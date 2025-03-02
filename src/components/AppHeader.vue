@@ -10,7 +10,7 @@ import AppNavbar from "./AppNavbar.vue";
 			class="flex flex-col items-center md:items-start justify-center gap-5"
 		>
 			<div
-				class="flex w-full flex-col md:flex-row-reverse items-center justify-between gap-5 md:gap-8 xl:gap-32"
+				class="flex w-full flex-col-reverse md:flex-row-reverse items-center justify-between gap-5 md:gap-8 xl:gap-32"
 			>
 				<div>
 					<img
@@ -24,24 +24,24 @@ import AppNavbar from "./AppNavbar.vue";
 				</div>
 
 				<div
-					class="flex flex-col gap-7 items-center md:items-start text-center md:text-left"
+					class="flex flex-col gap-7 items-start md:text-left"
 				>
 					<h1
-						class="text-2xl w-full SairaExtraBold md:text-3xl lg:text-4xl mt-12 xl:text-5xl 2xl:text-7xl"
+						class="text-5xl w-full md:text-4xl lg:text-5xl mt-12 xl:text-5xl 2xl:text-7xl"
 						data-aos="fade-right"
 						data-aos-delay="500"
 					>
 						M Power Sound
 					</h1>
 					<p
-						class="text-white text-base md:text-md lg:text-lg 2xl:text-lg mb-24"
+						class="text-white text-base md:text-md lg:text-lg 2xl:text-lg mb-8 lg:mb-24"
 						data-aos="fade-right"
 						data-aos-delay="600"
 					>
 						Potência, qualidade e som incomparável ! <br>
 						Encontre o amplificador perfeito para o seu setup aqui !
 					</p>
-					<div class="flex items-center">			
+					<div class="flex items-center mb-12 lg:mb-0">			
 						<img
 							src="../assets/img/icons/location-icon.webp"
 							alt="Camisa de mockup"
@@ -51,11 +51,11 @@ import AppNavbar from "./AppNavbar.vue";
 							data-aos-delay="600"
 						/>			
 						<p
-							class="text-base ml-6 text-white md:text-md lg:text-md 2xl:text-[0.9rem]"
+							class="text-base ml-3 lg:ml-6 text-white md:text-md lg:text-md 2xl:text-[0.9rem]"
 							data-aos="fade-right"
 							data-aos-delay="500"
 							>
-							Rua Altino Arantes, 717, Jardim das Bandeiras, <br>
+							Rua Altino Arantes, 717, Jardim das Bandeiras, <br class="md:hidden lg:block">
 							Campinas/SP, CEP 13051-110
 						</p>
 					</div>

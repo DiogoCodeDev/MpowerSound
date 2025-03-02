@@ -25,6 +25,7 @@ body {
 	font-family: "CanvaSans", sans-serif;
 	scroll-behavior: smooth;
 	letter-spacing: -0.5px;
+	min-width: 425px;
 	font-weight: 100;
 }
 
