@@ -12,16 +12,17 @@ import AppNavbar from "./AppNavbar.vue";
 			<div
 				class="flex w-full flex-col-reverse md:flex-row-reverse items-center justify-between gap-5 md:gap-8 xl:gap-32"
 			>
-				<div>
-					<img
-						src="../assets/img/promotion-image.webp"
-						alt="Camisa de mockup"
-						class="object-contain lg:mr-8 -mt-8 h-[250px] md:h-[300px] lg:h-[320px] xl:h-[350px] 2xl:h-[400px]"
-						loading="lazy"
-						data-aos="fade-right"
-						data-aos-delay="300"
-					/>
-				</div>
+			<div class="group">
+	<img
+		src="../assets/img/promotion-image.webp"
+		alt="Item em promoção destaque"
+		class="object-contain transform transition-transform duration-300 ease-in-out group-hover:scale-110
+		       lg:mr-8 -mt-8 h-[250px] md:h-[300px] lg:h-[320px] xl:h-[350px] 2xl:h-[400px]"
+		loading="lazy"
+		data-aos="fade-right"
+		data-aos-delay="300"
+	/>
+</div>
 
 				<div
 					class="flex flex-col gap-7 items-start md:text-left"

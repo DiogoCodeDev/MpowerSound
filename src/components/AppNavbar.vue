@@ -47,14 +47,12 @@ const isMenuOpen = ref(false);
 
 			<!-- Menu Mobile -->
 			<div data-aos="fade-right" class="relative z-50">
-				<!-- Botão do menu -->
 				<button @click="toggleMenu" class="lg:hidden flex flex-col items-center absolute -mt-2 right-0 top-0">
 					<span class="block w-9 h-0.5 bg-white mb-1"></span>
 					<span class="block w-9 h-0.5 bg-white mb-1"></span>
 					<span class="block w-9 h-0.5 bg-white mb-1"></span>
 				</button>
 
-				<!-- Menu Mobile com animação -->
 				<transition enter-active-class="transition-opacity duration-300 ease-out transform origin-top scale-90"
 					enter-from-class="opacity-0 scale-90" enter-to-class="opacity-100 scale-100"
 					leave-active-class="transition-opacity duration-300 ease-in transform origin-top scale-100"
