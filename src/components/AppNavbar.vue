@@ -17,7 +17,7 @@ const isMenuOpen = ref(false);
 	<div>
 		<nav class="flex w-full h-16 mb-14 lg:mb-20 pt-18 justify-between items-center flex">
 			<router-link data-aos="fade-right" data-aos-delay="200" to="/">
-				<h1 class="text-[1.7rem] 2xl:text-[2.7rem] font-bold"> MPSound </h1>
+				<h1 class="text-[2.1rem] 2xl:text-[2.7rem] font-bold"> MPSound </h1>
 			</router-link>
 
 			<!-- Menu Desktop -->
@@ -48,9 +48,9 @@ const isMenuOpen = ref(false);
 			<!-- Menu Mobile -->
 			<div data-aos="fade-right" class="relative z-50">
 				<button @click="toggleMenu" class="lg:hidden flex flex-col items-center absolute -mt-2 right-0 top-0">
-					<span class="block w-9 h-0.5 bg-white mb-1"></span>
-					<span class="block w-9 h-0.5 bg-white mb-1"></span>
-					<span class="block w-9 h-0.5 bg-white mb-1"></span>
+					<span class="block w-9 h-1 rounded bg-white mb-1"></span>
+					<span class="block w-9 h-1 rounded bg-white mb-1"></span>
+					<span class="block w-9 h-1 rounded bg-white mb-1"></span>
 				</button>
 
 				<transition enter-active-class="transition-opacity duration-300 ease-out transform origin-top scale-90"
