@@ -13,7 +13,7 @@ import AppHeader from "../components/AppHeader.vue";
 			alt="Background Mpower Sound"
 			class="fixed top-0 left-0 w-full h-full object-cover -z-10"
 		/>
-		<AppHeader class="z-10 px-7 md:px-20 lg:px-40 xl:px-[8%] 2xl:px-[10%]" />
+		<AppHeader class="z-50 px-7 md:px-20 lg:px-40 xl:px-[8%] 2xl:px-[10%]" />
 
 		<main class="z-10 flex flex-col gap-20 lg:gap-32">
 			<div class="w-full h-96 bg-white">
