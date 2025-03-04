@@ -30,9 +30,9 @@ onUnmounted(() => {
 const toggleMenu = () => {
 	isMenuOpen.value = !isMenuOpen.value;
 	if (!isMenuOpen.value) {
-		isProdutosOpen.value = false; 
+		isProdutosOpen.value = false;
 	}
-};	
+};
 
 const toggleProdutos = () => {
 	isProdutosOpen.value = !isProdutosOpen.value;
@@ -72,35 +72,46 @@ const isMenuOpen = ref(false);
 						:class="{ 'text-yellow-400 font-bold': route.path === '/', 'mr-1': isNavbarFixed }">
 						<router-link to="/">Home </router-link>
 					</li>
-					<li :class="{ 'text-yellow-400': route.path === '/produtos', 'bg-[#111111] rounded': isSubmenuOpen}"
+					<li :class="{ 'text-yellow-400': route.path === '/produtos', 'bg-[#111111] rounded': isSubmenuOpen }"
 						class="w-24 h-7 ml-4 flex items-center justify-center" @mouseenter="handleMouseEnter"
 						@mouseleave="handleMouseLeave">
 						<router-link to="/produtos">Produtos</router-link>
 						<span class="ml-3 text-xs cursor-pointer transform transition-transform duration-300"
-									:class="{ 'rotate-180': isSubmenuOpen}">▼</span>
+							:class="{ 'rotate-180': isSubmenuOpen }">▼</span>
 						<ul v-if="isSubmenuOpen" :class="isNavbarFixed ? 'mt-72' : 'mt-62'"
 							style="background-color: #111111;"
 							class="absolute w-56 shadow-md rounded mr-1 p-2 space-y-2">
 							<li class="w-72 ml-1 pt-2 pb-1">
-								<router-link to="/produtos/produto1" class="text-white hover:ml-1 duration-150 ease-in-out"> • &nbsp; &nbsp;Amplificadores de
+								<router-link to="/produtos/produto1"
+									class="text-white hover:ml-1 duration-150 ease-in-out"> • &nbsp;
+									&nbsp;Amplificadores de
 									Pôtencia</router-link>
 							</li>
 							<li class="w-72 ml-1 py-1">
-								<router-link to="/produtos/produto2" class="text-white hover:ml-1 duration-150 ease-in-out"> • &nbsp; &nbsp;Mesas de Som</router-link>
+								<router-link to="/produtos/produto2"
+									class="text-white hover:ml-1 duration-150 ease-in-out"> • &nbsp; &nbsp;Mesas de
+									Som</router-link>
 							</li>
 							<li class="w-72 ml-1 py-1">
-								<router-link to="/produtos/produto3" class="text-white hover:ml-1 duration-150 ease-in-out"> • &nbsp; &nbsp;Caixas Acústicas
+								<router-link to="/produtos/produto3"
+									class="text-white hover:ml-1 duration-150 ease-in-out"> • &nbsp; &nbsp;Caixas
+									Acústicas
 									Ativas</router-link>
 							</li>
 							<li class="w-72 ml-1 py-1">
-								<router-link to="/produtos/produto4" class="text-white hover:ml-1 duration-150 ease-in-out"> • &nbsp; &nbsp;Caixas Multiuso </router-link>
+								<router-link to="/produtos/produto4"
+									class="text-white hover:ml-1 duration-150 ease-in-out"> • &nbsp; &nbsp;Caixas
+									Multiuso </router-link>
 							</li>
 							<li class="w-72 ml-1 py-1">
-								<router-link to="/produtos/produto5" class="text-white hover:ml-1 duration-150 ease-in-out"> • &nbsp; &nbsp;Amplificador
+								<router-link to="/produtos/produto5"
+									class="text-white hover:ml-1 duration-150 ease-in-out"> • &nbsp; &nbsp;Amplificador
 									Compacto</router-link>
 							</li>
 							<li class="w-72 ml-1 pt-1 pb-2">
-								<router-link to="/produtos/produto6" class="text-white hover:ml-1 duration-150 ease-in-out"> • &nbsp; &nbsp;Mixer Amplificado</router-link>
+								<router-link to="/produtos/produto6"
+									class="text-white hover:ml-1 duration-150 ease-in-out"> • &nbsp; &nbsp;Mixer
+									Amplificado</router-link>
 							</li>
 						</ul>
 					</li>
@@ -124,11 +135,16 @@ const isMenuOpen = ref(false);
 				loading="lazy" data-aos="fade-right" data-aos-delay="400" />
 
 			<!-- Menu Mobile -->
-			<div data-aos="fade-right" class="relative z-50"> 
-				<button @click="toggleMenu" class="lg:hidden flex flex-col items-center absolute -mt-2 right-4 top-0">
-					<span class="block w-9 h-1 rounded bg-white mb-1"></span>
-					<span class="block w-9 h-1 rounded bg-white mb-1"></span>
-					<span class="block w-9 h-1 rounded bg-white mb-1"></span>
+			<div data-aos="fade-right" class="relative z-50 bg-red-400">
+				<button @click="toggleMenu"
+					class="lg:hidden flex flex-col items-center absolute -mt-2 right-1 top-0 transition-all duration-300"
+					:class="{ 'open': isMenuOpen, 'right-0': isNavbarFixed }">
+					<span class="block w-9 h-1 rounded bg-white mb-1 transition-all duration-300"
+						:class="{ 'rotate-45 w-4 translate-y-2': isMenuOpen }"></span>
+					<span class="block w-9 h-1 rounded bg-white mb-1 transition-all duration-300"
+						:class="{ 'opacity-0': isMenuOpen }"></span>
+					<span class="block w-9 h-1 rounded bg-white mb-1 transition-all duration-300"
+						:class="{ '-rotate-45 w-4 -translate-y-2': isMenuOpen }"></span>
 				</button>
 
 				<transition enter-active-class="transition-opacity duration-300 ease-out transform origin-top scale-90"
@@ -150,22 +166,30 @@ const isMenuOpen = ref(false);
 							</button>
 							<transition name="slide">
 								<ul v-show="isProdutosOpen" class="ml-4 mt-2 space-y-1">
-									<li class="h-10 mt-4 flex items-center text-sm"><router-link to="/produtos/produto1" class="text-white hover:ml-1 duration-150 ease-in-out"> • &nbsp; Amplificadores de
+									<li class="h-10 mt-4 flex items-center text-sm"><router-link to="/produtos/produto1"
+											class="text-white hover:ml-1 duration-150 ease-in-out"> • &nbsp;
+											Amplificadores de
 											Potência</router-link></li>
-									<li class="h-10 flex items-center text-sm"><router-link to="/produtos/produto2" class="text-white hover:ml-1 duration-150 ease-in-out"> • &nbsp; Mesas de
+									<li class="h-10 flex items-center text-sm"><router-link to="/produtos/produto2"
+											class="text-white hover:ml-1 duration-150 ease-in-out"> • &nbsp; Mesas de
 											Som</router-link></li>
-									<li class="h-10 flex items-center text-sm"><router-link to="/produtos/produto3" class="text-white hover:ml-1 duration-150 ease-in-out"> • &nbsp; Caixas Acústicas
+									<li class="h-10 flex items-center text-sm"><router-link to="/produtos/produto3"
+											class="text-white hover:ml-1 duration-150 ease-in-out"> • &nbsp; Caixas
+											Acústicas
 											Ativas</router-link></li>
-									<li class="h-10 flex items-center text-sm"><router-link to="/produtos/produto4" class="text-white hover:ml-1 duration-150 ease-in-out"> • &nbsp; Caixas
+									<li class="h-10 flex items-center text-sm"><router-link to="/produtos/produto4"
+											class="text-white hover:ml-1 duration-150 ease-in-out"> • &nbsp; Caixas
 											Multiuso</router-link></li>
-									<li class="h-10 flex items-center text-sm"><router-link to="/produtos/produto5" class="text-white hover:ml-1 duration-150 ease-in-out"> • &nbsp; Amplificador
+									<li class="h-10 flex items-center text-sm"><router-link to="/produtos/produto5"
+											class="text-white hover:ml-1 duration-150 ease-in-out"> • &nbsp;
+											Amplificador
 											Compacto</router-link></li>
-									<li class="h-10 flex items-center text-sm"><router-link to="/produtos/produto6" class="text-white hover:ml-1 duration-150 ease-in-out"> • &nbsp; Mixer
+									<li class="h-10 flex items-center text-sm"><router-link to="/produtos/produto6"
+											class="text-white hover:ml-1 duration-150 ease-in-out"> • &nbsp; Mixer
 											Amplificado</router-link></li>
 								</ul>
 							</transition>
 						</li>
-
 						<li class="my-3" :class="{ 'text-yellow-400': route.path === '/empresa' }">
 							<router-link to="/empresa">Empresa</router-link>
 						</li>
@@ -178,6 +202,7 @@ const isMenuOpen = ref(false);
 					</ul>
 				</transition>
 			</div>
+
 		</nav>
 	</div>
 
@@ -210,12 +235,15 @@ const isMenuOpen = ref(false);
 	transform: translateY(0);
 }
 
-.slide-enter-active, .slide-leave-active {
+.slide-enter-active,
+.slide-leave-active {
 	transition: all 0.3s ease-in-out;
 	max-height: 300px;
 	opacity: 1;
 }
-.slide-enter, .slide-leave-to {
+
+.slide-enter,
+.slide-leave-to {
 	max-height: 0;
 	opacity: 0;
 	overflow: hidden;

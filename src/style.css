@@ -44,7 +44,7 @@ p {
 ::-webkit-scrollbar-thumb {
 	-webkit-border-radius: 3px;
 	border-radius: 10px;
-	background: #535353;
+	background: #111111;
 }
 
 ::-webkit-scrollbar {
