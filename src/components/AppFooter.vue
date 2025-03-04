@@ -2,6 +2,7 @@
 
 <template>
 	<footer
+		:style="{ backgroundColor: 'rgba(0, 0, 0, 0.55)' }"
 		class="w-full flex flex-col justify-center items-center lg:justify-between lg:flex-row lg:h-96 py-12 lg:py-12 lg:px-40 z-10">
 		<div class="w-80 md:w-96 flex flex-col lg:w-1/3">
 			<router-link data-aos="fade-right" to="/">
@@ -11,7 +12,7 @@
 				Rua Altino Arantes, 717, Jardim das Bandeiras, Campinas/SP <br class="hidden md:flex lg:hidden xl:flex">
 				CEP 13051-110
 			</p>
-			<p data-aos="fade-up" data-aos-offset="50" class="text-sm lg:text-xs text-white mb-12 lg:mb-4">
+			<p data-aos="fade-up" data-aos-offset="50" class="text-sm hidden lg:flex lg:text-xs text-white mb-12 lg:mb-4">
 				© 2025 MPowerSound. Todos os direitos reservados.
 			</p>
 		</div>
@@ -30,10 +31,13 @@
 			<div>
 				<h3 data-aos="fade-right" class="text-xl mb-12 font-black uppercase">Redes Sociais</h3>
 				<div class="flex w-72 lg:w-full justify-between">
-					<img data-aos="fade-up" class="h-9 lg:h-7" src="../assets/img/icons/facebook-icon.webp"/>
-					<img data-aos="fade-up" class="h-9 lg:h-7" src="../assets/img/icons/instagram-icon.webp"/>
-					<img data-aos="fade-up" class="h-9 lg:h-7 mb-28" src="../assets/img/icons/wpp-icon.webp"/>
+					<img data-aos="fade-up" alt="icon facebook" class="h-9 lg:h-7" src="../assets/img/icons/facebook-icon.webp"/>
+					<img data-aos="fade-up" alt="icon instagram" class="h-9 lg:h-7" src="../assets/img/icons/instagram-icon.webp"/>
+					<img data-aos="fade-up" alt="icon whatsapp" class="h-9 lg:h-7 mb-28" src="../assets/img/icons/wpp-icon.webp"/>
 				</div>
+				<p data-aos="fade-up" data-aos-offset="50" class="text-sm flex lg:hidden lg:text-xs text-white mb-16">
+					© 2025 MPowerSound. Todos os direitos reservados.
+				</p>
 			</div>
 		</div>
 	</footer>
