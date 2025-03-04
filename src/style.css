@@ -29,10 +29,14 @@ body {
 	font-weight: 100;
 }
 
-h1,
-h2 {
+h1{
 	font-family: "CanvaSans", sans-serif;
 	font-weight: 600;
+}
+
+h2 {
+	font-family: "CanvaSans", sans-serif;
+	font-weight: 400;
 }
 
 p {

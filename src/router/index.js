@@ -1,9 +1,11 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import HomeView from '../pages/HomeView.vue';
+import EnterpriseView from '../pages/EnterpriseView.vue';
 
 const routes = [
   { path: '/', component: HomeView },
-  // { path: '/product/:id', component: ProductView, props: true },
+  { path: '/empresa', component: EnterpriseView },
+  // { path: '/product/:id', component: ProductView},
 ];
 
 const router = createRouter({

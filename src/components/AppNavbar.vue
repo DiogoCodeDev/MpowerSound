@@ -38,6 +38,10 @@ const toggleProdutos = () => {
 	isProdutosOpen.value = !isProdutosOpen.value;
 }
 
+const notFixeNavBar = () =>  {
+	isNavbarFixed.value = false;
+}
+
 const handleMouseEnter = () => {
 	if (submenuTimeout.value) {
 		clearTimeout(submenuTimeout.value);
@@ -70,62 +74,62 @@ const isMenuOpen = ref(false);
 				<ul :class="!isNavbarFixed ? '-mt-2' : 'mt-1'" class="flex lg:ml-12 w-10/12 justify-between">
 					<li class="w-24 h-7 flex items-center justify-center"
 						:class="{ 'text-yellow-400 font-bold': route.path === '/', 'mr-1': isNavbarFixed }">
-						<router-link to="/">Home </router-link>
+						<router-link @click="notFixeNavBar" to="/">Home </router-link>
 					</li>
-					<li :class="{ 'text-yellow-400': route.path === '/produtos', 'bg-[#111111] rounded': isSubmenuOpen }"
+					<li :class="{ 'text-yellow-400 font-bold ': route.path === '/produtos', 'bg-[#111111] rounded': isSubmenuOpen }"
 						class="w-24 h-7 ml-4 flex items-center justify-center" @mouseenter="handleMouseEnter"
 						@mouseleave="handleMouseLeave">
-						<router-link to="/produtos">Produtos</router-link>
+						<router-link @click="notFixeNavBar" to="/produtos">Produtos</router-link>
 						<span class="ml-3 text-xs cursor-pointer transform transition-transform duration-300"
 							:class="{ 'rotate-180': isSubmenuOpen }">▼</span>
 						<ul v-if="isSubmenuOpen" :class="isNavbarFixed ? 'mt-72' : 'mt-62'"
 							style="background-color: #111111;"
 							class="absolute w-56 shadow-md rounded mr-1 p-2 space-y-2">
 							<li class="w-72 ml-1 pt-2 pb-1">
-								<router-link to="/produtos/produto1"
+								<router-link @click="notFixeNavBar" to="/produtos/produto1"
 									class="text-white hover:ml-1 duration-150 ease-in-out"> • &nbsp;
 									&nbsp;Amplificadores de
 									Pôtencia</router-link>
 							</li>
 							<li class="w-72 ml-1 py-1">
-								<router-link to="/produtos/produto2"
+								<router-link @click="notFixeNavBar" to="/produtos/produto2"
 									class="text-white hover:ml-1 duration-150 ease-in-out"> • &nbsp; &nbsp;Mesas de
 									Som</router-link>
 							</li>
 							<li class="w-72 ml-1 py-1">
-								<router-link to="/produtos/produto3"
+								<router-link @click="notFixeNavBar" to="/produtos/produto3"
 									class="text-white hover:ml-1 duration-150 ease-in-out"> • &nbsp; &nbsp;Caixas
 									Acústicas
 									Ativas</router-link>
 							</li>
 							<li class="w-72 ml-1 py-1">
-								<router-link to="/produtos/produto4"
+								<router-link @click="notFixeNavBar" to="/produtos/produto4"
 									class="text-white hover:ml-1 duration-150 ease-in-out"> • &nbsp; &nbsp;Caixas
 									Multiuso </router-link>
 							</li>
 							<li class="w-72 ml-1 py-1">
-								<router-link to="/produtos/produto5"
+								<router-link @click="notFixeNavBar" to="/produtos/produto5"
 									class="text-white hover:ml-1 duration-150 ease-in-out"> • &nbsp; &nbsp;Amplificador
 									Compacto</router-link>
 							</li>
 							<li class="w-72 ml-1 pt-1 pb-2">
-								<router-link to="/produtos/produto6"
+								<router-link @click="notFixeNavBar" to="/produtos/produto6"
 									class="text-white hover:ml-1 duration-150 ease-in-out"> • &nbsp; &nbsp;Mixer
 									Amplificado</router-link>
 							</li>
 						</ul>
 					</li>
 					<li class="w-24 h-7 ml-3 flex items-center justify-center"
-						:class="{ 'text-yellow-400': route.path === '/empresa' }">
-						<router-link to="/empresa">Empresa</router-link>
+						:class="{ 'text-yellow-400 font-bold ': route.path === '/empresa' }">
+						<router-link @click="notFixeNavBar" to="/empresa">Empresa</router-link>
 					</li>
 					<li class="w-24 h-7 flex items-center justify-center"
-						:class="{ 'text-yellow-400': route.path === '/suporte' }">
-						<router-link to="/suporte">Suporte</router-link>
+						:class="{ 'text-yellow-400 font-bold ': route.path === '/suporte' }">
+						<router-link @click="notFixeNavBar" to="/suporte">Suporte</router-link>
 					</li>
 					<li class="w-24 lg:w-32 h-7 flex items-center justify-center"
-						:class="{ 'text-yellow-400': route.path === '/redes-sociais' }">
-						<router-link to="/redes-sociais">Redes Sociais</router-link>
+						:class="{ 'text-yellow-400 font-bold ': route.path === '/redes-sociais' }">
+						<router-link @click="notFixeNavBar" to="/redes-sociais">Redes Sociais</router-link>
 					</li>
 				</ul>
 			</div>
@@ -153,51 +157,51 @@ const isMenuOpen = ref(false);
 					leave-from-class="opacity-100 scale-100" leave-to-class="opacity-0 scale-100">
 					<ul v-show="isMenuOpen"
 						class="absolute w-80 text-white -right-4 top-9 bg-[#111111] shadow-md rounded p-4 flex flex-col space-y-2 z-50">
-						<li class="mt-1" :class="{ 'text-yellow-400': route.path === '/' }">
-							<router-link to="/">Home</router-link>
+						<li class="mt-1" :class="{ 'text-yellow-400 font-bold ': route.path === '/' }">
+							<router-link @click="notFixeNavBar" to="/">Home</router-link>
 						</li>
 
 						<li class="my-3">
 							<button @click="toggleProdutos"
 								class="flex items-center justify-between w-full text-left text-white">
-								<span :class="{ 'text-yellow-400': route.path.startsWith('/produtos') }">Produtos</span>
+								<span :class="{ 'text-yellow-400 font-bold ': route.path.startsWith('/produtos') }">Produtos</span>
 								<span class="ml-2 transform transition-transform duration-300"
 									:class="{ 'rotate-180': isProdutosOpen }">▼</span>
 							</button>
 							<transition name="slide">
 								<ul v-show="isProdutosOpen" class="ml-4 mt-2 space-y-1">
-									<li class="h-10 mt-4 flex items-center text-sm"><router-link to="/produtos/produto1"
+									<li class="h-10 mt-4 flex items-center text-sm"><router-link @click="notFixeNavBar" to="/produtos/produto1"
 											class="text-white hover:ml-1 duration-150 ease-in-out"> • &nbsp;
 											Amplificadores de
 											Potência</router-link></li>
-									<li class="h-10 flex items-center text-sm"><router-link to="/produtos/produto2"
+									<li class="h-10 flex items-center text-sm"><router-link @click="notFixeNavBar" to="/produtos/produto2"
 											class="text-white hover:ml-1 duration-150 ease-in-out"> • &nbsp; Mesas de
 											Som</router-link></li>
-									<li class="h-10 flex items-center text-sm"><router-link to="/produtos/produto3"
+									<li class="h-10 flex items-center text-sm"><router-link @click="notFixeNavBar" to="/produtos/produto3"
 											class="text-white hover:ml-1 duration-150 ease-in-out"> • &nbsp; Caixas
 											Acústicas
 											Ativas</router-link></li>
-									<li class="h-10 flex items-center text-sm"><router-link to="/produtos/produto4"
+									<li class="h-10 flex items-center text-sm"><router-link @click="notFixeNavBar" to="/produtos/produto4"
 											class="text-white hover:ml-1 duration-150 ease-in-out"> • &nbsp; Caixas
 											Multiuso</router-link></li>
-									<li class="h-10 flex items-center text-sm"><router-link to="/produtos/produto5"
+									<li class="h-10 flex items-center text-sm"><router-link @click="notFixeNavBar" to="/produtos/produto5"
 											class="text-white hover:ml-1 duration-150 ease-in-out"> • &nbsp;
 											Amplificador
 											Compacto</router-link></li>
-									<li class="h-10 flex items-center text-sm"><router-link to="/produtos/produto6"
+									<li class="h-10 flex items-center text-sm"><router-link @click="notFixeNavBar" to="/produtos/produto6"
 											class="text-white hover:ml-1 duration-150 ease-in-out"> • &nbsp; Mixer
 											Amplificado</router-link></li>
 								</ul>
 							</transition>
 						</li>
-						<li class="my-3" :class="{ 'text-yellow-400': route.path === '/empresa' }">
-							<router-link to="/empresa">Empresa</router-link>
+						<li class="my-3" :class="{ 'text-yellow-400 font-bold ': route.path === '/empresa' }">
+							<router-link @click="notFixeNavBar" to="/empresa">Empresa</router-link>
 						</li>
-						<li class="my-3" :class="{ 'text-yellow-400': route.path === '/suporte' }">
-							<router-link to="/suporte">Suporte</router-link>
+						<li class="my-3" :class="{ 'text-yellow-400 font-bold ': route.path === '/suporte' }">
+							<router-link @click="notFixeNavBar" to="/suporte">Suporte</router-link>
 						</li>
-						<li class="mt-3 mb-1" :class="{ 'text-yellow-400': route.path === '/redes-sociais' }">
-							<router-link to="/redes-sociais">Redes Sociais</router-link>
+						<li class="mt-3 mb-1" :class="{ 'text-yellow-400 font-bold ': route.path === '/redes-sociais' }">
+							<router-link @click="notFixeNavBar" to="/redes-sociais">Redes Sociais</router-link>
 						</li>
 					</ul>
 				</transition>
