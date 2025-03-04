@@ -124,7 +124,7 @@ const isMenuOpen = ref(false);
 				loading="lazy" data-aos="fade-right" data-aos-delay="400" />
 
 			<!-- Menu Mobile -->
-			<div data-aos="fade-right" class="relative z-50">
+			<div data-aos="fade-right" class="relative z-50"> 
 				<button @click="toggleMenu" class="lg:hidden flex flex-col items-center absolute -mt-2 right-4 top-0">
 					<span class="block w-9 h-1 rounded bg-white mb-1"></span>
 					<span class="block w-9 h-1 rounded bg-white mb-1"></span>
