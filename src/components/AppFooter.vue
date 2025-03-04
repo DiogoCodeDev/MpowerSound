@@ -1,4 +1,8 @@
-<script setup></script>
+<script setup>
+import { useRoute } from "vue-router";
+
+const route = useRoute();
+</script>
 
 <template>
 	<footer
@@ -20,10 +24,14 @@
 			<div>
 				<h3 data-aos="fade-right" class="text-xl mb-12 font-black uppercase">Nosso Site</h3>
 				<ul>
-					<li data-aos="fade-up" class="mb-8 lg:mb-2 xl:mb-4 cursor-pointer transition-all duration-150 ease-in-out text-lg lg:text-sm">Home</li>
-					<li data-aos="fade-up" class="mb-8 lg:mb-2 xl:mb-4 cursor-pointer transition-all duration-150 ease-in-out text-lg lg:text-sm">Produtos</li>
-					<li data-aos="fade-up" class="mb-8 lg:mb-2 xl:mb-4 cursor-pointer transition-all duration-150 ease-in-out text-lg lg:text-sm">Empresa</li>
-					<li data-aos="fade-up" class="mb-8 lg:mb-2 xl:mb-4 cursor-pointer transition-all duration-150 ease-in-out text-lg lg:text-sm">Suporte</li>
+					<li data-aos="fade-up" :class="{ 'text-yellow-400 font-bold ': route.path === '/' }" class="mb-8 lg:mb-2 xl:mb-4 cursor-pointer transition-all duration-150 ease-in-out text-lg lg:text-sm">
+						<router-link @click="notFixeNavBar" to="/">Home</router-link></li>
+					<li data-aos="fade-up" :class="{ 'text-yellow-400 font-bold ': route.path === '/produtos' }" class="mb-8 lg:mb-2 xl:mb-4 cursor-pointer transition-all duration-150 ease-in-out text-lg lg:text-sm">
+						<router-link @click="notFixeNavBar" to="/produtos">Produtos</router-link></li>
+					<li data-aos="fade-up" :class="{ 'text-yellow-400 font-bold ': route.path === '/empresa' }" class="mb-8 lg:mb-2 xl:mb-4 cursor-pointer transition-all duration-150 ease-in-out text-lg lg:text-sm">
+						<router-link @click="notFixeNavBar" to="/empresa">Empresa</router-link></li>
+					<li data-aos="fade-up" :class="{ 'text-yellow-400 font-bold ': route.path === '/suporte' }" class="mb-8 lg:mb-2 xl:mb-4 cursor-pointer transition-all duration-150 ease-in-out text-lg lg:text-sm">
+						<router-link @click="notFixeNavBar" to="/suporte">Suporte</router-link></li>
 				</ul>
 			</div>
 		</div>
