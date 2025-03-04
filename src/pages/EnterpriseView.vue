@@ -1,11 +1,11 @@
 <script setup>
 import EnterpriseHeader from "../components/EnterpriseHeader.vue";
-// import AppFooter from "../components/AppFooter.vue";
+import AppFooter from "../components/AppFooter.vue";
 </script>
 
 <template>
     <div id="container"
-        class="relative w-full min-h-screen overflow-x-hidden flex flex-col gap-20 lg:gap-32 text-white before:absolute before:inset-0 before:bg-black before:opacity-75 tracking-wide">
+        class="relative w-full min-h-screen overflow-x-hidden flex flex-col text-white before:absolute before:inset-0 before:bg-black before:opacity-75 tracking-wide">
         <img src="/bg3.webp" alt="Background Mpower Sound"
             class="fixed top-0 left-0 w-full h-full object-cover -z-10" />
         <EnterpriseHeader class="z-50 px-7 md:px-20 lg:px-40 xl:px-[8%] 2xl:px-[10%]" />
@@ -52,7 +52,7 @@ import EnterpriseHeader from "../components/EnterpriseHeader.vue";
                     </div>
             </div>
 
-        <!-- <AppFooter class="z-10 px-7 md:px-20 lg:px-40 xl:px-[8%] 2xl:px-[10%]s" /> -->
+        <AppFooter/>
     </div>
 </template>
 
