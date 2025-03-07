@@ -61,17 +61,17 @@ const isMenuOpen = ref(false);
 <template>
 	<div ref="navbarRef" class="z-50" :class="{ 'navbar-fixed': isNavbarFixed, 'navbar-default': !isNavbarFixed }"
 		:style="!isNavbarFixed ? '' : 'transition: none;'">
-		<nav :class="!isNavbarFixed ? 'w-full mb-10 lg:mb-20 pt-12 lg:pt-12' : 'w-10/12 lg:w-9/12 py-4 lg:py-4 xl:py-2'"
+		<nav :class="!isNavbarFixed ? 'w-full mb-10 lg:mb-20 pt-12 lg:pt-12' : 'w-full px-7 lg:px-32 py-4 lg:py-4 xl:py-2'"
 			class="justify-between items-center flex">
 			<router-link data-aos="fade-right" data-aos-delay="200" to="/">
-				<h1 :class="isNavbarFixed ? 'text-[1.8rem] xl:text-[2.3rem] lg:-ml-4 lg:mr-6' : 'text-[2.1rem] xl:text-[2.7rem] '"
+				<h1 :class="isNavbarFixed ? 'text-[1.8rem] xl:text-[2.3rem] lg:mr-6' : 'text-[2.1rem] xl:text-[2.7rem] '"
 					class="font-bold"> MPSound </h1>
 			</router-link>
 
 			<!-- Menu Desktop -->
 			<div data-aos="fade-right" data-aos-delay="400"
-				class="hidden lg:flex w-8/12 lg:w-12/12 xl:w-7/12 lg:text-[0.8rem]">
-				<ul :class="!isNavbarFixed ? '-mt-2' : 'mt-1'" class="flex lg:ml-12 w-10/12 justify-between">
+				class="hidden lg:flex w-8/12 lg:w-12/12 xl:w-8/12 lg:text-[0.8rem]">
+				<ul :class="!isNavbarFixed ? '-mt-2' : 'mt-1'" class="flex lg:ml-12 w-11/12 justify-between">
 					<li class="w-24 h-7 flex items-center justify-center"
 						:class="{ 'text-yellow-400 font-bold': route.path === '/', 'mr-1': isNavbarFixed }">
 						<router-link @click="notFixeNavBar" to="/">Home </router-link>
@@ -135,11 +135,11 @@ const isMenuOpen = ref(false);
 			</div>
 
 			<img src="../assets/img/icons/user-icon.webp" alt="Ícone de usuário"
-				class="object-contain hidden lg:flex lg:mr-14 h-[15px] md:h-[15px] lg:h-[20px] xl:h-[23px] 2xl:h-[23px]"
+				class="object-contain hidden lg:flex lg:ml-8 -mt-1 h-[15px] md:h-[15px] lg:h-[20px] xl:h-[23px] 2xl:h-[23px]"
 				loading="lazy" data-aos="fade-right" data-aos-delay="400" />
 
 			<!-- Menu Mobile -->
-			<div data-aos="fade-right" class="relative z-50 bg-red-400">
+			<div data-aos="fade-right" class="relative z-50">
 				<button @click="toggleMenu"
 					class="lg:hidden flex flex-col items-center absolute -mt-2 right-1 top-0 transition-all duration-300"
 					:class="{ 'open': isMenuOpen, 'right-0': isNavbarFixed }">
@@ -222,6 +222,7 @@ const isMenuOpen = ref(false);
 .navbar-default {
 	position: relative;
 	opacity: 1;
+	width: 100%;
 	transform: translateY(0);
 }
 

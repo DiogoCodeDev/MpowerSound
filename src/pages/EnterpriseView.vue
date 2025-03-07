@@ -5,10 +5,10 @@ import AppFooter from "../components/AppFooter.vue";
 
 <template>
     <div id="container"
-        class="relative w-full min-h-screen overflow-x-hidden flex flex-col text-white before:absolute before:inset-0 before:bg-black before:opacity-75 tracking-wide">
+        class="relative w-full min-h-screen overflow-x-hidden max-w-full overflow-hidden overflow-x-hidden flex flex-col text-white before:absolute before:inset-0 before:bg-black before:opacity-75 tracking-wide">
         <img src="/bg3.webp" alt="Background Mpower Sound"
             class="fixed top-0 left-0 w-full h-full object-cover -z-10" />
-        <EnterpriseHeader class="z-50 px-7 md:px-20 lg:px-40 xl:px-[8%] 2xl:px-[10%]" />
+        <EnterpriseHeader class="z-50 px-7 md:px-20 lg:px-32" />
 
             <div class="w-full px-8 lg:px-32 bg-[#F1F1F1] gap-20 lg:gap-72 z-10">
                 <h2 data-aos="fade-right" data-aos-delay="100" class="text-black py-12 text-xl lg:text-xl ml-4"> <bold class="font-bold">MPOWER SOUND</bold> – Potência e Qualidade em Cada Frequência </h2>
