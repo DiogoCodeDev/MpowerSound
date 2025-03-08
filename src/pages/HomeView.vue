@@ -7,7 +7,7 @@ import HomeProducts from "../components/HomeProducts.vue";
 <template>
 	<div
 		id="container"
-		class="relative w-full min-h-screen max-w-full overflow-hidden overflow-x-hidden flex flex-col text-white before:absolute before:inset-0 before:bg-black before:opacity-75 tracking-wide"
+		class="relative w-full max-w-full overflow-hidden overflow-x-hidden flex flex-col text-white before:absolute before:inset-0 before:bg-black before:opacity-85 tracking-wide"
 		>
 		<img
 			src="/mpower-sound-bg.webp"

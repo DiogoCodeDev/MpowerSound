@@ -210,7 +210,8 @@ const isMenuOpen = ref(false);
 		</nav>
 	</div>
 
-	<div v-if="isNavbarFixed" :style="{ height: navbarHeight + 'px' }"></div>
+	<div :style="isNavbarFixed ? 'padding-top: ' + navbarHeight + 'px' : ''">
+	</div>
 
 </template>
 
