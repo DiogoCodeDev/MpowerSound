@@ -157,7 +157,7 @@ const isMenuOpen = ref(false);
 					leave-from-class="opacity-100 scale-100" leave-to-class="opacity-0 scale-100">
 					<ul v-show="isMenuOpen"
 						class="absolute w-88 text-white -right-4 top-9 bg-[#090909] shadow-md rounded p-4 flex flex-col space-y-2 z-50">
-						<li class="mt-2 flex text-[1.15rem]" :class="{ 'text-yellow-400 font-bold ': route.path === '/' }">	
+						<li class="mt-2 mb-2 flex text-[1.15rem]" :class="{ 'text-yellow-400 font-bold ': route.path === '/' }">	
 							<img class="h-[1.15rem] mt-0.5 mr-3" src="../assets/img/icons/home.webp" alt="Ícone home, página inicial">
 							<router-link @click="notFixeNavBar" to="/">Home</router-link>
 						</li>

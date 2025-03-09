@@ -33,7 +33,7 @@ const submitForm = () => {
 
 <template>
     <div id="container"
-        class="relative w-full min-h-screen max-w-full overflow-hidden overflow-x-hidden flex flex-col text-white before:absolute before:inset-0 before:bg-black before:opacity-75 tracking-wide">
+        class="relative w-full min-h-screen max-w-full overflow-hidden overflow-x-hidden flex flex-col text-white before:absolute before:inset-0 before:bg-black before:opacity-85 tracking-wide">
         <img src="/bg1.webp" alt="Background Mpower Sound"
             class="fixed top-0 left-0 w-full h-full object-cover -z-10" />
         <SupportHeader class="z-50 px-7 md:px-20 lg:px-32" />
@@ -63,13 +63,13 @@ const submitForm = () => {
                 </div>
                 <div loading="lazy" data-aos="fade-up" data-aos-delay="500"  class="py-2 flex mb-4 md:mb-1 px-4">
                     <img src="../assets/img/icons/help.webp" alt="Ícone shake hands" class="h-7 mt-1 -ml-1"/>
-                    <p class="text-[0.8rem] md:mt-2 text-black ml-3 mt-2 lg:mt-1"> Previsão de resposta dentro de <bold
+                    <p class="text-[0.8rem] md:mt-2 text-black ml-3 mt-1 lg:mt-1"> Previsão de resposta dentro de <bold
                             class="font-bold">24 horas!</bold>
                     </p>
                 </div>
             </div>
 
-            <div  data-aos="zoom-in" class="max-w-4xl mx-auto bg-white p-6 rounded-lg shadow-md mb-24 mt-12">
+            <div  data-aos="zoom-in" class="max-w-3xl mx-auto bg-white p-6 rounded-lg shadow-md mb-24 mt-12">
                 <h2 class="text-xl text-black font-bold text-center mb-8 uppercase">Formulário de Contato</h2>
 
                 <form @submit.prevent="submitForm" class="space-y-4">
@@ -103,7 +103,7 @@ const submitForm = () => {
                     </div>
 
                     <button type="submit"
-                        class="w-full bg-neutral-900 text-white p-2 rounded-md hover:bg-black cursor-pointer transition">
+                        class="w-full bg-neutral-900 font-bold text-white p-3 rounded-md hover:bg-black cursor-pointer transition">
                         Enviar
                     </button>
                 </form>

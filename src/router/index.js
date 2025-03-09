@@ -1,11 +1,11 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import HomeView from '../pages/HomeView.vue';
-import EnterpriseView from '../pages/EnterpriseView.vue';
+// import EnterpriseView from '../pages/EnterpriseView.vue';
 import SupportView from '../pages/SupportView.vue';
 
 const routes = [
   { path: '/', component: HomeView },
-  { path: '/empresa', component: EnterpriseView },
+  // { path: '/empresa', component: EnterpriseView },
   { path: '/suporte', component: SupportView },
   // { path: '/product/:id', component: ProductView},
 ];
