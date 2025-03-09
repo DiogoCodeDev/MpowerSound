@@ -50,7 +50,7 @@ const submitForm = () => {
                     informações sobre nossos serviços.
                 </h2>
                 <div loading="lazy" data-aos="fade-up" data-aos-delay="300" class="py-2 flex mb-4 md:mb-1 px-4">
-                    <img src="../assets/img/icons/headset.webp" alt="Ícone atendimento telefone" class="h-7 lg:h-8 lg:-ml-0.5 mt-1"/>
+                    <img src="../assets/img/icons/headset.webp" alt="Ícone atendimento telefone" class="h-8 lg:h-8 -ml-1 lg:-ml-0.5 mt-1"/>
                     <p class="text-[0.8rem] md:mt-2 text-black ml-4 lg:ml-3"> Resuma seu caso em até <bold class="font-bold">300
                             caracteres</bold> e responderemos o quanto antes. </p>
                 </div>
