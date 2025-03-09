@@ -157,12 +157,12 @@ const isMenuOpen = ref(false);
 					leave-from-class="opacity-100 scale-100" leave-to-class="opacity-0 scale-100">
 					<ul v-show="isMenuOpen"
 						class="absolute w-88 text-white -right-4 top-9 bg-[#090909] shadow-md rounded p-4 flex flex-col space-y-2 z-50">
-						<li class="mt-1 flex text-[1.15rem]" :class="{ 'text-yellow-400 font-bold ': route.path === '/' }">	
+						<li class="mt-2 flex text-[1.15rem]" :class="{ 'text-yellow-400 font-bold ': route.path === '/' }">	
 							<img class="h-[1.15rem] mt-0.5 mr-3" src="../assets/img/icons/home.webp" alt="Ícone home, página inicial">
 							<router-link @click="notFixeNavBar" to="/">Home</router-link>
 						</li>
 
-						<li class="my-3">
+						<li class="my-4">
 							<button @click="toggleProdutos"
 								aria-label="btn-produtos"
 								class="flex items-center justify-start w-full text-left text-white text-[1.15rem]">
@@ -198,16 +198,16 @@ const isMenuOpen = ref(false);
 								</ul>
 							</transition>
 						</li>
-						<li class="my-3 flex text-[1.15rem]" :class="{ 'text-yellow-400 font-bold ': route.path === '/empresa' }">
+						<li class="my-4 flex text-[1.15rem]" :class="{ 'text-yellow-400 font-bold ': route.path === '/empresa' }">
 							<img class="h-6 ml-0.5 mr-[0.65rem]" src="../assets/img/icons/empresa.webp" alt="Ícone empresa, página sobre nós">
 							<router-link @click="notFixeNavBar" to="/empresa">Empresa</router-link>
 						</li>
-						<li class="my-3 flex text-[1.15rem]" :class="{ 'text-yellow-400 font-bold ': route.path === '/suporte' }">
+						<li class="my-4 flex text-[1.15rem]" :class="{ 'text-yellow-400 font-bold ': route.path === '/suporte' }">
 							<img class="h-[1.35rem] ml-0.5 mt-0.5 mr-3" src="../assets/img/icons/suporte.webp" alt="Ícone suporte, página fale conosco">
 							<router-link @click="notFixeNavBar" to="/suporte">Suporte</router-link>
 						</li>
-						<li class="mt-3 flex text-[1.15rem] mb-1" :class="{ 'text-yellow-400 font-bold ': route.path === '/redes-sociais' }">
-							<img class="h-5 ml-0.5 mt-1 mr-3" src="../assets/img/icons/social-media.webp" alt="Ícone de redes sociais, contato">
+						<li class="mt-4 flex text-[1.15rem] mb-1" :class="{ 'text-yellow-400 font-bold ': route.path === '/redes-sociais' }">
+							<img class="h-5 ml-1 mt-1 mr-3" src="../assets/img/icons/social-media.webp" alt="Ícone de redes sociais, contato">
 							<router-link @click="notFixeNavBar" to="/redes-sociais">Redes Sociais</router-link>
 						</li>
 					</ul>

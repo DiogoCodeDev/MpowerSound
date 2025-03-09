@@ -21,7 +21,7 @@ import AppNavbar from "./AppNavbar.vue";
 						data-aos="fade-right" data-aos-delay="500">
 						M Power Sound
 					</h1>
-					<p class="text-white text-lg lg:text-lg 2xl:text-lg mb-16 lg:mb-24" data-aos="fade-right"
+					<p class="text-white text-base md:text-md lg:text-lg 2xl:text-lg mb-16 lg:mb-24" data-aos="fade-right"
 						data-aos-delay="600">
 						Potência, qualidade e som incomparável ! <br>
 						Encontre o amplificador perfeito para o seu setup aqui !
@@ -30,9 +30,9 @@ import AppNavbar from "./AppNavbar.vue";
 						<img src="../assets/img/icons/location-icon.webp" alt="Camisa de mockup"
 							class="object-contain h-[35px] md:h-[35px] lg:h-[40px] xl:h-[45px] 2xl:h-[50px]"
 							loading="lazy" data-aos="fade-right" data-aos-delay="800" />
-						<p class="ml-4 lg:ml-6 text-white text-md 2xl:text-[0.9rem]" data-aos="fade-right"
+						<p class="ml-4 lg:ml-6 text-white text-sm 2xl:text-[0.9rem]" data-aos="fade-right"
 							data-aos-delay="700">
-							Rua Altino Arantes, 717, Jardim das Bandeiras, <br>
+							Rua Altino Arantes, 717, Jardim das Bandeiras, <br class="hidden md:block">
 							Campinas/SP, CEP 13051-110
 						</p>
 					</div>

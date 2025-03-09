@@ -13,11 +13,11 @@ const route = useRoute();
 				<router-link data-aos="fade-right" to="/">
 					<h1 class="text-[2.6rem] xl:text-[2.7rem] font-bold mb-6 mt-4 lg:mt-0"> MPSound </h1>
 				</router-link>
-				<p data-aos="fade-up" class="text-[1.02rem] lg:text-sm mb-16">
+				<p data-aos="fade-up" class="text-[0.9rem] lg:text-xs mb-16">
 					Rua Altino Arantes, 717, Jardim das Bandeiras, Campinas/SP <br class="hidden md:flex lg:hidden xl:flex">
 					CEP 13051-110
 				</p>
-				<p data-aos="fade-up" data-aos-offset="50" class="text-sm hidden lg:flex lg:text-xs text-white mb-12 lg:mb-4">
+				<p data-aos="fade-up" data-aos-offset="50" class="text-sm hidden lg:flex lg:text-[0.6rem] text-white mb-12 lg:mb-4">
 					© 2025 MPowerSound. Todos os direitos reservados.
 				</p>
 			</div>
@@ -39,13 +39,13 @@ const route = useRoute();
 		</div>
 		<div class="w-80 md:w-96 flex flex-col justify-center md:items-center lg:justify-start lg:w-1/3">
 			<div>
-				<h3 data-aos="fade-right" class="text-xl mb-12 font-black uppercase">Redes Sociais</h3>
+				<h3 data-aos="fade-right" class="text-xl mb-12 lg:mb-10 lg:-mt-2 font-black uppercase">Redes Sociais</h3>
 				<div class="flex w-72 lg:w-full justify-between">
 					<img data-aos="fade-up" alt="icon facebook" class="h-9 lg:h-7" src="../assets/img/icons/facebook-icon.webp"/>
 					<img data-aos="fade-up" alt="icon whatsapp" class="h-9 lg:h-7 ml-3 lg:ml-2 mb-28" src="../assets/img/icons/wpp-icon.webp"/>
 					<img data-aos="fade-up" alt="icon instagram" class="h-9 lg:h-7" src="../assets/img/icons/instagram-icon.webp"/>
 				</div>
-				<p data-aos="fade-up" data-aos-offset="50" class="text-sm flex lg:hidden lg:text-xs text-white mb-16">
+				<p data-aos="fade-up" data-aos-offset="50" class="text-[0.74rem] flex lg:hidden lg:text-xs text-white mb-16">
 					© 2025 MPowerSound. Todos os direitos reservados.
 				</p>
 			</div>
