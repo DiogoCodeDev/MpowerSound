@@ -16,7 +16,7 @@ import HomeProducts from "../components/HomeProducts.vue";
 		/>
 		<AppHeader class="z-50 px-7 md:px-20 lg:px-32" />
 
-		<main class="z-10 flex flex-col">
+		<main class="bg-white z-10 flex flex-col">
 			<HomeProducts/>
 		</main>
 

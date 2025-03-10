@@ -93,7 +93,7 @@ const useProductStore = defineStore('product', {
           },
           {
             "id": 5,
-            "name": "Mouse Gamer RGB",
+            "name": "Teclado Legal",
             "img": "",
             "alt": "",
             "description": "Mouse ergonômico com sensor de alta precisão e iluminação RGB personalizável.",
@@ -115,6 +115,48 @@ const useProductStore = defineStore('product', {
           {
             "id": 6,
             "name": "Mouse Gamer RGB",
+            "img": "",
+            "alt": "",
+            "description": "Mouse ergonômico com sensor de alta precisão e iluminação RGB personalizável.",
+            "saleCfg": [
+              {
+                "price": "299,90",
+                "installmentPrice": "30,00",
+                "installmentMax": "12x",
+              }
+            ],
+            "promotion": [
+              {
+                "price": 199.90,
+                "installmentPrice": "20,00",
+                "installmentMax": "12x",
+              }
+            ],
+          },
+          {
+            "id": 7,
+            "name": "Produto 7",
+            "img": "",
+            "alt": "",
+            "description": "Mouse ergonômico com sensor de alta precisão e iluminação RGB personalizável.",
+            "saleCfg": [
+              {
+                "price": "299,90",
+                "installmentPrice": "30,00",
+                "installmentMax": "12x",
+              }
+            ],
+            "promotion": [
+              {
+                "price": 199.90,
+                "installmentPrice": "20,00",
+                "installmentMax": "12x",
+              }
+            ],
+          },
+          {
+            "id": 8,
+            "name": "Produto 8",
             "img": "",
             "alt": "",
             "description": "Mouse ergonômico com sensor de alta precisão e iluminação RGB personalizável.",
