@@ -135,7 +135,7 @@ const isMenuOpen = ref(false);
 			</div>
 
 			<img src="../assets/img/icons/user-icon.webp" alt="Ícone de usuário"
-				class="object-contain hidden lg:flex lg:ml-8 -mt-1 h-[15px] md:h-[15px] lg:h-[20px] xl:h-[23px] 2xl:h-[23px]"
+				class="object-contain hidden lg:flex lg:ml-8 -mt-0.5 h-[15px] md:h-[15px] lg:h-[20px] xl:h-[23px] 2xl:h-[23px]"
 				loading="lazy" data-aos="fade-right" data-aos-delay="400" />
 
 			<!-- Menu Mobile -->

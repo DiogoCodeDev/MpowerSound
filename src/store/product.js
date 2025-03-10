@@ -13,8 +13,9 @@ const useProductStore = defineStore('product', {
         "products": [
           {
             "id": 1,
-            "name": "Smartphone X",
-            "img": "",
+            "name": "Caixa Produto V1.0 - 30 Versão 40t - 1080p.",
+            "img": "@/assets/img/products/product1.webp",
+            "size": "h-20",
             "alt": "",
             "description": "Smartphone com tela AMOLED de 6.5 polegadas, câmera tripla e bateria de longa duração.",
             "saleCfg": [
@@ -28,16 +29,9 @@ const useProductStore = defineStore('product', {
           },
           {
             "id": 2,
-            "name": "Notebook Ultra",
-            "saleCfg": [
-              {
-                "price": "299,90",
-                "installmentPrice": "30,00",
-                "installmentMax": "12x",
-                "installmentMode": "12x",
-              }
-            ],
-            "img": "",
+            "name": "Caixa Produto V1.0 - 30 Versão 40t - 1080p.",
+            "img": "@/assets/img/products/product2.webp",
+            "size": "h-14",
             "alt": "",
             "description": "Notebook leve e potente com processador Intel i7, 16GB RAM e SSD de 512GB.",
             "saleCfg": [
@@ -51,8 +45,9 @@ const useProductStore = defineStore('product', {
           },
           {
             "id": 3,
-            "name": "Fone de Ouvido Bluetooth",
-            "img": "",
+            "name": "Caixa Produto V1.0 - 30 Versão 40t - 1080p.",
+            "img": "@/assets/img/products/product3.webp",
+            "size": "h-20",
             "alt": "",
             "description": "Fone de ouvido sem fio com cancelamento de ruído e bateria de 20 horas.",
             "saleCfg": [
@@ -64,7 +59,7 @@ const useProductStore = defineStore('product', {
             ],
             "promotion": [
               {
-                "price": 199.90,
+                "price": "1.199.90",
                 "installmentPrice": "20,00",
                 "installmentMax": "12x",
               }
@@ -73,7 +68,8 @@ const useProductStore = defineStore('product', {
           {
             "id": 4,
             "name": "Smartwatch Fit",
-            "img": "",
+            "img": "@/assets/img/products/product4.webp",
+            "size": "h-16",
             "alt": "",
             "description": "Relógio inteligente com monitoramento de saúde, GPS e resistência à água.",
             "saleCfg": [
@@ -85,7 +81,7 @@ const useProductStore = defineStore('product', {
             ],
             "promotion": [
               {
-                "price": 199.90,
+                "price": "1.199.90",
                 "installmentPrice": "20,00",
                 "installmentMax": "12x",
               }
@@ -94,7 +90,8 @@ const useProductStore = defineStore('product', {
           {
             "id": 5,
             "name": "Teclado Legal",
-            "img": "",
+            "img": "@/assets/img/products/product5.webp",
+            "size": "h-16",
             "alt": "",
             "description": "Mouse ergonômico com sensor de alta precisão e iluminação RGB personalizável.",
             "saleCfg": [
@@ -106,7 +103,7 @@ const useProductStore = defineStore('product', {
             ],
             "promotion": [
               {
-                "price": 199.90,
+                "price": "1.199.90",
                 "installmentPrice": "20,00",
                 "installmentMax": "12x",
               }
@@ -115,7 +112,8 @@ const useProductStore = defineStore('product', {
           {
             "id": 6,
             "name": "Mouse Gamer RGB",
-            "img": "",
+            "img": "@/assets/img/products/product2.webp",
+            "size": "h-14",
             "alt": "",
             "description": "Mouse ergonômico com sensor de alta precisão e iluminação RGB personalizável.",
             "saleCfg": [
@@ -127,7 +125,7 @@ const useProductStore = defineStore('product', {
             ],
             "promotion": [
               {
-                "price": 199.90,
+                "price": "1.199.90",
                 "installmentPrice": "20,00",
                 "installmentMax": "12x",
               }
@@ -135,8 +133,9 @@ const useProductStore = defineStore('product', {
           },
           {
             "id": 7,
-            "name": "Produto 7",
-            "img": "",
+            "name": "Teclado Legal",
+            "img": "@/assets/img/products/product5.webp",
+            "size": "h-18",
             "alt": "",
             "description": "Mouse ergonômico com sensor de alta precisão e iluminação RGB personalizável.",
             "saleCfg": [
@@ -148,7 +147,7 @@ const useProductStore = defineStore('product', {
             ],
             "promotion": [
               {
-                "price": 199.90,
+                "price": "1.199.90",
                 "installmentPrice": "20,00",
                 "installmentMax": "12x",
               }
@@ -156,8 +155,9 @@ const useProductStore = defineStore('product', {
           },
           {
             "id": 8,
-            "name": "Produto 8",
-            "img": "",
+            "name": "Mouse Gamer RGB",
+            "img": "@/assets/img/products/product2.webp",
+            "size": "h-14",
             "alt": "",
             "description": "Mouse ergonômico com sensor de alta precisão e iluminação RGB personalizável.",
             "saleCfg": [
@@ -169,12 +169,12 @@ const useProductStore = defineStore('product', {
             ],
             "promotion": [
               {
-                "price": 199.90,
+                "price": "1.199.90",
                 "installmentPrice": "20,00",
                 "installmentMax": "12x",
               }
             ],
-          }
+          },
         ]
       },
     ],
