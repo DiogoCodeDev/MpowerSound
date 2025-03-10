@@ -1,41 +1,60 @@
 <template>
-    <div class="relative text-black overflow-hidden mx-auto w-full lg:w-11/12 mb-12 lg:mb-16">
+    <div class="relative text-black overflow-hidden mx-auto w-full lg:w-11/12 mb-12 lg:mb-14">
         <div class="w-full lg:w-11/12 mx-auto py-4 lg:mx-12">
             <h2 class="mx-3 lg:mx-0 text-lg mb-2 font-bold">Carrosel x - Lorem ipsun Lorem ipsun</h2>
-            <p class="mx-3 lg:mx-0 text-xs">A vida é como uma jornada cheia de descobertas e momentos inesperados. Às vezes, as
+            <p class="mr-1 ml-3 lg:mx-0 text-xs">A vida é como uma jornada cheia de descobertas e momentos inesperados. Às
+                vezes, as
                 estradas mais sinuosas nos levam a lugares surpreendentes, onde aprendemos mais sobre nós mesmos do que
                 jamais imaginamos.
             </p>
         </div>
         <div ref="carousel" class="flex overflow-x-auto scroll-smooth lg:mx-11">
             <div v-for="(product, index) in duplicatedProducts" :key="index"
-                class="w-36 h-56 lg:w-48 lg:h-48 bg-white rounded hover:scale-105 duration-200 ease-in-out shadow lg:m-2 mb-4 lg:mb-6 m-2 flex-none">
-                <div class="flex items-center h-20 justify-center pt-4">
-                    <img :class="product.size" class="drop-shadow" :src="getImagePath(product.img)" alt="Produto" />
+                class="w-36 h-56 lg:w-48 lg:h-48 bg-white rounded hover:scale-105 duration-200 ease-in-out shadow lg:m-2 mb-4 lg:mb-6 m-2 flex-none relative">
+                <div v-if="product.promotion"
+                    class="absolute top-0 right-0 p-1 z-50 bg-red-500 text-white text-[0.7rem] font-semibold rounded-bl-lg">
+                    {{ product.promotion[0].discountPercentage }} OFF
                 </div>
-                <div class="w-full flex items-center justify-center pt-5">
-                    <h4 class="font-semibold text-[0.74rem] mb-1 px-4 text-left">{{ product.name }}</h4>
+
+                <div class="flex items-center h-20 justify-center pt-4">
+                    <img :class="product.size" class="drop-shadow cursor-pointer" :src="getImagePath(product.img)"
+                        :alt="product.alt" />
+                </div>
+                <div v-bind:title="product.promotion && product.name.length > 12 ? product.name : ''"
+                    class="w-full flex items-center justify-center pt-5">
+                    <h4 class="font-semibold text-[0.74rem] mb-2 lg:mb-1 px-4 text-left">{{ product.promotion ?
+                        limitNameProduct(product.name) : product.name }}</h4>
                 </div>
                 <div class="w-full flex items-start justify-start">
-                    <h3 v-if="product.promotion" class="font-semibold text-[0.85rem] line-through px-4 text-left text-neutral-500">R$ {{product.promotion[0].price}}</h3>
+                    <h3 v-if="product.promotion"
+                        class="font-semibold text-[0.85rem] line-through px-4 text-left text-neutral-500">R$
+                        {{ product.promotion[0].price }}</h3>
                 </div>
                 <div class="w-full flex items-start justify-start -mt-1">
-                    <h3 v-if="product.saleCfg" :class="product.promotion ? 'text-[0.9rem]' : 'text-[1.03rem] pt-1'" class="font-semibold px-4 text-left text-black">R$ {{product.saleCfg[0].price}}</h3>
+                    <h3 v-if="product.saleCfg"
+                        :class="product.promotion ? 'lg:text-[0.9rem] text-[1.03rem]' : 'text-[1.1rem] lg:text-[1.03rem] pt-1'"
+                        class="font-semibold px-4 mb-2 lg:mb-0 text-left text-black">R$ {{ product.saleCfg[0].price }}
+                        <span class="text-[0.65rem] lg:text-[0.6rem] hidden lg:block font-light -mt-0.5">No PIX!</span>
+                    </h3>
                 </div>
                 <div class="w-full flex items-start justify-start -mt-1.5">
-                    <h4 class="font-semibold px-4 text-left text-black text-[0.55rem] mt-2">Em até <bold class="font-bold">{{product.saleCfg[0].installmentMax}}</bold> de <bold class="font-bold">{{ product.saleCfg[0].installmentPrice }}</bold> sem juros!</h4>
+                    <h4 class="font-semibold px-4 text-left text-black text-[0.6rem] lg:text-[0.55rem] mt-2">Em até
+                        <bold class="font-bold">{{ product.saleCfg[0].installmentMax }}</bold> de <bold
+                            class="font-bold">
+                            {{ product.saleCfg[0].installmentPrice }}</bold> sem juros!
+                    </h4>
                 </div>
             </div>
         </div>
         <button
             class="absolute hidden lg:flex left-1 top-3/5 transform -translate-y-1/2 bg-black hover:bg-neutral-900 cursor-pointer w-8 items-center justify-center h-8 text-white p-2 rounded-full"
             @click="scrollLeft">
-            &lt;
+            <img class="h-3 rotate-180 drop-shadow cursor-pointer" src="../assets/img/icons/white-arrow-right.webp" alt="Seta carrosel esquerda" />
         </button>
         <button
             class="absolute hidden lg:flex right-1 top-3/5 transform -translate-y-1/2 bg-black hover:bg-neutral-900 cursor-pointer w-8 items-center justify-center h-8 text-white p-2 rounded-full"
             @click="scrollRight">
-            &gt;
+            <img class="h-3 drop-shadow cursor-pointer" src="../assets/img/icons/white-arrow-right.webp" alt="Seta carrosel direita" />
         </button>
     </div>
 </template>
@@ -58,8 +77,12 @@ const getScrollAmount = () => {
     return 275;
 };
 
+const limitNameProduct = (name) => {
+    return name.length > 25 ? name.substring(0, 25) + '...' : name;
+}
+
 const getImagePath = (imgPath) => {
-  return new URL(imgPath.replace('@/', '/src/'), import.meta.url).href;
+    return new URL(imgPath.replace('@/', '/src/'), import.meta.url).href;
 };
 
 const scrollLeft = () => {

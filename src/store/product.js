@@ -16,7 +16,7 @@ const useProductStore = defineStore('product', {
             "name": "Caixa Produto V1.0 - 30 Versão 40t - 1080p.",
             "img": "@/assets/img/products/product1.webp",
             "size": "h-20",
-            "alt": "",
+            "alt": "Desc Produto X",
             "description": "Smartphone com tela AMOLED de 6.5 polegadas, câmera tripla e bateria de longa duração.",
             "saleCfg": [
               {
@@ -32,11 +32,11 @@ const useProductStore = defineStore('product', {
             "name": "Caixa Produto V1.0 - 30 Versão 40t - 1080p.",
             "img": "@/assets/img/products/product2.webp",
             "size": "h-14",
-            "alt": "",
+            "alt": "Desc Produto X",
             "description": "Notebook leve e potente com processador Intel i7, 16GB RAM e SSD de 512GB.",
             "saleCfg": [
               {
-                "price": "299,90",
+                "price": "1.299,90",
                 "installmentPrice": "30,00",
                 "installmentMax": "12x",
               }
@@ -48,11 +48,11 @@ const useProductStore = defineStore('product', {
             "name": "Caixa Produto V1.0 - 30 Versão 40t - 1080p.",
             "img": "@/assets/img/products/product3.webp",
             "size": "h-20",
-            "alt": "",
+            "alt": "Desc Produto X",
             "description": "Fone de ouvido sem fio com cancelamento de ruído e bateria de 20 horas.",
             "saleCfg": [
               {
-                "price": "299,90",
+                "price": "899,90",
                 "installmentPrice": "30,00",
                 "installmentMax": "12x",
               }
@@ -60,6 +60,7 @@ const useProductStore = defineStore('product', {
             "promotion": [
               {
                 "price": "1.199.90",
+                "discountPercentage": "15%",
                 "installmentPrice": "20,00",
                 "installmentMax": "12x",
               }
@@ -67,43 +68,38 @@ const useProductStore = defineStore('product', {
           },
           {
             "id": 4,
-            "name": "Smartwatch Fit",
+            "name": "Caixa Produto V1.0 - 30",
             "img": "@/assets/img/products/product4.webp",
             "size": "h-16",
-            "alt": "",
+            "alt": "Desc Produto X",
             "description": "Relógio inteligente com monitoramento de saúde, GPS e resistência à água.",
             "saleCfg": [
               {
-                "price": "299,90",
+                "price": "1.299,90",
                 "installmentPrice": "30,00",
                 "installmentMax": "12x",
               }
             ],
-            "promotion": [
-              {
-                "price": "1.199.90",
-                "installmentPrice": "20,00",
-                "installmentMax": "12x",
-              }
-            ],
+            "promotion": null,
           },
           {
             "id": 5,
-            "name": "Teclado Legal",
+            "name": "Caixa Produto V1.0 - 30",
             "img": "@/assets/img/products/product5.webp",
             "size": "h-16",
-            "alt": "",
-            "description": "Mouse ergonômico com sensor de alta precisão e iluminação RGB personalizável.",
+            "alt": "Desc Produto X",
+            "description": "Mouse ergonômico com sensor de alta prDesc Produto Xecisão e iluminação RGB personalizável.",
             "saleCfg": [
               {
-                "price": "299,90",
+                "price": "199,90",
                 "installmentPrice": "30,00",
                 "installmentMax": "12x",
               }
             ],
             "promotion": [
               {
-                "price": "1.199.90",
+                "price": "299.90",
+                "discountPercentage": "30%",
                 "installmentPrice": "20,00",
                 "installmentMax": "12x",
               }
@@ -111,11 +107,11 @@ const useProductStore = defineStore('product', {
           },
           {
             "id": 6,
-            "name": "Mouse Gamer RGB",
+            "name": "Caixa Produto V1.0 - 30",
             "img": "@/assets/img/products/product2.webp",
             "size": "h-14",
-            "alt": "",
-            "description": "Mouse ergonômico com sensor de alta precisão e iluminação RGB personalizável.",
+            "alt": "Desc Produto X",
+            "description": "Mouse ergonômico com sensor de alta prDesc Produto Xecisão e iluminação RGB personalizável.",
             "saleCfg": [
               {
                 "price": "299,90",
@@ -126,6 +122,7 @@ const useProductStore = defineStore('product', {
             "promotion": [
               {
                 "price": "1.199.90",
+                "discountPercentage": "50%",
                 "installmentPrice": "20,00",
                 "installmentMax": "12x",
               }
@@ -133,11 +130,11 @@ const useProductStore = defineStore('product', {
           },
           {
             "id": 7,
-            "name": "Teclado Legal",
+            "name": "Caixa Produto V1.0 - 30",
             "img": "@/assets/img/products/product5.webp",
             "size": "h-18",
-            "alt": "",
-            "description": "Mouse ergonômico com sensor de alta precisão e iluminação RGB personalizável.",
+            "alt": "Desc Produto X",
+            "description": "Mouse ergonômico com sensor de alta prDesc Produto Xecisão e iluminação RGB personalizável.",
             "saleCfg": [
               {
                 "price": "299,90",
@@ -145,21 +142,15 @@ const useProductStore = defineStore('product', {
                 "installmentMax": "12x",
               }
             ],
-            "promotion": [
-              {
-                "price": "1.199.90",
-                "installmentPrice": "20,00",
-                "installmentMax": "12x",
-              }
-            ],
+            "promotion": null,
           },
           {
             "id": 8,
-            "name": "Mouse Gamer RGB",
+            "name": "Caixa Produto V1.0 - 30",
             "img": "@/assets/img/products/product2.webp",
             "size": "h-14",
-            "alt": "",
-            "description": "Mouse ergonômico com sensor de alta precisão e iluminação RGB personalizável.",
+            "alt": "Desc Produto X",
+            "description": "Mouse ergonômico com sensor de alta prDesc Produto Xecisão e iluminação RGB personalizável.",
             "saleCfg": [
               {
                 "price": "299,90",
@@ -170,6 +161,7 @@ const useProductStore = defineStore('product', {
             "promotion": [
               {
                 "price": "1.199.90",
+                "discountPercentage": "25%",
                 "installmentPrice": "20,00",
                 "installmentMax": "12x",
               }

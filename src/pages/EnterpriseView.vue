@@ -1,6 +1,7 @@
 <script setup>
 import EnterpriseHeader from "../components/EnterpriseHeader.vue";
 import AppFooter from "../components/AppFooter.vue";
+import InfiniteCarousel from "../components/InfiniteCarousel.vue";
 </script>
 
 <template>
@@ -50,8 +51,11 @@ import AppFooter from "../components/AppFooter.vue";
                         <img data-aos="fade-down-left" class="w-72 lg:w-4/12" src="../assets/img/enterprise/enterprise-2.webp" alt="Imagem da empresa M Power Sound"/>
                         <img data-aos="fade-up-left" class="w-72 lg:w-4/12" src="../assets/img/enterprise/enterprise-3.webp" alt="Imagem da empresa M Power Sound"/>
                     </div>
+                    
+                <h3 class="mt-10 lg:mt-6 mb-7 lg:mb-10 lg:text-lg text-xl font-bold uppercase text-center text-black"> Você também pode gostar!</h3>
+                <InfiniteCarousel data-aos="zoom-in" data-aos-delay="700" data-aos-duration="300"/>
+                
             </div>
-
         <AppFooter/>
     </div>
 </template>
