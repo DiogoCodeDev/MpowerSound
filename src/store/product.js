@@ -14,7 +14,7 @@ const useProductStore = defineStore('product', {
           {
             "id": 1,
             "name": "Caixa Produto V1.0 - 30 Versão 40t - 1080p.",
-            "img": "@/assets/img/products/product1.webp",
+            "img": "/products/product1.webp",
             "size": "h-20",
             "alt": "Desc Produto X",
             "description": "Smartphone com tela AMOLED de 6.5 polegadas, câmera tripla e bateria de longa duração.",
@@ -30,7 +30,7 @@ const useProductStore = defineStore('product', {
           {
             "id": 2,
             "name": "Caixa Produto V1.0 - 30 Versão 40t - 1080p.",
-            "img": "@/assets/img/products/product2.webp",
+            "img": "/products/product2.webp",
             "size": "h-14",
             "alt": "Desc Produto X",
             "description": "Notebook leve e potente com processador Intel i7, 16GB RAM e SSD de 512GB.",
@@ -46,7 +46,7 @@ const useProductStore = defineStore('product', {
           {
             "id": 3,
             "name": "Caixa Produto V1.0 - 30 Versão 40t - 1080p.",
-            "img": "@/assets/img/products/product3.webp",
+            "img": "/products/product3.webp",
             "size": "h-20",
             "alt": "Desc Produto X",
             "description": "Fone de ouvido sem fio com cancelamento de ruído e bateria de 20 horas.",
@@ -69,7 +69,7 @@ const useProductStore = defineStore('product', {
           {
             "id": 4,
             "name": "Caixa Produto V1.0 - 30",
-            "img": "@/assets/img/products/product4.webp",
+            "img": "/products/product4.webp",
             "size": "h-16",
             "alt": "Desc Produto X",
             "description": "Relógio inteligente com monitoramento de saúde, GPS e resistência à água.",
@@ -85,7 +85,7 @@ const useProductStore = defineStore('product', {
           {
             "id": 5,
             "name": "Caixa Produto V1.0 - 30",
-            "img": "@/assets/img/products/product5.webp",
+            "img": "/products/product5.webp",
             "size": "h-16",
             "alt": "Desc Produto X",
             "description": "Mouse ergonômico com sensor de alta prDesc Produto Xecisão e iluminação RGB personalizável.",
@@ -108,7 +108,7 @@ const useProductStore = defineStore('product', {
           {
             "id": 6,
             "name": "Caixa Produto V1.0 - 30",
-            "img": "@/assets/img/products/product2.webp",
+            "img": "/products/product2.webp",
             "size": "h-14",
             "alt": "Desc Produto X",
             "description": "Mouse ergonômico com sensor de alta prDesc Produto Xecisão e iluminação RGB personalizável.",
@@ -131,7 +131,7 @@ const useProductStore = defineStore('product', {
           {
             "id": 7,
             "name": "Caixa Produto V1.0 - 30",
-            "img": "@/assets/img/products/product5.webp",
+            "img": "/products/product5.webp",
             "size": "h-18",
             "alt": "Desc Produto X",
             "description": "Mouse ergonômico com sensor de alta prDesc Produto Xecisão e iluminação RGB personalizável.",
@@ -147,7 +147,7 @@ const useProductStore = defineStore('product', {
           {
             "id": 8,
             "name": "Caixa Produto V1.0 - 30",
-            "img": "@/assets/img/products/product2.webp",
+            "img": "/products/product2.webp",
             "size": "h-14",
             "alt": "Desc Produto X",
             "description": "Mouse ergonômico com sensor de alta prDesc Produto Xecisão e iluminação RGB personalizável.",

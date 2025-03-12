@@ -2,6 +2,8 @@
 import AppHeader from "../components/AppHeader.vue";
 import AppFooter from "../components/AppFooter.vue";
 import HomeProducts from "../components/HomeProducts.vue";
+import FindUs from "../components/FindUs.vue";
+import PromotionalBanner from "../components/PromotionalBanner.vue";
 </script>
 
 <template>
@@ -16,8 +18,10 @@ import HomeProducts from "../components/HomeProducts.vue";
 		/>
 		<AppHeader class="z-50 px-7 md:px-20 lg:px-32" />
 
-		<main class="bg-white z-10 flex flex-col">
+		<main class="z-10 flex flex-col">
 			<HomeProducts/>
+			<PromotionalBanner/>
+			<FindUs/>
 		</main>
 
 		<AppFooter/>

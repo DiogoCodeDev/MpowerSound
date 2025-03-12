@@ -53,7 +53,7 @@ import InfiniteCarousel from "../components/InfiniteCarousel.vue";
                     </div>
                     
                 <h3 class="mt-10 lg:mt-6 mb-7 lg:mb-10 lg:text-lg text-xl font-bold uppercase text-center text-black"> Você também pode gostar!</h3>
-                <InfiniteCarousel data-aos="zoom-in" data-aos-delay="700" data-aos-duration="300"/>
+                <InfiniteCarousel/>
                 
             </div>
         <AppFooter/>
