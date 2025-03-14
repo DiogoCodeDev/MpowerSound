@@ -13,14 +13,14 @@ const items = ref([
         description: 'Potência, qualidade e som incomparável. <br> Encontre o amplificador perfeito.',
         img: '/banner/product-1.webp',
         class: 'h-52 md:h-36 lg:h-48',
-        saleDiscount: 'Até <bold class="font-black text-red-500 lg:text-[1.34rem]">70%</bold> de desconto!'
+        saleDiscount: 'Até <bold class="font-black text-yellow-500 lg:text-[1.34rem]">70%</bold> de desconto!'
     },
     {
         title: 'Mixer de som',
         description: 'Som de alta fidelidade para sua experiência! <br> Conheça nossa linha premium.',
         img: '/banner/product-2.webp',
         class: 'h-52 md:h-36 lg:h-48',
-        saleDiscount: 'Em até <bold class="font-black text-red-500 lg:text-[1.34rem]">12x</bold> sem juros!'
+        saleDiscount: 'Em até <bold class="font-black text-yellow-500 lg:text-[1.34rem]">12x</bold> sem juros!'
     }
 ]);
 
