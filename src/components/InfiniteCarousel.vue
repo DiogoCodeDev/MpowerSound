@@ -1,12 +1,13 @@
 <template>
     <div class="relative text-black overflow-hidden mx-auto w-full lg:w-11/12 mb-12 lg:mb-14">
         <div class="w-full lg:w-11/12 mx-auto py-4 lg:mx-12">
-            <h2 class="mx-3 lg:mx-0 text-lg mb-2 font-bold">Carrosel x - Lorem ipsun Lorem ipsun</h2>
-            <p class="mr-1 ml-3 lg:mx-0 text-xs">A vida é como uma jornada cheia de descobertas e momentos inesperados. Às
-                vezes, as
-                estradas sinuosas nos levam a lugares surpreendentes, onde aprendemos mais sobre nós mesmos do que
-                jamais imaginamos.
+            <h2 class="mx-3 lg:mx-0 text-xl lg:text-lg mb-2 font-bold">Amplificador Compacto</h2>
+            <p class="mr-1 ml-3 lg:mx-0 text-xs hidden lg:block">Apresentamos a nova linha de equipamentos de som desenvolvida para proporcionar uma experiência sonora imersiva e de alta qualidade. Com tecnologia avançada e design moderno, essa linha é ideal para diversos ambientes, como residências, eventos e espaços profissionais, oferecendo um desempenho excepcional em todas as frequências sonoras.
             </p>
+            <p class="mr-1 ml-3 lg:mx-0 text-xs lg:hidden">Apresentamos a nova linha de equipamentos de som desenvolvida para proporcionar uma experiência sonora imersiva e de alta qualidade.</p>
+        </div>
+        <div class="w-11/12 mx-auto lg:py-1 text-right lg:mx-11 mb-2 lg:mb-0">
+            <h2 class="text-[0.8rem] lg:text-[0.7rem] text-black"> Ver mais...</h2>
         </div>
         <div ref="carousel" class="flex overflow-x-auto scroll-smooth lg:mx-11">
             <div data-aos="zoom-in" data-aos-delay="100" data-aos-duration="200" v-for="(product, index) in duplicatedProducts" :key="index"

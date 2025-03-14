@@ -6,10 +6,6 @@ const useProductStore = defineStore('product', {
   state: () => ({
     productSection: [
       {
-        "name": "Produto X - Linha MP30EX",
-        "location": "Campinas - SP",
-        "saleHomeSection": true,
-        "salePage": false,
         "products": [
           {
             "id": 1,

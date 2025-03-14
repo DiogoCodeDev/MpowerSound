@@ -52,7 +52,7 @@ import InfiniteCarousel from "../components/InfiniteCarousel.vue";
                         <img data-aos="fade-up-left" class="w-72 lg:w-4/12" src="../assets/img/enterprise/enterprise-3.webp" alt="Imagem da empresa M Power Sound"/>
                     </div>
                     
-                <h3 class="mt-10 lg:mt-6 mb-7 lg:mb-10 lg:text-lg text-xl font-bold uppercase text-center text-black"> Você também pode gostar!</h3>
+                <h3 class="mt-4 lg:mt-6 mb-7 lg:mb-10 lg:text-lg text-xl font-bold uppercase text-center text-black"> Você também pode gostar!</h3>
                 <InfiniteCarousel/>
                 
             </div>
