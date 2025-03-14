@@ -6,7 +6,7 @@ import InfiniteCarousel from "../components/InfiniteCarousel.vue";
         <h1 class="text-black font-bold text-center uppercase text-xl py-12"> Produtos em destaque! </h1>
 
         <div class="w-full items-end flex justify-end px-4 lg:px-32 mb-8">
-            <div class="w-full flex justify-end px-4 lg:px-7">
+            <div data-aos="fade-left" class="w-full flex justify-end px-4 lg:px-7">
                 <div class="relative w-36 lg:w-48">
                     <select id="filter"
                         class="w-full bg-white text-black p-2 pl-3 pr-8 rounded outline-none text-sm border-l-2 border-black appearance-none">
@@ -23,7 +23,7 @@ import InfiniteCarousel from "../components/InfiniteCarousel.vue";
                 </div>
             </div>
 
-            <div class="relative w-[28rem] lg:w-80">
+            <div data-aos="fade-left" class="relative w-[28rem] lg:w-80">
                 <input id="name" type="text"
                     class="w-full bg-white text-black p-2 pl-3 pr-8 rounded outline-none text-sm border-l-2 border-black"
                     placeholder="Pesquise aqui.." required />

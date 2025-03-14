@@ -7,7 +7,7 @@
             <p class="mr-1 ml-3 lg:mx-0 text-xs lg:hidden">Apresentamos a nova linha de equipamentos de som desenvolvida para proporcionar uma experiência sonora imersiva e de alta qualidade.</p>
         </div>
         <div class="w-11/12 mx-auto lg:py-1 text-right lg:mx-11 mb-2 lg:mb-0">
-            <h2 class="text-[0.8rem] lg:text-[0.7rem] text-black"> Ver mais...</h2>
+            <h2 class="text-[0.8rem] lg:text-[0.7rem] text-black cursor-pointer"> Ver mais...</h2>
         </div>
         <div ref="carousel" class="flex overflow-x-auto scroll-smooth lg:mx-11">
             <div data-aos="zoom-in" data-aos-delay="100" data-aos-duration="200" v-for="(product, index) in duplicatedProducts" :key="index"
