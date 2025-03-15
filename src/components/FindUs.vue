@@ -3,21 +3,44 @@ import { onMounted } from "vue";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 
+import markerIcon from "leaflet/dist/images/marker-icon.png";
+import markerShadow from "leaflet/dist/images/marker-shadow.png";
+
 onMounted(() => {
-    const map = L.map("map-container").setView([-22.9520172, -47.0914413], 16);
+    const isMobile = window.innerWidth <= 768;
+
+    const map = L.map("map-container", {
+        dragging: !isMobile,
+        scrollWheelZoom: true,
+        touchZoom: true,
+        doubleClickZoom: true,
+        zoomControl: true,
+    }).setView([-22.9520172, -47.0914413], 16);
 
     L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
         attribution: 'M Power Sound - Campinas SP',
     }).addTo(map);
 
-    L.marker([-22.9520172, -47.0914413]).addTo(map)
+    const customIcon = L.icon({
+        iconUrl: markerIcon,
+        shadowUrl: markerShadow,
+        iconSize: [25, 41],
+        iconAnchor: [12, 41],
+        popupAnchor: [1, -34],
+        shadowSize: [41, 41]
+    });
+
+    const marker = L.marker([-22.9520172, -47.0914413], { icon: customIcon }).addTo(map)
         .bindPopup(`
             <div style="text-align: center;">
                 📍 <strong>Rua Altino Arantes, 717</strong><br>
                 Campinas/SP <br>
             </div>
-        `)
-        .openPopup();
+        `);
+
+    map.whenReady(() => {
+        marker.openPopup();
+    });
 });
 </script>
 
