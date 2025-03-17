@@ -9,7 +9,7 @@ import InfiniteCarousel from "../components/InfiniteCarousel.vue";
             <div data-aos="fade-left" class="w-full flex justify-end px-4 lg:px-7">
                 <div class="relative w-36 lg:w-48">
                     <select id="filter"
-                        class="w-full bg-white text-black p-2 pl-3 pr-8 rounded outline-none text-sm border-l-2 border-black appearance-none">
+                        class="w-full bg-white font-bold text-black p-2 pl-3 pr-8 rounded outline-none text-sm border-l-2 border-black appearance-none">
                         <option class="py-4" value="" disabled selected>Filtre aqui..</option>
                         <option class="py-4" value="conectividade">Promoções</option>
                         <option class="py-4" value="potencia">Maior preço</option>
@@ -23,14 +23,15 @@ import InfiniteCarousel from "../components/InfiniteCarousel.vue";
                 </div>
             </div>
 
-            <div data-aos="fade-left" class="relative w-[28rem] lg:w-80">
+            <div data-aos="fade-left" class="relative w-[29.5rem] lg:w-80">
                 <input id="name" type="text"
-                    class="w-full bg-white text-black p-2 pl-3 pr-8 rounded outline-none text-sm border-l-2 border-black"
+                    class="w-full bg-white text-black p-2 pl-3 pr-8 rounded outline-none text-sm border-l-2 border-black placeholder:font-bold"
                     placeholder="Pesquise aqui.." required />
                 <span class="absolute right-2 top-1/2 transform -translate-y-1/2 cursor-pointer">
                     <img class="h-4 m-1" src="../assets/img/icons/search-icon.webp" alt="Ícone de procura, search" />
                 </span>
             </div>
+
         </div>
 
         <InfiniteCarousel />

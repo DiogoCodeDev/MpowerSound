@@ -10,7 +10,7 @@
             <h2 class="text-[0.8rem] lg:text-[0.7rem] text-black cursor-pointer"> Ver mais...</h2>
         </div>
         <div ref="carousel" class="flex overflow-x-auto scroll-smooth lg:mx-11">
-            <div data-aos="zoom-in" data-aos-delay="100" data-aos-duration="200" v-for="(product, index) in duplicatedProducts" :key="index"
+            <div @click="goToProduct(product)" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="200" v-for="(product, index) in duplicatedProducts" :key="index"
                 class="w-36 h-56 lg:w-48 lg:h-48 bg-white rounded hover:scale-105 duration-200 ease-in-out shadow lg:m-2 mb-4 lg:mb-6 m-2 flex-none relative">
                 <div v-if="product.promotion"
                     class="absolute top-0 right-0 p-1 z-50 bg-red-500 text-white text-[0.7rem] font-semibold rounded-bl-lg">
@@ -63,7 +63,9 @@
 <script setup>
 import { ref, computed, onMounted, onUnmounted } from 'vue';
 import useProductStore from '../store/product.js';
+import { useRouter } from 'vue-router';
 
+const router = useRouter();
 const productStore = useProductStore();
 const products = ref(productStore.productSection[0].products);
 
@@ -101,6 +103,10 @@ const scrollRight = () => {
 };
 
 let autoScrollInterval;
+
+const goToProduct = (product) => {
+  router.push(`/product/${product.id}`);
+};
 
 onMounted(() => {
     autoScrollInterval = setInterval(scrollRight, 5000);

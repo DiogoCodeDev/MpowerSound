@@ -80,7 +80,7 @@ const isMenuOpen = ref(false);
 <template>
 	<div ref="navbarRef" class="z-50" :class="{ 'navbar-fixed': isNavbarFixed, 'navbar-default': !isNavbarFixed }"
 		:style="!isNavbarFixed ? '' : 'transition: none;'">
-		<nav :class="!isNavbarFixed ? 'w-full mb-10 lg:mb-20 pt-12 lg:pt-12' : 'w-full px-7 md:px-20 lg:px-32 py-4 lg:py-4 xl:py-2'"
+		<nav :class="!isNavbarFixed ? 'w-full mb-6 lg:mb-8 pt-8 lg:pt-8' : 'w-full px-7 md:px-20 lg:px-32 py-4 lg:py-4 xl:py-2'"
 			class="justify-between items-center flex">
 			<router-link data-aos="fade-right" data-aos-delay="200" to="/">
 				<h1 :class="isNavbarFixed ? 'text-[1.8rem] xl:text-[2.3rem] lg:mr-6' : 'text-[2.1rem] xl:text-[2.7rem] '"
