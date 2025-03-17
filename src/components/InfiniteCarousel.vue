@@ -12,28 +12,28 @@
         <div ref="carousel" class="flex overflow-x-auto scroll-smooth lg:mx-11">
             <div @click="goToProduct(product)" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="200" v-for="(product, index) in duplicatedProducts" :key="index"
                 class="w-36 h-56 lg:w-48 lg:h-48 bg-white rounded hover:scale-105 duration-200 ease-in-out shadow lg:m-2 mb-4 lg:mb-6 m-2 flex-none relative">
-                <div v-if="product.promotion"
+                <div v-if="product.oldPricePromotion"
                     class="absolute top-0 right-0 p-1 z-50 bg-red-500 text-white text-[0.7rem] font-semibold rounded-bl-lg">
-                    {{ product.promotion[0].discountPercentage }} OFF
+                    {{ product.oldPricePromotion[0].discountPercentage }} OFF
                 </div>
 
                 <div class="flex items-center h-20 justify-center pt-4">
                     <img :class="product.size" class="drop-shadow cursor-pointer" :src="getImagePath(product.img)"
                         :alt="product.alt" />
                 </div>
-                <div v-bind:title="product.promotion && product.name.length > 12 ? product.name : ''"
+                <div v-bind:title="product.oldPricePromotion && product.name.length > 12 ? product.name : ''"
                     class="w-full flex items-center justify-center pt-5">
-                    <h4 class="font-semibold text-[0.74rem] mb-2 lg:mb-1 px-4 text-left">{{ product.promotion ?
+                    <h4 class="font-semibold text-[0.74rem] mb-2 lg:mb-1 px-4 text-left">{{ product.oldPricePromotion ?
                         limitNameProduct(product.name) : product.name }}</h4>
                 </div>
                 <div class="w-full flex items-start justify-start">
-                    <h3 v-if="product.promotion"
+                    <h3 v-if="product.oldPricePromotion"
                         class="font-semibold text-[0.85rem] line-through px-4 text-left text-neutral-500">R$
-                        {{ product.promotion[0].price }}</h3>
+                        {{ product.oldPricePromotion[0].price }}</h3>
                 </div>
                 <div class="w-full flex items-start justify-start -mt-1">
-                    <h3 v-if="product.saleCfg"
-                        :class="product.promotion ? 'lg:text-[0.9rem] text-[1.03rem]' : 'text-[1.1rem] lg:text-[1.03rem] pt-1'"
+                    <h3 v-if="product.saleCfg" 
+                        :class="product.oldPricePromotion ? 'lg:text-[0.9rem] text-[1.03rem]' : 'text-[1.1rem] lg:text-[1.03rem] pt-1'"
                         class="font-semibold px-4 mb-2 lg:mb-0 text-left text-black">R$ {{ product.saleCfg[0].price }}
                         <span class="text-[0.65rem] lg:text-[0.6rem] hidden lg:block font-light -mt-0.5">No PIX!</span>
                     </h3>

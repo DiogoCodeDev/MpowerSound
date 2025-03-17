@@ -2,18 +2,29 @@
 import HeaderProduct from "../components/HeaderProduct.vue";
 import AppFooter from "../components/AppFooter.vue";
 import InfiniteCarousel from "../components/InfiniteCarousel.vue";
-import { useRoute } from "vue-router";
-import useProductStore from '../store/product.js';
+import { useRoute, useRouter } from "vue-router";
+import { ref, watch, computed } from "vue";
+import useProductStore from "../store/product.js";
 
 const route = useRoute();
+const router = useRouter();
 const productStore = useProductStore();
 
-const productId = parseInt(route.params.id);
+const productId = computed(() => parseInt(route.params.id));
 
-const product = productStore.productSection[0].products.find(
-    (product) => product.id === productId
-);
+const product = ref(null);
 
+const getProduct = () => {
+  product.value = productStore.productSection[0].products.find(
+    (product) => product.id === productId.value
+  );
+};
+
+const backPage = () => {
+    router.push(`/`);
+};
+
+watch(productId, getProduct, { immediate: true });
 </script>
 
 <template>
@@ -21,18 +32,22 @@ const product = productStore.productSection[0].products.find(
         class="relative w-full max-w-full overflow-hidden overflow-x-hidden flex flex-col text-white before:absolute before:inset-0 before:bg-black before:opacity-85">
         <img src="/mpower-sound-bg.webp" alt="Background Mpower Sound"
             class="fixed top-0 left-0 w-full h-full object-cover -z-10" />
-        <HeaderProduct class="z-50 px-7 md:px-20 lg:px-32" />
+        <HeaderProduct class="z-50 px-7 md:px-20 lg:px-32"/>
 
         <div class="z-10 text-black"
             style="background: linear-gradient(to bottom, white, #eeeeee);">
-            <div class="lg:flex-row w-full flex flex-col pb-16">
-                <div class="w-full lg:w-80 lg:h-80 flex-grow lg:py-20 pb-2 pt-12 flex flex-wrap justify-center">
+            <div class="w-full cursor-pointer flex px-6 md:px-12 xl:px-20 items-center h-12 mt-8">
+                <img @click="backPage()" class="h-3 mr-2 rotate-180" alt="imagem produto não encontrado" src="/icons/black-arrow-right.webp"/>
+                <h2 @click="backPage()" class="uppercase">Voltar</h2>
+            </div>
+            <div v-if="product" class="lg:flex-row w-full flex flex-col pb-16">
+                <div class="w-full lg:w-80 lg:h-80 flex-grow lg:pb-20 lg:pt-8 pb-2 pt-8 flex flex-wrap justify-center">
                     <section v-for="(img, index) in product.imgsProduct" :key="index" class="w-40 h-40 lg:w-56 lg:h-56 xl:w-72 xl:h-72 m-2"
                         style="background: linear-gradient(to bottom, white, #f1f1f1);">
                         <img data-aos="zoom-in" :src="img.img" class="h-full mx-auto" />
                     </section>
                 </div>
-                <div class="w-full lg:w-1/2 py-8 lg:py-20 lg:px-12 px-6 mr-2">
+                <div class="w-full lg:w-1/2 py-8 lg:pb-20 lg:pt-12 lg:px-12 px-6 mr-2">
                     <h1 class="text-black text-[1.72rem] pl-2 pt-2">{{ product.name }}</h1>
                     <p class="text-black text-[1.05rem] pt-2 mb-6">{{ product.description }}</p>
                     <section v-for="(desc, index) in product.topicsDesc" :key="index">
@@ -40,20 +55,20 @@ const product = productStore.productSection[0].products.find(
                             <bold class="font-bold text-[1rem]">• {{ desc.title }}:</bold> {{ desc.description }}
                         </p>
                     </section>
-                    <section v-if="product.promotion && product.promotion.length > 0">
+                    <section v-if="product.oldPricePromotion && product.oldPricePromotion.length > 0">
                         <div class="mt-5">
                             <h1 data-aos="fade-down" class="text-neutral-500 text-[2.22rem] line-through pl-2 mr-3">R$ {{
-                                product.saleCfg[0].price }}</h1>
+                                product.oldPricePromotion[0].price }}</h1>
                         </div>
                         <div class="flex flex-col xl:flex-row xl:items-center -mt-4">
                             <div>
-                                <h1 data-aos="fade-down" class="text-black lg:text-[3.2rem] text-[3.7rem] lg:pt-2 pl-2 mr-3">R$ {{ product.promotion[0].price }}</h1>
+                                <h1 data-aos="fade-down" class="text-black lg:text-[3.2rem] text-[3.7rem] lg:pt-2 pl-2 mr-3">R$ {{ product.saleCfg[0].price }}</h1>
                             </div>
                             <div data-aos="fade-left">
                                 <h1 class="text-black lg:text-[1.12rem] text-[1.42rem] mt-2 pl-2">no PIX</h1>
                                 <h1 class="text-black lg:text-[1.12rem] text-[1.22rem] -mt-2 pl-2">ou
-                                    até{{ product.promotion[0].installmentMax }} de R$ {{
-                                        product.promotion[0].installmentPrice }}</h1>
+                                    até{{ product.saleCfg[0].installmentMax }} de R$ {{
+                                        product.saleCfg[0].installmentPrice }}</h1>
                             </div>
                         </div>
                     </section>
@@ -90,9 +105,17 @@ const product = productStore.productSection[0].products.find(
                         </button>
                     </div>
                 </div>  
-            </div>       
+            </div> 
+            <div v-else style="background-color: #fff;" class="w-full flex flex-col lg:flex-row items-center justify-center py-16">
+                <img data-aos="flip-right" class="lg:mr-16 mb-4 lg:mb-0" alt="imagem produto não encontrado" src="/products/not-found.webp"/>
+                <div class="w-10/12 lg:w-72">
+                    <h3 class="mb-3 text-[1.2rem]">Ops! Produto não encontrado.</h3>
+                    <h4 class="mb-3">Não conseguimos localizar o item que você está procurando.</h4>
+                    <h4>Verifique se a busca está correta ou explore outras categorias em nosso catálogo.</h4>
+                </div>
+            </div>      
             <div style="background-color: #f5f5f5;" class="w-full pb-8 bg-white">
-                <h3 class="mt-4 lg:mt-6 mb-7 lg:mb-10 lg:text-lg text-xl font-bold uppercase text-center text-black"> Você também pode gostar!</h3>
+                <h3 class="mt-4 lg:mt-6 pt-12 mb-7 lg:mb-10 lg:text-lg text-xl font-bold uppercase text-center text-black"> Você também pode gostar!</h3>
                 <InfiniteCarousel/>
             </div>
         </div>

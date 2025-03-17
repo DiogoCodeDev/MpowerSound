@@ -49,7 +49,7 @@ const useProductStore = defineStore('product', {
                 "alt": "desc product 1"
               }
             ],
-            "promotion": [
+            "oldPricePromotion": [
               {
                 "price": "1.599.90",
                 "discountPercentage": "15%",
@@ -100,7 +100,7 @@ const useProductStore = defineStore('product', {
                 "alt": "desc product 1"
               }
             ],
-            "promotion": null,
+            "oldPricePromotion": null,
           },
           {
             "id": 3,
@@ -144,7 +144,7 @@ const useProductStore = defineStore('product', {
                 "alt": "desc product 1"
               }
             ],
-            "promotion": [
+            "oldPricePromotion": [
               {
                 "price": "1.199.90",
                 "discountPercentage": "15%",
@@ -195,7 +195,7 @@ const useProductStore = defineStore('product', {
                 "alt": "desc product 1"
               }
             ],
-            "promotion": null,
+            "oldPricePromotion": null,
           },
           {
             "id": 5,
@@ -239,7 +239,7 @@ const useProductStore = defineStore('product', {
                 "alt": "desc product 1"
               }
             ],
-            "promotion": [
+            "oldPricePromotion": [
               {
                 "price": "299.90",
                 "discountPercentage": "30%",
@@ -290,7 +290,7 @@ const useProductStore = defineStore('product', {
                 "alt": "desc product 1"
               }
             ],
-            "promotion": [
+            "oldPricePromotion": [
               {
                 "price": "1.199.90",
                 "discountPercentage": "50%",
@@ -341,7 +341,7 @@ const useProductStore = defineStore('product', {
                 "alt": "desc product 1"
               }
             ],
-            "promotion": null,
+            "oldPricePromotion": null,
           },
           {
             "id": 8,
@@ -385,7 +385,7 @@ const useProductStore = defineStore('product', {
                 "alt": "desc product 1"
               }
             ],
-            "promotion": [
+            "oldPricePromotion": [
               {
                 "price": "1.199.90",
                 "discountPercentage": "25%",
