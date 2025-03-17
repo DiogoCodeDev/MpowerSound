@@ -9,10 +9,10 @@ const useProductStore = defineStore('product', {
         "products": [
           {
             "id": 1,
-            "name": "Caixa Produto V1.0 - 30 Versão 40t - 1080p.",
+            "name": "Caixas Acústicas Passiva - Versão 40t - 1080p.",
             "img": "/products/product1.webp",
             "size": "h-20",
-            "alt": "Desc Produto X",
+            "alt": "Este amplificador excepcional oferece uma experiência sonora incomparável, onde cada nota e cada nuance são reproduzidas com clareza cristalina e precisão impressionante.",
             "description": "Este amplificador excepcional oferece uma experiência sonora incomparável, onde cada nota e cada nuance são reproduzidas com clareza cristalina e precisão impressionante.",
             "topicsDesc": [
               {
@@ -26,8 +26,8 @@ const useProductStore = defineStore('product', {
             ],
             "saleCfg": [
               {
-                "price": "2.299,90",
-                "installmentPrice": "30,00",
+                "price": "799,90",
+                "installmentPrice": "65,00",
                 "installmentMax": "12x",
               }
             ],
@@ -37,12 +37,12 @@ const useProductStore = defineStore('product', {
                 "alt": "desc product 1"
               },
               {
-                "img": "/products/product-1-picture.webp",
-                "alt": "desc product 1"
+                "img": "/products/product-2-picture.webp",
+                "alt": "desc product 2"
               },
               {
-                "img": "/products/product-1-picture.webp",
-                "alt": "desc product 1"
+                "img": "/products/product-3-picture.webp",
+                "alt": "desc product 3"
               },
               {
                 "img": "/products/product-1-picture.webp",
@@ -51,20 +51,20 @@ const useProductStore = defineStore('product', {
             ],
             "oldPricePromotion": [
               {
-                "price": "1.599.90",
-                "discountPercentage": "15%",
-                "installmentPrice": "135,00 sem juros.",
+                "price": "1.599,90",
+                "discountPercentage": "50%",
+                "installmentPrice": "133,25 sem juros.",
                 "installmentMax": "12x",
               }
             ],
           },
           {
             "id": 2,
-            "name": "Caixa Produto V1.0 - 30 Versão 40t - 1080p.",
+            "name": "Amplificador Compacto - Mpower Sound",
             "img": "/products/product2.webp",
             "size": "h-14",
-            "alt": "Desc Produto X",
-            "description": "Notebook leve e potente com processador Intel i7, 16GB RAM e SSD de 512GB.",
+            "alt": "Este amplificador excepcional oferece uma experiência sonora incomparável, onde cada nota e cada nuance são reproduzidas com clareza cristalina e precisão impressionante.",
+            "description": "Este amplificador excepcional oferece uma experiência sonora incomparável, onde cada nota e cada nuance são reproduzidas com clareza cristalina e precisão impressionante.",
             "topicsDesc": [
               {
                 "title": "Qualidade de som incomparável",
@@ -88,12 +88,12 @@ const useProductStore = defineStore('product', {
                 "alt": "desc product 1"
               },
               {
-                "img": "/products/product-1-picture.webp",
-                "alt": "desc product 1"
+                "img": "/products/product-2-picture.webp",
+                "alt": "desc product 2"
               },
               {
-                "img": "/products/product-1-picture.webp",
-                "alt": "desc product 1"
+                "img": "/products/product-3-picture.webp",
+                "alt": "desc product 3"
               },
               {
                 "img": "/products/product-1-picture.webp",
@@ -104,11 +104,11 @@ const useProductStore = defineStore('product', {
           },
           {
             "id": 3,
-            "name": "Caixa Produto V1.0 - 30 Versão 40t - 1080p.",
+            "name": "Caixa Multiuso - 40t Mpower Sound",
             "img": "/products/product3.webp",
             "size": "h-20",
-            "alt": "Desc Produto X",
-            "description": "Fone de ouvido sem fio com cancelamento de ruído e bateria de 20 horas.",
+            "alt": "Este amplificador excepcional oferece uma experiência sonora incomparável, onde cada nota e cada nuance são reproduzidas com clareza cristalina e precisão impressionante.",
+            "description": "Este amplificador excepcional oferece uma experiência sonora incomparável, onde cada nota e cada nuance são reproduzidas com clareza cristalina e precisão impressionante.",
             "topicsDesc": [
               {
                 "title": "Qualidade de som incomparável",
@@ -121,8 +121,8 @@ const useProductStore = defineStore('product', {
             ],
             "saleCfg": [
               {
-                "price": "899,90",
-                "installmentPrice": "30,00",
+                "price": "959,92",
+                "installmentPrice": "79,99",
                 "installmentMax": "12x",
               }
             ],
@@ -132,12 +132,12 @@ const useProductStore = defineStore('product', {
                 "alt": "desc product 1"
               },
               {
-                "img": "/products/product-1-picture.webp",
-                "alt": "desc product 1"
+                "img": "/products/product-2-picture.webp",
+                "alt": "desc product 2"
               },
               {
-                "img": "/products/product-1-picture.webp",
-                "alt": "desc product 1"
+                "img": "/products/product-3-picture.webp",
+                "alt": "desc product 3"
               },
               {
                 "img": "/products/product-1-picture.webp",
@@ -147,19 +147,19 @@ const useProductStore = defineStore('product', {
             "oldPricePromotion": [
               {
                 "price": "1.199.90",
-                "discountPercentage": "15%",
-                "installmentPrice": "20,00",
+                "discountPercentage": "20%",
+                "installmentPrice": "99,99",
                 "installmentMax": "12x",
               }
             ],
           },
           {
             "id": 4,
-            "name": "Caixa Produto V1.0 - 30",
+            "name": "Caixa Multiuso / Mpower Sound",
             "img": "/products/product4.webp",
             "size": "h-16",
-            "alt": "Desc Produto X",
-            "description": "Relógio inteligente com monitoramento de saúde, GPS e resistência à água.",
+            "alt": "Este amplificador excepcional oferece uma experiência sonora incomparável, onde cada nota e cada nuance são reproduzidas com clareza cristalina e precisão impressionante.",
+            "description": "Este amplificador excepcional oferece uma experiência sonora incomparável, onde cada nota e cada nuance são reproduzidas com clareza cristalina e precisão impressionante.",
             "topicsDesc": [
               {
                 "title": "Qualidade de som incomparável",
@@ -183,12 +183,12 @@ const useProductStore = defineStore('product', {
                 "alt": "desc product 1"
               },
               {
-                "img": "/products/product-1-picture.webp",
-                "alt": "desc product 1"
+                "img": "/products/product-2-picture.webp",
+                "alt": "desc product 2"
               },
               {
-                "img": "/products/product-1-picture.webp",
-                "alt": "desc product 1"
+                "img": "/products/product-3-picture.webp",
+                "alt": "desc product 3"
               },
               {
                 "img": "/products/product-1-picture.webp",
@@ -202,8 +202,8 @@ const useProductStore = defineStore('product', {
             "name": "Caixa Produto V1.0 - 30",
             "img": "/products/product5.webp",
             "size": "h-16",
-            "alt": "Desc Produto X",
-            "description": "Mouse ergonômico com sensor de alta prDesc Produto Xecisão e iluminação RGB personalizável.",
+            "alt": "Este amplificador excepcional oferece uma experiência sonora incomparável, onde cada nota e cada nuance são reproduzidas com clareza cristalina e precisão impressionante.",
+            "description": "Este amplificador excepcional oferece uma experiência sonora incomparável, onde cada nota e cada nuance são reproduzidas com clareza cristalina e precisão impressionante.",
             "topicsDesc": [
               {
                 "title": "Qualidade de som incomparável",
@@ -216,8 +216,8 @@ const useProductStore = defineStore('product', {
             ],
             "saleCfg": [
               {
-                "price": "199,90",
-                "installmentPrice": "30,00",
+                "price": "209,30",
+                "installmentPrice": "17,44",
                 "installmentMax": "12x",
               }
             ],
@@ -227,12 +227,12 @@ const useProductStore = defineStore('product', {
                 "alt": "desc product 1"
               },
               {
-                "img": "/products/product-1-picture.webp",
-                "alt": "desc product 1"
+                "img": "/products/product-2-picture.webp",
+                "alt": "desc product 2"
               },
               {
-                "img": "/products/product-1-picture.webp",
-                "alt": "desc product 1"
+                "img": "/products/product-3-picture.webp",
+                "alt": "desc product 3"
               },
               {
                 "img": "/products/product-1-picture.webp",
@@ -243,7 +243,7 @@ const useProductStore = defineStore('product', {
               {
                 "price": "299.90",
                 "discountPercentage": "30%",
-                "installmentPrice": "20,00",
+                "installmentPrice": "24,99",
                 "installmentMax": "12x",
               }
             ],
@@ -253,8 +253,8 @@ const useProductStore = defineStore('product', {
             "name": "Caixa Produto V1.0 - 30",
             "img": "/products/product2.webp",
             "size": "h-14",
-            "alt": "Desc Produto X",
-            "description": "Mouse ergonômico com sensor de alta prDesc Produto Xecisão e iluminação RGB personalizável.",
+            "alt": "Este amplificador excepcional oferece uma experiência sonora incomparável, onde cada nota e cada nuance são reproduzidas com clareza cristalina e precisão impressionante.",
+            "description": "Este amplificador excepcional oferece uma experiência sonora incomparável, onde cada nota e cada nuance são reproduzidas com clareza cristalina e precisão impressionante.",
             "topicsDesc": [
               {
                 "title": "Qualidade de som incomparável",
@@ -267,8 +267,8 @@ const useProductStore = defineStore('product', {
             ],
             "saleCfg": [
               {
-                "price": "299,90",
-                "installmentPrice": "30,00",
+                "price": "719,94",
+                "installmentPrice": "59,99",
                 "installmentMax": "12x",
               }
             ],
@@ -278,12 +278,12 @@ const useProductStore = defineStore('product', {
                 "alt": "desc product 1"
               },
               {
-                "img": "/products/product-1-picture.webp",
-                "alt": "desc product 1"
+                "img": "/products/product-2-picture.webp",
+                "alt": "desc product 2"
               },
               {
-                "img": "/products/product-1-picture.webp",
-                "alt": "desc product 1"
+                "img": "/products/product-3-picture.webp",
+                "alt": "desc product 3"
               },
               {
                 "img": "/products/product-1-picture.webp",
@@ -293,8 +293,8 @@ const useProductStore = defineStore('product', {
             "oldPricePromotion": [
               {
                 "price": "1.199.90",
-                "discountPercentage": "50%",
-                "installmentPrice": "20,00",
+                "discountPercentage": "40%",
+                "installmentPrice": "99,99",
                 "installmentMax": "12x",
               }
             ],
@@ -304,8 +304,8 @@ const useProductStore = defineStore('product', {
             "name": "Caixa Produto V1.0 - 30",
             "img": "/products/product5.webp",
             "size": "h-18",
-            "alt": "Desc Produto X",
-            "description": "Mouse ergonômico com sensor de alta prDesc Produto Xecisão e iluminação RGB personalizável.",
+            "alt": "Este amplificador excepcional oferece uma experiência sonora incomparável, onde cada nota e cada nuance são reproduzidas com clareza cristalina e precisão impressionante.",
+            "description": "Este amplificador excepcional oferece uma experiência sonora incomparável, onde cada nota e cada nuance são reproduzidas com clareza cristalina e precisão impressionante.",
             "topicsDesc": [
               {
                 "title": "Qualidade de som incomparável",
@@ -329,12 +329,12 @@ const useProductStore = defineStore('product', {
                 "alt": "desc product 1"
               },
               {
-                "img": "/products/product-1-picture.webp",
-                "alt": "desc product 1"
+                "img": "/products/product-2-picture.webp",
+                "alt": "desc product 2"
               },
               {
-                "img": "/products/product-1-picture.webp",
-                "alt": "desc product 1"
+                "img": "/products/product-3-picture.webp",
+                "alt": "desc product 3"
               },
               {
                 "img": "/products/product-1-picture.webp",
@@ -348,8 +348,8 @@ const useProductStore = defineStore('product', {
             "name": "Caixa Produto V1.0 - 30",
             "img": "/products/product2.webp",
             "size": "h-14",
-            "alt": "Desc Produto X",
-            "description": "Mouse ergonômico com sensor de alta prDesc Produto Xecisão e iluminação RGB personalizável.",
+            "alt": "Este amplificador excepcional oferece uma experiência sonora incomparável, onde cada nota e cada nuance são reproduzidas com clareza cristalina e precisão impressionante.",
+            "description": "Este amplificador excepcional oferece uma experiência sonora incomparável, onde cada nota e cada nuance são reproduzidas com clareza cristalina e precisão impressionante.",
             "topicsDesc": [
               {
                 "title": "Qualidade de som incomparável",
@@ -362,7 +362,7 @@ const useProductStore = defineStore('product', {
             ],
             "saleCfg": [
               {
-                "price": "299,90",
+                "price": "1.299,90",
                 "installmentPrice": "30,00",
                 "installmentMax": "12x",
               }
@@ -373,26 +373,19 @@ const useProductStore = defineStore('product', {
                 "alt": "desc product 1"
               },
               {
-                "img": "/products/product-1-picture.webp",
-                "alt": "desc product 1"
+                "img": "/products/product-2-picture.webp",
+                "alt": "desc product 2"
               },
               {
-                "img": "/products/product-1-picture.webp",
-                "alt": "desc product 1"
+                "img": "/products/product-3-picture.webp",
+                "alt": "desc product 3"
               },
               {
                 "img": "/products/product-1-picture.webp",
                 "alt": "desc product 1"
               }
             ],
-            "oldPricePromotion": [
-              {
-                "price": "1.199.90",
-                "discountPercentage": "25%",
-                "installmentPrice": "20,00",
-                "installmentMax": "12x",
-              }
-            ],
+            "oldPricePromotion": null,
           },
         ]
       },
