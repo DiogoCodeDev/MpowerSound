@@ -1,17 +1,16 @@
 <template>
     <div class="relative text-black overflow-hidden mx-auto w-full lg:w-11/12 mb-12 lg:mb-14">
         <div class="w-full lg:w-11/12 mx-auto py-4 lg:mx-12">
-            <h2 class="mx-3 lg:mx-0 text-xl lg:text-lg mb-2 font-bold">M Power Sound / Linha de produtos X</h2>
-            <p class="mr-1 ml-3 lg:mx-0 text-xs hidden lg:block">Apresentamos a nova linha de equipamentos de som desenvolvida para proporcionar uma experiência sonora imersiva e de alta qualidade. Com tecnologia avançada e design moderno, essa linha é ideal para diversos ambientes, como residências, eventos e espaços profissionais, oferecendo um desempenho excepcional em todas as frequências sonoras.
-            </p>
-            <p class="mr-1 ml-3 lg:mx-0 text-xs lg:hidden">Apresentamos a nova linha de equipamentos de som desenvolvida para proporcionar uma experiência sonora imersiva e de alta qualidade.</p>
+            <h2 class="mx-3 lg:mx-0 text-xl lg:text-lg mb-2 font-bold">{{ slide.title }}</h2>
+            <p class="mr-1 ml-3 lg:mx-0 text-xs hidden lg:block">{{ slide.desc }}</p>
+            <p class="mr-1 ml-3 lg:mx-0 text-xs lg:hidden">{{ slide.descMobile }}</p>
         </div>
         <div class="w-11/12 mx-auto lg:py-1 text-right lg:mx-11 mb-2 lg:mb-0">
             <h2 class="text-[0.8rem] lg:text-[0.7rem] text-black cursor-pointer"> Ver mais...</h2>
         </div>
         <div ref="carousel" class="flex overflow-x-auto scroll-smooth lg:mx-11">
-            <div @click="goToProduct(product)" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="200" v-for="(product, index) in duplicatedProducts" :key="index"
-                class="w-36 h-56 lg:w-48 lg:h-48 bg-white rounded hover:scale-105 duration-200 ease-in-out shadow lg:m-2 mb-4 lg:mb-6 m-2 flex-none relative">
+            <div @click="goToProduct(product)" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="200" v-for="(product, index) in slide.products" :key="index"
+                class="w-36 h-56 lg:w-48 lg:h-48 bg-white rounded hover:scale-105 duration-200 ease-in-out shadow lg:m-2 lg:mr-0 mb-4 lg:mb-6 m-2 flex-none relative">
                 <div v-if="product.oldPricePromotion"
                     class="absolute top-0 right-0 p-1 z-50 bg-red-500 text-white text-[0.7rem] font-semibold rounded-bl-lg">
                     {{ product.oldPricePromotion[0].discountPercentage }} OFF
@@ -23,12 +22,12 @@
                 </div>
                 <div v-bind:title="product.oldPricePromotion && product.name.length > 12 ? product.name : ''"
                     class="w-full flex items-center justify-center pt-5">
-                    <h4 class="font-semibold text-[0.74rem] mb-2 lg:mb-1 px-4 text-left">{{ product.oldPricePromotion ?
+                    <h4 class="font-semibold text-[0.74rem] mb-2 lg:mb-1 px-4 text-left">{{ product.oldPricePromotion ? 
                         limitNameProduct(product.name) : product.name }}</h4>
                 </div>
                 <div class="w-full flex items-start justify-start">
                     <h3 v-if="product.oldPricePromotion"
-                        class="font-semibold text-[0.85rem] line-through px-4 text-left text-neutral-500">R$
+                        class="font-semibold text-[0.88rem] lg:text-[0.85rem] line-through px-4 text-left text-neutral-500">R$ 
                         {{ product.oldPricePromotion[0].price }}</h3>
                 </div>
                 <div class="w-full flex items-start justify-start -mt-1">
@@ -41,8 +40,7 @@
                 <div class="w-full flex items-start justify-start -mt-1.5">
                     <h4 class="font-semibold px-4 text-left text-black text-[0.6rem] lg:text-[0.55rem] mt-2">Em até
                         <bold class="font-bold">{{ product.saleCfg[0].installmentMax }}</bold> de <bold
-                            class="font-bold">
-                            {{ product.saleCfg[0].installmentPrice }}</bold> sem juros!
+                            class="font-bold">{{ product.saleCfg[0].installmentPrice }}</bold> sem juros!
                     </h4>
                 </div>
             </div>
@@ -67,11 +65,16 @@ import { useRouter } from 'vue-router';
 
 const router = useRouter();
 const productStore = useProductStore();
-const products = ref(productStore.productSection[0].products);
-
-const duplicatedProducts = computed(() => [...products.value, ...products.value, ...products.value]);
+const products = ref(productStore.productSection);
 
 const carousel = ref(null);
+
+defineProps({
+  slide: {
+    type: Array,
+    required: true
+  }
+});
 
 const getScrollAmount = () => {
     if (window.innerWidth <= 768) {
@@ -92,6 +95,10 @@ const scrollLeft = () => {
     if (carousel.value) {
         const scrollAmount = getScrollAmount();
         carousel.value.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+
+        if (carousel.value.scrollLeft <= 0) {
+            carousel.value.scrollLeft = carousel.value.scrollWidth - carousel.value.clientWidth;
+        }
     }
 };
 
@@ -99,6 +106,10 @@ const scrollRight = () => {
     if (carousel.value) {
         const scrollAmount = getScrollAmount();
         carousel.value.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+
+        if (carousel.value.scrollLeft + carousel.value.clientWidth >= carousel.value.scrollWidth) {
+            carousel.value.scrollLeft = 0;
+        }
     }
 };
 
@@ -109,7 +120,18 @@ const goToProduct = (product) => {
 };
 
 onMounted(() => {
-    autoScrollInterval = setInterval(scrollRight, 5000);
+    autoScrollInterval = setInterval(() => {
+        if (carousel.value) {
+            const currentScroll = carousel.value.scrollLeft + carousel.value.clientWidth;
+            const maxScroll = carousel.value.scrollWidth;
+
+            if (currentScroll >= maxScroll) {
+                carousel.value.scrollLeft = 0;
+            } else {
+                scrollRight();
+            }
+        }
+    }, 3500);
 });
 
 onUnmounted(() => {

@@ -15,8 +15,19 @@ const productId = computed(() => parseInt(route.params.id));
 const product = ref(null);
 const selectedImage = ref(null)
 
+const slidesArray = computed(() => {
+  return productStore.slideEnterprise.map(slide => {
+    return {
+      ...slide,
+      products: slide.products.map(productId => {
+        return productStore.products.find(product => product.id === productId) || {};
+      }),
+    };
+  });
+});
+
 const getProduct = () => {
-    product.value = productStore.productSection[0].products.find(
+    product.value = productStore.products.find(
         (product) => product.id === productId.value
     );
 };
@@ -144,7 +155,7 @@ watch(productId, getProduct, { immediate: true });
                 <h3
                     class="mt-4 lg:mt-6 pt-12 mb-7 lg:mb-10 lg:text-lg text-xl font-bold uppercase text-center text-black">
                     Você também pode gostar!</h3>
-                <InfiniteCarousel />
+                <InfiniteCarousel :slide="slidesArray[0]"/>
             </div>
         </div>
 

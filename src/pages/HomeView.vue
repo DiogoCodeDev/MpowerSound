@@ -1,9 +1,26 @@
 <script setup>
 import AppHeader from "../components/AppHeader.vue";
+import { computed } from "vue";
 import AppFooter from "../components/AppFooter.vue";
 import HomeProducts from "../components/HomeProducts.vue";
 import FindUs from "../components/FindUs.vue";
 import PromotionalBanner from "../components/PromotionalBanner.vue";
+import useProductStore from '../store/product.js';
+
+const productStore = useProductStore();
+
+const slidesArray = computed(() => {
+  return productStore.slidesHome.map(slide => {
+    return {
+      ...slide,
+      products: slide.products.map(productId => {
+        return productStore.products.find(product => product.id === productId) || {};
+      }),
+    };
+  });
+});
+
+
 </script>
 
 <template>
@@ -19,7 +36,7 @@ import PromotionalBanner from "../components/PromotionalBanner.vue";
 		<AppHeader class="z-50 px-7 md:px-20 lg:px-32" />
 
 		<main class="z-10 flex flex-col">
-			<HomeProducts/>
+			<HomeProducts :slides="slidesArray"/>
 			<PromotionalBanner/>
 			<FindUs/>
 		</main>
