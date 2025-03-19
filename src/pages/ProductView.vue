@@ -55,7 +55,7 @@ watch(productId, getProduct, { immediate: true });
         <HeaderProduct class="z-50 px-7 md:px-20 lg:px-32" />
 
         <div class="z-10 text-black" style="background: linear-gradient(to bottom, white, #eeeeee);">
-            <div class="w-full cursor-pointer flex px-6 md:px-12 xl:px-20 items-center h-8 lg:h-12 mt-8">
+            <div class="w-full cursor-pointer flex px-6 md:px-12 xl:px-20 items-center h-8 lg:h-10 mt-8">
                 <img @click="backPage()" class="h-3 mr-2 rotate-180" alt="imagem produto não encontrado"
                     src="/icons/black-arrow-right.webp" />
                 <h2 @click="backPage()" class="uppercase lg:text-[0.85rem]">Voltar</h2>
@@ -63,7 +63,7 @@ watch(productId, getProduct, { immediate: true });
             <div v-if="product" class="lg:flex-row w-full flex flex-col pb-16">
                 <div class="w-full lg:w-80 lg:h-80 flex-grow lg:pb-20 lg:pt-8 pb-2 pt-8 flex flex-wrap justify-center">
                     <section v-for="(img, index) in product.imgsProduct" :key="index"
-                        class="w-40 h-40 lg:w-56 lg:h-56 xl:w-64 xl:h-64 m-2"
+                        class="w-40 h-40 lg:w-56 lg:h-56 xl:w-60 xl:h-60 m-2"
                         style="background: linear-gradient(to bottom, white, #f1f1f1);">
                         <img data-aos="zoom-in" :src="img.img" class="h-full shadow mx-auto cursor-pointer"
                             @click="openImage(img.img)" alt="Product image" />
@@ -100,7 +100,7 @@ watch(productId, getProduct, { immediate: true });
                             <div data-aos="fade-left">
                                 <h1 class="text-black lg:text-[1.12rem] text-[1.42rem] mt-2 pl-2">no PIX</h1>
                                 <h1 class="text-black lg:text-[1.12rem] text-[1.22rem] -mt-2 pl-2">ou
-                                    até{{ product.saleCfg[0].installmentMax }} de R$ {{
+                                    até {{ product.saleCfg[0].installmentMax }} de R$ {{
                                         product.saleCfg[0].installmentPrice }}</h1>
                             </div>
                         </div>
@@ -113,7 +113,7 @@ watch(productId, getProduct, { immediate: true });
                             </div>
                             <div data-aos="fade-left">
                                 <h1 class="text-black lg:text-[1.12rem] text-[1.42rem] mt-2 pl-2">no PIX</h1>
-                                <h1 class="text-black lg:text-[1.12rem] text-[1.42rem] lg:-mt-2 pl-2">ou até{{
+                                <h1 class="text-black lg:text-[1.12rem] text-[1.42rem] lg:-mt-2 pl-2">ou até {{
                                     product.saleCfg[0].installmentMax
                                 }}
                                     de R$ {{ product.saleCfg[0].installmentPrice }}</h1>
@@ -153,7 +153,7 @@ watch(productId, getProduct, { immediate: true });
             </div>
             <div style="background-color: #f5f5f5;" class="w-full pb-8 bg-white">
                 <h3
-                    class="mt-4 lg:mt-6 pt-12 mb-7 lg:mb-10 lg:text-lg text-xl font-bold uppercase text-center text-black">
+                    class="mt-4 lg:mt-2 pt-12 mb-7 lg:mb-10 lg:text-lg text-xl font-bold uppercase text-center text-black">
                     Você também pode gostar!</h3>
                 <InfiniteCarousel :slide="slidesArray[0]"/>
             </div>
