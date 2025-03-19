@@ -79,9 +79,9 @@ watch(productId, getProduct, { immediate: true });
                 </div>
                 <div class="w-full lg:w-1/2 py-8 lg:pb-20 lg:pt-12 lg:px-12 px-6 mr-2">
                     <h1 class="text-black text-[1.72rem] pl-2 pt-2 lg:pt-0 lg:mb-5 leading-none">{{ product.name }}</h1>
-                    <p class="text-black text-[1.05rem] pt-12 lg:pt-2 mb-6">{{ product.description }}</p>
+                    <p data-aos="fade-left" class="text-black text-[1.05rem] pt-12 lg:pt-2 mb-6">{{ product.description }}</p>
                     <section v-for="(desc, index) in product.topicsDesc" :key="index">
-                        <p data-aos="fade-left" class="text-black text-[0.9rem] pt-2 lg:pl-2">
+                        <p data-aos="fade-left" class="text-black text-[0.9rem] lg:text-[0.8rem] pt-2 lg:mb-3 lg:pl-2">
                             <bold class="font-bold text-[1rem]">• {{ desc.title }}:</bold> {{ desc.description }}
                         </p>
                     </section>

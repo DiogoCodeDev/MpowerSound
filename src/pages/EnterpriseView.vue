@@ -26,8 +26,10 @@ const slidesArray = computed(() => {
             class="fixed top-0 left-0 w-full h-full object-cover -z-10" />
         <EnterpriseHeader class="z-50 px-7 md:px-20 lg:px-32" />
 
-            <div class="w-full px-8 lg:px-32 bg-[#F1F1F1] gap-20 lg:gap-72 z-10">
-                <h2 data-aos="fade-right" data-aos-delay="100" class="text-black py-12 text-xl lg:text-xl ml-4"> <bold class="font-bold">MPOWER SOUND</bold> – Potência e Qualidade em Cada Frequência </h2>
+        
+        <div class="w-full px-8 lg:px-32 bg-[#F1F1F1] gap-20 lg:gap-72 z-10">
+                <h1 data-aos="fade-right" data-aos-delay="100" class="text-center font-bold text-[1.8rem] lg:text-[1.5rem] uppercase text-black pt-16 pb-5 lg:py-10"> Quem somos? </h1>
+                <h2 data-aos="fade-right" data-aos-delay="100" class="text-black py-12 text-[1.2rem] lg:text-xl ml-4"> <bold class="font-bold">MPOWER SOUND</bold> – Potência e Qualidade em Cada Frequência </h2>
                 <p data-aos="fade-right" data-aos-delay="200" class="text-black text-md tracking-wide lg:text-sm">Com mais de 30 anos de experiência, a <bold class="font-bold">MPOWER SOUND</bold> é referência no desenvolvimento e fabricação de
                     equipamentos de áudio de alta performance. Sua sede moderna, em operação desde 2011, conta com uma
                     das estruturas mais avançadas do Brasil, garantindo eficiência e qualidade em cada detalhe da
