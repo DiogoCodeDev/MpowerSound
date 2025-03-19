@@ -27,12 +27,12 @@
                 </div>
                 <div class="w-full flex items-start justify-start">
                     <h3 v-if="product.oldPricePromotion"
-                        class="font-semibold text-[0.88rem] lg:text-[0.85rem] line-through px-4 text-left text-neutral-500">R$ 
+                        class="font-semibold text-[0.88rem] lg:text-[0.845rem] line-through px-4 text-left text-neutral-500">R$ 
                         {{ product.oldPricePromotion[0].price }}</h3>
                 </div>
                 <div class="w-full flex items-start justify-start -mt-1">
                     <h3 v-if="product.saleCfg" 
-                        :class="product.oldPricePromotion ? 'lg:text-[0.9rem] text-[1.13rem]' : 'text-[1.1rem] lg:text-[1.03rem] pt-1'"
+                        :class="product.oldPricePromotion ? 'lg:text-[0.98rem] text-[1.13rem]' : 'text-[1.05rem] lg:text-[1.08rem] pt-1'"
                         class="font-semibold px-4 mb-2 lg:mb-0 text-left text-black">R$ {{ product.saleCfg[0].price }}
                         <span class="text-[0.65rem] lg:text-[0.6rem] hidden lg:block font-light -mt-0.5">No PIX!</span>
                     </h3>
