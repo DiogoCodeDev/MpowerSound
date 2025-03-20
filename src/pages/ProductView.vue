@@ -134,9 +134,9 @@ watch(productId, getProduct, { immediate: true });
                             </div>
                         </div>
                     </section>
-                    <div data-aos="fade-left" class="mb-10 mt-12 lg:mt-0">
+                    <div data-aos="fade-left" class="mb-10 mt-14 lg:mt-0">
                         <h3 class="font-bold uppercase mt-8 text-[1.3rem] lg:text-[1.1rem]">Tenho interesse:</h3>
-                        <p class="text-[1.1rem] lg:text-[0.9rem] mt-3">Por enquanto estamos fazendo as vendas somente por esses
+                        <p class="text-[0.98rem] lg:text-[0.9rem] mt-3">Por enquanto estamos fazendo as vendas somente por esses
                             meios de comunicação!</p>
                     </div>
                     <div class="flex flex-col lg:flex-row items-center lg:items-start">
