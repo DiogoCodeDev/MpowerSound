@@ -2,6 +2,7 @@
 import SupportHeader from "../components/SupportHeader.vue";
 import AppFooter from "../components/AppFooter.vue";
 import InfiniteCarousel from "../components/InfiniteCarousel.vue";
+import FaqSection from "../components/FaqSection.vue";
 import { reactive } from "vue";
 import { computed } from "vue";
 import useProductStore from '../store/product.js';
@@ -129,6 +130,9 @@ const submitForm = () => {
             <h3 class="mt-28 lg:mt-36 mb-7 lg:mb-10 lg:text-lg text-xl font-bold uppercase text-center text-black"> Você também pode gostar!</h3>
             <div class="w-full">
                 <InfiniteCarousel :slide="slidesArray[0]"/>
+            </div>
+            <div class="w-full">
+                <FaqSection/>
             </div>
         </div>
 

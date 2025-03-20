@@ -1,11 +1,28 @@
 <script setup>
+import { ref, computed } from 'vue';
 import InfiniteCarousel from "../components/InfiniteCarousel.vue";
 
-defineProps({
+const props = defineProps({
   slides: {
     type: Array,
     required: true,
   },
+});
+
+const filtroTexto = ref('');
+const filtroCategoria = ref('');
+
+const slidesFiltrados = computed(() => {
+  return props.slides.map(slide => {
+    const produtosFiltrados = slide.products.filter(product => {
+      const nomeMatch = product.name.toLowerCase().includes(filtroTexto.value.toLowerCase());
+      const categoriaMatch = filtroCategoria.value === '' || slide.title.toLowerCase().includes(filtroCategoria.value.toLowerCase());
+
+      return nomeMatch && categoriaMatch;
+    });
+
+    return { ...slide, products: produtosFiltrados };
+  }).filter(slide => slide.products.length > 0);
 });
 </script>
 
@@ -19,18 +36,16 @@ defineProps({
       <div data-aos="fade-left" class="w-full flex justify-end px-4 lg:px-7">
         <div class="relative w-36 lg:w-48">
           <select
-            id="filter"
+            id="categoryFilter"
             class="w-full bg-white font-bold text-black p-2 pl-3 pr-8 rounded outline-none text-sm border-l-2 border-black appearance-none"
+            v-model="filtroCategoria"
           >
-            <option class="py-4" value="" disabled selected>Filtre aqui..</option>
-            <option class="py-4" value="conectividade">Promoções</option>
-            <option class="py-4" value="potencia">Maior preço</option>
-            <option class="py-4" value="modelo">Menor preço</option>
+            <option class="py-4" value="">Todos</option>
+            <option class="py-4" value="caixas acústicas passivas">Caixas Acústicas Passivas</option>
+            <option class="py-4" value="amplificadores de potência">Amplificadores de Potência</option>
+            <option class="py-4" value="caixas para sonorização ambiente">Caixas para Sonorização Ambiente</option>
           </select>
-
-          <span
-            class="absolute right-2 top-1/2 transform -translate-y-1/2 pointer-events-none text-xs"
-          >
+          <span class="absolute right-2 top-1/2 transform -translate-y-1/2 pointer-events-none text-xs">
             ▼
           </span>
         </div>
@@ -40,6 +55,7 @@ defineProps({
         <input
           id="name"
           type="text"
+          v-model="filtroTexto"
           class="w-full bg-white text-black p-2 pl-3 pr-8 rounded outline-none text-sm border-l-2 border-black placeholder:font-bold"
           placeholder="Pesquise aqui.."
           required
@@ -54,7 +70,7 @@ defineProps({
       </div>
     </div>
 
-    <div v-for="(slide, index) in slides" :key="index">
+    <div v-for="(slide, index) in slidesFiltrados" :key="index">
       <InfiniteCarousel :slide="slide" />
     </div>
   </div>
