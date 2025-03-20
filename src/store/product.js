@@ -77,19 +77,19 @@ const useProductStore = defineStore('product', {
         ],
         "imgsProduct": [
           {
-            "img": "/products/product-1-picture.webp",
+            "img": "/products/product-2-picture.webp",
             "alt": "desc product 1"
           },
           {
-            "img": "/products/product-2-picture.webp",
+            "img": "/products/product-4-picture.webp",
             "alt": "desc product 2"
           },
           {
-            "img": "/products/product-3-picture.webp",
+            "img": "/products/product-5-picture.webp",
             "alt": "desc product 3"
           },
           {
-            "img": "/products/product-1-picture.webp",
+            "img": "/products/product-3-picture.webp",
             "alt": "desc product 1"
           }
         ],
@@ -128,19 +128,19 @@ const useProductStore = defineStore('product', {
         ],
         "imgsProduct": [
           {
-            "img": "/products/product-1-picture.webp",
-            "alt": "desc product 1"
+            "img": "/products/product-3-picture.webp",
+            "alt": "desc product 4"
           },
           {
             "img": "/products/product-2-picture.webp",
-            "alt": "desc product 2"
-          },
-          {
-            "img": "/products/product-3-picture.webp",
             "alt": "desc product 3"
           },
           {
-            "img": "/products/product-1-picture.webp",
+            "img": "/products/product-6-picture.webp",
+            "alt": "desc product 2"
+          },
+          {
+            "img": "/products/product-5-picture.webp",
             "alt": "desc product 1"
           }
         ],
@@ -172,7 +172,11 @@ const useProductStore = defineStore('product', {
         ],
         "imgsProduct": [
           {
-            "img": "/products/product-1-picture.webp",
+            "img": "/products/product-3-picture.webp",
+            "alt": "desc product 6"
+          },
+          {
+            "img": "/products/product-5-picture.webp",
             "alt": "desc product 1"
           },
           {
@@ -180,12 +184,8 @@ const useProductStore = defineStore('product', {
             "alt": "desc product 2"
           },
           {
-            "img": "/products/product-3-picture.webp",
-            "alt": "desc product 3"
-          },
-          {
             "img": "/products/product-1-picture.webp",
-            "alt": "desc product 1"
+            "alt": "desc product 3"
           }
         ],
         "oldPricePromotion": [
@@ -223,7 +223,7 @@ const useProductStore = defineStore('product', {
         ],
         "imgsProduct": [
           {
-            "img": "/products/product-1-picture.webp",
+            "img": "/products/product-5-picture.webp",
             "alt": "desc product 1"
           },
           {
@@ -235,7 +235,7 @@ const useProductStore = defineStore('product', {
             "alt": "desc product 3"
           },
           {
-            "img": "/products/product-1-picture.webp",
+            "img": "/products/product-6-picture.webp",
             "alt": "desc product 1"
           }
         ],
@@ -267,7 +267,7 @@ const useProductStore = defineStore('product', {
         ],
         "imgsProduct": [
           {
-            "img": "/products/product-1-picture.webp",
+            "img": "/products/product-4-picture.webp",
             "alt": "desc product 1"
           },
           {
@@ -275,11 +275,11 @@ const useProductStore = defineStore('product', {
             "alt": "desc product 2"
           },
           {
-            "img": "/products/product-3-picture.webp",
+            "img": "/products/product-2-picture.webp",
             "alt": "desc product 3"
           },
           {
-            "img": "/products/product-1-picture.webp",
+            "img": "/products/product-6-picture.webp",
             "alt": "desc product 1"
           }
         ],
@@ -318,7 +318,7 @@ const useProductStore = defineStore('product', {
         ],
         "imgsProduct": [
           {
-            "img": "/products/product-1-picture.webp",
+            "img": "/products/product-5-picture.webp",
             "alt": "desc product 1"
           },
           {
@@ -326,11 +326,11 @@ const useProductStore = defineStore('product', {
             "alt": "desc product 2"
           },
           {
-            "img": "/products/product-3-picture.webp",
+            "img": "/products/product-6-picture.webp",
             "alt": "desc product 3"
           },
           {
-            "img": "/products/product-1-picture.webp",
+            "img": "/products/product-4-picture.webp",
             "alt": "desc product 1"
           }
         ],
@@ -369,15 +369,15 @@ const useProductStore = defineStore('product', {
         ],
         "imgsProduct": [
           {
-            "img": "/products/product-1-picture.webp",
+            "img": "/products/product-4-picture.webp",
             "alt": "desc product 1"
           },
           {
-            "img": "/products/product-2-picture.webp",
+            "img": "/products/product-6-picture.webp",
             "alt": "desc product 2"
           },
           {
-            "img": "/products/product-3-picture.webp",
+            "img": "/products/product-2-picture.webp",
             "alt": "desc product 3"
           },
           {
@@ -413,7 +413,7 @@ const useProductStore = defineStore('product', {
         ],
         "imgsProduct": [
           {
-            "img": "/products/product-1-picture.webp",
+            "img": "/products/product-4-picture.webp",
             "alt": "desc product 1"
           },
           {

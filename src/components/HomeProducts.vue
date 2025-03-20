@@ -4,7 +4,7 @@ import InfiniteCarousel from "../components/InfiniteCarousel.vue";
 
 const props = defineProps({
   slides: {
-    type: Array,
+    type: [Array, Object],
     required: true,
   },
 });
@@ -28,7 +28,7 @@ const slidesFiltrados = computed(() => {
 
 <template>
   <div class="w-full bg-neutral-100 text-black">
-    <h1 class="text-black font-bold text-center uppercase text-xl py-12">
+    <h1 class="text-black font-bold text-center uppercase text-[1.35rem] py-12">
       Produtos em destaque!
     </h1>
 
@@ -56,7 +56,7 @@ const slidesFiltrados = computed(() => {
           id="name"
           type="text"
           v-model="filtroTexto"
-          class="w-full bg-white text-black p-2 pl-3 pr-8 rounded outline-none text-sm border-l-2 border-black placeholder:font-bold"
+          class="w-full bg-white text-black font-medium p-2 pl-3 pr-8 rounded outline-none text-sm border-l-2 border-black placeholder:font-bold"
           placeholder="Pesquise aqui.."
           required
         />

@@ -1,16 +1,16 @@
 <template>
     <div class="relative text-black overflow-hidden mx-auto w-full lg:w-11/12 mb-12 lg:mb-14">
         <div class="w-full lg:w-11/12 mx-auto py-4 lg:mx-12">
-            <h2 class="mx-3 lg:mx-0 text-xl lg:text-lg mb-2 font-bold">{{ slide.title }}</h2>
-            <p class="mr-1 ml-3 lg:mx-0 text-xs hidden lg:block">{{ slide.desc }}</p>
-            <p class="mr-1 ml-3 lg:mx-0 text-xs lg:hidden">{{ slide.descMobile }}</p>
+            <h2 class="mx-3 lg:mx-0 text-xl lg:text-lg mb-4 lg:mb-2 font-[400]">{{ slide.title }}</h2>
+            <p class="mr-1 ml-3 lg:mx-0 lg:text-[0.8rem] hidden font-[400] lg:block">{{ slide.desc }}</p>
+            <p class="mr-1 ml-3 lg:mx-0 text-sm lg:hidden">{{ slide.descMobile }}</p>
         </div>
         <div class="w-11/12 mx-auto lg:py-1 text-right lg:mx-11 mb-2 lg:mb-0">
-            <h2 class="text-[0.8rem] lg:text-[0.7rem] text-black cursor-pointer"> Ver mais...</h2>
+            <h2 class="text-[0.93rem] lg:text-[0.75rem] text-black cursor-pointer"> Ver mais...</h2>
         </div>
         <div ref="carousel" class="flex overflow-x-auto scroll-smooth lg:mx-11">
             <div @click="goToProduct(product)" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="200" v-for="(product, index) in slide.products" :key="index"
-                class="w-36 h-56 lg:w-48 lg:h-48 bg-white rounded hover:scale-105 duration-200 ease-in-out shadow lg:m-2 lg:mr-0 mb-4 lg:mb-6 m-2 flex-none relative">
+                class="w-36 h-58 lg:w-48 lg:h-50 bg-white rounded hover:scale-105 duration-200 ease-in-out shadow lg:m-2 lg:mr-0 mb-4 lg:mb-6 m-2 flex-none relative">
                 <div v-if="product.oldPricePromotion"
                     class="absolute top-0 right-0 p-1 z-50 bg-red-500 text-white text-[0.7rem] font-semibold rounded-bl-lg">
                     {{ product.oldPricePromotion[0].discountPercentage }} OFF
@@ -22,8 +22,8 @@
                 </div>
                 <div v-bind:title="product.oldPricePromotion && product.name.length > 12 ? product.name : ''"
                     class="w-full flex items-center justify-center pt-5">
-                    <h4 class="font-semibold text-[0.74rem] mb-2 lg:mb-1 px-4 text-left">{{ product.oldPricePromotion ? 
-                        limitNameProduct(product.name) : product.name }}</h4>
+                    <h2 class="font-semibold text-[0.8rem] mb-2 lg:mb-1 px-4 text-left">{{ product.oldPricePromotion ? 
+                        limitNameProduct(product.name) : product.name }}</h2>
                 </div>
                 <div class="w-full flex items-start justify-start">
                     <h3 v-if="product.oldPricePromotion"
@@ -32,15 +32,15 @@
                 </div>
                 <div class="w-full flex items-start justify-start -mt-1">
                     <h3 v-if="product.saleCfg" 
-                        :class="product.oldPricePromotion ? 'lg:text-[0.98rem] text-[1.13rem]' : 'text-[1.05rem] lg:text-[1.08rem] pt-1'"
+                        :class="product.oldPricePromotion ? 'lg:text-[0.98rem] text-[1.13rem]' : 'text-[1.15rem] lg:text-[1.08rem] -pt-1'"
                         class="font-semibold px-4 mb-2 lg:mb-0 text-left text-black">R$ {{ product.saleCfg[0].price }}
-                        <span class="text-[0.65rem] lg:text-[0.6rem] hidden lg:block font-light -mt-0.5">No PIX!</span>
+                        <span class="text-[0.65rem] lg:text-[0.6rem] hidden lg:block font-[500] -mt-0.5">No PIX!</span>
                     </h3>
                 </div>
-                <div class="w-full flex items-start justify-start -mt-1.5">
-                    <h4 class="font-semibold px-4 text-left text-black text-[0.6rem] lg:text-[0.55rem] mt-2">Em até
-                        <bold class="font-bold">{{ product.saleCfg[0].installmentMax }}</bold> de <bold
-                            class="font-bold">{{ product.saleCfg[0].installmentPrice }}</bold> sem juros!
+                <div class="w-full flex items-start justify-start lg:ml-2 ml-1 -mt-1.5">
+                    <h4 class="font-[600] px-2 text-left text-black text-[0.67rem] lg:text-[0.55rem] mt-2">Em até
+                        <span class="font-semibold">{{ product.saleCfg[0].installmentMax }}</span> de <span
+                            class="font-semibold">{{ product.saleCfg[0].installmentPrice }}</span> sem juros!
                     </h4>
                 </div>
             </div>
@@ -71,7 +71,7 @@ const carousel = ref(null);
 
 defineProps({
   slide: {
-    type: Array,
+    type: [Array, Object],
     required: true
   }
 });

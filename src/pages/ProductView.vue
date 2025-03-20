@@ -44,6 +44,16 @@ const closeModal = () => {
   selectedImage.value = null
 }
 
+const ShareProduct = () => {
+  if (navigator.share) {
+    navigator.share({
+      title: 'Confira isso!',
+      text: 'Dá uma olhada nesse conteúdo incrível.',
+      url: window.location.href
+    })
+  }
+};
+
 watch(productId, getProduct, { immediate: true });
 </script>
 
@@ -55,10 +65,14 @@ watch(productId, getProduct, { immediate: true });
         <HeaderProduct class="z-50 px-7 md:px-20 lg:px-32" />
 
         <div class="z-10 text-black" style="background: linear-gradient(to bottom, white, #eeeeee);">
-            <div class="w-full cursor-pointer flex px-6 md:px-12 xl:px-20 items-center h-8 lg:h-10 mt-8">
-                <img @click="backPage()" class="h-3 mr-2 rotate-180" alt="imagem produto não encontrado"
+            <div class="w-full cursor-pointer flex px-6 md:px-12 xl:px-20 justify-between h-8 lg:h-10 mt-8">
+                <div class="flex items-center">
+                    <img @click="backPage()" class="h-3 mr-2 rotate-180" alt="imagem produto não encontrado"
                     src="/icons/black-arrow-right.webp" />
-                <h2 @click="backPage()" class="uppercase lg:text-[0.85rem]">Voltar</h2>
+                    <h2 @click="backPage()" class="uppercase lg:text-[0.85rem]">Voltar</h2>
+                </div>
+                <img @click="ShareProduct" class="lg:h-5 h-6 mr-2" alt="imagem produto não encontrado"
+                    src="/icons/share-icon.webp" />
             </div>
             <div v-if="product" class="lg:flex-row w-full flex flex-col pb-16">
                 <div class="w-full lg:w-80 lg:h-80 flex-grow lg:pb-20 lg:pt-8 pb-2 pt-8 flex flex-wrap justify-center">
@@ -81,8 +95,8 @@ watch(productId, getProduct, { immediate: true });
                     <h1 class="text-black text-[1.72rem] pl-2 pt-2 lg:pt-0 lg:mb-5 leading-none">{{ product.name }}</h1>
                     <p data-aos="fade-left" class="text-black text-[1.05rem] pt-12 lg:pt-2 mb-6">{{ product.description }}</p>
                     <section v-for="(desc, index) in product.topicsDesc" :key="index">
-                        <p data-aos="fade-left" class="text-black text-[0.9rem] lg:text-[0.8rem] pt-2 lg:mb-3 lg:pl-2">
-                            <bold class="font-bold text-[1rem]">• {{ desc.title }}:</bold> {{ desc.description }}
+                        <p data-aos="fade-left" class="text-black text-[1rem] lg:text-[0.85rem] pt-2 lg:mb-3 lg:pl-2">
+                            <bold class="font-bold text-[1.1rem] lg:text-[1rem]">• {{ desc.title }}:</bold> {{ desc.description }}
                         </p>
                     </section>
                     <section v-if="product.oldPricePromotion && product.oldPricePromotion.length > 0">
@@ -120,9 +134,9 @@ watch(productId, getProduct, { immediate: true });
                             </div>
                         </div>
                     </section>
-                    <div data-aos="fade-left" class="mb-10">
-                        <h3 class="font-bold uppercase mt-8">Tenho interesse:</h3>
-                        <p class="text-[0.9rem] mt-3">Por enquanto estamos fazendo as vendas somente por esses
+                    <div data-aos="fade-left" class="mb-10 mt-12 lg:mt-0">
+                        <h3 class="font-bold uppercase mt-8 text-[1.3rem] lg:text-[1.1rem]">Tenho interesse:</h3>
+                        <p class="text-[1.1rem] lg:text-[0.9rem] mt-3">Por enquanto estamos fazendo as vendas somente por esses
                             meios de comunicação!</p>
                     </div>
                     <div class="flex flex-col lg:flex-row items-center lg:items-start">
@@ -142,13 +156,13 @@ watch(productId, getProduct, { immediate: true });
                 </div>
             </div>
             <div v-else style="background-color: #fff;"
-                class="w-full flex flex-col lg:flex-row items-center justify-center py-16">
+                class="w-full flex flex-col lg:flex-row items-center justify-center pt-12 pb-16 lg:py-16">
                 <img data-aos="flip-right" class="lg:mr-16 mb-4 lg:mb-0" alt="imagem produto não encontrado"
                     src="/products/not-found.webp" />
                 <div class="w-10/12 lg:w-72">
-                    <h3 class="mb-3 text-[1.2rem]">Ops! Produto não encontrado.</h3>
-                    <h4 class="mb-3">Não conseguimos localizar o item que você está procurando.</h4>
-                    <h4>Verifique se a busca está correta ou explore outras categorias em nosso catálogo.</h4>
+                    <h3 class="mb-3 font-[500] text-[1.2rem]">Ops! Produto não encontrado.</h3>
+                    <h2 class="mb-3 font-[500]">Não conseguimos localizar o item que você está procurando.</h2>
+                    <h2>Verifique se a busca está correta ou explore outras categorias em nosso catálogo.</h2>
                 </div>
             </div>
             <div style="background-color: #f5f5f5;" class="w-full pb-8 bg-white">

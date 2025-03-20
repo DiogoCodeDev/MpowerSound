@@ -87,36 +87,36 @@ const submitForm = () => {
             </div>
 
             <div  data-aos="zoom-in" class="max-w-3xl mx-auto bg-white p-6 rounded-lg shadow-md mb-24 mt-12">
-                <h2 class="text-xl text-black font-bold text-center mb-8 uppercase">Formulário de Contato</h2>
+                <h2 class="text-xl text-black font-black text-center mb-8 uppercase">Formulário de Contato</h2>
 
                 <form @submit.prevent="submitForm" class="space-y-4">
                     <div>
                         <label for="subject" class="block mb-2 text-black font-medium">Assunto:</label>
                         <input id="subject" type="text" v-model="form.subject"
-                            class="w-full text-black p-2 outline-none border-b border-black" placeholder="Seu assunto"
+                            class="w-full text-black p-2 font-semibold outline-none border-b border-black" placeholder="Seu assunto"
                             maxlength="15" required />
                     </div>
 
                     <div>
                         <label for="name" class="block mb-2 text-black font-medium">Nome:</label>
                         <input id="name" type="text" v-model="form.name"
-                            class="w-full text-black p-2 outline-none border-b border-black" placeholder="Seu nome"
+                            class="w-full text-black p-2 font-semibold outline-none border-b border-black" placeholder="Seu nome"
                             required />
                     </div>
 
                     <div>
                         <label for="phone" class="block mb-2 text-black font-medium">Celular:</label>
                         <input id="phone" type="text" v-model="form.phone"
-                            class="w-full text-black p-2 outline-none border-b border-black"
+                            class="w-full text-black p-2 font-semibold outline-none border-b border-black"
                             placeholder="(99) 99999-9999" maxlength="15" @input="formatPhone" required />
                     </div>
 
                     <div>
                         <label for="message" class="block mb-2 text-black font-medium">Mensagem:</label>
                         <textarea id="message" v-model="form.message" maxlength="300" rows="4"
-                            class="w-full text-black p-2 outline-none border-b border-black"
+                            class="w-full text-black p-2 font-semibold outline-none border-b border-black"
                             placeholder="Digite sua mensagem..."></textarea>
-                        <small class="block text-gray-500 text-right">{{ form.message.length }}/300 caracteres</small>
+                        <small class="block text-gray-500 font-[600] text-right">{{ form.message.length }}/300 caracteres</small>
                     </div>
 
                     <button type="submit"

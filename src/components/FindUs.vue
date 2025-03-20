@@ -46,10 +46,10 @@ onMounted(() => {
 
 <template>
     <div class="w-full bg-white text-black py-12 flex flex-col items-center">
-        <h1 class="text-black font-bold text-center uppercase text-xl mb-5 lg:mb-2">
+        <h5 class="text-black font-bold text-center uppercase text-xl mb-5 lg:mb-2">
             Como nos encontrar?
-        </h1>
-        <p class="text-black mx-12 text-center text-xs mb-6">
+        </h5>
+        <p class="text-black mx-12 text-center font-[500] text-sm lg:text-xs mb-6">
             Rua Altino Arantes, 717, Jardim das Bandeiras, Campinas/SP, CEP 13051-110
         </p>
         <div data-aos="fade-up" data-aos-delay="200" id="map-container" class="lg:w-full mb-4 w-88 sm:w-96 md:w-8/12 md:max-w-3xl h-[40vh] sm:h-[400px] lg:h-[600px] rounded-lg shadow-lg"></div>

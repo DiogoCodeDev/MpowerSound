@@ -17,14 +17,14 @@ import AppNavbar from "./AppNavbar.vue";
 				</div>
 
 				<div class="flex flex-col items-start md:text-left">
-					<h1 class="text-[2.84rem] w-full lg:text-5xl mt-8 lg:mt-12 mb-6 lg:mb-6 xl:text-5xl 2xl:text-7xl whitespace-nowrap"
+					<h1 class="text-[2.88rem] w-full lg:text-5xl mt-8 lg:mt-12 mb-6 lg:mb-6 xl:text-5xl 2xl:text-7xl whitespace-nowrap"
 						data-aos="fade-right" data-aos-delay="500">
 						M Power Sound
 					</h1>
 					<p class="text-white text-base md:text-md lg:text-lg 2xl:text-lg mb-16 lg:mb-24" data-aos="fade-right"
 						data-aos-delay="600">
-						Potência, qualidade e som incomparável ! <br>
-						Encontre o amplificador perfeito para o seu setup aqui !
+						Potência, qualidade e som incomparável! <br>
+						Encontre o amplificador perfeito para o seu setup aqui!
 					</p>
 					<div class="flex items-center mb-16 lg:mb-0">
 						<img src="../assets/img/icons/location-icon.webp" alt="Camisa de mockup"

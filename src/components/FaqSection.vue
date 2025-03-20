@@ -105,7 +105,7 @@ function leave(el) {
                 </button>
                 <transition @before-enter="beforeEnter" @enter="enter" @leave="leave">
                     <div v-if="activeIndex === `${index}-${qIndex}`" class="overflow-hidden">
-                        <div class="p-5 text-gray-800 text-sm">{{ item.answer }}</div>
+                        <h5 class="p-5 text-black font-[400] text-[0.85rem] lg:text-sm">{{ item.answer }}</h5>
                     </div>
                 </transition>
             </div>
