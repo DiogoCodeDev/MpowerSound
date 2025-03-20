@@ -4,6 +4,56 @@ import { defineStore } from 'pinia';
 
 const useProductStore = defineStore('product', {
   state: () => ({
+    slidesGallery: [
+      {
+        "title": "Caixas Acústicas Passivas",
+        "desc": "As Caixas Acústicas Passivas da MPower Sound são projetadas para entregar uma reprodução sonora precisa e de alta qualidade.",
+        "descMobile": "As Caixas Acústicas Passivas da M Power Sound são projetadas para entregar uma reprodução sonora precisa e de alta qualidade.",
+        "products":[
+          1, 2, 3, 4, 5, 6, 7, 8
+        ]
+      },
+      {
+        "title": "Amplificadores de Potência",
+        "desc": "Os Amplificadores de Potência da MPower Sound foram desenvolvidos para entregar um som robusto, claro e fiel em qualquer ambiente.",
+        "descMobile": "Os Amplificadores de Potência da M Power Sound foram desenvolvidos para entregar um som robusto, claro e fiel em qualquer ambiente.",
+        "products":[
+          4, 7, 3, 4, 5, 6, 1, 4
+        ]
+      },
+      {
+        "title": "Caixas para Sonorização Ambiente",
+        "desc": "Transforme seu espaço com as Caixas para Sonorização de Ambiente, oferecendo som de alta qualidade, clareza e potência para qualquer tipo de ambiente!",
+        "descMobile": "Transforme seu espaço com as Caixas para Sonorização de Ambiente, oferecendo som de alta qualidade, clareza e potência para qualquer tipo de ambiente!",
+        "products":[
+          5, 6, 7, 8, 1, 2, 3, 4 
+        ]
+      },
+      {
+        "title": "Produtos X",
+        "desc": "As Caixas Acústicas Passivas da MPower Sound são projetadas para entregar uma reprodução sonora precisa e de alta qualidade.",
+        "descMobile": "As Caixas Acústicas Passivas da M Power Sound são projetadas para entregar uma reprodução sonora precisa e de alta qualidade.",
+        "products":[
+          1, 2, 3, 4, 5, 6, 7, 8
+        ]
+      },
+      {
+        "title": "Produtos Y",
+        "desc": "Os Amplificadores de Potência da MPower Sound foram desenvolvidos para entregar um som robusto, claro e fiel em qualquer ambiente.",
+        "descMobile": "Os Amplificadores de Potência da M Power Sound foram desenvolvidos para entregar um som robusto, claro e fiel em qualquer ambiente.",
+        "products":[
+          4, 7, 3, 4, 5, 6, 1, 4
+        ]
+      },
+      {
+        "title": "Produtos Z",
+        "desc": "Transforme seu espaço com as Caixas para Sonorização de Ambiente, oferecendo som de alta qualidade, clareza e potência para qualquer tipo de ambiente!",
+        "descMobile": "Transforme seu espaço com as Caixas para Sonorização de Ambiente, oferecendo som de alta qualidade, clareza e potência para qualquer tipo de ambiente!",
+        "products":[
+          5, 6, 7, 8, 1, 2, 3, 4 
+        ]
+      }
+    ],
     slidesHome: [
       {
         "title": "Caixas Acústicas Passivas",

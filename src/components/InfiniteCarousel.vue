@@ -6,7 +6,7 @@
             <p class="mr-1 ml-3 lg:mx-0 text-sm lg:hidden">{{ slide.descMobile }}</p>
         </div>
         <div class="w-11/12 mx-auto lg:py-1 text-right lg:mx-11 mb-2 lg:mb-0">
-            <h2 class="text-[0.93rem] lg:text-[0.75rem] text-black cursor-pointer"> Ver mais...</h2>
+            <h2 @click="goToGallery(slide.title)" class="text-[0.93rem] lg:text-[0.75rem] text-black cursor-pointer"> Ver mais...</h2>
         </div>
         <div ref="carousel" class="flex overflow-x-auto scroll-smooth lg:mx-11">
             <div @click="goToProduct(product)" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="200" v-for="(product, index) in slide.products" :key="index"
@@ -59,14 +59,10 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted, onUnmounted } from 'vue';
-import useProductStore from '../store/product.js';
+import { ref, onMounted, onUnmounted } from 'vue';
 import { useRouter } from 'vue-router';
 
 const router = useRouter();
-const productStore = useProductStore();
-const products = ref(productStore.productSection);
-
 const carousel = ref(null);
 
 defineProps({
@@ -81,6 +77,10 @@ const getScrollAmount = () => {
         return 160;
     }
     return 275;
+};
+
+const goToGallery = (filter) => {
+  router.push({ path: `/product-gallery/${filter}` });
 };
 
 const limitNameProduct = (name) => {
