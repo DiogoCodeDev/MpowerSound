@@ -6,10 +6,12 @@
             <p class="mr-1 ml-3 lg:mx-0 text-sm lg:hidden">{{ slide.descMobile }}</p>
         </div>
         <div class="w-11/12 mx-auto lg:py-1 text-right lg:mx-11 mb-2 lg:mb-0">
-            <h2 @click="goToGallery(slide.title)" class="text-[0.93rem] lg:text-[0.75rem] text-black cursor-pointer"> Ver mais...</h2>
+            <h2 @click="goToGallery(slide.title)" class="text-[0.93rem] lg:text-[0.75rem] text-black cursor-pointer">
+                Ver mais...</h2>
         </div>
         <div ref="carousel" class="flex overflow-x-auto scroll-smooth lg:mx-11">
-            <div @click="goToProduct(product)" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="200" v-for="(product, index) in slide.products" :key="index"
+            <div @click="goToProduct(product)" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="200"
+                v-for="(product, index) in slide.products" :key="index"
                 class="w-36 h-58 lg:w-48 lg:h-50 bg-white rounded hover:scale-105 duration-200 ease-in-out shadow lg:m-2 lg:mr-0 mb-4 lg:mb-6 m-2 flex-none relative">
                 <div v-if="product.oldPricePromotion"
                     class="absolute top-0 right-0 p-1 z-50 bg-red-500 text-white text-[0.7rem] font-semibold rounded-bl-lg">
@@ -22,16 +24,17 @@
                 </div>
                 <div v-bind:title="product.oldPricePromotion && product.name.length > 12 ? product.name : ''"
                     class="w-full flex items-center justify-center pt-5">
-                    <h2 class="font-semibold text-[0.8rem] mb-2 lg:mb-1 px-4 text-left">{{ product.oldPricePromotion ? 
+                    <h2 class="font-semibold text-[0.8rem] mb-2 lg:mb-1 px-4 text-left">{{ product.oldPricePromotion ?
                         limitNameProduct(product.name) : product.name }}</h2>
                 </div>
                 <div class="w-full flex items-start justify-start">
                     <h3 v-if="product.oldPricePromotion"
-                        class="font-semibold text-[0.88rem] lg:text-[0.845rem] line-through px-4 text-left text-neutral-500">R$ 
+                        class="font-semibold text-[0.88rem] lg:text-[0.845rem] line-through px-4 text-left text-neutral-500">
+                        R$
                         {{ product.oldPricePromotion[0].price }}</h3>
                 </div>
                 <div class="w-full flex items-start justify-start -mt-1">
-                    <h3 v-if="product.saleCfg" 
+                    <h3 v-if="product.saleCfg"
                         :class="product.oldPricePromotion ? 'lg:text-[0.98rem] text-[1.13rem]' : 'text-[1.15rem] lg:text-[1.08rem] -pt-1'"
                         class="font-semibold px-4 mb-2 lg:mb-0 text-left text-black">R$ {{ product.saleCfg[0].price }}
                         <span class="text-[0.65rem] lg:text-[0.6rem] hidden lg:block font-[500] -mt-0.5">No PIX!</span>
@@ -48,12 +51,14 @@
         <button
             class="absolute hidden lg:flex left-1 top-3/5 transform -translate-y-1/2 bg-black hover:bg-neutral-900 cursor-pointer w-8 items-center justify-center h-8 text-white p-2 rounded-full"
             @click="scrollLeft">
-            <img class="h-3 rotate-180 drop-shadow cursor-pointer" src="../assets/img/icons/white-arrow-right.webp" alt="Seta carrosel esquerda" />
+            <img class="h-3 rotate-180 drop-shadow cursor-pointer" src="../assets/img/icons/white-arrow-right.webp"
+                alt="Seta carrosel esquerda" />
         </button>
         <button
             class="absolute hidden lg:flex right-1 top-3/5 transform -translate-y-1/2 bg-black hover:bg-neutral-900 cursor-pointer w-8 items-center justify-center h-8 text-white p-2 rounded-full"
             @click="scrollRight">
-            <img class="h-3 drop-shadow cursor-pointer" src="../assets/img/icons/white-arrow-right.webp" alt="Seta carrosel direita" />
+            <img class="h-3 drop-shadow cursor-pointer" src="../assets/img/icons/white-arrow-right.webp"
+                alt="Seta carrosel direita" />
         </button>
     </div>
 </template>
@@ -66,10 +71,10 @@ const router = useRouter();
 const carousel = ref(null);
 
 defineProps({
-  slide: {
-    type: [Array, Object],
-    required: true
-  }
+    slide: {
+        type: [Array, Object],
+        required: true
+    }
 });
 
 const getScrollAmount = () => {
@@ -80,7 +85,7 @@ const getScrollAmount = () => {
 };
 
 const goToGallery = (filter) => {
-  router.push({ path: `/product-gallery/${filter}` });
+    router.push({ path: `/product-gallery/${filter}` });
 };
 
 const limitNameProduct = (name) => {
@@ -107,8 +112,8 @@ const scrollRight = () => {
         const scrollAmount = getScrollAmount();
         carousel.value.scrollBy({ left: scrollAmount, behavior: 'smooth' });
 
-        if (carousel.value.scrollLeft + carousel.value.clientWidth >= carousel.value.scrollWidth) {
-            carousel.value.scrollLeft = 0;
+        if (carousel.value.scrollLeft + carousel.value.clientWidth >= carousel.value.scrollWidth - 1) {
+            setTimeout(() => { carousel.value.scrollLeft = 0; }, 300);
         }
     }
 };
@@ -116,7 +121,7 @@ const scrollRight = () => {
 let autoScrollInterval;
 
 const goToProduct = (product) => {
-  router.push(`/product/${product.id}`);
+    router.push(`/product/${product.id}`);
 };
 
 onMounted(() => {
@@ -125,13 +130,14 @@ onMounted(() => {
             const currentScroll = carousel.value.scrollLeft + carousel.value.clientWidth;
             const maxScroll = carousel.value.scrollWidth;
 
-            if (currentScroll >= maxScroll) {
-                carousel.value.scrollLeft = 0;
+            if (currentScroll >= maxScroll - 1) {
+                setTimeout(() => { carousel.value.scrollLeft = 0; }, 300);
             } else {
                 scrollRight();
             }
         }
     }, 3500);
+
 });
 
 onUnmounted(() => {
