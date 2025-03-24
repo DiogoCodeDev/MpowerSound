@@ -9,7 +9,7 @@ const useProductStore = defineStore('product', {
         "title": "Caixas Acústicas Passivas",
         "desc": "As Caixas Acústicas Passivas da MPower Sound são projetadas para entregar uma reprodução sonora precisa e de alta qualidade.",
         "descMobile": "As Caixas Acústicas Passivas da M Power Sound são projetadas para entregar uma reprodução sonora precisa e de alta qualidade.",
-        "products":[
+        "products": [
           1, 2, 3, 4, 5, 6, 7, 8
         ]
       },
@@ -17,7 +17,7 @@ const useProductStore = defineStore('product', {
         "title": "Amplificadores de Potência",
         "desc": "Os Amplificadores de Potência da MPower Sound foram desenvolvidos para entregar um som robusto, claro e fiel em qualquer ambiente.",
         "descMobile": "Os Amplificadores de Potência da M Power Sound foram desenvolvidos para entregar um som robusto, claro e fiel em qualquer ambiente.",
-        "products":[
+        "products": [
           4, 7, 3, 4, 5, 6, 1, 4
         ]
       },
@@ -25,15 +25,15 @@ const useProductStore = defineStore('product', {
         "title": "Caixas para Sonorização Ambiente",
         "desc": "Transforme seu espaço com as Caixas para Sonorização de Ambiente, oferecendo som de alta qualidade, clareza e potência para qualquer tipo de ambiente!",
         "descMobile": "Transforme seu espaço com as Caixas para Sonorização de Ambiente, oferecendo som de alta qualidade, clareza e potência para qualquer tipo de ambiente!",
-        "products":[
-          5, 6, 7, 8, 1, 2, 3, 4 
+        "products": [
+          5, 6, 7, 8, 1, 2, 3, 4
         ]
       },
       {
         "title": "Produtos X",
         "desc": "As Caixas Acústicas Passivas da MPower Sound são projetadas para entregar uma reprodução sonora precisa e de alta qualidade.",
         "descMobile": "As Caixas Acústicas Passivas da M Power Sound são projetadas para entregar uma reprodução sonora precisa e de alta qualidade.",
-        "products":[
+        "products": [
           1, 2, 3, 4, 5, 6, 7, 8
         ]
       },
@@ -41,7 +41,7 @@ const useProductStore = defineStore('product', {
         "title": "Produtos Y",
         "desc": "Os Amplificadores de Potência da MPower Sound foram desenvolvidos para entregar um som robusto, claro e fiel em qualquer ambiente.",
         "descMobile": "Os Amplificadores de Potência da M Power Sound foram desenvolvidos para entregar um som robusto, claro e fiel em qualquer ambiente.",
-        "products":[
+        "products": [
           4, 7, 3, 4, 5, 6, 1, 4
         ]
       },
@@ -49,8 +49,8 @@ const useProductStore = defineStore('product', {
         "title": "Produtos Z",
         "desc": "Transforme seu espaço com as Caixas para Sonorização de Ambiente, oferecendo som de alta qualidade, clareza e potência para qualquer tipo de ambiente!",
         "descMobile": "Transforme seu espaço com as Caixas para Sonorização de Ambiente, oferecendo som de alta qualidade, clareza e potência para qualquer tipo de ambiente!",
-        "products":[
-          5, 6, 7, 8, 1, 2, 3, 4 
+        "products": [
+          5, 6, 7, 8, 1, 2, 3, 4
         ]
       }
     ],
@@ -59,7 +59,7 @@ const useProductStore = defineStore('product', {
         "title": "Caixas Acústicas Passivas",
         "desc": "As Caixas Acústicas Passivas da MPower Sound são projetadas para entregar uma reprodução sonora precisa e de alta qualidade. Com design robusto e tecnologia avançada, elas oferecem excelente desempenho acústico, garantindo graves potentes, médios definidos e agudos cristalinos em qualquer ambiente.",
         "descMobile": "As Caixas Acústicas Passivas da M Power Sound são projetadas para entregar uma reprodução sonora precisa e de alta qualidade.",
-        "products":[
+        "products": [
           1, 2, 3, 4, 5, 6, 7, 8
         ]
       },
@@ -67,7 +67,7 @@ const useProductStore = defineStore('product', {
         "title": "Amplificadores de Potência",
         "desc": "Os Amplificadores de Potência da MPower Sound foram desenvolvidos para entregar um som robusto, claro e fiel em qualquer ambiente. Com tecnologia de ponta e engenharia de alta precisão, nossos amplificadores oferecem desempenho excepcional em todas as frequências sonoras, proporcionando uma experiência sonora imersiva e de alta qualidade.",
         "descMobile": "Os Amplificadores de Potência da M Power Sound foram desenvolvidos para entregar um som robusto, claro e fiel em qualquer ambiente.",
-        "products":[
+        "products": [
           4, 7, 3, 4, 5, 6, 1, 4
         ]
       },
@@ -75,8 +75,8 @@ const useProductStore = defineStore('product', {
         "title": "Caixas para Sonorização Ambiente",
         "desc": "Transforme seu espaço com as Caixas para Sonorização de Ambiente, oferecendo som de alta qualidade, clareza e potência para qualquer tipo de ambiente!",
         "descMobile": "Transforme seu espaço com as Caixas para Sonorização de Ambiente, oferecendo som de alta qualidade, clareza e potência para qualquer tipo de ambiente!",
-        "products":[
-          5, 6, 7, 8, 1, 2, 3, 4 
+        "products": [
+          5, 6, 7, 8, 1, 2, 3, 4
         ]
       }
     ],
@@ -85,7 +85,7 @@ const useProductStore = defineStore('product', {
         "title": "Recomendados para você!",
         "desc": "As Caixas Acústicas Passivas da MPower Sound são projetadas para entregar uma reprodução sonora precisa e de alta qualidade. Com design robusto e tecnologia avançada, elas oferecem excelente desempenho acústico, garantindo graves potentes, médios definidos e agudos cristalinos em qualquer ambiente.",
         "descMobile": "As Caixas Acústicas Passivas da M Power Sound são projetadas para entregar uma reprodução sonora precisa e de alta qualidade.",
-        "products":[
+        "products": [
           5, 6, 7, 8, 1, 2, 3, 4
         ]
       }
@@ -95,7 +95,7 @@ const useProductStore = defineStore('product', {
         "title": "Selecionados para você!",
         "desc": "As Caixas Acústicas Passivas da MPower Sound são projetadas para entregar uma reprodução sonora precisa e de alta qualidade. Com design robusto e tecnologia avançada, elas oferecem excelente desempenho acústico, garantindo graves potentes, médios definidos e agudos cristalinos em qualquer ambiente.",
         "descMobile": "As Caixas Acústicas Passivas da M Power Sound são projetadas para entregar uma reprodução sonora precisa e de alta qualidade.",
-        "products":[
+        "products": [
           1, 2, 3, 4, 5, 6, 7, 8
         ]
       }
@@ -106,7 +106,7 @@ const useProductStore = defineStore('product', {
         "name": "Caixas Acústicas Passiva - Versão 40t - 1080p.",
         "img": "/products/product1.webp",
         "size": "h-20",
-        "alt": "Este amplificador excepcional oferece uma experiência sonora incomparável, onde cada nota e cada nuance são reproduzidas com clareza cristalina e precisão impressionante.",
+        "alt": "Imagem Produto",
         "description": "Este amplificador excepcional oferece uma experiência sonora incomparável, onde cada nota e cada nuance são reproduzidas com clareza cristalina e precisão impressionante.",
         "topicsDesc": [
           {
@@ -116,6 +116,32 @@ const useProductStore = defineStore('product', {
           {
             "title": "Design elegante e construção robusta",
             "description": "O Amplificador [Nome do Modelo] combina um design elegante e minimalista com uma construção robusta e durável. Seu acabamento premium e seus componentes de alta qualidade garantem um desempenho confiável e duradouro."
+          }
+        ],
+        "infos": [
+          {
+            "name": 'Amplificador MpowerSound X500',
+            "description": 'O Amplificador MpowerSound X500 oferece alta fidelidade sonora com potência de 500W RMS, ideal para quem busca desempenho e qualidade em sistemas de áudio profissionais e residenciais.',
+            "specifications": [
+              { "label": 'Potência', "value": '500W RMS' },
+              { "label": 'Entradas', "value": '2 entradas RCA estéreo' },
+              { "label": 'Saídas', "value": 'Saída para 2 canais de alto-falantes' },
+              { "label": 'Proteção', "value": 'Proteção térmica e contra curto-circuito' },
+              { "label": 'Compatibilidade', "value": 'Compatível com a maioria dos sistemas de som padrão' },
+              { "label": 'Resposta de Frequência', "value": '20Hz - 20kHz' },
+              { "label": 'Relação Sinal-Ruído', "value": '>90dB' },
+              { "label": 'Impedância', "value": '4-8 ohms' },
+              { "label": 'Dimensões', "value": '300mm x 200mm x 70mm' },
+              { "label": 'Peso', "value": '3.5kg' },
+              { "label": 'Alimentação', "value": 'Bivolt automático (110V/220V)' },
+              { "label": 'THD (Distorção Harmônica Total)', "value": '<0.1%' },
+              { "label": 'Sensibilidade de Entrada', "value": '0.775V' },
+              { "label": 'Consumo de Energia', "value": '600W em plena carga' },
+              { "label": 'Material do Chassi', "value": 'Alumínio anodizado' },
+              { "label": 'Temperatura de Operação', "value": '0°C a 40°C' },
+              { "label": 'Método de Resfriamento', "value": 'Ventilação forçada com ventilador silencioso' }
+            ],
+            "warranty": '12 meses de garantia contra defeitos de fabricação.'
           }
         ],
         "saleCfg": [
@@ -157,7 +183,7 @@ const useProductStore = defineStore('product', {
         "name": "Amplificador Compacto - Mpower Sound",
         "img": "/products/product2.webp",
         "size": "h-14",
-        "alt": "Este amplificador excepcional oferece uma experiência sonora incomparável, onde cada nota e cada nuance são reproduzidas com clareza cristalina e precisão impressionante.",
+        "alt": "Imagem Produto",
         "description": "Este amplificador excepcional oferece uma experiência sonora incomparável, onde cada nota e cada nuance são reproduzidas com clareza cristalina e precisão impressionante.",
         "topicsDesc": [
           {
@@ -167,6 +193,32 @@ const useProductStore = defineStore('product', {
           {
             "title": "Design elegante e construção robusta",
             "description": "O Amplificador [Nome do Modelo] combina um design elegante e minimalista com uma construção robusta e durável. Seu acabamento premium e seus componentes de alta qualidade garantem um desempenho confiável e duradouro."
+          }
+        ],
+        "infos": [
+          {
+            "name": 'Amplificador MpowerSound X500',
+            "description": 'O Amplificador MpowerSound X500 oferece alta fidelidade sonora com potência de 500W RMS, ideal para quem busca desempenho e qualidade em sistemas de áudio profissionais e residenciais.',
+            "specifications": [
+              { "label": 'Potência', "value": '500W RMS' },
+              { "label": 'Entradas', "value": '2 entradas RCA estéreo' },
+              { "label": 'Saídas', "value": 'Saída para 2 canais de alto-falantes' },
+              { "label": 'Proteção', "value": 'Proteção térmica e contra curto-circuito' },
+              { "label": 'Compatibilidade', "value": 'Compatível com a maioria dos sistemas de som padrão' },
+              { "label": 'Resposta de Frequência', "value": '20Hz - 20kHz' },
+              { "label": 'Relação Sinal-Ruído', "value": '>90dB' },
+              { "label": 'Impedância', "value": '4-8 ohms' },
+              { "label": 'Dimensões', "value": '300mm x 200mm x 70mm' },
+              { "label": 'Peso', "value": '3.5kg' },
+              { "label": 'Alimentação', "value": 'Bivolt automático (110V/220V)' },
+              { "label": 'THD (Distorção Harmônica Total)', "value": '<0.1%' },
+              { "label": 'Sensibilidade de Entrada', "value": '0.775V' },
+              { "label": 'Consumo de Energia', "value": '600W em plena carga' },
+              { "label": 'Material do Chassi', "value": 'Alumínio anodizado' },
+              { "label": 'Temperatura de Operação', "value": '0°C a 40°C' },
+              { "label": 'Método de Resfriamento', "value": 'Ventilação forçada com ventilador silencioso' }
+            ],
+            "warranty": '12 meses de garantia contra defeitos de fabricação.'
           }
         ],
         "saleCfg": [
@@ -201,7 +253,7 @@ const useProductStore = defineStore('product', {
         "name": "Caixa Multiuso - 40t Mpower Sound",
         "img": "/products/product3.webp",
         "size": "h-20",
-        "alt": "Este amplificador excepcional oferece uma experiência sonora incomparável, onde cada nota e cada nuance são reproduzidas com clareza cristalina e precisão impressionante.",
+        "alt": "Imagem Produto",
         "description": "Este amplificador excepcional oferece uma experiência sonora incomparável, onde cada nota e cada nuance são reproduzidas com clareza cristalina e precisão impressionante.",
         "topicsDesc": [
           {
@@ -211,6 +263,32 @@ const useProductStore = defineStore('product', {
           {
             "title": "Design elegante e construção robusta",
             "description": "O Amplificador [Nome do Modelo] combina um design elegante e minimalista com uma construção robusta e durável. Seu acabamento premium e seus componentes de alta qualidade garantem um desempenho confiável e duradouro."
+          }
+        ],
+        "infos": [
+          {
+            "name": 'Amplificador MpowerSound X500',
+            "description": 'O Amplificador MpowerSound X500 oferece alta fidelidade sonora com potência de 500W RMS, ideal para quem busca desempenho e qualidade em sistemas de áudio profissionais e residenciais.',
+            "specifications": [
+              { "label": 'Potência', "value": '500W RMS' },
+              { "label": 'Entradas', "value": '2 entradas RCA estéreo' },
+              { "label": 'Saídas', "value": 'Saída para 2 canais de alto-falantes' },
+              { "label": 'Proteção', "value": 'Proteção térmica e contra curto-circuito' },
+              { "label": 'Compatibilidade', "value": 'Compatível com a maioria dos sistemas de som padrão' },
+              { "label": 'Resposta de Frequência', "value": '20Hz - 20kHz' },
+              { "label": 'Relação Sinal-Ruído', "value": '>90dB' },
+              { "label": 'Impedância', "value": '4-8 ohms' },
+              { "label": 'Dimensões', "value": '300mm x 200mm x 70mm' },
+              { "label": 'Peso', "value": '3.5kg' },
+              { "label": 'Alimentação', "value": 'Bivolt automático (110V/220V)' },
+              { "label": 'THD (Distorção Harmônica Total)', "value": '<0.1%' },
+              { "label": 'Sensibilidade de Entrada', "value": '0.775V' },
+              { "label": 'Consumo de Energia', "value": '600W em plena carga' },
+              { "label": 'Material do Chassi', "value": 'Alumínio anodizado' },
+              { "label": 'Temperatura de Operação', "value": '0°C a 40°C' },
+              { "label": 'Método de Resfriamento', "value": 'Ventilação forçada com ventilador silencioso' }
+            ],
+            "warranty": '12 meses de garantia contra defeitos de fabricação.'
           }
         ],
         "saleCfg": [
@@ -252,7 +330,7 @@ const useProductStore = defineStore('product', {
         "name": "Caixa Multiuso / Mpower Sound",
         "img": "/products/product4.webp",
         "size": "h-16",
-        "alt": "Este amplificador excepcional oferece uma experiência sonora incomparável, onde cada nota e cada nuance são reproduzidas com clareza cristalina e precisão impressionante.",
+        "alt": "Imagem Produto",
         "description": "Este amplificador excepcional oferece uma experiência sonora incomparável, onde cada nota e cada nuance são reproduzidas com clareza cristalina e precisão impressionante.",
         "topicsDesc": [
           {
@@ -262,6 +340,32 @@ const useProductStore = defineStore('product', {
           {
             "title": "Design elegante e construção robusta",
             "description": "O Amplificador [Nome do Modelo] combina um design elegante e minimalista com uma construção robusta e durável. Seu acabamento premium e seus componentes de alta qualidade garantem um desempenho confiável e duradouro."
+          }
+        ],
+        "infos": [
+          {
+            "name": 'Amplificador MpowerSound X500',
+            "description": 'O Amplificador MpowerSound X500 oferece alta fidelidade sonora com potência de 500W RMS, ideal para quem busca desempenho e qualidade em sistemas de áudio profissionais e residenciais.',
+            "specifications": [
+              { "label": 'Potência', "value": '500W RMS' },
+              { "label": 'Entradas', "value": '2 entradas RCA estéreo' },
+              { "label": 'Saídas', "value": 'Saída para 2 canais de alto-falantes' },
+              { "label": 'Proteção', "value": 'Proteção térmica e contra curto-circuito' },
+              { "label": 'Compatibilidade', "value": 'Compatível com a maioria dos sistemas de som padrão' },
+              { "label": 'Resposta de Frequência', "value": '20Hz - 20kHz' },
+              { "label": 'Relação Sinal-Ruído', "value": '>90dB' },
+              { "label": 'Impedância', "value": '4-8 ohms' },
+              { "label": 'Dimensões', "value": '300mm x 200mm x 70mm' },
+              { "label": 'Peso', "value": '3.5kg' },
+              { "label": 'Alimentação', "value": 'Bivolt automático (110V/220V)' },
+              { "label": 'THD (Distorção Harmônica Total)', "value": '<0.1%' },
+              { "label": 'Sensibilidade de Entrada', "value": '0.775V' },
+              { "label": 'Consumo de Energia', "value": '600W em plena carga' },
+              { "label": 'Material do Chassi', "value": 'Alumínio anodizado' },
+              { "label": 'Temperatura de Operação', "value": '0°C a 40°C' },
+              { "label": 'Método de Resfriamento', "value": 'Ventilação forçada com ventilador silencioso' }
+            ],
+            "warranty": '12 meses de garantia contra defeitos de fabricação.'
           }
         ],
         "saleCfg": [
@@ -296,7 +400,7 @@ const useProductStore = defineStore('product', {
         "name": "Caixa Produto V1.0 - 30",
         "img": "/products/product5.webp",
         "size": "h-16",
-        "alt": "Este amplificador excepcional oferece uma experiência sonora incomparável, onde cada nota e cada nuance são reproduzidas com clareza cristalina e precisão impressionante.",
+        "alt": "Imagem Produto",
         "description": "Este amplificador excepcional oferece uma experiência sonora incomparável, onde cada nota e cada nuance são reproduzidas com clareza cristalina e precisão impressionante.",
         "topicsDesc": [
           {
@@ -306,6 +410,32 @@ const useProductStore = defineStore('product', {
           {
             "title": "Design elegante e construção robusta",
             "description": "O Amplificador [Nome do Modelo] combina um design elegante e minimalista com uma construção robusta e durável. Seu acabamento premium e seus componentes de alta qualidade garantem um desempenho confiável e duradouro."
+          }
+        ],
+        "infos": [
+          {
+            "name": 'Amplificador MpowerSound X500',
+            "description": 'O Amplificador MpowerSound X500 oferece alta fidelidade sonora com potência de 500W RMS, ideal para quem busca desempenho e qualidade em sistemas de áudio profissionais e residenciais.',
+            "specifications": [
+              { "label": 'Potência', "value": '500W RMS' },
+              { "label": 'Entradas', "value": '2 entradas RCA estéreo' },
+              { "label": 'Saídas', "value": 'Saída para 2 canais de alto-falantes' },
+              { "label": 'Proteção', "value": 'Proteção térmica e contra curto-circuito' },
+              { "label": 'Compatibilidade', "value": 'Compatível com a maioria dos sistemas de som padrão' },
+              { "label": 'Resposta de Frequência', "value": '20Hz - 20kHz' },
+              { "label": 'Relação Sinal-Ruído', "value": '>90dB' },
+              { "label": 'Impedância', "value": '4-8 ohms' },
+              { "label": 'Dimensões', "value": '300mm x 200mm x 70mm' },
+              { "label": 'Peso', "value": '3.5kg' },
+              { "label": 'Alimentação', "value": 'Bivolt automático (110V/220V)' },
+              { "label": 'THD (Distorção Harmônica Total)', "value": '<0.1%' },
+              { "label": 'Sensibilidade de Entrada', "value": '0.775V' },
+              { "label": 'Consumo de Energia', "value": '600W em plena carga' },
+              { "label": 'Material do Chassi', "value": 'Alumínio anodizado' },
+              { "label": 'Temperatura de Operação', "value": '0°C a 40°C' },
+              { "label": 'Método de Resfriamento', "value": 'Ventilação forçada com ventilador silencioso' }
+            ],
+            "warranty": '12 meses de garantia contra defeitos de fabricação.'
           }
         ],
         "saleCfg": [
@@ -347,7 +477,7 @@ const useProductStore = defineStore('product', {
         "name": "Caixa Produto V1.0 - 30",
         "img": "/products/product2.webp",
         "size": "h-14",
-        "alt": "Este amplificador excepcional oferece uma experiência sonora incomparável, onde cada nota e cada nuance são reproduzidas com clareza cristalina e precisão impressionante.",
+        "alt": "Imagem Produto",
         "description": "Este amplificador excepcional oferece uma experiência sonora incomparável, onde cada nota e cada nuance são reproduzidas com clareza cristalina e precisão impressionante.",
         "topicsDesc": [
           {
@@ -357,6 +487,32 @@ const useProductStore = defineStore('product', {
           {
             "title": "Design elegante e construção robusta",
             "description": "O Amplificador [Nome do Modelo] combina um design elegante e minimalista com uma construção robusta e durável. Seu acabamento premium e seus componentes de alta qualidade garantem um desempenho confiável e duradouro."
+          }
+        ],
+        "infos": [
+          {
+            "name": 'Amplificador MpowerSound X500',
+            "description": 'O Amplificador MpowerSound X500 oferece alta fidelidade sonora com potência de 500W RMS, ideal para quem busca desempenho e qualidade em sistemas de áudio profissionais e residenciais.',
+            "specifications": [
+              { "label": 'Potência', "value": '500W RMS' },
+              { "label": 'Entradas', "value": '2 entradas RCA estéreo' },
+              { "label": 'Saídas', "value": 'Saída para 2 canais de alto-falantes' },
+              { "label": 'Proteção', "value": 'Proteção térmica e contra curto-circuito' },
+              { "label": 'Compatibilidade', "value": 'Compatível com a maioria dos sistemas de som padrão' },
+              { "label": 'Resposta de Frequência', "value": '20Hz - 20kHz' },
+              { "label": 'Relação Sinal-Ruído', "value": '>90dB' },
+              { "label": 'Impedância', "value": '4-8 ohms' },
+              { "label": 'Dimensões', "value": '300mm x 200mm x 70mm' },
+              { "label": 'Peso', "value": '3.5kg' },
+              { "label": 'Alimentação', "value": 'Bivolt automático (110V/220V)' },
+              { "label": 'THD (Distorção Harmônica Total)', "value": '<0.1%' },
+              { "label": 'Sensibilidade de Entrada', "value": '0.775V' },
+              { "label": 'Consumo de Energia', "value": '600W em plena carga' },
+              { "label": 'Material do Chassi', "value": 'Alumínio anodizado' },
+              { "label": 'Temperatura de Operação', "value": '0°C a 40°C' },
+              { "label": 'Método de Resfriamento', "value": 'Ventilação forçada com ventilador silencioso' }
+            ],
+            "warranty": '12 meses de garantia contra defeitos de fabricação.'
           }
         ],
         "saleCfg": [
@@ -398,7 +554,7 @@ const useProductStore = defineStore('product', {
         "name": "Caixa Produto V1.0 - 30",
         "img": "/products/product5.webp",
         "size": "h-18",
-        "alt": "Este amplificador excepcional oferece uma experiência sonora incomparável, onde cada nota e cada nuance são reproduzidas com clareza cristalina e precisão impressionante.",
+        "alt": "Imagem Produto",
         "description": "Este amplificador excepcional oferece uma experiência sonora incomparável, onde cada nota e cada nuance são reproduzidas com clareza cristalina e precisão impressionante.",
         "topicsDesc": [
           {
@@ -408,6 +564,32 @@ const useProductStore = defineStore('product', {
           {
             "title": "Design elegante e construção robusta",
             "description": "O Amplificador [Nome do Modelo] combina um design elegante e minimalista com uma construção robusta e durável. Seu acabamento premium e seus componentes de alta qualidade garantem um desempenho confiável e duradouro."
+          }
+        ],
+        "infos": [
+          {
+            "name": 'Amplificador MpowerSound X500',
+            "description": 'O Amplificador MpowerSound X500 oferece alta fidelidade sonora com potência de 500W RMS, ideal para quem busca desempenho e qualidade em sistemas de áudio profissionais e residenciais.',
+            "specifications": [
+              { "label": 'Potência', "value": '500W RMS' },
+              { "label": 'Entradas', "value": '2 entradas RCA estéreo' },
+              { "label": 'Saídas', "value": 'Saída para 2 canais de alto-falantes' },
+              { "label": 'Proteção', "value": 'Proteção térmica e contra curto-circuito' },
+              { "label": 'Compatibilidade', "value": 'Compatível com a maioria dos sistemas de som padrão' },
+              { "label": 'Resposta de Frequência', "value": '20Hz - 20kHz' },
+              { "label": 'Relação Sinal-Ruído', "value": '>90dB' },
+              { "label": 'Impedância', "value": '4-8 ohms' },
+              { "label": 'Dimensões', "value": '300mm x 200mm x 70mm' },
+              { "label": 'Peso', "value": '3.5kg' },
+              { "label": 'Alimentação', "value": 'Bivolt automático (110V/220V)' },
+              { "label": 'THD (Distorção Harmônica Total)', "value": '<0.1%' },
+              { "label": 'Sensibilidade de Entrada', "value": '0.775V' },
+              { "label": 'Consumo de Energia', "value": '600W em plena carga' },
+              { "label": 'Material do Chassi', "value": 'Alumínio anodizado' },
+              { "label": 'Temperatura de Operação', "value": '0°C a 40°C' },
+              { "label": 'Método de Resfriamento', "value": 'Ventilação forçada com ventilador silencioso' }
+            ],
+            "warranty": '12 meses de garantia contra defeitos de fabricação.'
           }
         ],
         "saleCfg": [
@@ -442,7 +624,7 @@ const useProductStore = defineStore('product', {
         "name": "Caixa Produto V1.0 - 30",
         "img": "/products/product2.webp",
         "size": "h-14",
-        "alt": "Este amplificador excepcional oferece uma experiência sonora incomparável, onde cada nota e cada nuance são reproduzidas com clareza cristalina e precisão impressionante.",
+        "alt": "Imagem Produto",
         "description": "Este amplificador excepcional oferece uma experiência sonora incomparável, onde cada nota e cada nuance são reproduzidas com clareza cristalina e precisão impressionante.",
         "topicsDesc": [
           {
@@ -452,6 +634,32 @@ const useProductStore = defineStore('product', {
           {
             "title": "Design elegante e construção robusta",
             "description": "O Amplificador [Nome do Modelo] combina um design elegante e minimalista com uma construção robusta e durável. Seu acabamento premium e seus componentes de alta qualidade garantem um desempenho confiável e duradouro."
+          }
+        ],
+        "infos": [
+          {
+            "name": 'Amplificador MpowerSound X500',
+            "description": 'O Amplificador MpowerSound X500 oferece alta fidelidade sonora com potência de 500W RMS, ideal para quem busca desempenho e qualidade em sistemas de áudio profissionais e residenciais.',
+            "specifications": [
+              { "label": 'Potência', "value": '500W RMS' },
+              { "label": 'Entradas', "value": '2 entradas RCA estéreo' },
+              { "label": 'Saídas', "value": 'Saída para 2 canais de alto-falantes' },
+              { "label": 'Proteção', "value": 'Proteção térmica e contra curto-circuito' },
+              { "label": 'Compatibilidade', "value": 'Compatível com a maioria dos sistemas de som padrão' },
+              { "label": 'Resposta de Frequência', "value": '20Hz - 20kHz' },
+              { "label": 'Relação Sinal-Ruído', "value": '>90dB' },
+              { "label": 'Impedância', "value": '4-8 ohms' },
+              { "label": 'Dimensões', "value": '300mm x 200mm x 70mm' },
+              { "label": 'Peso', "value": '3.5kg' },
+              { "label": 'Alimentação', "value": 'Bivolt automático (110V/220V)' },
+              { "label": 'THD (Distorção Harmônica Total)', "value": '<0.1%' },
+              { "label": 'Sensibilidade de Entrada', "value": '0.775V' },
+              { "label": 'Consumo de Energia', "value": '600W em plena carga' },
+              { "label": 'Material do Chassi', "value": 'Alumínio anodizado' },
+              { "label": 'Temperatura de Operação', "value": '0°C a 40°C' },
+              { "label": 'Método de Resfriamento', "value": 'Ventilação forçada com ventilador silencioso' }
+            ],
+            "warranty": '12 meses de garantia contra defeitos de fabricação.'
           }
         ],
         "saleCfg": [

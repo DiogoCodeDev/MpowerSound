@@ -4,7 +4,7 @@ import AppFooter from "../components/AppFooter.vue";
 import InfiniteCarousel from "../components/InfiniteCarousel.vue";
 import FaqSection from "../components/FaqSection.vue";
 import { reactive } from "vue";
-import { computed } from "vue";
+import { computed } from "vue"; 
 import useProductStore from '../store/product.js';
 
 const productStore = useProductStore();

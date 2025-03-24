@@ -98,7 +98,7 @@ const isMenuOpen = ref(false);
 					<li :class="{ 'text-yellow-400 font-semibold ': route.path === '/produtos', 'bg-[#090909] rounded': isSubmenuOpen }"
 						class="w-24 h-7 font-normal tracking-wider ml-4 flex items-center justify-center" @mouseenter="handleMouseEnter"
 						@mouseleave="handleMouseLeave">
-						<router-link @click="notFixeNavBar" to="/produtos">Produtos</router-link>
+						<router-link @click="notFixeNavBar" to="/product-gallery/alll">Produtos</router-link>
 						<span class="ml-3 text-xs cursor-pointer transform transition-transform duration-300"
 							:class="{ 'rotate-180': isSubmenuOpen }">▼</span>
 						<ul v-if="isSubmenuOpen" :class="isNavbarFixed ? 'mt-72' : 'mt-62'"
@@ -173,8 +173,8 @@ const isMenuOpen = ref(false);
 				</ul>
 			</div>
 
-			<img src="../assets/img/icons/user-icon.webp" alt="Ícone de usuário"
-				class="object-contain hidden lg:flex lg:ml-8 -mt-0.5 h-[15px] md:h-[15px] lg:h-[20px] xl:h-[23px] 2xl:h-[23px]"
+			<img src="../assets/img/icons/shop-icon.webp" alt="Ícone de usuário"
+				class="object-contain hidden lg:flex lg:ml-8 -mt-0.5 shop-iconh-[19px] md:h-[19px] lg:h-[24px] xl:h-[28px] 2xl:h-[28px]"
 				loading="lazy" data-aos="fade-right" data-aos-delay="400" />
 
 			<!-- Menu Mobile -->

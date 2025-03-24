@@ -5,6 +5,7 @@ import InfiniteCarousel from "../components/InfiniteCarousel.vue";
 import { useRoute, useRouter } from "vue-router";
 import { ref, watch, computed } from "vue";
 import useProductStore from "../store/product.js";
+import DescProduct from "../components/DescProduct.vue";
 
 const route = useRoute();
 const router = useRouter();
@@ -16,14 +17,14 @@ const product = ref(null);
 const selectedImage = ref(null)
 
 const slidesArray = computed(() => {
-  return productStore.slideEnterprise.map(slide => {
-    return {
-      ...slide,
-      products: slide.products.map(productId => {
-        return productStore.products.find(product => product.id === productId) || {};
-      }),
-    };
-  });
+    return productStore.slideEnterprise.map(slide => {
+        return {
+            ...slide,
+            products: slide.products.map(productId => {
+                return productStore.products.find(product => product.id === productId) || {};
+            }),
+        };
+    });
 });
 
 const getProduct = () => {
@@ -37,21 +38,21 @@ const backPage = () => {
 };
 
 const openImage = (img) => {
-  selectedImage.value = img
+    selectedImage.value = img
 }
 
 const closeModal = () => {
-  selectedImage.value = null
+    selectedImage.value = null
 }
 
 const ShareProduct = () => {
-  if (navigator.share) {
-    navigator.share({
-      title: 'Confira isso!',
-      text: 'Dá uma olhada nesse conteúdo incrível.',
-      url: window.location.href
-    })
-  }
+    if (navigator.share) {
+        navigator.share({
+            title: 'Confira isso!',
+            text: 'Dá uma olhada nesse conteúdo incrível.',
+            url: window.location.href
+        })
+    }
 };
 
 watch(productId, getProduct, { immediate: true });
@@ -68,35 +69,44 @@ watch(productId, getProduct, { immediate: true });
             <div class="w-full cursor-pointer flex px-6 md:px-12 xl:px-20 justify-between h-8 lg:h-10 mt-8">
                 <div class="flex items-center">
                     <img @click="backPage()" class="h-3 mr-2 rotate-180" alt="imagem produto não encontrado"
-                    src="/icons/black-arrow-right.webp" />
+                        src="/icons/black-arrow-right.webp" />
                     <h2 @click="backPage()" class="uppercase lg:text-[0.85rem]">Voltar</h2>
                 </div>
                 <img @click="ShareProduct" class="lg:h-5 h-6 mr-2" alt="imagem produto não encontrado"
                     src="/icons/share-icon.webp" />
             </div>
-            <div v-if="product" class="lg:flex-row w-full flex flex-col pb-16">
-                <div class="w-full lg:w-80 lg:h-80 flex-grow lg:pb-20 lg:pt-8 pb-2 pt-8 flex flex-wrap justify-center">
-                    <section v-for="(img, index) in product.imgsProduct" :key="index"
-                        class="w-40 h-40 lg:w-56 lg:h-56 xl:w-60 xl:h-60 m-2"
-                        style="background: linear-gradient(to bottom, white, #f1f1f1);">
-                        <img data-aos="zoom-in" :src="img.img" class="h-full shadow mx-auto cursor-pointer"
-                            @click="openImage(img.img)" alt="Product image" />
-                    </section>
-                    <div v-if="selectedImage"
-                        class="fixed inset-0 bg-gray-500 bg-opacity-75 flex items-center justify-center z-50"
-                        @click="closeModal">
-                        <div class="relative">
-                            <img :src="selectedImage" class="max-w-full imgselected max-h-full rounded-lg shadow-lg" />
-                            <button @click="closeModal" class="absolute top-4 right-4 text-white text-2xl">X</button>
+            <div v-if="product" class="lg:flex-row w-full flex items-center lg:items-start flex-col pb-8 lg:pb-16">
+                <div class="w-96 lg:w-1/2 md:w-2/4 lg:pb-20 lg:pt-8 pt-8 flex flex-col lg:items-center lg:justify-center">
+                    <div class="w-full lg:w-[40rem] flex-grow flex h-96 lg:h-[32rem] flex-wrap lg:mb-12 justify-center py-2">
+                        <section v-for="(img, index) in product.imgsProduct" :key="index"
+                            class="w-42 h-42 lg:w-56 lg:h-56 xl:w-60 xl:h-60 m-2"
+                            style="background: linear-gradient(to bottom, white, #f1f1f1);">
+                            <img data-aos="zoom-in" :src="img.img" class="h-full shadow mx-auto cursor-pointer"
+                                @click="openImage(img.img)" alt="Product image" />
+                        </section>
+                        <div v-if="selectedImage"
+                            class="fixed inset-0 bg-gray-500 bg-opacity-75 flex items-center justify-center z-50"
+                            @click="closeModal">
+                            <div class="relative">
+                                <img :src="selectedImage"
+                                    class="max-w-full imgselected max-h-full rounded-lg shadow-lg" />
+                                <button @click="closeModal"
+                                    class="absolute top-4 right-4 text-white text-2xl">X</button>
+                            </div>
                         </div>
                     </div>
+                    <div class="w-full hidden lg:block">
+                        <DescProduct data-aos="zoom-in" :descProd="product.infos"/>
+                    </div>
                 </div>
-                <div class="w-full lg:w-1/2 py-8 lg:pb-20 lg:pt-12 lg:px-12 px-6 mr-2">
+                <div class="w-full lg:w-1/2 py-8 lg:pb-20 lg:pt-10 lg:px-12 px-6 mr-2">
                     <h1 class="text-black text-[1.72rem] pl-2 pt-2 lg:pt-0 lg:mb-5 leading-none">{{ product.name }}</h1>
-                    <p data-aos="fade-left" class="text-black text-[1.05rem] pt-12 lg:pt-2 mb-6">{{ product.description }}</p>
+                    <p data-aos="fade-left" class="text-black lg:text-[0.90rem] text-[1.05rem] pt-12 lg:pt-2 mb-6">{{
+                        product.description }}</p>
                     <section v-for="(desc, index) in product.topicsDesc" :key="index">
                         <p data-aos="fade-left" class="text-black text-[1rem] lg:text-[0.85rem] pt-2 lg:mb-3 lg:pl-2">
-                            <bold class="font-bold text-[1.1rem] lg:text-[1rem]">• {{ desc.title }}:</bold> {{ desc.description }}
+                            <bold class="font-bold text-[1.1rem] lg:text-[0.9rem]">• {{ desc.title }}:</bold> {{
+                            desc.description }}
                         </p>
                     </section>
                     <section v-if="product.oldPricePromotion && product.oldPricePromotion.length > 0">
@@ -129,14 +139,18 @@ watch(productId, getProduct, { immediate: true });
                                 <h1 class="text-black lg:text-[1.12rem] text-[1.42rem] mt-2 pl-2">no PIX</h1>
                                 <h1 class="text-black lg:text-[1.12rem] text-[1.42rem] lg:-mt-2 pl-2">ou até {{
                                     product.saleCfg[0].installmentMax
-                                }}
+                                    }}
                                     de R$ {{ product.saleCfg[0].installmentPrice }}</h1>
                             </div>
                         </div>
                     </section>
+                    <div class="w-full mt-8 block lg:hidden">
+                        <DescProduct data-aos="zoom-in" :descProd="product.infos"/>
+                    </div>
                     <div data-aos="fade-left" class="mb-10 mt-14 lg:mt-0">
                         <h3 class="font-bold uppercase mt-8 text-[1.3rem] lg:text-[1.1rem]">Tenho interesse:</h3>
-                        <p class="text-[0.98rem] lg:text-[0.9rem] mt-3">Por enquanto estamos fazendo as vendas somente por esses
+                        <p class="text-[0.98rem] lg:text-[0.9rem] mt-3">Por enquanto estamos fazendo as vendas somente
+                            por esses
                             meios de comunicação!</p>
                     </div>
                     <div class="flex flex-col lg:flex-row items-center lg:items-start">
@@ -156,7 +170,7 @@ watch(productId, getProduct, { immediate: true });
                 </div>
             </div>
             <div v-else style="background-color: #fff;"
-                class="w-full flex flex-col lg:flex-row items-center justify-center pt-12 pb-16 lg:py-16">
+                class="w-full flex flex-col lg:flex-row items-center justify-center pt-12 pb-16 lg:pt-8 lg:pb-24">
                 <img data-aos="flip-right" class="lg:mr-16 mb-4 lg:mb-0" alt="imagem produto não encontrado"
                     src="/products/not-found.webp" />
                 <div class="w-10/12 lg:w-72">
@@ -169,7 +183,7 @@ watch(productId, getProduct, { immediate: true });
                 <h3
                     class="mt-4 lg:mt-2 pt-12 mb-7 lg:mb-10 lg:text-lg text-xl font-bold uppercase text-center text-black">
                     Você também pode gostar!</h3>
-                <InfiniteCarousel :slide="slidesArray[0]"/>
+                <InfiniteCarousel :slide="slidesArray[0]" />
             </div>
         </div>
 
@@ -199,5 +213,4 @@ watch(productId, getProduct, { immediate: true });
         max-height: 330px;
     }
 }
-
 </style>
