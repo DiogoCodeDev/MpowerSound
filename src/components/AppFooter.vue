@@ -28,7 +28,7 @@ const route = useRoute();
 				<ul>
 					<li data-aos="fade-up" :class="{ 'text-yellow-400 canva-weight-800': route.path === '/' }" class="mb-8 font-[500] tracking-wider lg:mb-4 cursor-pointer transition-all duration-150 ease-in-out text-lg lg:text-sm">
 						<router-link to="/">Home</router-link></li>
-					<li data-aos="fade-up" :class="{ 'text-yellow-400 canva-weight-800': route.path === '/produtos' }" class="mb-8 font-[500] tracking-wider lg:mb-4 cursor-pointer transition-all duration-150 ease-in-out text-lg lg:text-sm">
+					<li data-aos="fade-up" :class="{ 'text-yellow-400 canva-weight-800': (route.path === '/produtos' || route.path.includes('/product')) }" class="mb-8 font-[500] tracking-wider lg:mb-4 cursor-pointer transition-all duration-150 ease-in-out text-lg lg:text-sm">
 						<router-link to="/product-gallery/alll">Produtos</router-link></li>
 					<li data-aos="fade-up" :class="{ 'text-yellow-400 canva-weight-800': route.path === '/empresa' }" class="mb-8 font-[500] tracking-wider lg:mb-4 cursor-pointer transition-all duration-150 ease-in-out text-lg lg:text-sm">
 						<router-link to="/empresa">Empresa</router-link></li>

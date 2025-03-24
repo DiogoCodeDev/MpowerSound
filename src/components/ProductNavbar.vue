@@ -46,6 +46,10 @@ const toggleRedes = () => {
 
 const notFixeNavBar = () =>  {
 	isNavbarFixed.value = false;
+	if (submenuTimeout.value) {
+		clearTimeout(submenuTimeout.value);
+	}
+	isSubmenuOpen.value = true;
 }
 
 const handleMouseEnter = () => {
@@ -95,7 +99,7 @@ const isMenuOpen = ref(false);
 						:class="{ 'text-yellow-400 font-bold': route.path === '/', 'mr-1': isNavbarFixed }">
 						<router-link @click="notFixeNavBar" to="/">Home </router-link>
 					</li>
-					<li :class="{ 'text-yellow-400 font-bold ': route.path === '/produtos', 'bg-[#090909] rounded': isSubmenuOpen }"
+					<li :class="{ 'text-yellow-400 font-bold ': (route.path === '/produtos' || route.path.includes('/product')), 'bg-[#090909] rounded': isSubmenuOpen }"
 						class="w-24 font-normal tracking-widest h-7 ml-4 flex items-center justify-center" @mouseenter="handleMouseEnter"
 						@mouseleave="handleMouseLeave">
 						<router-link @click="notFixeNavBar" to="/product-gallery/alll">Produtos</router-link>
@@ -105,34 +109,34 @@ const isMenuOpen = ref(false);
 							style="background-color: #090909;"
 							class="absolute w-56 shadow-md rounded mr-1 p-2 space-y-2">
 							<li class="w-72 font-normal tracking-wider ml-1 pt-2 pb-1">
-								<router-link @click="notFixeNavBar" to="/produtos/produto1"
+								<router-link @click="notFixeNavBar" to="/product-gallery/all"
 									class="text-white hover:ml-1 font-normal tracking-wider duration-150 ease-in-out"> •
 									&nbsp;Amplificadores de
 									Pôtencia</router-link>
 							</li>
 							<li class="w-72 ml-1 py-1">
-								<router-link @click="notFixeNavBar" to="/produtos/produto2"
+								<router-link @click="notFixeNavBar" to="/product-gallery/all"
 									class="text-white hover:ml-1 font-normal tracking-wider duration-150 ease-in-out"> • &nbsp;Mesas de
 									Som</router-link>
 							</li>
 							<li class="w-72 ml-1 py-1">
-								<router-link @click="notFixeNavBar" to="/produtos/produto3"
+								<router-link @click="notFixeNavBar" to="/product-gallery/all"
 									class="text-white hover:ml-1 font-normal tracking-wider duration-150 ease-in-out"> • &nbsp;Caixas
 									Acústicas
 									Ativas</router-link>
 							</li>
 							<li class="w-72 ml-1 py-1">
-								<router-link @click="notFixeNavBar" to="/produtos/produto4"
+								<router-link @click="notFixeNavBar" to="/product-gallery/all"
 									class="text-white hover:ml-1 font-normal tracking-wider duration-150 ease-in-out"> • &nbsp;Caixas
 									Multiuso </router-link>
 							</li>
 							<li class="w-72 ml-1 py-1">
-								<router-link @click="notFixeNavBar" to="/produtos/produto5"
+								<router-link @click="notFixeNavBar" to="/product-gallery/all"
 									class="text-white hover:ml-1 font-normal tracking-wider duration-150 ease-in-out"> • &nbsp;Amplificador
 									Compacto</router-link>
 							</li>
 							<li class="w-72 ml-1 pt-1 pb-2">
-								<router-link @click="notFixeNavBar" to="/produtos/produto6"
+								<router-link @click="notFixeNavBar" to="/product-gallery/all"
 									class="text-white hover:ml-1 font-normal tracking-wider duration-150 ease-in-out"> • &nbsp;Mixer
 									Amplificado</router-link>
 							</li>
@@ -146,7 +150,7 @@ const isMenuOpen = ref(false);
 						:class="{ 'text-yellow-400 font-bold ': route.path === '/suporte' }">
 						<router-link @click="notFixeNavBar" to="/suporte">Suporte</router-link>
 					</li>
-					<li :class="{ 'text-yellow-400 font-bold ': route.path === '/produtos', 'bg-[#090909] rounded': isSubmenuSocialMediaOpen }"
+					<li :class="{ 'text-yellow-400 font-bold ': route.path === '/redes', 'bg-[#090909] rounded': isSubmenuSocialMediaOpen }"
 						class="w-32 h-7 font-normal tracking-widest ml-4 flex items-center text-[0.75rem] justify-center" @mouseenter="handleMouseSocialEnter"
 						@mouseleave="handleMouseSocialLeave">
 						<router-link @click="notFixeNavBar" to="/redes-sociais">Redes Sociais</router-link>
@@ -156,16 +160,16 @@ const isMenuOpen = ref(false);
 							style="background-color: #090909;"
 							class="absolute w-56 shadow-md rounded mr-1 p-2 space-y-2">
 							<li class="w-72 ml-1 pt-2 pb-1">
-								<router-link @click="notFixeNavBar" to="/produtos/produto1"
+								<router-link @click="notFixeNavBar" to="/product-gallery/all"
 									class="text-white hover:ml-1 font-normal tracking-wider duration-150 ease-in-out"> •
 									&nbsp;WhatsApp</router-link>
 							</li>
 							<li class="w-72 ml-1 py-1">
-								<router-link @click="notFixeNavBar" to="/produtos/produto2"
+								<router-link @click="notFixeNavBar" to="/product-gallery/all"
 									class="text-white hover:ml-1 font-normal tracking-wider duration-150 ease-in-out"> • &nbsp;Instagram</router-link>
 							</li>
 							<li class="w-72 ml-1 py-1">
-								<router-link @click="notFixeNavBar" to="/produtos/produto3"
+								<router-link @click="notFixeNavBar" to="/product-gallery/all"
 									class="text-white hover:ml-1 font-normal tracking-wider duration-150 ease-in-out"> • &nbsp;Facebook</router-link>
 							</li>
 						</ul>
@@ -213,25 +217,25 @@ const isMenuOpen = ref(false);
 							<transition name="slide">
 								<ul v-show="isProdutosOpen" class="ml-3 mt-2 space-y-1">
 									<li class="h-10 mt-4 text-[1.05rem] flex items-center text-sm">									
-										<router-link @click="notFixeNavBar" to="/produtos/produto1"
+										<router-link @click="notFixeNavBar" to="/product-gallery/all"
 											class="text-white hover:ml-1 font-normal tracking-wider duration-150 ease-in-out"> • &nbsp;
 											Amplificadores de
 											Potência</router-link></li>
-									<li class="h-10 flex text-[1.05rem] items-center text-sm"><router-link @click="notFixeNavBar" to="/produtos/produto2"
+									<li class="h-10 flex text-[1.05rem] items-center text-sm"><router-link @click="notFixeNavBar" to="/product-gallery/all"
 											class="text-white hover:ml-1 font-normal tracking-wider duration-150 ease-in-out"> • &nbsp; Mesas de
 											Som</router-link></li>
-									<li class="h-10 flex text-[1.05rem] items-center text-sm"><router-link @click="notFixeNavBar" to="/produtos/produto3"
+									<li class="h-10 flex text-[1.05rem] items-center text-sm"><router-link @click="notFixeNavBar" to="/product-gallery/all"
 											class="text-white hover:ml-1 font-normal tracking-wider duration-150 ease-in-out"> • &nbsp; Caixas
 											Acústicas
 											Ativas</router-link></li>
-									<li class="h-10 flex text-[1.05rem] items-center text-sm"><router-link @click="notFixeNavBar" to="/produtos/produto4"
+									<li class="h-10 flex text-[1.05rem] items-center text-sm"><router-link @click="notFixeNavBar" to="/product-gallery/all"
 											class="text-white hover:ml-1 font-normal tracking-wider duration-150 ease-in-out"> • &nbsp; Caixas
 											Multiuso</router-link></li>
-									<li class="h-10 flex text-[1.05rem] items-center text-sm"><router-link @click="notFixeNavBar" to="/produtos/produto5"
+									<li class="h-10 flex text-[1.05rem] items-center text-sm"><router-link @click="notFixeNavBar" to="/product-gallery/all"
 											class="text-white hover:ml-1 font-normal tracking-wider duration-150 ease-in-out"> • &nbsp;
 											Amplificador
 											Compacto</router-link></li>
-									<li class="h-10 flex text-[1.05rem] items-center text-sm"><router-link @click="notFixeNavBar" to="/produtos/produto6"
+									<li class="h-10 flex text-[1.05rem] items-center text-sm"><router-link @click="notFixeNavBar" to="/product-gallery/all"
 											class="text-white hover:ml-1 font-normal tracking-wider duration-150 ease-in-out"> • &nbsp; Mixer
 											Amplificado</router-link></li>
 								</ul>
@@ -257,13 +261,13 @@ const isMenuOpen = ref(false);
 							<transition name="slide">
 								<ul v-show="isProdutosRedesOpen" class="ml-3 mt-2 space-y-1">
 									<li class="h-10 mt-4 text-[1.05rem] flex items-center text-sm">									
-										<router-link @click="notFixeNavBar" to="/produtos/produto1"
+										<router-link @click="notFixeNavBar" to="/product-gallery/all"
 											class="text-white hover:ml-1 font-normal tracking-wider duration-150 ease-in-out"> • &nbsp;
 											WhatsApp</router-link></li>
-									<li class="h-10 flex text-[1.05rem] items-center text-sm"><router-link @click="notFixeNavBar" to="/produtos/produto2"
+									<li class="h-10 flex text-[1.05rem] items-center text-sm"><router-link @click="notFixeNavBar" to="/product-gallery/all"
 											class="text-white hover:ml-1 font-normal tracking-wider duration-150 ease-in-out"> • &nbsp; 
 											Instagram</router-link></li>
-									<li class="h-10 flex text-[1.05rem] items-center text-sm"><router-link @click="notFixeNavBar" to="/produtos/produto3"
+									<li class="h-10 flex text-[1.05rem] items-center text-sm"><router-link @click="notFixeNavBar" to="/product-gallery/all"
 											class="text-white hover:ml-1 font-normal tracking-wider duration-150 ease-in-out"> • &nbsp;
 											Facebook</router-link></li>
 								</ul>
