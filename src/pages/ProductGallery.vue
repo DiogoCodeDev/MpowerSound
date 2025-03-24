@@ -91,7 +91,7 @@ const slidesFiltrados = computed(() => {
 </script>
 
 <template>
-    <div :style="{ backgroundImage: 'linear-gradient(to bottom, rgba(234, 234, 234, 0.8), rgba(255, 255, 255, 1))', opacity: '100 !important' }"
+    <div :style="{ backgroundImage: 'linear-gradient(to bottom, rgba(244, 244, 244, 1), rgba(255, 255, 255, 1))', opacity: '100 !important' }"
         id="container" class="relative w-full max-w-full overflow-hidden overflow-x-hidden flex flex-col text-white">
         <div class="bg-black">
             <HeaderProduct class="z-50 px-7 md:px-20 lg:px-32" />
