@@ -1,6 +1,13 @@
 <script setup>
 
 import AppNavbar from "./AppNavbar.vue";
+import { useRouter } from 'vue-router';
+
+const router = useRouter();
+
+const goToGallery = (filter) => {
+    router.push({ path: '/product-gallery', query: { filter: filter } });
+};	
 
 </script>
 
@@ -11,7 +18,7 @@ import AppNavbar from "./AppNavbar.vue";
 		<section class="flex w-full flex-col items-center md:items-start justify-center mb-28">
 			<div class="flex w-full flex-col-reverse md:flex-row-reverse items-center justify-between">
 				<div class="group">
-					<img src="../assets/img/promotion-image.webp" alt="Item em promoção destaque" class="object-contain transform transition-transform duration-300 ease-in-out group-hover:scale-110
+					<img @click="goToGallery('promoção')" src="../assets/img/promotion-image.webp" alt="Item em promoção destaque" class="object-contain transform transition-transform duration-300 ease-in-out group-hover:scale-110
 		       		-mt-8 h-[250px] md:h-[300px] lg:h-[320px] xl:h-[350px] 2xl:h-[390px]" loading="lazy" data-aos="fade-right"
 						data-aos-delay="300" />
 				</div>

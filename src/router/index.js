@@ -9,7 +9,7 @@ const routes = [
   { path: '/', component: HomeView },
   { path: '/empresa', component: EnterpriseView },
   { path: '/suporte', component: SupportView },
-  { path: '/product-gallery/:filter', component: ProductGallery },
+  { path: '/product-gallery', component: ProductGallery },
   { path: '/product/:id', component: ProductView},
 ];
 

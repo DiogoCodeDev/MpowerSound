@@ -29,7 +29,7 @@ const route = useRoute();
 					<li data-aos="fade-up" :class="{ 'text-yellow-400 canva-weight-800': route.path === '/' }" class="mb-8 font-[500] tracking-wider lg:mb-4 cursor-pointer transition-all duration-150 ease-in-out text-lg lg:text-sm">
 						<router-link to="/">Home</router-link></li>
 					<li data-aos="fade-up" :class="{ 'text-yellow-400 canva-weight-800': (route.path === '/produtos' || route.path.includes('/product')) }" class="mb-8 font-[500] tracking-wider lg:mb-4 cursor-pointer transition-all duration-150 ease-in-out text-lg lg:text-sm">
-						<router-link to="/product-gallery/alll">Produtos</router-link></li>
+						<router-link to="/product-gallery?alll">Produtos</router-link></li>
 					<li data-aos="fade-up" :class="{ 'text-yellow-400 canva-weight-800': route.path === '/empresa' }" class="mb-8 font-[500] tracking-wider lg:mb-4 cursor-pointer transition-all duration-150 ease-in-out text-lg lg:text-sm">
 						<router-link to="/empresa">Empresa</router-link></li>
 					<li data-aos="fade-up" :class="{ 'text-yellow-400 canva-weight-800': route.path === '/suporte' }" class="mb-8 font-[500] tracking-wider lg:mb-4 cursor-pointer transition-all duration-150 ease-in-out text-lg lg:text-sm">
@@ -39,13 +39,19 @@ const route = useRoute();
 		</div>
 		<div class="w-80 md:w-96 flex flex-col justify-center md:items-center lg:justify-start lg:w-1/3">
 			<div>
-				<h3 data-aos="fade-right" class="text-xl mb-12 lg:mb-10 lg:-mt-2 font-black uppercase">Redes Sociais</h3>
+				<h3 data-aos="fade-right" class="text-xl mb-6 lg:mb-10 lg:-mt-2 font-black uppercase">Redes Sociais</h3>
 				<div class="flex w-72 lg:w-full justify-between">
 					<img data-aos="fade-up" alt="icon facebook" class="h-9 lg:h-7" src="../assets/img/icons/facebook-icon.webp"/>
-					<img data-aos="fade-up" alt="icon whatsapp" class="h-9 lg:h-7 ml-3 lg:ml-2 mb-28" src="../assets/img/icons/wpp-icon.webp"/>
+					<img data-aos="fade-up" alt="icon whatsapp" class="h-9 lg:h-7 ml-3 lg:ml-2 mb-24" src="../assets/img/icons/wpp-icon.webp"/>
 					<img data-aos="fade-up" alt="icon instagram" class="h-9 lg:h-7" src="../assets/img/icons/instagram-icon.webp"/>
 				</div>
-				<p data-aos="fade-up" data-aos-offset="50" class="text-[0.74rem] tracking-wider flex lg:hidden lg:text-xs text-white mb-16">
+				<div class="w-full lg:-mt-10 mb-24 lg:mb-0">
+					<p data-aos="fade-up" data-aos-offset="50" class="text-[0.74rem] lg:text-[0.6rem] tracking-wider flex lg:text-xs text-white lg:mb-2 mb-4">
+						Powered By:
+					</p>
+					<img data-aos="fade-up" alt="icon criadores do site" class="h-7 lg:h-5 mb-8 cursor-pointer" src="../assets/img/icons/dcodev-white_1.webp"/>
+				</div>
+				<p data-aos="fade-up" data-aos-offset="50" class="text-[0.74rem] tracking-wider flex lg:hidden lg:text-xs text-white mb-4">
 					© 2025 MPowerSound. Todos os direitos reservados.
 				</p>
 			</div>

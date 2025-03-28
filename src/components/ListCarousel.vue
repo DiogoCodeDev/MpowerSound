@@ -67,7 +67,7 @@ defineProps({
 });
 
 const goToGallery = (filter) => {
-    router.push({ path: `/product-gallery/${filter}` });
+    router.push({ path: '/product-gallery', query: { search: filter } });
 };
 
 const limitNameProduct = (name) => {

@@ -5,7 +5,7 @@
             <p class="mr-1 ml-3 lg:mx-0 lg:text-[0.8rem] hidden font-[400] lg:block">{{ slide.desc }}</p>
             <p class="mr-1 ml-3 lg:mx-0 text-sm lg:hidden">{{ slide.descMobile }}</p>
         </div>
-        <div class="w-11/12 mx-auto lg:py-1 text-right lg:mx-11 mb-2 lg:mb-0">
+        <div class="w-11/12 mx-auto lg:py-1 text-right lg:mx-11 mb-2 lg:mb-0"> 
             <h2 @click="goToGallery(slide.title)" class="text-[0.93rem] lg:text-[0.75rem] text-black cursor-pointer">
                 Ver mais...</h2>
         </div>
@@ -85,7 +85,7 @@ const getScrollAmount = () => {
 };
 
 const goToGallery = (filter) => {
-    router.push({ path: `/product-gallery/${filter}` });
+    router.push({ path: '/product-gallery', query: { search: filter } });
 };
 
 const limitNameProduct = (name) => {

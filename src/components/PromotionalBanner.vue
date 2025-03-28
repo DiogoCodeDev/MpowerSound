@@ -1,5 +1,8 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
+import { useRouter } from 'vue-router';
+
+const router = useRouter();
 
 const items = ref([
     {
@@ -30,6 +33,10 @@ let interval = null;
 
 let startX = 0;
 let endX = 0;
+
+const goToGallery = (filter) => {
+    router.push({ path: '/product-gallery', query: { search: filter } });
+};
 
 const changeSlide = (direction) => {
     fadeOut.value = true;
@@ -64,7 +71,7 @@ const handleTouchEnd = (event) => {
 };
 
 onMounted(() => {
-    interval = setInterval(nextSlide, 4000);
+    interval = setInterval(nextSlide, 3000);
 });
 
 onUnmounted(() => {
@@ -85,7 +92,7 @@ onUnmounted(() => {
       <div class="relative w-full md:w-10/12 overflow-hidden flex items-center justify-center">
         <div class="flex w-full transition-transform duration-300 ease-in-out"
           :style="{ transform: `translateX(-${currentIndex * 100}%)` }">
-          <div v-for="(item, index) in items" :key="index"
+          <div v-for="(item, index) in items" @click="goToGallery(item.title)" :key="index"
             class="w-full flex flex-col md:flex-row flex-shrink-0 justify-center items-center">
             <div class="w-full md:w-9/12 lg:w-7/12 lg:pl-8 flex flex-col mb-16 md:mb-0 items-center justify-center">
               <h1 data-aos="fade-down" :class="item.saleDiscount ? 'mb-2' : 'mb-4'"

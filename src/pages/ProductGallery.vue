@@ -1,11 +1,12 @@
 <script setup>
-import { ref, computed } from 'vue';
+import { ref, computed, onMounted } from 'vue';
 import InfiniteCarousel from "../components/InfiniteCarousel.vue";
 import ListCarousel from "../components/ListCarousel.vue";
 import useProductStore from '../store/product.js';
 import { useRoute, useRouter } from "vue-router";
 import HeaderProduct from "../components/HeaderProduct.vue";
 import AppFooter from "../components/AppFooter.vue";
+import { watch } from 'vue';
 
 const route = useRoute();
 const router = useRouter();
@@ -14,6 +15,7 @@ const filtroTexto = ref('');
 const hasListMode = ref(false);
 const hasBoxMode = ref(true);
 const filtroCategoria = ref('');
+const newfiltroCategoria = ref('');
 const filtroPreco = ref('');
 
 const slidesProduct = computed(() => {
@@ -38,7 +40,7 @@ const ShareProduct = () => {
             title: 'Confira isso!',
             text: 'Dá uma olhada nesse conteúdo incrível.',
             url: window.location.href
-        })
+        });
     }
 };
 
@@ -51,43 +53,59 @@ const getTotalProducts = (slides) => {
 };
 
 const slidesFiltrados = computed(() => {
+    const formatPrice = (priceString) => {
+        const precoString = priceString.replace('R$', '').replace('.', '').replace(',', '.').trim();
+        const preco = parseFloat(precoString);
+        return isNaN(preco) ? 0 : preco;
+    };
 
-  const formatPrice = (priceString) => {
+    return slidesProduct.value.map(slide => {
+        let produtosFiltrados = slide.products.filter(product => {
+            const nomeMatch = product.name.toLowerCase().includes(filtroTexto.value.toLowerCase());
+            const categoriaMatch = filtroCategoria.value === '' || slide.title.toLowerCase().includes(filtroCategoria.value.toLowerCase());
+            let promocaoMatch = true;
 
-    const precoString = priceString.replace('R$', '').replace('.', '').replace(',', '.').trim();
-    const preco = parseFloat(precoString);
-    return isNaN(preco) ? 0 : preco;
-  };
+            if (filtroPreco.value === 'promoções') {
+                promocaoMatch = !!product.oldPricePromotion;
+            }
 
-  return slidesProduct.value.map(slide => {
+            return nomeMatch && categoriaMatch && promocaoMatch;
+        });
 
-    let produtosFiltrados = slide.products.filter(product => {
-      const nomeMatch = product.name.toLowerCase().includes(filtroTexto.value.toLowerCase());
-      const categoriaMatch = filtroCategoria.value === '' || slide.title.toLowerCase().includes(filtroCategoria.value.toLowerCase());
+        if (filtroPreco.value === 'menores') {
+            produtosFiltrados.sort((a, b) => {
+                const precoA = a.saleCfg && a.saleCfg[0] && a.saleCfg[0].price ? formatPrice(a.saleCfg[0].price) : 0;
+                const precoB = b.saleCfg && b.saleCfg[0] && b.saleCfg[0].price ? formatPrice(b.saleCfg[0].price) : 0;
+                return precoA - precoB;
+            });
+        } else if (filtroPreco.value === 'maiores') {
+            produtosFiltrados.sort((a, b) => {
+                const precoA = a.saleCfg && a.saleCfg[0] && a.saleCfg[0].price ? formatPrice(a.saleCfg[0].price) : 0;
+                const precoB = b.saleCfg && b.saleCfg[0] && b.saleCfg[0].price ? formatPrice(b.saleCfg[0].price) : 0;
+                return precoB - precoA;
+            });
+        }
 
-      return nomeMatch && categoriaMatch;
-    });
-
-
-    if (filtroPreco.value === 'menores') {
-      produtosFiltrados.sort((a, b) => {
-        const precoA = a.saleCfg && a.saleCfg[0] && a.saleCfg[0].price ? formatPrice(a.saleCfg[0].price) : 0;
-        const precoB = b.saleCfg && b.saleCfg[0] && b.saleCfg[0].price ? formatPrice(b.saleCfg[0].price) : 0;
-        return precoA - precoB;
-      });
-    } else if (filtroPreco.value === 'maiores') {
-      produtosFiltrados.sort((a, b) => {
-        const precoA = a.saleCfg && a.saleCfg[0] && a.saleCfg[0].price ? formatPrice(a.saleCfg[0].price) : 0;
-        const precoB = b.saleCfg && b.saleCfg[0] && b.saleCfg[0].price ? formatPrice(b.saleCfg[0].price) : 0;
-        return precoB - precoA;
-      });
-    }
-
-    return { ...slide, products: produtosFiltrados };
-  }).filter(slide => slide.products.length > 0);
+        return { ...slide, products: produtosFiltrados };
+    }).filter(slide => slide.products.length > 0);
 });
 
-
+watch(
+    () => route.fullPath,
+    (newPath) => {
+        if (newPath.includes('filter=promo%C3%A7%C3%A3o')) {
+            filtroPreco.value = 'promoções';
+        } 
+        else if (newPath.includes('search')) {
+            filtroCategoria.value = route.query.search || '';
+            newfiltroCategoria.value = route.query.search || '';
+        }
+        else {
+            filtroPreco.value = '';
+        }
+    },
+    { immediate: true }
+);
 </script>
 
 <template>
@@ -129,7 +147,7 @@ const slidesFiltrados = computed(() => {
                 class="flex flex-col lg:flex-row mb-16 lg:mb-14 items-end w-full justify-between lg:justify-end lg:mr-16">
                 <div data-aos="fade-left" class="w-[5.5rem] h-full hidden lg:flex ml-4 lg:pt-7">
                     <div class="flex items-center text-neutral-700 text-[0.75rem]">
-                        <h3> {{ getTotalProducts(slidesFiltrados) + '&nbsp;' + 'produtos.' }}</h3>
+                        <h3>{{ getTotalProducts(slidesFiltrados) + '&nbsp;' + 'produtos.' }}</h3>
                     </div>
                 </div>
                 <div class="flex w-full lg:w-[24rem] lg:mr-8">
@@ -149,6 +167,7 @@ const slidesFiltrados = computed(() => {
                                 <option class="py-4 px-2" value="Produto X">Produtos X</option>
                                 <option class="py-4 px-2" value="Produxo Y">Produxos Y</option>
                                 <option class="py-4 px-2" value="Produto Z">Produtos Z</option>
+                                <option v-if="newfiltroCategoria" class="py-4 px-2" :value="newfiltroCategoria">{{newfiltroCategoria}}</option>
                             </select>
                             <span
                                 class="absolute right-2 top-1/2 transform -translate-y-1/2 pointer-events-none text-xs">▼</span>
@@ -156,13 +175,14 @@ const slidesFiltrados = computed(() => {
                     </div>
 
                     <div data-aos="fade-left" class="lg:w-[13rem] flex justify-end lg:justify-start pr-4">
-                        <div class="relative w-32 lg:w-48 bg-[#fff] rounded">
+                        <div class="relative w-36 lg:w-48 bg-[#fff] rounded">
                             <select id="priceFilter"
                                 class="w-full font-bold text-black p-2 lg:p-1.5 lg:pl-2.5 pl-3 pr-8 rounded outline-none text-sm border-l-2 border-black appearance-none"
                                 v-model="filtroPreco">
                                 <option class="py-4 px-2" value="">Preço</option>
                                 <option class="py-4 px-2" value="menores">Menores preços</option>
                                 <option class="py-4 px-2" value="maiores">Maiores preços</option>
+                                <option class="py-4 px-2" value="promoções">Promoções</option>
                             </select>
                             <span
                                 class="absolute right-2 top-1/2 transform -translate-y-1/2 pointer-events-none text-xs">▼</span>
@@ -181,7 +201,8 @@ const slidesFiltrados = computed(() => {
                 <InfiniteCarousel v-if="hasBoxMode" :slide="slide" />
                 <ListCarousel v-if="hasListMode" :slide="slide" />
             </div>
-            <div v-if="slidesFiltrados.length == 0" class="w-full mt-12 text-black">
+
+            <div v-if="slidesFiltrados.length === 0" class="w-full mt-12 text-black">
                 <div class="w-full flex flex-col lg:flex-row items-center justify-center pt-12 pb-24 lg:pt-16 lg:pb-32">
                     <img data-aos="flip-right" class="lg:mr-16 mb-4 lg:mb-0" alt="imagem produto não encontrado"
                         src="/products/not-found.webp" />
