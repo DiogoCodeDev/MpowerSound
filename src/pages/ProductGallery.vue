@@ -128,11 +128,11 @@ watch(
 
         <div class="w-full text-black mb-12">
             <h1 data-aos="zoom-in"
-                class="text-black font-black text-center text-[3.95rem] lg:text-[3.5rem] pb-6 lg:pb-4 pt-14 lg:pt-8">
-                MPSound
+                class="text-black font-black text-center text-[3.1rem] lg:text-[3.5rem] pb-6 lg:pb-4 pt-12 lg:pt-2">
+                M Power Sound
             </h1>
 
-            <div class="w-full items-center flex justify-center px-4 lg:px-32 mb-8 lg:mb-8">
+            <div class="w-full items-center flex justify-center px-4 lg:px-32 mb-8 lg:mb-6">
                 <div data-aos="zoom-in" class="relative w-[29.5rem]">
                     <input id="name" type="text" v-model="filtroTexto"
                         class="w-full bg-white text-black font-medium p-3 lg:p-2.5 pl-3 pr-8 rounded outline-none text-[1.2rem] lg:text-sm border-l-2 border-black placeholder:font-bold"
@@ -189,7 +189,7 @@ watch(
                         </div>
                     </div>
                 </div>
-                <div data-aos="zoom-in" class="w-24 h-full flex ml-4 lg:mr-24 mt-7 -ml-12 lg:mt-0 lg:pt-7">
+                <div data-aos="zoom-in" class="w-24 h-full flex lg:mr-24 mt-7 -ml-12 lg:mt-0 lg:pt-7">
                     <div class="flex items-center">
                         <img @click="ChangeMode" class="h-7 lg:h-6 m-1 ml-12 cursor-pointer"
                             src="../assets/img/icons/icon-box.webp" alt="Ícone produtos modo boxe" />
@@ -202,7 +202,7 @@ watch(
                 <ListCarousel v-if="hasListMode" :slide="slide" />
             </div>
 
-            <div v-if="slidesFiltrados.length === 0" class="w-full mt-12 text-black">
+            <div v-if="slidesFiltrados.length === 0" class="w-full mt-8 lg:mt-12 text-black">
                 <div class="w-full flex flex-col lg:flex-row items-center justify-center pt-12 pb-24 lg:pt-16 lg:pb-32">
                     <img data-aos="flip-right" class="lg:mr-16 mb-4 lg:mb-0" alt="imagem produto não encontrado"
                         src="/products/not-found.webp" />

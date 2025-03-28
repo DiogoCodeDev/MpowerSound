@@ -49,7 +49,7 @@ const route = useRoute();
 					<p data-aos="fade-up" data-aos-offset="50" class="text-[0.74rem] lg:text-[0.6rem] tracking-wider flex lg:text-xs text-white lg:mb-2 mb-4">
 						Powered By:
 					</p>
-					<img data-aos="fade-up" alt="icon criadores do site" class="h-7 lg:h-5 mb-8 cursor-pointer" src="../assets/img/icons/dcodev-white_1.webp"/>
+					<img data-aos="fade-up" alt="icon criadores do site" class="h-6 lg:h-5 mb-8 cursor-pointer" src="../assets/img/icons/dcodev-white_1.webp"/>
 				</div>
 				<p data-aos="fade-up" data-aos-offset="50" class="text-[0.74rem] tracking-wider flex lg:hidden lg:text-xs text-white mb-4">
 					© 2025 MPowerSound. Todos os direitos reservados.
