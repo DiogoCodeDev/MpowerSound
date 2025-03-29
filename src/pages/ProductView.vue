@@ -6,15 +6,33 @@ import { useRoute, useRouter } from "vue-router";
 import { ref, watch, computed } from "vue";
 import useProductStore from "../store/product.js";
 import DescProduct from "../components/DescProduct.vue";
+import ContactModal from "../components/ContactModal.vue";
 
 const route = useRoute();
 const router = useRouter();
 const productStore = useProductStore();
-
 const productId = computed(() => parseInt(route.params.id));
 
 const product = ref(null);
 const selectedImage = ref(null)
+const showModal = ref(false);
+const contactType = ref("");
+
+const openContact = (type) => {
+    contactType.value = type;
+    showModal.value = true;
+};
+
+const closeContact = () => {
+    showModal.value = false;
+};
+
+const openContactWpp = (product, price) => {
+    const phoneNumber = "5519988770404";
+    const message = `Olá, estou interessado no ${product} anunciado no valor de R$ ${price}!`;
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, "_blank");
+};
 
 const slidesArray = computed(() => {
     return productStore.slideEnterprise.map(slide => {
@@ -76,8 +94,10 @@ watch(productId, getProduct, { immediate: true });
                     src="/icons/share-icon.webp" />
             </div>
             <div v-if="product" class="lg:flex-row w-full flex items-center lg:items-start flex-col pb-8 lg:pb-16">
-                <div class="w-96 lg:w-1/2 md:w-2/4 lg:pb-20 lg:pt-8 pt-8 flex flex-col lg:items-center lg:justify-center">
-                    <div class="w-full lg:w-[40rem] flex-grow flex h-96 lg:h-[32rem] flex-wrap lg:mb-12 justify-center py-2">
+                <div
+                    class="w-96 lg:w-1/2 md:w-2/4 lg:pb-20 lg:pt-8 pt-8 flex flex-col lg:items-center lg:justify-center">
+                    <div
+                        class="w-full lg:w-[40rem] flex-grow flex h-96 lg:h-[32rem] flex-wrap lg:mb-12 justify-center py-2">
                         <section v-for="(img, index) in product.imgsProduct" :key="index"
                             class="w-42 h-42 lg:w-56 lg:h-56 xl:w-60 xl:h-60 m-2"
                             style="background: linear-gradient(to bottom, white, #f1f1f1);">
@@ -96,7 +116,7 @@ watch(productId, getProduct, { immediate: true });
                         </div>
                     </div>
                     <div class="w-full hidden lg:block">
-                        <DescProduct data-aos="zoom-in" :descProd="product.infos"/>
+                        <DescProduct data-aos="zoom-in" :descProd="product.infos" />
                     </div>
                 </div>
                 <div class="w-full lg:w-1/2 py-8 lg:pb-20 lg:pt-10 lg:px-12 px-6 mr-2">
@@ -106,7 +126,7 @@ watch(productId, getProduct, { immediate: true });
                     <section v-for="(desc, index) in product.topicsDesc" :key="index">
                         <p data-aos="fade-left" class="text-black text-[1rem] lg:text-[0.85rem] pt-2 lg:mb-3 lg:pl-2">
                             <bold class="font-bold text-[1.1rem] lg:text-[0.9rem]">• {{ desc.title }}:</bold> {{
-                            desc.description }}
+                                desc.description }}
                         </p>
                     </section>
                     <section v-if="product.oldPricePromotion && product.oldPricePromotion.length > 0">
@@ -145,27 +165,60 @@ watch(productId, getProduct, { immediate: true });
                         </div>
                     </section>
                     <div class="w-full mt-8 block lg:hidden">
-                        <DescProduct data-aos="zoom-in" :descProd="product.infos"/>
+                        <DescProduct data-aos="zoom-in" :descProd="product.infos" />
                     </div>
                     <div data-aos="fade-left" class="mb-10 mt-14 lg:mt-0">
                         <h3 class="font-bold uppercase mt-8 text-[1.3rem] lg:text-[1.1rem]">Tenho interesse:</h3>
-                        <p class="text-[0.98rem] lg:text-[0.9rem] mt-3">Por enquanto estamos fazendo as vendas somente
-                            por esses
-                            meios de comunicação!</p>
+                        <p class="text-[0.98rem] lg:text-[0.9rem] mt-3">Você pode adquirir este produto nos seguintes
+                            locais:</p>
                     </div>
-                    <div class="flex flex-col lg:flex-row items-center lg:items-start">
-                        <button
-                            class="w-80 lg:w-64 cursor-pointer hover:scale-105 mb-6 lg:mb-0 transition-transform duration-300 ease-in-out h-16 shadow-xl bg-neutral-900 text-white font-bold rounded-full flex items-center justify-center space-x-2">
-                            <span>WhatsApp</span>
-                            <img alt="icon whatsapp" class="h-7 lg:h-6 ml-2 lg:ml-8"
-                                src="../assets/img/icons/wpp-icon.webp" />
-                        </button>
-                        <button
-                            class="w-80 lg:w-64 cursor-pointer hover:scale-105 transition-transform duration-300 ease-in-out mx-6 shadow-xl h-16 bg-white text-neutral-900 font-bold rounded-full flex items-center justify-center space-x-2">
-                            <span>E-mail</span>
-                            <img alt="icon whatsapp" class="h-7 lg:h-4 ml-2 lg:ml-8"
-                                src="../assets/img/icons/email-black.webp" />
-                        </button>
+                    <div class="flex flex-col mb-10 items-center lg:items-start">
+                        <h3 class="ml-2 mb-1 lg:text-[0.95rem] text-[1.35rem] text-bold"> Comprar on-line: </h3>
+                        <p class="ml-2.5 mb-6 lg:text-[0.75rem] text-[0.9rem]"> * Pode haver uma <span
+                                class="font-bold">pequena</span> diferença de
+                            preço </p>
+                        <div class="w-full flex flex-col items-center lg:flex-row">
+                            <a :href="product.mercadolivre" target="_blank">
+                                <button data-aos="zoom-in" data-aos-duration="100"
+                                    class="w-80 lg:w-64 cursor-pointer hover:scale-105 transition-transform duration-300 ease-in-out mb-6 lg:mb-0 shadow-xl h-16 bg-yellow-300 text-[#2D2E7B] font-bold rounded-full flex items-center justify-center space-x-2">
+                                    <img alt="logo mercado livre" class="h-8"
+                                        src="../assets/img/icons/mercado-livre.webp" />
+                                </button>
+                            </a>
+                            <a :href="product.amazon" target="_blank">
+                                <button data-aos="zoom-in" data-aos-duration="200"
+                                    class="w-80 lg:w-64 cursor-pointer hover:scale-105 mb-6 lg:mb-0 transition-transform duration-300 mx-6 ease-in-out h-16 shadow-xl bg-[#131921] text-white font-bold rounded-full flex items-center justify-center space-x-2">
+                                    <img alt="logo mercado livre" class="h-8 pt-1"
+                                        src="../assets/img/icons/amazon-logo.webp" />
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="flex flex-col lg:mb-6 items-center lg:items-start">
+                        <h3 class="ml-2 mb-1 lg:text-[0.95rem] text-[1.35rem] text-bold"> Combinar retirada: </h3>
+                        <p class="ml-2.5 mb-6 lg:text-[0.75rem] text-[0.9rem]"> * Únidade em Campinas-SP </p>
+                        <div class="w-full flex flex-col items-center lg:flex-row">
+                            <button @click="openContact('email')" data-aos="zoom-in" data-aos-duration="300"
+                                class="w-80 lg:w-64 cursor-pointer hover:scale-105 transition-transform duration-300 ease-in-out shadow-xl mb-6 lg:mb-0 h-16 bg-white text-neutral-900 font-bold rounded-full flex items-center justify-center space-x-2">
+                                <span>E-mail</span>
+                                <img alt="icon email" class="h-5 lg:h-4 ml-4 lg:ml-6"
+                                    src="../assets/img/icons/email-black.webp" />
+                            </button>
+
+                            <button @click="openContactWpp(product.name, product.saleCfg[0].price)" data-aos="zoom-in" data-aos-duration="400"
+                                class="w-80 lg:w-64 cursor-pointer hover:scale-105 mb-6 lg:mb-0 transition-transform duration-300 mx-6 ease-in-out h-16 shadow-xl bg-[#31B646] text-white font-bold rounded-full flex items-center justify-center space-x-2">
+                                <span>WhatsApp</span>
+                                <img alt="icon whatsapp" class="h-7 lg:h-6 ml-2 lg:ml-6"
+                                    src="../assets/img/icons/wpp-icon.webp" />
+                            </button>
+
+
+                            <ContactModal v-if="showModal"
+                                class="z-50 fixed top-0 left-0 right-0 bottom-0 bg-opacity-70" :produto="product.name"
+                                :price="product.saleCfg[0].price"
+                                @close="closeContact" />
+
+                        </div>
                     </div>
                 </div>
             </div>

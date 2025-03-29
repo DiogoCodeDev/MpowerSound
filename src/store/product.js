@@ -108,6 +108,8 @@ const useProductStore = defineStore('product', {
         "size": "h-20",
         "alt": "Imagem Produto",
         "description": "Este amplificador excepcional oferece uma experiência sonora incomparável, onde cada nota e cada nuance são reproduzidas com clareza cristalina e precisão impressionante.",
+        "mercadolivre": "https://lista.mercadolivre.com.br/amplificadores#D[A:amplificadores]",
+        "amazon":"https://www.amazon.com.br/s?k=amplificadores&__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3AR8WW2DKSE17&sprefix=amplificadore%2Caps%2C254&ref=nb_sb_noss_2",
         "topicsDesc": [
           {
             "title": "Qualidade de som incomparável",
@@ -185,6 +187,8 @@ const useProductStore = defineStore('product', {
         "size": "h-14",
         "alt": "Imagem Produto",
         "description": "Este amplificador excepcional oferece uma experiência sonora incomparável, onde cada nota e cada nuance são reproduzidas com clareza cristalina e precisão impressionante.",
+        "mercadolivre": "https://lista.mercadolivre.com.br/amplificadores#D[A:amplificadores]",
+        "amazon":"https://www.amazon.com.br/s?k=amplificadores&__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3AR8WW2DKSE17&sprefix=amplificadore%2Caps%2C254&ref=nb_sb_noss_2",
         "topicsDesc": [
           {
             "title": "Qualidade de som incomparável",
@@ -255,6 +259,8 @@ const useProductStore = defineStore('product', {
         "size": "h-20",
         "alt": "Imagem Produto",
         "description": "Este amplificador excepcional oferece uma experiência sonora incomparável, onde cada nota e cada nuance são reproduzidas com clareza cristalina e precisão impressionante.",
+        "mercadolivre": "https://lista.mercadolivre.com.br/amplificadores#D[A:amplificadores]",
+        "amazon":"https://www.amazon.com.br/s?k=amplificadores&__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3AR8WW2DKSE17&sprefix=amplificadore%2Caps%2C254&ref=nb_sb_noss_2",
         "topicsDesc": [
           {
             "title": "Qualidade de som incomparável",
@@ -332,6 +338,8 @@ const useProductStore = defineStore('product', {
         "size": "h-16",
         "alt": "Imagem Produto",
         "description": "Este amplificador excepcional oferece uma experiência sonora incomparável, onde cada nota e cada nuance são reproduzidas com clareza cristalina e precisão impressionante.",
+        "mercadolivre": "https://lista.mercadolivre.com.br/amplificadores#D[A:amplificadores]",
+        "amazon":"https://www.amazon.com.br/s?k=amplificadores&__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3AR8WW2DKSE17&sprefix=amplificadore%2Caps%2C254&ref=nb_sb_noss_2",
         "topicsDesc": [
           {
             "title": "Qualidade de som incomparável",
@@ -402,6 +410,8 @@ const useProductStore = defineStore('product', {
         "size": "h-16",
         "alt": "Imagem Produto",
         "description": "Este amplificador excepcional oferece uma experiência sonora incomparável, onde cada nota e cada nuance são reproduzidas com clareza cristalina e precisão impressionante.",
+        "mercadolivre": "https://lista.mercadolivre.com.br/amplificadores#D[A:amplificadores]",
+        "amazon":"https://www.amazon.com.br/s?k=amplificadores&__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3AR8WW2DKSE17&sprefix=amplificadore%2Caps%2C254&ref=nb_sb_noss_2",
         "topicsDesc": [
           {
             "title": "Qualidade de som incomparável",
@@ -479,6 +489,8 @@ const useProductStore = defineStore('product', {
         "size": "h-14",
         "alt": "Imagem Produto",
         "description": "Este amplificador excepcional oferece uma experiência sonora incomparável, onde cada nota e cada nuance são reproduzidas com clareza cristalina e precisão impressionante.",
+        "mercadolivre": "https://lista.mercadolivre.com.br/amplificadores#D[A:amplificadores]",
+        "amazon":"https://www.amazon.com.br/s?k=amplificadores&__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3AR8WW2DKSE17&sprefix=amplificadore%2Caps%2C254&ref=nb_sb_noss_2",
         "topicsDesc": [
           {
             "title": "Qualidade de som incomparável",
@@ -556,6 +568,8 @@ const useProductStore = defineStore('product', {
         "size": "h-18",
         "alt": "Imagem Produto",
         "description": "Este amplificador excepcional oferece uma experiência sonora incomparável, onde cada nota e cada nuance são reproduzidas com clareza cristalina e precisão impressionante.",
+        "mercadolivre": "https://lista.mercadolivre.com.br/amplificadores#D[A:amplificadores]",
+        "amazon":"https://www.amazon.com.br/s?k=amplificadores&__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3AR8WW2DKSE17&sprefix=amplificadore%2Caps%2C254&ref=nb_sb_noss_2",
         "topicsDesc": [
           {
             "title": "Qualidade de som incomparável",
@@ -626,6 +640,8 @@ const useProductStore = defineStore('product', {
         "size": "h-14",
         "alt": "Imagem Produto",
         "description": "Este amplificador excepcional oferece uma experiência sonora incomparável, onde cada nota e cada nuance são reproduzidas com clareza cristalina e precisão impressionante.",
+        "mercadolivre": "https://lista.mercadolivre.com.br/amplificadores#D[A:amplificadores]",
+        "amazon":"https://www.amazon.com.br/s?k=amplificadores&__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3AR8WW2DKSE17&sprefix=amplificadore%2Caps%2C254&ref=nb_sb_noss_2",
         "topicsDesc": [
           {
             "title": "Qualidade de som incomparável",

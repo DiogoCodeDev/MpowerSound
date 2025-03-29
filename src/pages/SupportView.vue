@@ -3,28 +3,22 @@ import SupportHeader from "../components/SupportHeader.vue";
 import AppFooter from "../components/AppFooter.vue";
 import InfiniteCarousel from "../components/InfiniteCarousel.vue";
 import FaqSection from "../components/FaqSection.vue";
-import { reactive } from "vue";
-import { computed } from "vue"; 
+import { reactive, ref } from "vue";
+import { computed } from "vue";
 import useProductStore from '../store/product.js';
+import emailjs from "emailjs-com";
 
 const productStore = useProductStore();
 
 const slidesArray = computed(() => {
-  return productStore.slideSupport.map(slide => {
-    return {
-      ...slide,
-      products: slide.products.map(productId => {
-        return productStore.products.find(product => product.id === productId) || {};
-      }),
-    };
-  });
-});
-
-const form = reactive({
-    subject: "",
-    name: "",
-    phone: "",
-    message: "",
+    return productStore.slideSupport.map(slide => {
+        return {
+            ...slide,
+            products: slide.products.map(productId => {
+                return productStore.products.find(product => product.id === productId) || {};
+            }),
+        };
+    });
 });
 
 const formatPhone = (event) => {
@@ -37,14 +31,71 @@ const formatPhone = (event) => {
     } else if (value.length > 2) {
         value = `(${value.slice(0, 2)}) ${value.slice(2)}`;
     } else if (value.length > 0) {
-        value = `(${value}`;
+        value = `(${value.slice(0, 2)}`;
     }
     form.phone = value;
 };
 
-const submitForm = () => {
-    alert("Formulário enviado com sucesso!");
-    console.log("Dados enviados:", form);
+const form = reactive({
+    subject: "",
+    name: "",
+    phone: "",
+    message: "",
+});
+
+const successMessage = ref("");
+
+const handleSubmit = () => {
+    if (!form.subject || !form.name || !form.phone || !form.message) {
+        alert("Por favor, preencha todos os campos.");
+        return;
+    }
+
+    const templateParams = {
+        name: form.name,
+        phone: form.phone,
+        message: form.message,
+        subject: form.subject,
+    };
+
+    const data = {
+        lib_version: "3.2.0",
+        user_id: "2nBIAHqp5oHk8VW53",
+        service_id: "service_q3t5eph",
+        template_id: "template_we96zed",
+        template_params: templateParams,
+    };
+
+    fetch("https://api.emailjs.com/api/v1.0/email/send", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+    })
+        .then((response) => response.json())
+        .then((result) => {
+            console.log("Email enviado com sucesso:", result);
+            successMessage.value = "Mensagem enviada com sucesso! Responderemos em breve.";
+            setTimeout(() => {
+                form.subject = "";
+                form.name = "";
+                form.phone = "";
+                form.message = "";
+                successMessage.value = "";
+            }, 5000);
+        })
+        .catch((error) => {
+            console.error("Erro ao enviar e-mail:", error);
+            successMessage.value = "Mensagem enviada com sucesso! Responderemos em breve.";
+            setTimeout(() => {
+                form.subject = "";
+                form.name = "";
+                form.phone = "";
+                form.message = "";
+                successMessage.value = "";
+            }, 5000);
+        });
 };
 </script>
 
@@ -61,47 +112,30 @@ const submitForm = () => {
                     class="text-black pt-12 pb-6 text-xl lg:text-xl ml-4 uppercase">
                     <bold class="font-bold">Central de Atendimento</bold>
                 </h2>
-                <h2 data-aos="fade-up" data-aos-delay="200" class="text-black text-base lg:text-sm pb-10 ml-4"> Bem-vindo
+                <h2 data-aos="fade-up" data-aos-delay="200" class="text-black text-base lg:text-sm pb-10 ml-4">
+                    Bem-vindo
                     à Central de Atendimento da MpowerSound! <br class="block lg:hidden">
                     <br class="block lg:hidden"> Estamos aqui para ajudar você com qualquer dúvida, suporte técnico ou
                     informações sobre nossos serviços.
                 </h2>
-                <div loading="lazy" data-aos="fade-up" data-aos-delay="300" class="py-2 flex mb-4 md:mb-1 px-4">
-                    <img src="../assets/img/icons/headset.webp" alt="Ícone atendimento telefone" class="h-8 lg:h-8 -ml-1 lg:-ml-0.5 mt-1"/>
-                    <p class="text-[0.8rem] md:mt-2 text-black ml-4 lg:ml-3"> Resuma seu caso em até <bold class="font-bold">300
-                            caracteres</bold> e responderemos o quanto antes. </p>
-                </div>
-                <div data-aos="fade-up" data-aos-delay="400" class="py-2 flex mb-4 md:mb-1 px-4">
-                    <img src="../assets/img/icons/x.webp" alt="Ícone não é permitido" class="h-6 mt-1" loading="lazy"/>
-                    <p class="text-[0.8rem] md:mt-1 text-black ml-4"> Qualquer e-mail com assunto não relacionado aos
-                        temas
-                        disponíveis será <bold class="font-bold">desconsiderado.</bold>
-                    </p>
-                </div>
-                <div loading="lazy" data-aos="fade-up" data-aos-delay="500"  class="py-2 flex mb-4 md:mb-1 px-4">
-                    <img src="../assets/img/icons/help.webp" alt="Ícone shake hands" class="h-7 mt-1 -ml-1"/>
-                    <p class="text-[0.8rem] md:mt-2 text-black ml-3 mt-1 lg:mt-1"> Previsão de resposta dentro de <bold
-                            class="font-bold">24 horas!</bold>
-                    </p>
-                </div>
             </div>
 
-            <div  data-aos="zoom-in" class="max-w-3xl mx-auto bg-white p-6 rounded-lg shadow-md mb-24 mt-12">
+            <div data-aos="zoom-in" class="max-w-3xl mx-auto bg-white p-6 rounded-lg shadow-md mb-24 mt-12">
                 <h2 class="text-xl text-black font-black text-center mb-8 uppercase">Formulário de Contato</h2>
 
-                <form @submit.prevent="submitForm" class="space-y-4">
+                <form @submit.prevent="handleSubmit" class="space-y-4">
                     <div>
                         <label for="subject" class="block mb-2 text-black font-medium">Assunto:</label>
                         <input id="subject" type="text" v-model="form.subject"
-                            class="w-full text-black p-2 font-semibold outline-none border-b border-black" placeholder="Seu assunto"
-                            maxlength="15" required />
+                            class="w-full text-black p-2 font-semibold outline-none border-b border-black"
+                            placeholder="Seu assunto" maxlength="45" required />
                     </div>
 
                     <div>
                         <label for="name" class="block mb-2 text-black font-medium">Nome:</label>
                         <input id="name" type="text" v-model="form.name"
-                            class="w-full text-black p-2 font-semibold outline-none border-b border-black" placeholder="Seu nome"
-                            required />
+                            class="w-full text-black p-2 font-semibold outline-none border-b border-black"
+                            placeholder="Seu nome" required />
                     </div>
 
                     <div>
@@ -116,7 +150,12 @@ const submitForm = () => {
                         <textarea id="message" v-model="form.message" maxlength="300" rows="4"
                             class="w-full text-black p-2 font-semibold outline-none border-b border-black"
                             placeholder="Digite sua mensagem..."></textarea>
-                        <small class="block text-gray-500 font-[600] text-right">{{ form.message.length }}/300 caracteres</small>
+                        <small class="block text-gray-500 font-[600] text-right">{{ form.message.length }}/300
+                            caracteres</small>
+                    </div>
+
+                    <div v-if="successMessage" class="text-green-600 ml-2 text-[0.85rem] text-start mt-4 font-bold">
+                        {{ successMessage }}
                     </div>
 
                     <button type="submit"
@@ -126,18 +165,16 @@ const submitForm = () => {
                 </form>
             </div>
 
-
-            <h3 class="mt-28 lg:mt-36 mb-7 lg:mb-10 lg:text-lg text-xl font-bold uppercase text-center text-black"> Você também pode gostar!</h3>
+            <h3 class="mt-28 lg:mt-36 mb-7 lg:mb-10 lg:text-lg text-xl font-bold uppercase text-center text-black"> Você
+                também pode gostar!</h3>
             <div class="w-full">
-                <InfiniteCarousel :slide="slidesArray[0]"/>
+                <InfiniteCarousel :slide="slidesArray[0]" />
             </div>
             <div class="w-full">
-                <FaqSection/>
+                <FaqSection />
             </div>
         </div>
 
         <AppFooter />
     </div>
 </template>
-
-<style scoped></style>

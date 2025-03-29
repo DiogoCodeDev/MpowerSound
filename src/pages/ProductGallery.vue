@@ -189,10 +189,12 @@ watch(
                         </div>
                     </div>
                 </div>
-                <div data-aos="zoom-in" class="w-24 h-full flex lg:mr-24 mt-7 -ml-12 lg:mt-0 lg:pt-7">
+                <div class="w-24 h-full flex lg:mr-24 mt-7 -ml-12 lg:mt-0 lg:pt-7">
                     <div class="flex items-center">
-                        <img @click="ChangeMode" class="h-7 lg:h-6 m-1 ml-12 cursor-pointer"
+                        <img data-aos="zoom-in" data-aos-duration="300" v-if="!hasListMode" @click="ChangeMode" class="h-7 lg:h-6 m-1 ml-12 cursor-pointer"
                             src="../assets/img/icons/icon-box.webp" alt="Ícone produtos modo boxe" />
+                        <img data-aos="zoom-in" data-aos-duration="300" v-else-if="hasListMode" @click="ChangeMode" class="h-7 lg:h-6 m-1 ml-12 cursor-pointer"
+                            src="../assets/img/icons/icon-list.webp" alt="Ícone produtos modo lista" />
                     </div>
                 </div>
             </div>

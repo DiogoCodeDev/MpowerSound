@@ -85,6 +85,8 @@ const getScrollAmount = () => {
 };
 
 const goToGallery = (filter) => {
+    if(filter == "Selecionados para você!")
+        filter = "Produtos"
     router.push({ path: '/product-gallery', query: { search: filter } });
 };
 
