@@ -43,28 +43,28 @@ const route = useRoute();
 		<div class="w-80 md:w-96 flex flex-col justify-center md:items-center lg:justify-start lg:w-1/3">
 			<div>
 				<h3 data-aos="fade-right" class="text-xl mb-8 lg:mb-4 lg:mt-6 font-black uppercase">Redes Sociais</h3>
-				<div class="flex w-72 lg:w-9/12 justify-between mb-4 lg:mb-3">
-					<img data-aos="fade-up" alt="icon facebook" class="h-9 cursor-pointer lg:h-6" src="../assets/img/icons/facebook-icon.webp"/>
-					<img data-aos="fade-up" alt="icon whatsapp" class="h-9 cursor-pointer lg:h-6 ml-3 lg:ml-2 mb-12 lg:mb-4" src="../assets/img/icons/wpp-icon.webp"/>
-					<img data-aos="fade-up" alt="icon instagram" class="h-9 cursor-pointer lg:h-6" src="../assets/img/icons/instagram-icon.webp"/>
+				<div class="flex w-72 lg:w-8/12 justify-between mb-4 lg:mb-3">
+					<img data-aos="fade-up" alt="icon whatsapp" class="h-9 cursor-pointer lg:h-5.5 ml-1 lg:ml-1 mb-12 lg:mb-2" src="../assets/img/icons/wpp-icon.webp"/>
+					<img data-aos="fade-up" alt="icon facebook" class="h-9 cursor-pointer lg:h-5.5" src="../assets/img/icons/facebook-icon.webp"/>
+					<img data-aos="fade-up" alt="icon instagram" class="h-9 cursor-pointer lg:h-5.5" src="../assets/img/icons/instagram-icon.webp"/>
+				</div>
+				<div class="w-full flex flex-col mb-14 py-4 lg:mb-4">
+					<p data-aos="fade-up" data-aos-offset="50" class="text-[0.74rem] lg:text-[0.6rem] tracking-wider flex lg:text-xs text-white lg:mb-2 mb-4">
+						Meios de Pagamento:
+					</p>
+					<div class="w-full flex">
+						<img data-aos="fade-up" alt="icon criadores do site" class="h-8.5 lg:h-5.5 mr-4 lg:mr-2.5 cursor-pointer" src="/icons/master-card-icon.webp"/>
+						<img data-aos="fade-up" alt="icon criadores do site" class="h-8 lg:h-5.5 mx-4 lg:mx-2.5 cursor-pointer" src="/icons/pix-icon.webp"/>
+						<img data-aos="fade-up" alt="icon criadores do site" class="h-7.5 lg:h-5 mx-4 lg:mx-2.5 cursor-pointer" src="/icons/visa-icon.webp"/>
+					</div>
 				</div>
 				<div class="w-full mb-14 lg:mb-0">
 					<p data-aos="fade-up" data-aos-offset="50" class="text-[0.74rem] lg:text-[0.6rem] tracking-wider flex lg:text-xs text-white lg:mb-2 mb-6">
 						Powered By:
 					</p>
 					<a href="https://dcodev.com.br/" target="_blank">
-						<img data-aos="fade-up" alt="icon criadores do site" class="h-6 lg:h-4 mb-8 lg:mb-4 cursor-pointer" src="../assets/img/icons/dcodev-white_1.webp"/>
+						<img data-aos="fade-up" alt="icon criadores do site" class="h-6 lg:h-4 mb-8 lg:mb-8 cursor-pointer" src="../assets/img/icons/dcodev-white_1.webp"/>
 					</a>
-				</div>
-				<div class="w-full flex flex-col mb-14 py-4 lg:mb-5">
-					<p data-aos="fade-up" data-aos-offset="50" class="text-[0.74rem] lg:text-[0.6rem] tracking-wider flex lg:text-xs text-white lg:mb-2 mb-4">
-						Meios de Pagamento:
-					</p>
-					<div class="w-full flex">
-						<img data-aos="fade-up" alt="icon criadores do site" class="h-8.5 lg:h-5.5 mr-4 lg:mr-3 cursor-pointer" src="/icons/master-card-icon.webp"/>
-						<img data-aos="fade-up" alt="icon criadores do site" class="h-8 lg:h-5.5 mx-4 lg:mx-3 cursor-pointer" src="/icons/pix-icon.webp"/>
-						<img data-aos="fade-up" alt="icon criadores do site" class="h-7.5 lg:h-5 mx-4 lg:mx-3 cursor-pointer" src="/icons/visa-icon.webp"/>
-					</div>
 				</div>
 				<p data-aos="fade-up" data-aos-offset="50" class="text-[0.74rem] tracking-wider flex lg:hidden lg:text-xs text-white mb-4">
 					© 2025 MPowerSound. Todos os direitos reservados.
