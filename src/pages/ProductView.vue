@@ -185,13 +185,13 @@ watch(productId, getProduct, { immediate: true });
                                         src="../assets/img/icons/mercado-livre.webp" />
                                 </button>
                             </a>
-                            <a :href="product.amazon" target="_blank">
+                            <!-- <a :href="product.amazon" target="_blank">
                                 <button data-aos="zoom-in" data-aos-duration="200"
                                     class="w-80 lg:w-64 cursor-pointer hover:scale-105 mb-6 lg:mb-0 transition-transform duration-300 mx-6 ease-in-out h-16 shadow-xl bg-[#131921] text-white font-bold rounded-full flex items-center justify-center space-x-2">
                                     <img alt="logo mercado livre" class="h-8 pt-1"
                                         src="../assets/img/icons/amazon-logo.webp" />
                                 </button>
-                            </a>
+                            </a> -->
                         </div>
                     </div>
                     <div class="flex flex-col lg:mb-6 items-center lg:items-start">

@@ -45,7 +45,7 @@ const faqList = ref([
         questions: [
             {
                 question: 'Como solicito um reembolso?',
-                answer: 'Para solicitar um reembolso, entre em contato com nosso suporte pelo e-mail suporte@mpowersound.com com o número do pedido e o motivo da solicitação.'
+                answer: 'Para solicitar um reembolso, entre em contato com nosso suporte pelo e-mail suporte@mpowersound.com.br com o número do pedido e o motivo da solicitação.'
             },
             {
                 question: 'Qual o prazo para reembolsos?',
