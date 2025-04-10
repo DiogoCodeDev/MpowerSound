@@ -17,8 +17,11 @@ const route = useRoute();
 					Rua Altino Arantes, 717, Jardim das Bandeiras, Campinas/SP <br class="hidden md:flex lg:hidden xl:flex">
 					CEP 13051-110
 				</p>
+				<p data-aos="fade-up" class="text-[0.95rem] lg:text-[0.65rem] mb-8 lg:mb-2">
+					Horário de funcionamento: Segunda a sexta, das 7h às 16:45h.
+				</p>
 				<p data-aos="fade-up" class="text-[0.95rem] lg:text-[0.65rem] mb-10">
-					Horário de funcionamento: Segunda a sexta, das 8h às 18h.
+					Contato: (19) 3227-6477
 				</p>
 				<p data-aos="fade-up" data-aos-offset="50" class="text-sm hidden lg:flex lg:text-[0.6rem] text-white mb-12 lg:mb-4">
 					© 2025 MPowerSound. Todos os direitos reservados.

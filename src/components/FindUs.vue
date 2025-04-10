@@ -53,7 +53,7 @@ onMounted(() => {
             Rua Altino Arantes, 717, Jardim das Bandeiras, Campinas/SP, CEP 13051-110
         </p>
         <p class="text-black mx-12 lg:text-center font-[500] text-sm lg:text-[0.69rem] mb-6">
-            Horário de funcionamento: Segunda a sexta, das 8h às 18h.
+            Horário de funcionamento: Segunda a sexta, das 7h às 16:45h.
         </p>
         <div data-aos="fade-up" data-aos-delay="200" id="map-container" class="lg:w-full mb-4 w-88 sm:w-96 md:w-8/12 md:max-w-3xl h-[40vh] sm:h-[400px] lg:h-[600px] rounded-lg shadow-lg"></div>
         <a class="w-full flex items-center justify-center" href="https://www.google.com/maps?q=Rua+Altino+Arantes,717,Jardim+das+Bandeiras,Campinas,SP"

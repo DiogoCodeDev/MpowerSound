@@ -7,11 +7,11 @@ const faqList = ref([
         questions: [
             {
                 question: 'Qual a potência dos amplificadores?',
-                answer: 'A potência dos amplificadores varia de acordo com o modelo, indo de 50W a 500W RMS. Consulte as especificações do produto para mais detalhes.'
+                answer: 'A potência dos amplificadores varia de acordo com o modelo, indo de 35W a 300W RMS. Consulte as especificações do produto para mais detalhes.'
             },
             {
                 question: 'Os amplificadores têm garantia?',
-                answer: 'Sim, todos os nossos amplificadores possuem garantia de 12 meses contra defeitos de fabricação.'
+                answer: 'Sim, todos os nossos amplificadores possuem garantia de 24 meses contra defeitos de fabricação.'
             },
             {
                 question: 'Os amplificadores são compatíveis com qualquer sistema de som?',
@@ -28,15 +28,11 @@ const faqList = ref([
         questions: [
             {
                 question: 'Quais formas de pagamento são aceitas?',
-                answer: 'Aceitamos cartões de crédito, débito, Pix e boleto bancário.'
-            },
-            {
-                question: 'Posso parcelar minha compra?',
-                answer: 'Sim, oferecemos parcelamento em até 12 vezes sem juros em compras acima de R$ 200,00.'
+                answer: 'Aceitamos pix e boleto bancário.'
             },
             {
                 question: 'Vocês oferecem desconto para pagamento à vista?',
-                answer: 'Sim, oferecemos 10% de desconto para pagamentos via Pix ou boleto bancário.'
+                answer: 'Sim, oferecemos 5% de desconto para pagamentos via Pix ou boleto bancário.'
             }
         ]
     },
