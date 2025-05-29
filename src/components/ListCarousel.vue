@@ -19,7 +19,7 @@
                 </div>
 
                 <div class="flex items-center mt-12 lg:mt-0 justify-center lg:mr-8 xl:mr-12">
-                    <img :class="product.size" class="drop-shadow cursor-pointer lg:ml-10 xl:ml-0" :src="getImagePath(product.img)"
+                    <img :class="product.size" class="cursor-pointer lg:ml-10 xl:ml-0" :src="getImagePath(product.img)"
                         :alt="product.alt" />
                 </div>
                 <div class="w-80 ml-4 flex flex-col pt-4">

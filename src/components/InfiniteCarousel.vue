@@ -19,7 +19,7 @@
                 </div>
 
                 <div class="flex items-center h-20 justify-center pt-4">
-                    <img :class="product.size" class="drop-shadow cursor-pointer" :src="getImagePath(product.img)"
+                    <img :class="product.size" class="cursor-pointer" :src="getImagePath(product.img)"
                         :alt="product.alt" />
                 </div>
                 <div v-bind:title="product.oldPricePromotion && product.name.length > 12 ? product.name : ''"

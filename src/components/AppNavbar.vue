@@ -83,8 +83,9 @@ const isMenuOpen = ref(false);
 		<nav :class="!isNavbarFixed ? 'w-full mb-10 lg:mb-20 pt-12 lg:pt-12' : 'w-full px-7 md:px-20 lg:px-32 py-4 lg:py-4 xl:py-2'"
 			class="justify-between items-center flex">
 			<router-link data-aos="fade-right" data-aos-delay="200" to="/">
-				<h1 :class="isNavbarFixed ? 'text-[1.8rem] xl:text-[2.3rem] lg:mr-6' : 'text-[2.1rem] xl:text-[2.7rem] '"
-					class="font-bold"> MPSound </h1>
+				<!-- <h1 :class="isNavbarFixed ? 'text-[1.8rem] xl:text-[2.3rem] lg:mr-6' : 'text-[2.1rem] xl:text-[2.7rem] '"
+					class="font-bold"> MPSound </h1> -->
+				<img data-aos="fade-up" alt="icon criadores do site" class="h-6 lg:h-6 mb-4 mt-4 lg:mb-4 cursor-pointer" src="../assets/img/icons/m-power-logo-white.webp"/>
 			</router-link>
 
 			<!-- Menu Desktop -->
@@ -101,40 +102,24 @@ const isMenuOpen = ref(false);
 						<router-link @click="notFixeNavBar" to="/product-gallery?all">Produtos</router-link>
 						<span class="ml-3 text-xs cursor-pointer transform transition-transform duration-300"
 							:class="{ 'rotate-180': isSubmenuOpen }">▼</span>
-						<ul v-if="isSubmenuOpen" :class="isNavbarFixed ? 'mt-72' : 'mt-62'"
+						<ul v-if="isSubmenuOpen" :class="isNavbarFixed ? 'mt-44' : 'mt-36'"
 							style="background-color: #090909;"
-							class="absolute w-56 shadow-md rounded mr-1 p-2 space-y-2">
+							class="absolute w-64 shadow-md rounded mr-1 p-2 space-y-2">
 							<li class="font-normal tracking-wider w-72 ml-1 pt-2 pb-1">
 								<router-link @click="notFixeNavBar" to="/product-gallery?all"
 									class="text-white hover:ml-1 duration-150 ease-in-out"> •&nbsp;
-									Amplificadores de
-									Pôtencia</router-link>
+									Caixas Amplificadoras Multi-uso</router-link>
 							</li>
 							<li class="font-normal tracking-wider w-72 ml-1 py-1">
 								<router-link @click="notFixeNavBar" to="/product-gallery?all"
-									class="text-white hover:ml-1 duration-150 ease-in-out"> • &nbsp;Mesas de
-									Som</router-link>
-							</li>
-							<li class="font-normal tracking-wider w-72 ml-1 py-1">
-								<router-link @click="notFixeNavBar" to="/product-gallery?all"
-									class="text-white hover:ml-1 duration-150 ease-in-out"> • &nbsp;Caixas
-									Acústicas
-									Ativas</router-link>
+									class="text-white hover:ml-1 duration-150 ease-in-out"> • &nbsp;
+									Amplificadores de Potência</router-link>
 							</li>
 							<li class="font-normal tracking-wider w-72 ml-1 py-1">
 								<router-link @click="notFixeNavBar" to="/product-gallery?all"
 									class="text-white hover:ml-1 duration-150 ease-in-out"> • &nbsp;Caixas
-									Multiuso </router-link>
-							</li>
-							<li class="font-normal tracking-wider w-72 ml-1 py-1">
-								<router-link @click="notFixeNavBar" to="/product-gallery?all"
-									class="text-white hover:ml-1 duration-150 ease-in-out"> • &nbsp;Amplificador
-									Compacto</router-link>
-							</li>
-							<li class="font-normal tracking-wider w-72 ml-1 pt-1 pb-2">
-								<router-link @click="notFixeNavBar" to="/product-gallery?all"
-									class="text-white hover:ml-1 duration-150 ease-in-out"> • &nbsp;Mixer
-									Amplificado</router-link>
+									Kits M power Sound
+								</router-link>
 							</li>
 						</ul>
 					</li>
@@ -215,25 +200,11 @@ const isMenuOpen = ref(false);
 									<li class="font-normal tracking-wider h-10 mt-4 text-[1.05rem] flex items-center text-sm">									
 										<router-link @click="notFixeNavBar" to="/product-gallery?all"
 											class="text-white hover:ml-1 duration-150 ease-in-out"> • &nbsp;
-											Amplificadores de
-											Potência</router-link></li>
+											Caixas Amplificadoras Multi-uso</router-link></li>
 									<li class="font-normal tracking-wider h-10 flex text-[1.05rem] items-center text-sm"><router-link @click="notFixeNavBar" to="/product-gallery?all"
-											class="text-white hover:ml-1 duration-150 ease-in-out"> • &nbsp; Mesas de
-											Som</router-link></li>
+											class="text-white hover:ml-1 duration-150 ease-in-out"> • &nbsp; Amplificadores de Potência</router-link></li>
 									<li class="font-normal tracking-wider h-10 flex text-[1.05rem] items-center text-sm"><router-link @click="notFixeNavBar" to="/product-gallery?all"
-											class="text-white hover:ml-1 duration-150 ease-in-out"> • &nbsp; Caixas
-											Acústicas
-											Ativas</router-link></li>
-									<li class="font-normal tracking-wider h-10 flex text-[1.05rem] items-center text-sm"><router-link @click="notFixeNavBar" to="/product-gallery?all"
-											class="text-white hover:ml-1 duration-150 ease-in-out"> • &nbsp; Caixas
-											Multiuso</router-link></li>
-									<li class="font-normal tracking-wider h-10 flex text-[1.05rem] items-center text-sm"><router-link @click="notFixeNavBar" to="/product-gallery?all"
-											class="text-white hover:ml-1 duration-150 ease-in-out"> • &nbsp;
-											Amplificador
-											Compacto</router-link></li>
-									<li class="font-normal tracking-wider h-10 flex text-[1.05rem] items-center text-sm"><router-link @click="notFixeNavBar" to="/product-gallery?all"
-											class="text-white hover:ml-1 duration-150 ease-in-out"> • &nbsp; Mixer
-											Amplificado</router-link></li>
+											class="text-white hover:ml-1 duration-150 ease-in-out"> • &nbsp; Kits M power Sound</router-link></li>
 								</ul>
 							</transition>
 						</li>

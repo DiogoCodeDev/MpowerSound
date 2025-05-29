@@ -120,8 +120,19 @@ watch(productId, getProduct, { immediate: true });
                     </div>
                 </div>
                 <div class="w-full lg:w-1/2 py-8 lg:pb-20 lg:pt-10 lg:px-12 px-6 mr-2">
-                    <h1 class="text-black text-[1.72rem] pl-2 pt-2 lg:pt-0 lg:mb-5 leading-none">{{ product.name }}</h1>
-                    <p data-aos="fade-left" class="text-black lg:text-[0.90rem] text-[1.05rem] pt-12 lg:pt-2 mb-6">{{
+                    <h1 class="text-black text-[1.72rem] pl-2 pt-2 lg:pt-0 lg:mb-5 mb-4 leading-none">{{ product.name }}
+                    </h1>
+                    <div v-if="product.manual" class="w-full flex justify-end items-center mb-2">
+                        <a data-aos="zoom-in" :href="`/manual/${product.manual}`" download target="_blank"
+                            class="flex items-center">
+                            <img src="/products/download.png" class="h-5 lg:h-3 cursor-pointer" alt="Download Manual" />
+                            <p data-aos="fade-left" class="text-black mx-4 lg:mx-2 lg:text-[0.7rem] text-[0.95rem]">
+                                Manual de instalação
+                            </p>
+                        </a>
+                    </div>
+
+                    <p data-aos="fade-left" class="text-black lg:text-[0.90rem] text-[1.05rem] pt-8 lg:pt-2 mb-6">{{
                         product.description }}</p>
                     <section v-for="(desc, index) in product.topicsDesc" :key="index">
                         <p data-aos="fade-left" class="text-black text-[1rem] lg:text-[0.85rem] pt-2 lg:mb-3 lg:pl-2">
@@ -159,7 +170,7 @@ watch(productId, getProduct, { immediate: true });
                                 <h1 class="text-black lg:text-[1.12rem] text-[1.42rem] mt-2 pl-2">no PIX</h1>
                                 <h1 class="text-black lg:text-[1.12rem] text-[1.42rem] lg:-mt-2 pl-2">ou até {{
                                     product.saleCfg[0].installmentMax
-                                    }}
+                                }}
                                     de R$ {{ product.saleCfg[0].installmentPrice }}</h1>
                             </div>
                         </div>
@@ -205,7 +216,8 @@ watch(productId, getProduct, { immediate: true });
                                     src="../assets/img/icons/email-black.webp" />
                             </button>
 
-                            <button @click="openContactWpp(product.name, product.saleCfg[0].price)" data-aos="zoom-in" data-aos-duration="400"
+                            <button @click="openContactWpp(product.name, product.saleCfg[0].price)" data-aos="zoom-in"
+                                data-aos-duration="400"
                                 class="w-80 lg:w-64 cursor-pointer hover:scale-105 mb-6 lg:mb-0 transition-transform duration-300 mx-6 ease-in-out h-16 shadow-xl bg-[#31B646] text-white font-bold rounded-full flex items-center justify-center space-x-2">
                                 <span>WhatsApp</span>
                                 <img alt="icon whatsapp" class="h-7 lg:h-6 ml-2 lg:ml-6"
@@ -215,8 +227,7 @@ watch(productId, getProduct, { immediate: true });
 
                             <ContactModal v-if="showModal"
                                 class="z-50 fixed top-0 left-0 right-0 bottom-0 bg-opacity-70" :produto="product.name"
-                                :price="product.saleCfg[0].price"
-                                @close="closeContact" />
+                                :price="product.saleCfg[0].price" @close="closeContact" />
 
                         </div>
                     </div>

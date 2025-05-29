@@ -87,8 +87,9 @@ const isMenuOpen = ref(false);
 		<nav :class="!isNavbarFixed ? 'w-full mb-4 lg:mb-2 pt-5 lg:pt-2' : 'w-full px-7 md:px-20 lg:px-32 py-4 lg:py-4 xl:py-2'"
 			class="justify-between items-center flex">
 			<router-link data-aos="fade-right" data-aos-delay="200" to="/">
-				<h1 :class="isNavbarFixed ? 'text-[1.8rem] xl:text-[2.3rem] lg:mr-6' : 'text-[2.1rem] xl:text-[2.7rem] '"
-					class="font-bold"> MPSound </h1>
+				<!-- <h1 :class="isNavbarFixed ? 'text-[1.8rem] xl:text-[2.3rem] lg:mr-6' : 'text-[2.1rem] xl:text-[2.7rem] '"
+					class="font-bold"> MPSound </h1> -->
+				<img data-aos="fade-up" alt="icon criadores do site" class="h-6 lg:h-6 mb-4 mt-4 lg:mb-4 cursor-pointer" src="../assets/img/icons/m-power-logo-white.webp"/>
 			</router-link>
 
 			<!-- Menu Desktop -->

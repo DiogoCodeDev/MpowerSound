@@ -4,63 +4,13 @@ import { defineStore } from 'pinia';
 
 const useProductStore = defineStore('product', {
   state: () => ({
-    slidesGallery: [
-      {
-        "title": "Caixas Acústicas Passivas",
-        "desc": "As Caixas Acústicas Passivas da MPower Sound são projetadas para entregar uma reprodução sonora precisa e de alta qualidade.",
-        "descMobile": "As Caixas Acústicas Passivas da M Power Sound são projetadas para entregar uma reprodução sonora precisa e de alta qualidade.",
-        "products": [
-          1, 2, 3, 4, 5, 6, 7, 8
-        ]
-      },
-      {
-        "title": "Amplificadores de Potência",
-        "desc": "Os Amplificadores de Potência da MPower Sound foram desenvolvidos para entregar um som robusto, claro e fiel em qualquer ambiente.",
-        "descMobile": "Os Amplificadores de Potência da M Power Sound foram desenvolvidos para entregar um som robusto, claro e fiel em qualquer ambiente.",
-        "products": [
-          4, 7, 3, 4, 5, 6, 1, 4
-        ]
-      },
-      {
-        "title": "Caixas para Sonorização Ambiente",
-        "desc": "Transforme seu espaço com as Caixas para Sonorização de Ambiente, oferecendo som de alta qualidade, clareza e potência para qualquer tipo de ambiente!",
-        "descMobile": "Transforme seu espaço com as Caixas para Sonorização de Ambiente, oferecendo som de alta qualidade, clareza e potência para qualquer tipo de ambiente!",
-        "products": [
-          5, 6, 7, 8, 1, 2, 3, 4
-        ]
-      },
-      {
-        "title": "Produtos X",
-        "desc": "As Caixas Acústicas Passivas da MPower Sound são projetadas para entregar uma reprodução sonora precisa e de alta qualidade.",
-        "descMobile": "As Caixas Acústicas Passivas da M Power Sound são projetadas para entregar uma reprodução sonora precisa e de alta qualidade.",
-        "products": [
-          1, 2, 3, 4, 5, 6, 7, 8
-        ]
-      },
-      {
-        "title": "Produtos Y",
-        "desc": "Os Amplificadores de Potência da MPower Sound foram desenvolvidos para entregar um som robusto, claro e fiel em qualquer ambiente.",
-        "descMobile": "Os Amplificadores de Potência da M Power Sound foram desenvolvidos para entregar um som robusto, claro e fiel em qualquer ambiente.",
-        "products": [
-          4, 7, 3, 4, 5, 6, 1, 4
-        ]
-      },
-      {
-        "title": "Produtos Z",
-        "desc": "Transforme seu espaço com as Caixas para Sonorização de Ambiente, oferecendo som de alta qualidade, clareza e potência para qualquer tipo de ambiente!",
-        "descMobile": "Transforme seu espaço com as Caixas para Sonorização de Ambiente, oferecendo som de alta qualidade, clareza e potência para qualquer tipo de ambiente!",
-        "products": [
-          5, 6, 7, 8, 1, 2, 3, 4
-        ]
-      }
-    ],
     slidesHome: [
       {
-        "title": "Caixas Acústicas Passivas",
-        "desc": "As Caixas Acústicas Passivas da MPower Sound são projetadas para entregar uma reprodução sonora precisa e de alta qualidade. Com design robusto e tecnologia avançada, elas oferecem excelente desempenho acústico, garantindo graves potentes, médios definidos e agudos cristalinos em qualquer ambiente.",
-        "descMobile": "As Caixas Acústicas Passivas da M Power Sound são projetadas para entregar uma reprodução sonora precisa e de alta qualidade.",
+        "title": "Caixas Amplificadoras Multi-uso",
+        "desc": "As Caixas Amplificadoras Multi-uso da MPower Sound são versáteis, potentes e ideais para diversas aplicações sonoras, oferecendo excelente qualidade de áudio, robustez e conectividade para diferentes tipos de uso.",
+        "descMobile": "Caixas Amplificadoras Multi-uso da MPower Sound com qualidade, potência e conectividade para diversas aplicações.",
         "products": [
-          1, 2, 3, 4, 5, 6, 7, 8
+          1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3
         ]
       },
       {
@@ -68,15 +18,41 @@ const useProductStore = defineStore('product', {
         "desc": "Os Amplificadores de Potência da MPower Sound foram desenvolvidos para entregar um som robusto, claro e fiel em qualquer ambiente. Com tecnologia de ponta e engenharia de alta precisão, nossos amplificadores oferecem desempenho excepcional em todas as frequências sonoras, proporcionando uma experiência sonora imersiva e de alta qualidade.",
         "descMobile": "Os Amplificadores de Potência da M Power Sound foram desenvolvidos para entregar um som robusto, claro e fiel em qualquer ambiente.",
         "products": [
-          4, 7, 3, 4, 5, 6, 1, 4
+          4, 5, 6, 4, 5, 6, 4, 5, 6, 4, 5, 6, 4, 5, 6
         ]
       },
       {
-        "title": "Caixas para Sonorização Ambiente",
-        "desc": "Transforme seu espaço com as Caixas para Sonorização de Ambiente, oferecendo som de alta qualidade, clareza e potência para qualquer tipo de ambiente!",
-        "descMobile": "Transforme seu espaço com as Caixas para Sonorização de Ambiente, oferecendo som de alta qualidade, clareza e potência para qualquer tipo de ambiente!",
+        "title": "Kits M power Sound",
+        "desc": "Os Kits M power Sound foram desenvolvidos para oferecer soluções completas de áudio com excelente desempenho e praticidade. Combinando amplificadores e caixas de som de alta qualidade, esses kits garantem potência, clareza e fidelidade sonora para diversos ambientes.",
+        "descMobile": "Os Kits M power Sound oferecem soluções completas de áudio com alta performance e praticidade.",
         "products": [
-          5, 6, 7, 8, 1, 2, 3, 4
+          7, 8, 7, 8, 7, 8, 7, 8, 7, 8, 7, 8, 7, 8
+        ]
+      }
+    ],
+    slidesGallery: [
+      {
+        "title": "Caixas Amplificadoras Multi-uso",
+        "desc": "As Caixas Amplificadoras Multi-uso da MPower Sound são versáteis, potentes e ideais para diversas aplicações sonoras, oferecendo excelente qualidade de áudio, robustez e conectividade para diferentes tipos de uso.",
+        "descMobile": "Caixas Amplificadoras Multi-uso da MPower Sound com qualidade, potência e conectividade para diversas aplicações.",
+        "products": [
+          1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3
+        ]
+      },
+      {
+        "title": "Amplificadores de Potência",
+        "desc": "Os Amplificadores de Potência da MPower Sound foram desenvolvidos para entregar um som robusto, claro e fiel em qualquer ambiente. Com tecnologia de ponta e engenharia de alta precisão, nossos amplificadores oferecem desempenho excepcional em todas as frequências sonoras, proporcionando uma experiência sonora imersiva e de alta qualidade.",
+        "descMobile": "Os Amplificadores de Potência da M Power Sound foram desenvolvidos para entregar um som robusto, claro e fiel em qualquer ambiente.",
+        "products": [
+          4, 5, 6, 4, 5, 6, 4, 5, 6, 4, 5, 6, 4, 5, 6
+        ]
+      },
+      {
+        "title": "Kits M power Sound",
+        "desc": "Os Kits M power Sound foram desenvolvidos para oferecer soluções completas de áudio com excelente desempenho e praticidade. Combinando amplificadores e caixas de som de alta qualidade, esses kits garantem potência, clareza e fidelidade sonora para diversos ambientes.",
+        "descMobile": "Os Kits M power Sound oferecem soluções completas de áudio com alta performance e praticidade.",
+        "products": [
+          7, 8, 7, 8, 7, 8, 7, 8, 7, 8, 7, 8, 7, 8
         ]
       }
     ],
@@ -101,610 +77,611 @@ const useProductStore = defineStore('product', {
       }
     ],
     products: [
+      // {
+      //   "id": 1,
+      //   "name": "Cxs Acústicas Passiva - Versão 40t - 1080p.",
+      //   "img": "/products/product1.webp",
+      //   "size": "h-20",
+      //   "alt": "Imagem Produto",
+      //   "description": "Este amplificador excepcional oferece uma experiência sonora incomparável, onde cada nota e cada nuance são reproduzidas com clareza cristalina e precisão impressionante.",
+      //   "mercadolivre": "https://lista.mercadolivre.com.br/amplificadores#D[A:amplificadores]",
+      //   "amazon":"https://www.amazon.com.br/s?k=amplificadores&__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3AR8WW2DKSE17&sprefix=amplificadore%2Caps%2C254&ref=nb_sb_noss_2",
+      //   "topicsDesc": [
+      //     {
+      //       "title": "Qualidade de som incomparável",
+      //       "description": "Desfrute de um som rico e detalhado, com graves profundos, médios exuberantes e agudos cristalinos. O Amplificador [Nome do Modelo] revela a verdadeira beleza da sua música, permitindo que você ouça cada detalhe como nunca antes."
+      //     },
+      //     {
+      //       "title": "Design elegante e construção robusta",
+      //       "description": "O Amplificador [Nome do Modelo] combina um design elegante e minimalista com uma construção robusta e durável. Seu acabamento premium e seus componentes de alta qualidade garantem um desempenho confiável e duradouro."
+      //     }
+      //   ],
+      //   "infos": [
+      //     {
+      //       "name": 'Amplificador MpowerSound X500',
+      //       "description": 'O Amplificador MpowerSound X500 oferece alta fidelidade sonora com potência de 500W RMS, ideal para quem busca desempenho e qualidade em sistemas de áudio profissionais e residenciais.',
+      //       "specifications": [
+      //         { "label": 'Potência', "value": '500W RMS' },
+      //         { "label": 'Entradas', "value": '2 entradas RCA estéreo' },
+      //         { "label": 'Saídas', "value": 'Saída para 2 canais de alto-falantes' },
+      //         { "label": 'Proteção', "value": 'Proteção térmica e contra curto-circuito' },
+      //         { "label": 'Compatibilidade', "value": 'Compatível com a maioria dos sistemas de som padrão' },
+      //         { "label": 'Resposta de Frequência', "value": '20Hz - 20kHz' },
+      //         { "label": 'Relação Sinal-Ruído', "value": '>90dB' },
+      //         { "label": 'Impedância', "value": '4-8 ohms' },
+      //         { "label": 'Dimensões', "value": '300mm x 200mm x 70mm' },
+      //         { "label": 'Peso', "value": '3.5kg' },
+      //         { "label": 'Alimentação', "value": 'Bivolt automático (110V/220V)' },
+      //         { "label": 'THD (Distorção Harmônica Total)', "value": '<0.1%' },
+      //         { "label": 'Sensibilidade de Entrada', "value": '0.775V' },
+      //         { "label": 'Consumo de Energia', "value": '600W em plena carga' },
+      //         { "label": 'Material do Chassi', "value": 'Alumínio anodizado' },
+      //         { "label": 'Temperatura de Operação', "value": '0°C a 40°C' },
+      //         { "label": 'Método de Resfriamento', "value": 'Ventilação forçada com ventilador silencioso' }
+      //       ],
+      //       "warranty": '12 meses de garantia contra defeitos de fabricação.'
+      //     }
+      //   ],
+      //   "saleCfg": [
+      //     {
+      //       "price": "799,90",
+      //       "installmentPrice": "65,00",
+      //       "installmentMax": "12x",
+      //     }
+      //   ],
+      //   "imgsProduct": [
+      //     {
+      //       "img": "/products/product-2-picture.webp",
+      //       "alt": "desc product 1"
+      //     },
+      //     {
+      //       "img": "/products/product-4-picture.webp",
+      //       "alt": "desc product 2"
+      //     },
+      //     {
+      //       "img": "/products/product-5-picture.webp",
+      //       "alt": "desc product 3"
+      //     },
+      //     {
+      //       "img": "/products/product-3-picture.webp",
+      //       "alt": "desc product 1"
+      //     }
+      //   ],
+      //   "oldPricePromotion": [
+      //     {
+      //       "price": "1.599,90",
+      //       "discountPercentage": "50%",
+      //       "installmentPrice": "133,25 sem juros.",
+      //       "installmentMax": "12x",
+      //     }
+      //   ],
+      // },
       {
         "id": 1,
-        "name": "Caixas Acústicas Passiva - Versão 40t - 1080p.",
-        "img": "/products/product1.webp",
+        "name": "Caixa Amplificadora MP900 USB/SD",
+        "img": "/products/mp900-3.webp",
         "size": "h-20",
         "alt": "Imagem Produto",
-        "description": "Este amplificador excepcional oferece uma experiência sonora incomparável, onde cada nota e cada nuance são reproduzidas com clareza cristalina e precisão impressionante.",
-        "mercadolivre": "https://lista.mercadolivre.com.br/amplificadores#D[A:amplificadores]",
-        "amazon":"https://www.amazon.com.br/s?k=amplificadores&__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3AR8WW2DKSE17&sprefix=amplificadore%2Caps%2C254&ref=nb_sb_noss_2",
+        "manual": "manual-mp900.pdf",
+        "description": "Caixa amplificadora com múltiplas entradas e controles individuais, ideal para apresentações, igrejas, escolas e eventos em geral.",
+        "mercadolivre": "https://produto.mercadolivre.com.br/MLB-4025771895-caixa-amplificada-mp-900-bluetooth-usb-sd-card-fm-_JM",
+        "amazon": "",
         "topicsDesc": [
           {
-            "title": "Qualidade de som incomparável",
-            "description": "Desfrute de um som rico e detalhado, com graves profundos, médios exuberantes e agudos cristalinos. O Amplificador [Nome do Modelo] revela a verdadeira beleza da sua música, permitindo que você ouça cada detalhe como nunca antes."
+            "title": "Versatilidade de conexões",
+            "description": "Com entradas para microfone, guitarra, auxiliar, USB, cartão SD e rádio FM, a MP900 é perfeita para diferentes necessidades de áudio."
           },
           {
-            "title": "Design elegante e construção robusta",
-            "description": "O Amplificador [Nome do Modelo] combina um design elegante e minimalista com uma construção robusta e durável. Seu acabamento premium e seus componentes de alta qualidade garantem um desempenho confiável e duradouro."
+            "title": "Controles profissionais",
+            "description": "Possui controles de equalização LOW, MID, HIGH e volume geral (MASTER), permitindo um ajuste fino do som conforme o ambiente."
           }
         ],
         "infos": [
           {
-            "name": 'Amplificador MpowerSound X500',
-            "description": 'O Amplificador MpowerSound X500 oferece alta fidelidade sonora com potência de 500W RMS, ideal para quem busca desempenho e qualidade em sistemas de áudio profissionais e residenciais.',
+            "name": "Caixa Amplificadora MP900",
+            "description": "Caixa Amplificadora de 150W com múltiplas entradas, ideal para ambientes diversos como igrejas, escolas e eventos ao ar livre. Oferece grande versatilidade e controle de áudio.",
             "specifications": [
-              { "label": 'Potência', "value": '500W RMS' },
-              { "label": 'Entradas', "value": '2 entradas RCA estéreo' },
-              { "label": 'Saídas', "value": 'Saída para 2 canais de alto-falantes' },
-              { "label": 'Proteção', "value": 'Proteção térmica e contra curto-circuito' },
-              { "label": 'Compatibilidade', "value": 'Compatível com a maioria dos sistemas de som padrão' },
-              { "label": 'Resposta de Frequência', "value": '20Hz - 20kHz' },
-              { "label": 'Relação Sinal-Ruído', "value": '>90dB' },
-              { "label": 'Impedância', "value": '4-8 ohms' },
-              { "label": 'Dimensões', "value": '300mm x 200mm x 70mm' },
-              { "label": 'Peso', "value": '3.5kg' },
-              { "label": 'Alimentação', "value": 'Bivolt automático (110V/220V)' },
-              { "label": 'THD (Distorção Harmônica Total)', "value": '<0.1%' },
-              { "label": 'Sensibilidade de Entrada', "value": '0.775V' },
-              { "label": 'Consumo de Energia', "value": '600W em plena carga' },
-              { "label": 'Material do Chassi', "value": 'Alumínio anodizado' },
-              { "label": 'Temperatura de Operação', "value": '0°C a 40°C' },
-              { "label": 'Método de Resfriamento', "value": 'Ventilação forçada com ventilador silencioso' }
+              { "label": "Potência", "value": "150W" },
+              { "label": "Entradas", "value": "2 P10 microfone (LOW - HIGH), 1 P10 guitarra (LOW - HIGH), 1 auxiliar P10, 1 RCA" },
+              { "label": "USB", "value": "Pendrive / MP3 Player (MP3 ou WMA)" },
+              { "label": "Cartão SD", "value": "Formatos MP3 ou WMA" },
+              { "label": "FM", "value": "Receptor digital de 88MHz a 108MHz" },
+              { "label": "Equalização", "value": "LOW, MID, HIGH" },
+              { "label": "Volume", "value": "Controle de volume geral (MASTER)" },
+              { "label": "Saídas", "value": "Fone de ouvido (PHONES), linha para mesa de som" },
+              { "label": "Tweeter", "value": "1 Piezoelétrico com chave liga/desliga" },
+              { "label": "Alto-falante", "value": "1 de 15''" },
+              { "label": "Dimensões", "value": "700mm (A) x 500mm (L) x 310mm (P)" },
+              { "label": "Peso", "value": "18,5Kg" },
+              { "label": "Alimentação", "value": "Bivolt Automático" }
             ],
-            "warranty": '12 meses de garantia contra defeitos de fabricação.'
+            "warranty": "A definir."
           }
         ],
         "saleCfg": [
           {
-            "price": "799,90",
-            "installmentPrice": "65,00",
-            "installmentMax": "12x",
+            "price": "1.330,90",
+            "installmentPrice": "332,73",
+            "installmentMax": "4x"
           }
         ],
         "imgsProduct": [
           {
-            "img": "/products/product-2-picture.webp",
-            "alt": "desc product 1"
+            "img": "/products/mp900-1.webp",
+            "alt": "Mp 900 - img 1"
           },
           {
-            "img": "/products/product-4-picture.webp",
-            "alt": "desc product 2"
+            "img": "/products/mp900-3.webp",
+            "alt": "Mp 900 - img 3"
           },
           {
-            "img": "/products/product-5-picture.webp",
-            "alt": "desc product 3"
+            "img": "/products/mp900-3.webp",
+            "alt": "Mp 900 - img 3"
           },
           {
-            "img": "/products/product-3-picture.webp",
-            "alt": "desc product 1"
+            "img": "/products/mp900-1.webp",
+            "alt": "Mp 900 - img 1"
           }
         ],
-        "oldPricePromotion": [
-          {
-            "price": "1.599,90",
-            "discountPercentage": "50%",
-            "installmentPrice": "133,25 sem juros.",
-            "installmentMax": "12x",
-          }
-        ],
+        "oldPricePromotion": null
       },
       {
         "id": 2,
-        "name": "Amplificador Compacto - Mpower Sound",
-        "img": "/products/product2.webp",
-        "size": "h-14",
+        "name": "Caixa Amplificadora MP200 USB/SD",
+        "img": "/products/mp200-1.webp",
+        "size": "h-20",
         "alt": "Imagem Produto",
-        "description": "Este amplificador excepcional oferece uma experiência sonora incomparável, onde cada nota e cada nuance são reproduzidas com clareza cristalina e precisão impressionante.",
-        "mercadolivre": "https://lista.mercadolivre.com.br/amplificadores#D[A:amplificadores]",
-        "amazon":"https://www.amazon.com.br/s?k=amplificadores&__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3AR8WW2DKSE17&sprefix=amplificadore%2Caps%2C254&ref=nb_sb_noss_2",
+        "manual": "manual-mp200.pdf",
+        "description": "Compacta e eficiente, a MP200 é uma caixa amplificadora ideal para ambientes menores, oferecendo múltiplas conexões e controle completo de áudio.",
+        "mercadolivre": "https://produto.mercadolivre.com.br/MLB-5342846720-caixa-amplificada-mp-200-bluetooth-usb-sd-card-fm-_JM",
+        "amazon": "",
         "topicsDesc": [
           {
-            "title": "Qualidade de som incomparável",
-            "description": "Desfrute de um som rico e detalhado, com graves profundos, médios exuberantes e agudos cristalinos. O Amplificador [Nome do Modelo] revela a verdadeira beleza da sua música, permitindo que você ouça cada detalhe como nunca antes."
+            "title": "Ideal para pequenos eventos",
+            "description": "Com potência de 35W e alto-falante de 8'', a MP200 oferece qualidade de som para uso pessoal, educativo ou corporativo."
           },
           {
-            "title": "Design elegante e construção robusta",
-            "description": "O Amplificador [Nome do Modelo] combina um design elegante e minimalista com uma construção robusta e durável. Seu acabamento premium e seus componentes de alta qualidade garantem um desempenho confiável e duradouro."
+            "title": "Entradas e controles integrados",
+            "description": "Possui entradas para microfone/guitarra, auxiliar, USB, cartão SD e rádio FM, além de controles individuais de volume e equalização."
           }
         ],
         "infos": [
           {
-            "name": 'Amplificador MpowerSound X500',
-            "description": 'O Amplificador MpowerSound X500 oferece alta fidelidade sonora com potência de 500W RMS, ideal para quem busca desempenho e qualidade em sistemas de áudio profissionais e residenciais.',
+            "name": "Cx Amplificadora MP200",
+            "description": "Caixa Amplificadora de 35W com diversas entradas e recursos de equalização, perfeita para uso em escolas, igrejas ou eventos domésticos.",
             "specifications": [
-              { "label": 'Potência', "value": '500W RMS' },
-              { "label": 'Entradas', "value": '2 entradas RCA estéreo' },
-              { "label": 'Saídas', "value": 'Saída para 2 canais de alto-falantes' },
-              { "label": 'Proteção', "value": 'Proteção térmica e contra curto-circuito' },
-              { "label": 'Compatibilidade', "value": 'Compatível com a maioria dos sistemas de som padrão' },
-              { "label": 'Resposta de Frequência', "value": '20Hz - 20kHz' },
-              { "label": 'Relação Sinal-Ruído', "value": '>90dB' },
-              { "label": 'Impedância', "value": '4-8 ohms' },
-              { "label": 'Dimensões', "value": '300mm x 200mm x 70mm' },
-              { "label": 'Peso', "value": '3.5kg' },
-              { "label": 'Alimentação', "value": 'Bivolt automático (110V/220V)' },
-              { "label": 'THD (Distorção Harmônica Total)', "value": '<0.1%' },
-              { "label": 'Sensibilidade de Entrada', "value": '0.775V' },
-              { "label": 'Consumo de Energia', "value": '600W em plena carga' },
-              { "label": 'Material do Chassi', "value": 'Alumínio anodizado' },
-              { "label": 'Temperatura de Operação', "value": '0°C a 40°C' },
-              { "label": 'Método de Resfriamento', "value": 'Ventilação forçada com ventilador silencioso' }
+              { "label": "Potência", "value": "35W" },
+              { "label": "Entradas", "value": "1 P10 microfone/guitarra, 1 auxiliar P10, 1 RCA" },
+              { "label": "USB", "value": "Pendrive / MP3 Player (MP3 ou WMA)" },
+              { "label": "Cartão SD", "value": "Formatos MP3 ou WMA" },
+              { "label": "FM", "value": "Receptor digital de 88MHz a 108MHz" },
+              { "label": "Equalização", "value": "LOW, MID, HIGH" },
+              { "label": "Volume", "value": "Controle de volume geral (MASTER)" },
+              { "label": "Tweeter", "value": "1 Piezoelétrico" },
+              { "label": "Alto-falante", "value": "1 de 8''" },
+              { "label": "Chave de voltagem", "value": "110V / 220V manual" },
+              { "label": "Dimensões", "value": "420mm (A) x 340mm (L) x 260mm (P)" },
+              { "label": "Peso", "value": "7,5Kg" }
             ],
-            "warranty": '12 meses de garantia contra defeitos de fabricação.'
+            "warranty": "A definir."
           }
         ],
         "saleCfg": [
           {
-            "price": "1.299,90",
-            "installmentPrice": "30,00",
-            "installmentMax": "12x",
+            "price": "669,90",
+            "installmentPrice": "167,45",
+            "installmentMax": "4x"
           }
         ],
         "imgsProduct": [
           {
-            "img": "/products/product-3-picture.webp",
-            "alt": "desc product 4"
+            "img": "/products/mp200-1.webp",
+            "alt": "Mp 200 - img 1"
           },
           {
-            "img": "/products/product-2-picture.webp",
-            "alt": "desc product 3"
+            "img": "/products/mp200-2_1.webp",
+            "alt": "Mp 200 - img 2"
           },
           {
-            "img": "/products/product-6-picture.webp",
-            "alt": "desc product 2"
+            "img": "/products/mp200-2_1.webp",
+            "alt": "Mp 200 - img 2"
           },
           {
-            "img": "/products/product-5-picture.webp",
-            "alt": "desc product 1"
+            "img": "/products/mp200-1.webp",
+            "alt": "Mp 200 - img 4"
           }
         ],
-        "oldPricePromotion": null,
+        "oldPricePromotion": null
       },
       {
         "id": 3,
-        "name": "Caixa Multiuso - 40t Mpower Sound",
-        "img": "/products/product3.webp",
+        "name": "Caixa Amplificadora MP700 USB/SD",
+        "img": "/products/mp700-1.webp",
         "size": "h-20",
         "alt": "Imagem Produto",
-        "description": "Este amplificador excepcional oferece uma experiência sonora incomparável, onde cada nota e cada nuance são reproduzidas com clareza cristalina e precisão impressionante.",
-        "mercadolivre": "https://lista.mercadolivre.com.br/amplificadores#D[A:amplificadores]",
-        "amazon":"https://www.amazon.com.br/s?k=amplificadores&__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3AR8WW2DKSE17&sprefix=amplificadore%2Caps%2C254&ref=nb_sb_noss_2",
+        "manual": "manual-mp700.pdf",
+        "description": "Com potência de 70W e múltiplas opções de entrada, a MP700 é ideal para apresentações, igrejas e eventos de médio porte.",
+        "mercadolivre": "https://produto.mercadolivre.com.br/MLB-5343705594-caixa-amplificada-mp-700-bluetooth-usb-sd-card-fm-_JM",
+        "amazon": "",
         "topicsDesc": [
           {
-            "title": "Qualidade de som incomparável",
-            "description": "Desfrute de um som rico e detalhado, com graves profundos, médios exuberantes e agudos cristalinos. O Amplificador [Nome do Modelo] revela a verdadeira beleza da sua música, permitindo que você ouça cada detalhe como nunca antes."
+            "title": "Versatilidade em conexões",
+            "description": "Entradas para microfone, guitarra, USB, cartão SD, rádio FM e controle de equalização permitem personalizar o som conforme o ambiente."
           },
           {
-            "title": "Design elegante e construção robusta",
-            "description": "O Amplificador [Nome do Modelo] combina um design elegante e minimalista com uma construção robusta e durável. Seu acabamento premium e seus componentes de alta qualidade garantem um desempenho confiável e duradouro."
+            "title": "Potência e clareza sonora",
+            "description": "Equipado com tweeter piezoelétrico e alto-falante de 12'', entrega áudio limpo e potente para diversas finalidades."
           }
         ],
         "infos": [
           {
-            "name": 'Amplificador MpowerSound X500',
-            "description": 'O Amplificador MpowerSound X500 oferece alta fidelidade sonora com potência de 500W RMS, ideal para quem busca desempenho e qualidade em sistemas de áudio profissionais e residenciais.',
+            "name": "Caixa Amplificadora MP700",
+            "description": "Caixa amplificadora de 70W com diversas entradas, ideal para eventos médios, apresentações e uso profissional ou recreativo.",
             "specifications": [
-              { "label": 'Potência', "value": '500W RMS' },
-              { "label": 'Entradas', "value": '2 entradas RCA estéreo' },
-              { "label": 'Saídas', "value": 'Saída para 2 canais de alto-falantes' },
-              { "label": 'Proteção', "value": 'Proteção térmica e contra curto-circuito' },
-              { "label": 'Compatibilidade', "value": 'Compatível com a maioria dos sistemas de som padrão' },
-              { "label": 'Resposta de Frequência', "value": '20Hz - 20kHz' },
-              { "label": 'Relação Sinal-Ruído', "value": '>90dB' },
-              { "label": 'Impedância', "value": '4-8 ohms' },
-              { "label": 'Dimensões', "value": '300mm x 200mm x 70mm' },
-              { "label": 'Peso', "value": '3.5kg' },
-              { "label": 'Alimentação', "value": 'Bivolt automático (110V/220V)' },
-              { "label": 'THD (Distorção Harmônica Total)', "value": '<0.1%' },
-              { "label": 'Sensibilidade de Entrada', "value": '0.775V' },
-              { "label": 'Consumo de Energia', "value": '600W em plena carga' },
-              { "label": 'Material do Chassi', "value": 'Alumínio anodizado' },
-              { "label": 'Temperatura de Operação', "value": '0°C a 40°C' },
-              { "label": 'Método de Resfriamento', "value": 'Ventilação forçada com ventilador silencioso' }
+              { "label": "Potência", "value": "70W" },
+              { "label": "Entradas", "value": "1 P10 microfone, 1 P10 guitarra, 1 auxiliar P10, 1 RCA, USB" },
+              { "label": "USB", "value": "Pendrive / MP3 Player (MP3 ou WMA)" },
+              { "label": "Cartão SD", "value": "Formatos MP3 ou WMA" },
+              { "label": "FM", "value": "Receptor digital de 88MHz a 108MHz" },
+              { "label": "Equalização", "value": "LOW, MID, HIGH" },
+              { "label": "Volume", "value": "Controle de volume geral (MASTER)" },
+              { "label": "Saída", "value": "Fone de ouvido (PHONES)" },
+              { "label": "Tweeter", "value": "Piezoelétrico" },
+              { "label": "Alto-falante", "value": "12''" },
+              { "label": "Chave de voltagem", "value": "110V x 220V manual" },
+              { "label": "Peso", "value": "12Kg" }
             ],
-            "warranty": '12 meses de garantia contra defeitos de fabricação.'
+            "warranty": "A definir."
           }
         ],
         "saleCfg": [
           {
-            "price": "959,92",
-            "installmentPrice": "79,99",
-            "installmentMax": "12x",
+            "price": "909,90",
+            "installmentPrice": "227,25",
+            "installmentMax": "4x"
           }
         ],
         "imgsProduct": [
           {
-            "img": "/products/product-3-picture.webp",
-            "alt": "desc product 6"
+            "img": "/products/mp700-1.webp",
+            "alt": "Mp 700 - img 1"
           },
           {
-            "img": "/products/product-5-picture.webp",
-            "alt": "desc product 1"
+            "img": "/products/mp700-2.webp",
+            "alt": "Mp 700 - img 2"
           },
           {
-            "img": "/products/product-2-picture.webp",
-            "alt": "desc product 2"
+            "img": "/products/mp700-1.webp",
+            "alt": "Mp 700 - img 1"
           },
           {
-            "img": "/products/product-1-picture.webp",
-            "alt": "desc product 3"
+            "img": "/products/mp700-2.webp",
+            "alt": "Mp 700 - img 2"
           }
         ],
-        "oldPricePromotion": [
-          {
-            "price": "1.199.90",
-            "discountPercentage": "20%",
-            "installmentPrice": "99,99",
-            "installmentMax": "12x",
-          }
-        ],
+        "oldPricePromotion": null
       },
       {
         "id": 4,
-        "name": "Caixa Multiuso / Mpower Sound",
-        "img": "/products/product4.webp",
-        "size": "h-16",
+        "name": "Caixa Acústica MP35 - 50W",
+        "img": "/products/mp35-3.webp",
+        "size": "h-24",
         "alt": "Imagem Produto",
-        "description": "Este amplificador excepcional oferece uma experiência sonora incomparável, onde cada nota e cada nuance são reproduzidas com clareza cristalina e precisão impressionante.",
-        "mercadolivre": "https://lista.mercadolivre.com.br/amplificadores#D[A:amplificadores]",
-        "amazon":"https://www.amazon.com.br/s?k=amplificadores&__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3AR8WW2DKSE17&sprefix=amplificadore%2Caps%2C254&ref=nb_sb_noss_2",
+        "description": "Compacta, leve e eficiente, a MP35 é ideal para ambientes que exigem qualidade sonora com discrição estética.",
+        "mercadolivre": "https://produto.mercadolivre.com.br/MLB-4025897385-caixa-acustica-mp-35-_JM",
+        "amazon": "",
         "topicsDesc": [
           {
-            "title": "Qualidade de som incomparável",
-            "description": "Desfrute de um som rico e detalhado, com graves profundos, médios exuberantes e agudos cristalinos. O Amplificador [Nome do Modelo] revela a verdadeira beleza da sua música, permitindo que você ouça cada detalhe como nunca antes."
+            "title": "Design compacto e resistente",
+            "description": "Construída com plástico branco de alto impacto, a MP35 combina leveza e durabilidade em um único produto."
           },
           {
-            "title": "Design elegante e construção robusta",
-            "description": "O Amplificador [Nome do Modelo] combina um design elegante e minimalista com uma construção robusta e durável. Seu acabamento premium e seus componentes de alta qualidade garantem um desempenho confiável e duradouro."
+            "title": "Qualidade sonora em ambientes pequenos",
+            "description": "Com 50W de potência e alto-falante de 4'', entrega som limpo para ambientes internos como lojas, consultórios e escritórios."
           }
         ],
         "infos": [
           {
-            "name": 'Amplificador MpowerSound X500',
-            "description": 'O Amplificador MpowerSound X500 oferece alta fidelidade sonora com potência de 500W RMS, ideal para quem busca desempenho e qualidade em sistemas de áudio profissionais e residenciais.',
+            "name": "Caixa Acústica MP35",
+            "description": "Caixa acústica de 50W injetada em plástico branco de alto impacto, ideal para instalações discretas e ambientes pequenos.",
             "specifications": [
-              { "label": 'Potência', "value": '500W RMS' },
-              { "label": 'Entradas', "value": '2 entradas RCA estéreo' },
-              { "label": 'Saídas', "value": 'Saída para 2 canais de alto-falantes' },
-              { "label": 'Proteção', "value": 'Proteção térmica e contra curto-circuito' },
-              { "label": 'Compatibilidade', "value": 'Compatível com a maioria dos sistemas de som padrão' },
-              { "label": 'Resposta de Frequência', "value": '20Hz - 20kHz' },
-              { "label": 'Relação Sinal-Ruído', "value": '>90dB' },
-              { "label": 'Impedância', "value": '4-8 ohms' },
-              { "label": 'Dimensões', "value": '300mm x 200mm x 70mm' },
-              { "label": 'Peso', "value": '3.5kg' },
-              { "label": 'Alimentação', "value": 'Bivolt automático (110V/220V)' },
-              { "label": 'THD (Distorção Harmônica Total)', "value": '<0.1%' },
-              { "label": 'Sensibilidade de Entrada', "value": '0.775V' },
-              { "label": 'Consumo de Energia', "value": '600W em plena carga' },
-              { "label": 'Material do Chassi', "value": 'Alumínio anodizado' },
-              { "label": 'Temperatura de Operação', "value": '0°C a 40°C' },
-              { "label": 'Método de Resfriamento', "value": 'Ventilação forçada com ventilador silencioso' }
+              { "label": "Potência", "value": "50W" },
+              { "label": "Material", "value": "Plástico branco de alto impacto" },
+              { "label": "Transformador de linha", "value": "Opcional" },
+              { "label": "Alto-falante", "value": "4'' @ 8 Ohms" },
+              { "label": "Dimensões", "value": "195mm (A) x 135mm (L) x 95mm (P)" },
+              { "label": "Peso", "value": "800g" }
             ],
-            "warranty": '12 meses de garantia contra defeitos de fabricação.'
+            "warranty": "A definir."
           }
         ],
         "saleCfg": [
           {
-            "price": "1.299,90",
-            "installmentPrice": "30,00",
-            "installmentMax": "12x",
+            "price": "199,90",
+            "installmentPrice": "49,90",
+            "installmentMax": "4x"
           }
         ],
         "imgsProduct": [
           {
-            "img": "/products/product-5-picture.webp",
-            "alt": "desc product 1"
+            "img": "/products/mp35-1.webp",
+            "alt": "Mp 35 - img 1"
           },
           {
-            "img": "/products/product-2-picture.webp",
-            "alt": "desc product 2"
+            "img": "/products/mp35-2.webp",
+            "alt": "Mp 35 - img 2"
           },
           {
-            "img": "/products/product-3-picture.webp",
-            "alt": "desc product 3"
+            "img": "/products/mp35-3.webp",
+            "alt": "Mp 35 - img 3"
           },
           {
-            "img": "/products/product-6-picture.webp",
-            "alt": "desc product 1"
+            "img": "/products/mp35-2.webp",
+            "alt": "Mp 35 - img 1"
           }
         ],
-        "oldPricePromotion": null,
+        "oldPricePromotion": null
       },
       {
         "id": 5,
-        "name": "Caixa Produto V1.0 - 30",
-        "img": "/products/product5.webp",
-        "size": "h-16",
+        "name": "Receiver Digital MP250 - 50W RMS",
+        "img": "/products/mp250-1.webp",
+        "size": "h-24",
         "alt": "Imagem Produto",
-        "description": "Este amplificador excepcional oferece uma experiência sonora incomparável, onde cada nota e cada nuance são reproduzidas com clareza cristalina e precisão impressionante.",
-        "mercadolivre": "https://lista.mercadolivre.com.br/amplificadores#D[A:amplificadores]",
-        "amazon":"https://www.amazon.com.br/s?k=amplificadores&__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3AR8WW2DKSE17&sprefix=amplificadore%2Caps%2C254&ref=nb_sb_noss_2",
+        "manual": "manual-mp250.pdf",
+        "description": "O Receiver MP250 oferece conectividade versátil, som de qualidade e funcionalidades ideais para sistemas de som ambiente.",
+        "mercadolivre": "https://produto.mercadolivre.com.br/MLB-4025883497-receiver-digital-mp-250-bluetooth-usb-sd-card-fm-_JM",
+        "amazon": "",
         "topicsDesc": [
           {
-            "title": "Qualidade de som incomparável",
-            "description": "Desfrute de um som rico e detalhado, com graves profundos, médios exuberantes e agudos cristalinos. O Amplificador [Nome do Modelo] revela a verdadeira beleza da sua música, permitindo que você ouça cada detalhe como nunca antes."
+            "title": "Versatilidade de conexões",
+            "description": "Entrada para microfone, auxiliar, USB, cartão SD e receptor FM digital em um único aparelho compacto."
           },
           {
-            "title": "Design elegante e construção robusta",
-            "description": "O Amplificador [Nome do Modelo] combina um design elegante e minimalista com uma construção robusta e durável. Seu acabamento premium e seus componentes de alta qualidade garantem um desempenho confiável e duradouro."
+            "title": "Controle total e visualização clara",
+            "description": "Display com indicação completa do modo, faixa e formato da música reproduzida, além de controle de equalização e volume geral."
           }
         ],
         "infos": [
           {
-            "name": 'Amplificador MpowerSound X500',
-            "description": 'O Amplificador MpowerSound X500 oferece alta fidelidade sonora com potência de 500W RMS, ideal para quem busca desempenho e qualidade em sistemas de áudio profissionais e residenciais.',
+            "name": "Receiver Digital MP250",
+            "description": "Receiver compacto com 50W RMS, ideal para som ambiente com entradas variadas e facilidade de operação.",
             "specifications": [
-              { "label": 'Potência', "value": '500W RMS' },
-              { "label": 'Entradas', "value": '2 entradas RCA estéreo' },
-              { "label": 'Saídas', "value": 'Saída para 2 canais de alto-falantes' },
-              { "label": 'Proteção', "value": 'Proteção térmica e contra curto-circuito' },
-              { "label": 'Compatibilidade', "value": 'Compatível com a maioria dos sistemas de som padrão' },
-              { "label": 'Resposta de Frequência', "value": '20Hz - 20kHz' },
-              { "label": 'Relação Sinal-Ruído', "value": '>90dB' },
-              { "label": 'Impedância', "value": '4-8 ohms' },
-              { "label": 'Dimensões', "value": '300mm x 200mm x 70mm' },
-              { "label": 'Peso', "value": '3.5kg' },
-              { "label": 'Alimentação', "value": 'Bivolt automático (110V/220V)' },
-              { "label": 'THD (Distorção Harmônica Total)', "value": '<0.1%' },
-              { "label": 'Sensibilidade de Entrada', "value": '0.775V' },
-              { "label": 'Consumo de Energia', "value": '600W em plena carga' },
-              { "label": 'Material do Chassi', "value": 'Alumínio anodizado' },
-              { "label": 'Temperatura de Operação', "value": '0°C a 40°C' },
-              { "label": 'Método de Resfriamento', "value": 'Ventilação forçada com ventilador silencioso' }
+              { "label": "Potência", "value": "50W RMS" },
+              { "label": "Entradas", "value": "1 P10 (MIC), 1 RCA auxiliar, USB, Cartão SD" },
+              { "label": "Reprodução", "value": "MP3 e WMA" },
+              { "label": "Sintonizador", "value": "Receptor FM digital (88MHz a 108MHz)" },
+              { "label": "Controles", "value": "Equalização (LOW, MID, HIGH) e volume geral (MASTER)" },
+              { "label": "Display", "value": "Indicação de modo, frequência FM, faixa e formato" },
+              { "label": "Saídas", "value": "Saída para fone (PHONES), OUT 'A' e OUT 'B' para 1 a 8 caixas (8 Ohms)" },
+              { "label": "Alimentação", "value": "Chave seletora 110V / 220V" },
+              { "label": "Dimensões", "value": "80mm (A) x 300mm (L) x 190mm (P)" },
+              { "label": "Peso", "value": "2,7Kg" }
             ],
-            "warranty": '12 meses de garantia contra defeitos de fabricação.'
+            "warranty": "A definir."
           }
         ],
         "saleCfg": [
           {
-            "price": "209,30",
-            "installmentPrice": "17,44",
-            "installmentMax": "12x",
+            "price": "750,00",
+            "installmentPrice": "187,50",
+            "installmentMax": "4x"
           }
         ],
         "imgsProduct": [
           {
-            "img": "/products/product-4-picture.webp",
-            "alt": "desc product 1"
+            "img": "/products/mp250-1.webp",
+            "alt": "Mp 250 - img 1"
           },
           {
-            "img": "/products/product-2-picture.webp",
-            "alt": "desc product 2"
+            "img": "/products/mp250-2.webp",
+            "alt": "Mp 250 - img 2"
           },
           {
-            "img": "/products/product-2-picture.webp",
-            "alt": "desc product 3"
+            "img": "/products/mp250-1.webp",
+            "alt": "Mp 250 - img 1"
           },
           {
-            "img": "/products/product-6-picture.webp",
-            "alt": "desc product 1"
+            "img": "/products/mp250-2.webp",
+            "alt": "Mp 250 - img 2"
           }
         ],
-        "oldPricePromotion": [
-          {
-            "price": "299.90",
-            "discountPercentage": "30%",
-            "installmentPrice": "24,99",
-            "installmentMax": "12x",
-          }
-        ],
+        "oldPricePromotion": null
       },
       {
         "id": 6,
-        "name": "Caixa Produto V1.0 - 30",
-        "img": "/products/product2.webp",
-        "size": "h-14",
+        "name": "Arandela 50W",
+        "img": "/products/arandela-1.webp",
+        "size": "h-20",
         "alt": "Imagem Produto",
-        "description": "Este amplificador excepcional oferece uma experiência sonora incomparável, onde cada nota e cada nuance são reproduzidas com clareza cristalina e precisão impressionante.",
-        "mercadolivre": "https://lista.mercadolivre.com.br/amplificadores#D[A:amplificadores]",
-        "amazon":"https://www.amazon.com.br/s?k=amplificadores&__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3AR8WW2DKSE17&sprefix=amplificadore%2Caps%2C254&ref=nb_sb_noss_2",
+        "description": "Arandela com alto falante de 6'' e potência de 50W, ideal para instalações de som ambiente com fácil montagem e acabamento discreto.",
+        "mercadolivre": "https://produto.mercadolivre.com.br/MLB-4040460485-arandela-som-ambiente-_JM",
+        "amazon": "",
         "topicsDesc": [
           {
-            "title": "Qualidade de som incomparável",
-            "description": "Desfrute de um som rico e detalhado, com graves profundos, médios exuberantes e agudos cristalinos. O Amplificador [Nome do Modelo] revela a verdadeira beleza da sua música, permitindo que você ouça cada detalhe como nunca antes."
+            "title": "Construção de alta qualidade",
+            "description": "Fabricada em plástico de alto impacto com tela de metal e pintura epóxi, garantindo durabilidade e estética profissional."
           },
           {
-            "title": "Design elegante e construção robusta",
-            "description": "O Amplificador [Nome do Modelo] combina um design elegante e minimalista com uma construção robusta e durável. Seu acabamento premium e seus componentes de alta qualidade garantem um desempenho confiável e duradouro."
+            "title": "Instalação prática",
+            "description": "Com design pensado para facilitar a montagem, é ideal para ambientes comerciais e residenciais."
           }
         ],
         "infos": [
           {
-            "name": 'Amplificador MpowerSound X500',
-            "description": 'O Amplificador MpowerSound X500 oferece alta fidelidade sonora com potência de 500W RMS, ideal para quem busca desempenho e qualidade em sistemas de áudio profissionais e residenciais.',
+            "name": "Arandela 50W",
+            "description": "Caixa acústica embutida com 50W de potência, disponível com ou sem transformador de linha.",
             "specifications": [
-              { "label": 'Potência', "value": '500W RMS' },
-              { "label": 'Entradas', "value": '2 entradas RCA estéreo' },
-              { "label": 'Saídas', "value": 'Saída para 2 canais de alto-falantes' },
-              { "label": 'Proteção', "value": 'Proteção térmica e contra curto-circuito' },
-              { "label": 'Compatibilidade', "value": 'Compatível com a maioria dos sistemas de som padrão' },
-              { "label": 'Resposta de Frequência', "value": '20Hz - 20kHz' },
-              { "label": 'Relação Sinal-Ruído', "value": '>90dB' },
-              { "label": 'Impedância', "value": '4-8 ohms' },
-              { "label": 'Dimensões', "value": '300mm x 200mm x 70mm' },
-              { "label": 'Peso', "value": '3.5kg' },
-              { "label": 'Alimentação', "value": 'Bivolt automático (110V/220V)' },
-              { "label": 'THD (Distorção Harmônica Total)', "value": '<0.1%' },
-              { "label": 'Sensibilidade de Entrada', "value": '0.775V' },
-              { "label": 'Consumo de Energia', "value": '600W em plena carga' },
-              { "label": 'Material do Chassi', "value": 'Alumínio anodizado' },
-              { "label": 'Temperatura de Operação', "value": '0°C a 40°C' },
-              { "label": 'Método de Resfriamento', "value": 'Ventilação forçada com ventilador silencioso' }
+              { "label": "Potência", "value": "50W" },
+              { "label": "Material", "value": "Plástico de alto impacto" },
+              { "label": "Transformador", "value": "Opcional com transformador de linha" },
+              { "label": "Tela", "value": "Metal com pintura epóxi" },
+              { "label": "Alto Falante", "value": "6'' @ 8 Ohms" },
+              { "label": "Dimensões", "value": "65mm (P) x 235mm (D)" },
+              { "label": "Peso com trafo", "value": "1,0Kg" },
+              { "label": "Peso sem trafo", "value": "800g" },
+              { "label": "Peso vazia", "value": "200g" }
             ],
-            "warranty": '12 meses de garantia contra defeitos de fabricação.'
+            "warranty": "A definir."
           }
         ],
         "saleCfg": [
           {
-            "price": "719,94",
-            "installmentPrice": "59,99",
-            "installmentMax": "12x",
+            "price": "149,90",
+            "installmentPrice": "37,45",
+            "installmentMax": "4x"
           }
         ],
         "imgsProduct": [
           {
-            "img": "/products/product-5-picture.webp",
-            "alt": "desc product 1"
+            "img": "/products/arandela-1.webp",
+            "alt": "Arandela - img 1"
           },
           {
-            "img": "/products/product-2-picture.webp",
-            "alt": "desc product 2"
+            "img": "/products/arandela-1.webp",
+            "alt": "Arandela - img 1"
           },
           {
-            "img": "/products/product-6-picture.webp",
-            "alt": "desc product 3"
+            "img": "/products/arandela-1.webp",
+            "alt": "Arandela - img 1"
           },
           {
-            "img": "/products/product-4-picture.webp",
-            "alt": "desc product 1"
+            "img": "/products/arandela-1.webp",
+            "alt": "Arandela - img 1"
           }
         ],
-        "oldPricePromotion": [
-          {
-            "price": "1.199.90",
-            "discountPercentage": "40%",
-            "installmentPrice": "99,99",
-            "installmentMax": "12x",
-          }
-        ],
+        "oldPricePromotion": null
       },
       {
         "id": 7,
-        "name": "Caixa Produto V1.0 - 30",
-        "img": "/products/product5.webp",
-        "size": "h-18",
+        "name": "Kit Teto Gesso Embutir + 04 Arandelas",
+        "img": "/products/kit-1.webp",
+        "size": "h-24",
         "alt": "Imagem Produto",
-        "description": "Este amplificador excepcional oferece uma experiência sonora incomparável, onde cada nota e cada nuance são reproduzidas com clareza cristalina e precisão impressionante.",
-        "mercadolivre": "https://lista.mercadolivre.com.br/amplificadores#D[A:amplificadores]",
-        "amazon":"https://www.amazon.com.br/s?k=amplificadores&__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3AR8WW2DKSE17&sprefix=amplificadore%2Caps%2C254&ref=nb_sb_noss_2",
+        "description": "O Receiver MP250 oferece conectividade versátil, som de qualidade e funcionalidades ideais para sistemas de som ambiente e Arandela com alto falante de 6'' e potência de 50W, ideal para instalações de som ambiente com fácil montagem e acabamento discreto.",
+        "mercadolivre": "https://produto.mercadolivre.com.br/MLB-4032239297-kit-som-ambiente-teto-gesso-embutir-04-arandelas-_JM",
+        "amazon": "",
         "topicsDesc": [
           {
-            "title": "Qualidade de som incomparável",
-            "description": "Desfrute de um som rico e detalhado, com graves profundos, médios exuberantes e agudos cristalinos. O Amplificador [Nome do Modelo] revela a verdadeira beleza da sua música, permitindo que você ouça cada detalhe como nunca antes."
+            "title": "Versatilidade de conexões",
+            "description": "Entrada para microfone, auxiliar, USB, cartão SD e receptor FM digital em um único aparelho compacto."
           },
           {
-            "title": "Design elegante e construção robusta",
-            "description": "O Amplificador [Nome do Modelo] combina um design elegante e minimalista com uma construção robusta e durável. Seu acabamento premium e seus componentes de alta qualidade garantem um desempenho confiável e duradouro."
+            "title": "Controle total e visualização clara",
+            "description": "Display com indicação completa do modo, faixa e formato da música reproduzida, além de controle de equalização e volume geral."
           }
         ],
         "infos": [
           {
-            "name": 'Amplificador MpowerSound X500',
-            "description": 'O Amplificador MpowerSound X500 oferece alta fidelidade sonora com potência de 500W RMS, ideal para quem busca desempenho e qualidade em sistemas de áudio profissionais e residenciais.',
+            "name": "Receiver Digital MP250 + 4 Arandelas",
+            "description": "Receiver compacto com 50W RMS, ideal para som ambiente com entradas variadas e facilidade de operação.",
             "specifications": [
-              { "label": 'Potência', "value": '500W RMS' },
-              { "label": 'Entradas', "value": '2 entradas RCA estéreo' },
-              { "label": 'Saídas', "value": 'Saída para 2 canais de alto-falantes' },
-              { "label": 'Proteção', "value": 'Proteção térmica e contra curto-circuito' },
-              { "label": 'Compatibilidade', "value": 'Compatível com a maioria dos sistemas de som padrão' },
-              { "label": 'Resposta de Frequência', "value": '20Hz - 20kHz' },
-              { "label": 'Relação Sinal-Ruído', "value": '>90dB' },
-              { "label": 'Impedância', "value": '4-8 ohms' },
-              { "label": 'Dimensões', "value": '300mm x 200mm x 70mm' },
-              { "label": 'Peso', "value": '3.5kg' },
-              { "label": 'Alimentação', "value": 'Bivolt automático (110V/220V)' },
-              { "label": 'THD (Distorção Harmônica Total)', "value": '<0.1%' },
-              { "label": 'Sensibilidade de Entrada', "value": '0.775V' },
-              { "label": 'Consumo de Energia', "value": '600W em plena carga' },
-              { "label": 'Material do Chassi', "value": 'Alumínio anodizado' },
-              { "label": 'Temperatura de Operação', "value": '0°C a 40°C' },
-              { "label": 'Método de Resfriamento', "value": 'Ventilação forçada com ventilador silencioso' }
+              { "label": "Potência", "value": "50W RMS" },
+              { "label": "Entradas", "value": "1 P10 (MIC), 1 RCA auxiliar, USB, Cartão SD" },
+              { "label": "Reprodução", "value": "MP3 e WMA" },
+              { "label": "Sintonizador", "value": "Receptor FM digital (88MHz a 108MHz)" },
+              { "label": "Controles", "value": "Equalização (LOW, MID, HIGH) e volume geral (MASTER)" },
+              { "label": "Display", "value": "Indicação de modo, frequência FM, faixa e formato" },
+              { "label": "Saídas", "value": "Saída para fone (PHONES), OUT 'A' e OUT 'B' para 1 a 8 caixas (8 Ohms)" },
+              { "label": "Alimentação", "value": "Chave seletora 110V / 220V" },
+              { "label": "Dimensões", "value": "80mm (A) x 300mm (L) x 190mm (P)" },
+              { "label": "Peso", "value": "2,7Kg" }
             ],
-            "warranty": '12 meses de garantia contra defeitos de fabricação.'
+            "warranty": "A definir."
           }
         ],
         "saleCfg": [
           {
-            "price": "299,90",
-            "installmentPrice": "30,00",
-            "installmentMax": "12x",
+            "price": "1.210,00",
+            "installmentPrice": "302,50",
+            "installmentMax": "4x"
           }
         ],
         "imgsProduct": [
           {
-            "img": "/products/product-4-picture.webp",
-            "alt": "desc product 1"
+            "img": "/products/kit-1.webp",
+            "alt": "Mp 250 - img 1"
           },
           {
-            "img": "/products/product-6-picture.webp",
-            "alt": "desc product 2"
+            "img": "/products/mp250-1.webp",
+            "alt": "Mp 250 - img 1"
           },
           {
-            "img": "/products/product-2-picture.webp",
-            "alt": "desc product 3"
+            "img": "/products/arandela-1.webp",
+            "alt": "Arandela - img 1"
           },
           {
-            "img": "/products/product-1-picture.webp",
-            "alt": "desc product 1"
+            "img": "/products/arandela-1.webp",
+            "alt": "Arandela - img 2"
           }
         ],
-        "oldPricePromotion": null,
+        "oldPricePromotion": null
       },
       {
         "id": 8,
-        "name": "Caixa Produto V1.0 - 30",
-        "img": "/products/product2.webp",
-        "size": "h-14",
+        "name": "Kit Mp250 Amplificador + 4 Caixas",
+        "img": "/products/kit-2.webp",
+        "size": "h-24",
         "alt": "Imagem Produto",
-        "description": "Este amplificador excepcional oferece uma experiência sonora incomparável, onde cada nota e cada nuance são reproduzidas com clareza cristalina e precisão impressionante.",
-        "mercadolivre": "https://lista.mercadolivre.com.br/amplificadores#D[A:amplificadores]",
-        "amazon":"https://www.amazon.com.br/s?k=amplificadores&__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3AR8WW2DKSE17&sprefix=amplificadore%2Caps%2C254&ref=nb_sb_noss_2",
+        "description": "O Receiver MP250 oferece conectividade versátil, som de qualidade e funcionalidades ideais para sistemas de som ambiente.",
+        "mercadolivre": "https://produto.mercadolivre.com.br/MLB-4025963203-kit-som-ambiente-mp250-amplificador-bluetooth-usb-4-caixas-_JM",
+        "amazon": "",
         "topicsDesc": [
           {
-            "title": "Qualidade de som incomparável",
-            "description": "Desfrute de um som rico e detalhado, com graves profundos, médios exuberantes e agudos cristalinos. O Amplificador [Nome do Modelo] revela a verdadeira beleza da sua música, permitindo que você ouça cada detalhe como nunca antes."
+            "title": "Construção de alta qualidade",
+            "description": "Fabricada em plástico de alto impacto com tela de metal e pintura epóxi, garantindo durabilidade e estética profissional."
           },
           {
-            "title": "Design elegante e construção robusta",
-            "description": "O Amplificador [Nome do Modelo] combina um design elegante e minimalista com uma construção robusta e durável. Seu acabamento premium e seus componentes de alta qualidade garantem um desempenho confiável e duradouro."
+            "title": "Instalação prática",
+            "description": "Com design pensado para facilitar a montagem, é ideal para ambientes comerciais e residenciais."
           }
         ],
         "infos": [
           {
-            "name": 'Amplificador MpowerSound X500',
-            "description": 'O Amplificador MpowerSound X500 oferece alta fidelidade sonora com potência de 500W RMS, ideal para quem busca desempenho e qualidade em sistemas de áudio profissionais e residenciais.',
+            "name": "Receiver Digital MP250",
+            "description": "Receiver compacto com 50W RMS, ideal para som ambiente com entradas variadas e facilidade de operação.",
             "specifications": [
-              { "label": 'Potência', "value": '500W RMS' },
-              { "label": 'Entradas', "value": '2 entradas RCA estéreo' },
-              { "label": 'Saídas', "value": 'Saída para 2 canais de alto-falantes' },
-              { "label": 'Proteção', "value": 'Proteção térmica e contra curto-circuito' },
-              { "label": 'Compatibilidade', "value": 'Compatível com a maioria dos sistemas de som padrão' },
-              { "label": 'Resposta de Frequência', "value": '20Hz - 20kHz' },
-              { "label": 'Relação Sinal-Ruído', "value": '>90dB' },
-              { "label": 'Impedância', "value": '4-8 ohms' },
-              { "label": 'Dimensões', "value": '300mm x 200mm x 70mm' },
-              { "label": 'Peso', "value": '3.5kg' },
-              { "label": 'Alimentação', "value": 'Bivolt automático (110V/220V)' },
-              { "label": 'THD (Distorção Harmônica Total)', "value": '<0.1%' },
-              { "label": 'Sensibilidade de Entrada', "value": '0.775V' },
-              { "label": 'Consumo de Energia', "value": '600W em plena carga' },
-              { "label": 'Material do Chassi', "value": 'Alumínio anodizado' },
-              { "label": 'Temperatura de Operação', "value": '0°C a 40°C' },
-              { "label": 'Método de Resfriamento', "value": 'Ventilação forçada com ventilador silencioso' }
+              { "label": "Potência", "value": "50W RMS" },
+              { "label": "Entradas", "value": "1 P10 (MIC), 1 RCA auxiliar, USB, Cartão SD" },
+              { "label": "Reprodução", "value": "MP3 e WMA" },
+              { "label": "Sintonizador", "value": "Receptor FM digital (88MHz a 108MHz)" },
+              { "label": "Controles", "value": "Equalização (LOW, MID, HIGH) e volume geral (MASTER)" },
+              { "label": "Display", "value": "Indicação de modo, frequência FM, faixa e formato" },
+              { "label": "Saídas", "value": "Saída para fone (PHONES), OUT 'A' e OUT 'B' para 1 a 8 caixas (8 Ohms)" },
+              { "label": "Alimentação", "value": "Chave seletora 110V / 220V" },
+              { "label": "Dimensões", "value": "80mm (A) x 300mm (L) x 190mm (P)" },
+              { "label": "Peso", "value": "2,7Kg" }
             ],
-            "warranty": '12 meses de garantia contra defeitos de fabricação.'
+            "warranty": "A definir."
           }
         ],
         "saleCfg": [
           {
-            "price": "1.299,90",
-            "installmentPrice": "30,00",
-            "installmentMax": "12x",
+            "price": "1.399,90",
+            "installmentPrice": "349,98",
+            "installmentMax": "4x"
           }
         ],
         "imgsProduct": [
           {
-            "img": "/products/product-4-picture.webp",
-            "alt": "desc product 1"
+            "img": "/products/kit-2.webp",
+            "alt": "Kit Som Ambiente Mp250 Amplificador + 4 Caixas"
           },
           {
-            "img": "/products/product-2-picture.webp",
-            "alt": "desc product 2"
+            "img": "/products/mp250-1.webp",
+            "alt": "Mp250 - img 1"
           },
           {
-            "img": "/products/product-3-picture.webp",
-            "alt": "desc product 3"
+            "img": "/products/mp250-2.webp",
+            "alt": "Mp250 - img 2"
           },
           {
-            "img": "/products/product-1-picture.webp",
-            "alt": "desc product 1"
-          }
+            "img": "/products/kit-2.webp",
+            "alt": "Kit Som Ambiente Mp250 Amplificador + 4 Caixas"
+          },
         ],
-        "oldPricePromotion": null,
-      },
+        "oldPricePromotion": null
+      }
     ],
   }),
   actions: {

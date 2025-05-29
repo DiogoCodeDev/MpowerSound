@@ -11,7 +11,8 @@ const route = useRoute();
 		<div class="w-80 md:w-96 flex flex-col md:items-center lg:w-1/3">
 			<div class="w-76 lg:w-full">
 				<router-link data-aos="fade-right" to="/">
-					<h1 class="text-[2.6rem] xl:text-[2.7rem] font-bold mb-6 mt-4 lg:mt-0"> MPSound </h1>
+					<!-- <h1 class="text-[2.6rem] xl:text-[2.7rem] font-bold mb-6 mt-4 lg:mt-0"> MPSound </h1> -->
+					 <img data-aos="fade-up" alt="icon criadores do site" class="h-10 lg:h-8 mb-8 lg:mb-8 cursor-pointer" src="../assets/img/icons/m-power-logo-white.webp"/>
 				</router-link>
 				<p data-aos="fade-up" class="text-[0.95rem] lg:text-xs mb-8">
 					Rua Altino Arantes, 717, Jardim das Bandeiras, Campinas/SP <br class="hidden md:flex lg:hidden xl:flex">

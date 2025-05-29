@@ -157,16 +157,9 @@ watch(
                                 class="w-full font-bold text-black p-2 lg:p-1.5 lg:mr-0 lg:pl-2.5 pl-3 pr-8 rounded outline-none text-sm border-l-2 border-black appearance-none"
                                 v-model="filtroCategoria">
                                 <option class="py-4 px-2" value="">Produto</option>
-                                <option class="py-4 px-2" value="caixas acústicas passivas">Caixas Acústicas Passivas
-                                </option>
-                                <option class="py-4 px-2" value="amplificadores de potência">Amplificadores de Potência
-                                </option>
-                                <option class="py-4 px-2" value="caixas para sonorização ambiente">Caixas para
-                                    Sonorização
-                                </option>
-                                <option class="py-4 px-2" value="Produto X">Produtos X</option>
-                                <option class="py-4 px-2" value="Produxo Y">Produxos Y</option>
-                                <option class="py-4 px-2" value="Produto Z">Produtos Z</option>
+                                <option class="py-4" value="Caixas Amplificadoras Multi-uso">Caixas Amplificadoras Multi-uso</option>
+                                <option class="py-4" value="amplificadores de potência">Amplificadores de Potência</option>
+                                <option class="py-4" value="Kits M power Sound">Kits M power Sound</option>
                                 <option v-if="newfiltroCategoria" class="py-4 px-2" :value="newfiltroCategoria">{{newfiltroCategoria}}</option>
                             </select>
                             <span
