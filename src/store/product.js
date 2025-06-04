@@ -10,7 +10,7 @@ const useProductStore = defineStore('product', {
         "desc": "As Caixas Amplificadoras Multi-uso da MPower Sound são versáteis, potentes e ideais para diversas aplicações sonoras, oferecendo excelente qualidade de áudio, robustez e conectividade para diferentes tipos de uso.",
         "descMobile": "Caixas Amplificadoras Multi-uso da MPower Sound com qualidade, potência e conectividade para diversas aplicações.",
         "products": [
-          1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3
+          1, 2, 3, 9, 10, 1, 2, 3, 9, 10, 1, 2, 3, 9, 10 
         ]
       },
       {
@@ -159,7 +159,7 @@ const useProductStore = defineStore('product', {
       {
         "id": 1,
         "name": "Caixa Amplificadora MP900 USB/SD",
-        "img": "/products/mp900-3.webp",
+        "img": "/products/mp900-2.webp",
         "size": "h-20",
         "alt": "Imagem Produto",
         "manual": "manual-mp900.pdf",
@@ -195,7 +195,7 @@ const useProductStore = defineStore('product', {
               { "label": "Peso", "value": "18,5Kg" },
               { "label": "Alimentação", "value": "Bivolt Automático" }
             ],
-            "warranty": "A definir."
+            "warranty": "12 meses de garantia contra defeitos de fabricação."
           }
         ],
         "saleCfg": [
@@ -228,7 +228,7 @@ const useProductStore = defineStore('product', {
       {
         "id": 2,
         "name": "Caixa Amplificadora MP200 USB/SD",
-        "img": "/products/mp200-1.webp",
+        "img": "/products/mp200-2.webp",
         "size": "h-20",
         "alt": "Imagem Produto",
         "manual": "manual-mp200.pdf",
@@ -263,7 +263,7 @@ const useProductStore = defineStore('product', {
               { "label": "Dimensões", "value": "420mm (A) x 340mm (L) x 260mm (P)" },
               { "label": "Peso", "value": "7,5Kg" }
             ],
-            "warranty": "A definir."
+            "warranty": "12 meses de garantia contra defeitos de fabricação."
           }
         ],
         "saleCfg": [
@@ -296,7 +296,7 @@ const useProductStore = defineStore('product', {
       {
         "id": 3,
         "name": "Caixa Amplificadora MP700 USB/SD",
-        "img": "/products/mp700-1.webp",
+        "img": "/products/mp700-2.webp",
         "size": "h-20",
         "alt": "Imagem Produto",
         "manual": "manual-mp700.pdf",
@@ -331,7 +331,7 @@ const useProductStore = defineStore('product', {
               { "label": "Chave de voltagem", "value": "110V x 220V manual" },
               { "label": "Peso", "value": "12Kg" }
             ],
-            "warranty": "A definir."
+            "warranty": "12 meses de garantia contra defeitos de fabricação."
           }
         ],
         "saleCfg": [
@@ -392,7 +392,7 @@ const useProductStore = defineStore('product', {
               { "label": "Dimensões", "value": "195mm (A) x 135mm (L) x 95mm (P)" },
               { "label": "Peso", "value": "800g" }
             ],
-            "warranty": "A definir."
+            "warranty": "12 meses de garantia contra defeitos de fabricação."
           }
         ],
         "saleCfg": [
@@ -458,7 +458,7 @@ const useProductStore = defineStore('product', {
               { "label": "Dimensões", "value": "80mm (A) x 300mm (L) x 190mm (P)" },
               { "label": "Peso", "value": "2,7Kg" }
             ],
-            "warranty": "A definir."
+            "warranty": "12 meses de garantia contra defeitos de fabricação."
           }
         ],
         "saleCfg": [
@@ -522,7 +522,7 @@ const useProductStore = defineStore('product', {
               { "label": "Peso sem trafo", "value": "800g" },
               { "label": "Peso vazia", "value": "200g" }
             ],
-            "warranty": "A definir."
+            "warranty": "12 meses de garantia contra defeitos de fabricação."
           }
         ],
         "saleCfg": [
@@ -587,7 +587,7 @@ const useProductStore = defineStore('product', {
               { "label": "Dimensões", "value": "80mm (A) x 300mm (L) x 190mm (P)" },
               { "label": "Peso", "value": "2,7Kg" }
             ],
-            "warranty": "A definir."
+            "warranty": "12 meses de garantia contra defeitos de fabricação."
           }
         ],
         "saleCfg": [
@@ -652,7 +652,7 @@ const useProductStore = defineStore('product', {
               { "label": "Dimensões", "value": "80mm (A) x 300mm (L) x 190mm (P)" },
               { "label": "Peso", "value": "2,7Kg" }
             ],
-            "warranty": "A definir."
+            "warranty": "12 meses de garantia contra defeitos de fabricação."
           }
         ],
         "saleCfg": [
@@ -681,7 +681,146 @@ const useProductStore = defineStore('product', {
           },
         ],
         "oldPricePromotion": null
+      },
+      {
+        "id": 9,
+        "name": "Caixa Amplificadora MP800 USB/SD",
+        "img": "/products/mp-800.webp",
+        "size": "h-20",
+        "alt": "Imagem Produto",
+        "manual": "manual-mp800.pdf",
+        "description": "Caixa amplificadora de 100W RMS com entradas diversas, controles individuais e conexão Bluetooth. Ideal para eventos, igrejas, escolas e uso profissional.",
+        "mercadolivre": "https://produto.mercadolivre.com.br/MLB-5360810242-caixa-amplificadora-mp-800-bluetooth-usb-sd-card-fm-_JM",
+        "amazon": "",
+        "topicsDesc": [
+          {
+            "title": "Versatilidade de conexões",
+            "description": "Com entradas para microfone, guitarra, auxiliar, USB, cartão SD, Bluetooth e rádio FM, a MP800 atende diversas necessidades de áudio com praticidade."
+          },
+          {
+            "title": "Controles profissionais",
+            "description": "Permite ajuste de som com controles de equalização LOW, MID, HIGH, controle de volume geral (MASTER) e volumes individuais para cada entrada."
+          }
+        ],
+        "infos": [
+          {
+            "name": "Caixa Amplificadora MP800",
+            "description": "Caixa Amplificadora de 100W RMS com entradas múltiplas e controle fino de som. Perfeita para igrejas, eventos, ambientes escolares ou profissionais.",
+            "specifications": [
+              { "label": "Potência", "value": "100W RMS" },
+              { "label": "Alimentação", "value": "Bivolt Automático" },
+              { "label": "Entradas", "value": "2 P10 microfone (LOW - HIGH), 1 P10 guitarra (LOW - HIGH), 1 auxiliar P10, 1 RCA, USB" },
+              { "label": "Bluetooth", "value": "Sim" },
+              { "label": "USB", "value": "Pendrive / MP3 Player (formatos MP3 ou WMA)" },
+              { "label": "Cartão SD", "value": "Formatos MP3 ou WMA" },
+              { "label": "FM", "value": "Receptor digital de 88MHz a 108MHz" },
+              { "label": "Equalização", "value": "LOW, MID, HIGH" },
+              { "label": "Volume", "value": "Controles individuais + Controle de volume geral (MASTER)" },
+              { "label": "Saídas", "value": "Fone de ouvido (PHONES), linha para mesa de som (LINE OUT)" },
+              { "label": "Tweeter", "value": "1 Piezoelétrico com chave liga/desliga" },
+              { "label": "Alto-falante", "value": "1 de 12''" },
+              { "label": "Dimensões", "value": "700mm (A) x 500mm (L) x 310mm (P)" },
+              { "label": "Peso", "value": "16Kg" }
+            ],
+            "warranty": "12 meses de garantia contra defeitos de fabricação."
+          }
+        ],
+        "saleCfg": [
+          {
+            "price": "1.159,99",
+            "installmentPrice": "225,00",
+            "installmentMax": "4x"
+          }
+        ],
+        "imgsProduct": [
+          {
+            "img": "/products/mp-800.webp",
+            "alt": "Mp 800 - img 1"
+          },
+          {
+            "img": "/products/mp-800.webp",
+            "alt": "Mp 800 - img 2"
+          },
+          {
+            "img": "/products/mp-800.webp",
+            "alt": "Mp 800 - img 3"
+          },
+          {
+            "img": "/products/mp-800.webp",
+            "alt": "Mp 800 - img 4"
+          }
+        ],
+        "oldPricePromotion": null
+      },
+      {
+        "id": 10,
+        "name": "Amplificador MP300 USB/SD",
+        "img": "/products/mp300-1.webp",
+        "size": "h-20",
+        "alt": "Imagem Produto",
+        "manual": "manual-mp300.pdf",
+        "description": "Amplificador de 300W RMS com múltiplas entradas e saídas, ideal para ambientes que exigem potência e qualidade sonora.",
+        "mercadolivre": "https://produto.mercadolivre.com.br/MLB-4067012153-amplificador-mp-300-bluetooth-usb-sd-card-fm-_JM",
+        "amazon": "",
+        "topicsDesc": [
+          {
+            "title": "Potência e conectividade",
+            "description": "Com 300W RMS e entradas para microfone, USB, SD, RCA e XLR balanceado, o MP300 oferece alta performance e versatilidade para eventos e instalações."
+          },
+          {
+            "title": "Controles avançados",
+            "description": "Controle de equalização completo (LOW, MID, HIGH), controle de volume geral (MASTER) e display com informações de faixa e modo de reprodução."
+          }
+        ],
+        "infos": [
+          {
+            "name": "Amplificador MP300",
+            "description": "Amplificador de 300W RMS com entradas XLR, RCA, USB, SD e FM digital. Ideal para sonorizações em ambientes profissionais e institucionais.",
+            "specifications": [
+              { "label": "Potência", "value": "300W RMS" },
+              { "label": "Entradas", "value": "2 XLR balanceadas, 1 P10 (MIC), 1 RCA auxiliar, USB, Cartão SD" },
+              { "label": "Reprodução", "value": "Formatos MP3 / WMA" },
+              { "label": "FM", "value": "Receptor digital com display de frequência" },
+              { "label": "Display", "value": "Indica modo, faixa e formato da música" },
+              { "label": "Equalização", "value": "LOW, MID, HIGH" },
+              { "label": "Volume", "value": "Controle de volume geral (MASTER)" },
+              { "label": "Alimentação", "value": "Chave seletora 110V / 220V" },
+              { "label": "Saídas", "value": "OUT A e OUT B (2 canais de 150W)" },
+              { "label": "Dimensões", "value": "88mm (A) x 483mm (L) x 314mm (P)" },
+              { "label": "Peso", "value": "2,7Kg" }
+            ],
+            "warranty": "12 meses de garantia contra defeitos de fabricação."
+          }
+        ],
+        "saleCfg": [
+          {
+            "price": "2.819,99",
+            "installmentPrice": "596,25",
+            "installmentMax": "4x"
+          }
+        ],
+        "imgsProduct": [
+          {
+            "img": "/products/mp300-1.webp",
+            "alt": "Mp 300 - img 1"
+          },
+          {
+            "img": "/products/mp300-1.webp",
+            "alt": "Mp 300 - img 2"
+          },
+          {
+            "img": "/products/mp300-1.webp",
+            "alt": "Mp 300 - img 3"
+          },
+          {
+            "img": "/products/mp300-1.webp",
+            "alt": "Mp 300 - img 4"
+          }
+        ],
+        "oldPricePromotion": null
       }
+
+
     ],
   }),
   actions: {

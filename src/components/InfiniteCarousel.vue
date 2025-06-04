@@ -41,9 +41,11 @@
                     </h3>
                 </div>
                 <div class="w-full flex items-start justify-start lg:ml-2 ml-1 -mt-1.5">
-                    <h4 class="font-[600] px-2 text-left text-black text-[0.67rem] lg:text-[0.55rem] mt-2">Em até
+                    <!-- <h4 class="font-[600] px-2 text-left text-black text-[0.67rem] lg:text-[0.55rem] mt-2">Em até
                         <span class="font-semibold">{{ product.saleCfg[0].installmentMax }}</span> de <span
                             class="font-semibold">{{ product.saleCfg[0].installmentPrice }}</span> sem juros!
+                    </h4> -->
+                    <h4 class="font-[600] px-2 text-left text-black text-[0.67rem] lg:text-[0.55rem] mt-2">15% de desconto na retirada.
                     </h4>
                 </div>
             </div>

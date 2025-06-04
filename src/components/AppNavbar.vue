@@ -85,7 +85,7 @@ const isMenuOpen = ref(false);
 			<router-link data-aos="fade-right" data-aos-delay="200" to="/">
 				<!-- <h1 :class="isNavbarFixed ? 'text-[1.8rem] xl:text-[2.3rem] lg:mr-6' : 'text-[2.1rem] xl:text-[2.7rem] '"
 					class="font-bold"> MPSound </h1> -->
-				<img data-aos="fade-up" alt="icon criadores do site" class="h-6 lg:h-6 mb-4 mt-4 lg:mb-4 cursor-pointer" src="../assets/img/icons/m-power-logo-white.webp"/>
+				<img data-aos="fade-up" alt="icon criadores do site" class="h-8 lg:h-7 mb-4 mt-4 lg:mb-4 cursor-pointer" src="../assets/img/icons/m-power-logo-white.webp"/>
 			</router-link>
 
 			<!-- Menu Desktop -->
@@ -143,7 +143,7 @@ const isMenuOpen = ref(false);
 							<li class="font-normal tracking-wider w-72 ml-1 pt-2 pb-1">
 								<router-link @click="notFixeNavBar" to="/product-gallery?all"
 									class="text-white hover:ml-1 duration-150 ease-in-out"> •
-									&nbsp;WhatsApp</router-link>
+									&nbsp;Mercado Livre</router-link>
 							</li>
 							<li class="font-normal tracking-wider w-72 ml-1 py-1">
 								<router-link @click="notFixeNavBar" to="/product-gallery?all"
@@ -151,7 +151,7 @@ const isMenuOpen = ref(false);
 							</li>
 							<li class="font-normal tracking-wider w-72 ml-1 py-1">
 								<router-link @click="notFixeNavBar" to="/product-gallery?all"
-									class="text-white hover:ml-1 duration-150 ease-in-out"> • &nbsp;Facebook</router-link>
+									class="text-white hover:ml-1 duration-150 ease-in-out"> • &nbsp;WhatsApp</router-link>
 							</li>
 						</ul>
 					</li>
@@ -230,13 +230,13 @@ const isMenuOpen = ref(false);
 									<li class="font-normal tracking-wider h-10 mt-4 text-[1.05rem] flex items-center text-sm">									
 										<router-link @click="notFixeNavBar" to="/product-gallery?all"
 											class="text-white hover:ml-1 duration-150 ease-in-out"> • &nbsp;
-											WhatsApp</router-link></li>
+											Mercado Livre</router-link></li>
 									<li class="font-normal tracking-wider h-10 flex text-[1.05rem] items-center text-sm"><router-link @click="notFixeNavBar" to="/product-gallery?all"
 											class="text-white hover:ml-1 duration-150 ease-in-out"> • &nbsp; 
 											Instagram</router-link></li>
 									<li class="font-normal tracking-wider h-10 flex text-[1.05rem] items-center text-sm"><router-link @click="notFixeNavBar" to="/product-gallery?all"
 											class="text-white hover:ml-1 duration-150 ease-in-out"> • &nbsp;
-											Facebook</router-link></li>
+											WhatsApp</router-link></li>
 								</ul>
 							</transition>
 						</li>

@@ -73,6 +73,23 @@ const ShareProduct = () => {
     }
 };
 
+function applyDiscount(price) {
+  if (!price) return '';
+
+  const numeric = parseFloat(
+    price.toString().replace(/\./g, '').replace(',', '.')
+  );
+
+  if (isNaN(numeric)) return '';
+
+  const discounted = numeric * 0.85;
+
+  return discounted.toLocaleString('pt-BR', {
+    style: 'currency',
+    currency: 'BRL',
+  });
+}
+
 watch(productId, getProduct, { immediate: true });
 </script>
 
@@ -167,16 +184,20 @@ watch(productId, getProduct, { immediate: true });
                                     product.saleCfg[0].price }}</h1>
                             </div>
                             <div data-aos="fade-left">
-                                <h1 class="text-black lg:text-[1.12rem] text-[1.42rem] mt-2 pl-2">no PIX</h1>
-                                <h1 class="text-black lg:text-[1.12rem] text-[1.42rem] lg:-mt-2 pl-2">ou até {{
+                                <h1 class="text-black lg:text-[1.32rem] text-[1.42rem] mt-1 lg:mt-7 pl-2">no PIX</h1>
+                                <!-- <h1 class="text-black lg:text-[1.12rem] text-[1.42rem] lg:-mt-2 pl-2">ou até {{
                                     product.saleCfg[0].installmentMax
                                 }}
-                                    de R$ {{ product.saleCfg[0].installmentPrice }}</h1>
+                                    de R$ {{ product.saleCfg[0].installmentPrice }}</h1> -->
                             </div>
                         </div>
                     </section>
                     <div class="w-full mt-8 block lg:hidden">
                         <DescProduct data-aos="zoom-in" :descProd="product.infos" />
+                    </div>
+                    <div data-aos="fade-left" class="mb-10 mt-6 lg:mt-0">
+                        <h3 class="font-bold uppercase mt-8 text-black text-[1.25rem] lg:text-[1rem]"><span class="text-red-800">15%</span> de desconto na retirada!</h3>
+                        <h1 data-aos="zoom-in" class="text-black text-[1.5rem] pt-2 pl-2 mr-3">{{ applyDiscount(product.saleCfg[0].price) }}</h1>
                     </div>
                     <div data-aos="fade-left" class="mb-10 mt-14 lg:mt-0">
                         <h3 class="font-bold uppercase mt-8 text-[1.3rem] lg:text-[1.1rem]">Tenho interesse:</h3>

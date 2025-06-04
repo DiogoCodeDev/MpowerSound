@@ -7,14 +7,14 @@ import markerIcon from "leaflet/dist/images/marker-icon.png";
 import markerShadow from "leaflet/dist/images/marker-shadow.png";
 
 onMounted(() => {
-    const isMobile = window.innerWidth <= 768;
+    const isMobile = window.innerWidth <= 4800;
 
     const map = L.map("map-container", {
         dragging: !isMobile,
-        scrollWheelZoom: true,
+        scrollWheelZoom: !isMobile,
         touchZoom: true,
         doubleClickZoom: true,
-        zoomControl: true,
+        zoomControl: !isMobile,
     }).setView([-22.9520172, -47.0914413], 16);
 
     L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
