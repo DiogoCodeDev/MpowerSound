@@ -4,6 +4,16 @@ import { defineStore } from 'pinia';
 
 const useProductStore = defineStore('product', {
   state: () => ({
+    productHome: [
+      {
+        "title": "Caixas Amplificadoras Multi-uso",
+        "desc": "As Caixas Amplificadoras Multi-uso da MPower Sound são versáteis, potentes e ideais para diversas aplicações sonoras, oferecendo excelente qualidade de áudio, robustez e conectividade para diferentes tipos de uso.",
+        "descMobile": "Caixas Amplificadoras Multi-uso da MPower Sound com qualidade, potência e conectividade para diversas aplicações.",
+        "products": [
+          1, 2, 3, 10
+        ]
+      },
+    ],
     slidesHome: [
       {
         "title": "Caixas Amplificadoras Multi-uso",
@@ -160,6 +170,7 @@ const useProductStore = defineStore('product', {
         "id": 1,
         "name": "Caixa Amplificadora MP900 USB/SD",
         "img": "/products/mp900-2.webp",
+        "img2": "/products/mp900-2.webp",
         "size": "h-20",
         "alt": "Imagem Produto",
         "manual": "manual-mp900.pdf",
@@ -229,6 +240,7 @@ const useProductStore = defineStore('product', {
         "id": 2,
         "name": "Caixa Amplificadora MP200 USB/SD",
         "img": "/products/mp200-2.webp",
+        "img2": "/products/mp200-1.webp",
         "size": "h-20",
         "alt": "Imagem Produto",
         "manual": "manual-mp200.pdf",
@@ -297,6 +309,7 @@ const useProductStore = defineStore('product', {
         "id": 3,
         "name": "Caixa Amplificadora MP700 USB/SD",
         "img": "/products/mp700-2.webp",
+        "img2": "/products/mp700-2.webp",
         "size": "h-20",
         "alt": "Imagem Produto",
         "manual": "manual-mp700.pdf",
@@ -686,6 +699,7 @@ const useProductStore = defineStore('product', {
         "id": 9,
         "name": "Caixa Amplificadora MP800 USB/SD",
         "img": "/products/mp-800.webp",
+        "img2": "/products/mp-800.webp",
         "size": "h-20",
         "alt": "Imagem Produto",
         "manual": "manual-mp800.pdf",
@@ -756,6 +770,7 @@ const useProductStore = defineStore('product', {
         "id": 10,
         "name": "Amplificador MP300 USB/SD",
         "img": "/products/mp300-1.webp",
+        "img2": "/products/mp300-1.webp",
         "size": "h-20",
         "alt": "Imagem Produto",
         "manual": "manual-mp300.pdf",

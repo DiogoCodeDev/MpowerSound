@@ -20,6 +20,17 @@ const slidesArray = computed(() => {
   });
 });
 
+const productArray = computed(() => {
+  return productStore.productHome.map(slide => {
+    return {
+      ...slide,
+      products: slide.products.map(productId => {
+        return productStore.products.find(product => product.id === productId) || {};
+      }),
+    };
+  });
+});
+
 
 </script>
 
@@ -36,7 +47,7 @@ const slidesArray = computed(() => {
 		<AppHeader class="z-50 px-7 md:px-20 lg:px-32" />
 
 		<main class="z-10 flex flex-col">
-			<HomeProducts :slides="slidesArray"/>
+			<HomeProducts :slides="slidesArray" :products="productArray"/>
 			<PromotionalBanner/>
 			<FindUs/>
 		</main>

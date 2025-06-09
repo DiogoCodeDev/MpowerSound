@@ -46,10 +46,12 @@ const route = useRoute();
 		</div>
 		<div class="w-80 md:w-96 flex flex-col justify-center md:items-center lg:justify-start lg:w-1/3">
 			<div>
-				<h3 data-aos="fade-right" class="text-xl mb-8 lg:mb-4 lg:mt-6 font-black uppercase">Redes Sociais</h3>
+				<h3 data-aos="fade-right" class="text-xl mb-8 lg:mb-4 lg:mt-6 font-black uppercase">Contato</h3>
 				<div class="flex w-72 lg:w-8/12 justify-between mb-4 lg:mb-3">
-					<img data-aos="fade-up" alt="icon whatsapp" class="h-9 cursor-pointer lg:h-5.5 ml-1 lg:ml-1 mb-12 lg:mb-2" src="../assets/img/icons/wpp-icon.webp"/>
-					<img data-aos="fade-up" alt="icon facebook" class="h-9 cursor-pointer lg:h-5.5" src="../assets/img/icons/facebook-icon.webp"/>
+					<a href="https://lista.mercadolivre.com.br/_CustId_2290861308?item_id=MLB5394978766&category_id=MLB11507&seller_id=2290861308&client=recoview-selleritems&recos_listing=true#origin=vip&component=sellerData&typeSeller=classic" target="_blank" rel="noopener noreferrer">
+						<img data-aos="fade-up" alt="icon mercado livre" class="h-9 cursor-pointer lg:h-5.5" src="../assets/img/icons/mercado-livre-logo.webp" />
+					</a>
+					<img data-aos="fade-up" alt="icon whatsapp" class="h-9 cursor-pointer lg:h-5.5 mb-12 lg:mb-2" src="../assets/img/icons/wpp-icon.webp"/>
 					<img data-aos="fade-up" alt="icon instagram" class="h-9 cursor-pointer lg:h-5.5" src="../assets/img/icons/instagram-icon.webp"/>
 				</div>
 				<div class="w-full flex flex-col mb-14 py-4 lg:mb-4">

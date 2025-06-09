@@ -7,7 +7,7 @@
         </div>
         <div class="w-11/12 mx-auto lg:py-1 text-right lg:mx-11 mb-2 lg:mb-0"> 
             <h2 @click="goToGallery(slide.title)" class="text-[0.93rem] lg:text-[0.75rem] text-black cursor-pointer">
-                Ver mais...</h2>
+                Ver mais...</h2> 
         </div>
         <div ref="carousel" class="flex overflow-x-auto scroll-smooth lg:mx-11">
             <div @click="goToProduct(product)" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="200"

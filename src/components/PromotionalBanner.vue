@@ -6,24 +6,24 @@ const router = useRouter();
 
 const items = ref([
     {
-        title: 'Caixas Acústicas',
-        description: '•&nbsp; A melhor potência para seu som! <br> •&nbsp; Encontre o amplificador ideal para você. <br> •&nbsp; Conheça nossa linha premium.',
-        img: '/banner/product-3.webp',
-        class: 'h-52 md:h-36 lg:h-48',
-    },
-    {
-        title: 'Amplificadores',
+        title: 'Caixas Amplificadoras',
         description: 'Potência, qualidade e som incomparável. <br> Encontre o amplificador perfeito.',
-        img: '/banner/product-1.webp',
-        class: 'h-52 md:h-36 lg:h-48',
-        saleDiscount: 'Até <bold class="font-black text-yellow-500 lg:text-[1.34rem]">70%</bold> de desconto!'
-    },
-    {
-        title: 'Mixer de som',
-        description: 'Som de alta fidelidade para sua experiência! <br> Conheça nossa linha premium.',
         img: '/banner/product-2.webp',
         class: 'h-52 md:h-36 lg:h-48',
-        saleDiscount: 'Em até <bold class="font-black text-yellow-500 lg:text-[1.34rem]">12x</bold> sem juros!'
+        saleDiscount: 'Todos com <bold class="font-black text-yellow-500 lg:text-[1.34rem]">15%</bold> de desconto!'
+    },
+    {
+        title: 'Amplificadores de Potência',
+        description: '•&nbsp; A melhor potência para seu som! <br> •&nbsp; Encontre o amplificador ideal para você. <br> •&nbsp; A maior qualidade do mercado atual.',
+        img: '/banner/product-1.webp',
+        class: 'h-52 md:h-36 lg:h-48',
+    },
+    {
+        title: 'Kits M Power Sound',
+        description: 'Som de alta fidelidade para sua experiência! <br> A maior qualidade do mercado atual.',
+        img: '/banner/product-3.webp',
+        class: 'h-52 md:h-36 lg:h-48',
+        saleDiscount: 'Melhor custo <bold class="font-black text-yellow-500 lg:text-[1.34rem]">benefício!</bold>'
     }
 ]);
 
@@ -96,7 +96,7 @@ onUnmounted(() => {
             class="w-full flex flex-col md:flex-row flex-shrink-0 justify-center items-center">
             <div class="w-full md:w-9/12 lg:w-7/12 lg:pl-8 flex flex-col mb-16 md:mb-0 items-center justify-center">
               <h1 data-aos="fade-down" :class="item.saleDiscount ? 'mb-2' : 'mb-4'"
-                class="w-full text-center md:text-start mx-8 md:mx-0 md:w-10/12 text-[1.85rem] md:text-[2rem] lg:text-[2.6rem] uppercase">{{ item.title }}</h1>
+                class="w-full text-center md:text-start mx-8 md:mx-0 md:w-10/12 text-[1.85rem] md:text-[2rem] lg:text-[2.3rem] uppercase">{{ item.title }}</h1>
               <p data-aos="fade-down" :class="item.saleDiscount ? 'mb-8 lg:mb-6' : ''"
                 class="w-full text-center md:text-start mx-8 md:mx-0 md:w-10/12 text-[1rem] md:text-[0.85rem] lg:text-[0.9rem]" v-html="item.description"></p>
               <p v-if="item.saleDiscount" data-aos="zoom-in"
@@ -104,7 +104,7 @@ onUnmounted(() => {
                 v-html="item.saleDiscount"></p>
             </div>
             <div class="w-full md:w-3/12 lg:w-5/12 md:mr-8 lg:mr-0 flex items-center justify-center">
-              <img class="drop-shadow-2xl cursor-pointer transform-gpu transition-opacity duration-500 ease-in-out"
+              <img class="drop-shadow-2xl h-[14rem] cursor-pointer transform-gpu transition-opacity duration-500 ease-in-out"
                 :class="[items[currentIndex].class, fadeOut ? 'opacity-0' : 'opacity-100']"
                 :src="items[currentIndex].img"
                 :alt="items[currentIndex].title" />

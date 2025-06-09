@@ -1,9 +1,14 @@
 <script setup>
 import { ref, computed } from 'vue';
 import InfiniteCarousel from "../components/InfiniteCarousel.vue";
+import ProductSection from "../components/ProductSection.vue";
 
 const props = defineProps({
   slides: {
+    type: [Array, Object],
+    required: true,
+  },
+  products: {
     type: [Array, Object],
     required: true,
   },
@@ -14,6 +19,19 @@ const filtroCategoria = ref('');
 
 const slidesFiltrados = computed(() => {
   return props.slides.map(slide => {
+    const produtosFiltrados = slide.products.filter(product => {
+      const nomeMatch = product.name.toLowerCase().includes(filtroTexto.value.toLowerCase());
+      const categoriaMatch = filtroCategoria.value === '' || slide.title.toLowerCase().includes(filtroCategoria.value.toLowerCase());
+
+      return nomeMatch && categoriaMatch;
+    });
+
+    return { ...slide, products: produtosFiltrados };
+  }).filter(slide => slide.products.length > 0);
+});
+
+const productsFiltrados = computed(() => {
+  return props.products.map(slide => {
     const produtosFiltrados = slide.products.filter(product => {
       const nomeMatch = product.name.toLowerCase().includes(filtroTexto.value.toLowerCase());
       const categoriaMatch = filtroCategoria.value === '' || slide.title.toLowerCase().includes(filtroCategoria.value.toLowerCase());
@@ -71,8 +89,10 @@ const slidesFiltrados = computed(() => {
     </div>
 
     <div v-for="(slide, index) in slidesFiltrados" :key="index">
-      <InfiniteCarousel :slide="slide" />
+      <InfiniteCarousel :slide="slide" /> 
     </div>
+
+    <ProductSection :slide="productsFiltrados[0]" /> 
   </div>
 </template>
 
