@@ -10,9 +10,25 @@ const useProductStore = defineStore('product', {
         "desc": "As Caixas Amplificadoras Multi-uso da MPower Sound são versáteis, potentes e ideais para diversas aplicações sonoras, oferecendo excelente qualidade de áudio, robustez e conectividade para diferentes tipos de uso.",
         "descMobile": "Caixas Amplificadoras Multi-uso da MPower Sound com qualidade, potência e conectividade para diversas aplicações.",
         "products": [
-          1, 2, 3, 10
+          2, 3, 9, 1
         ]
       },
+      {
+        "title": "Amplificadores de Potência",
+        "desc": "As Caixas Amplificadoras Multi-uso da MPower Sound são versáteis, potentes e ideais para diversas aplicações sonoras, oferecendo excelente qualidade de áudio, robustez e conectividade para diferentes tipos de uso.",
+        "descMobile": "Caixas Amplificadoras Multi-uso da MPower Sound com qualidade, potência e conectividade para diversas aplicações.",
+        "products": [
+          5, 10, 6, 4
+        ]
+      },
+      {
+        "title": "Kits M power Sound",
+        "desc": "Os Kits M power Sound foram desenvolvidos para oferecer soluções completas de áudio com excelente desempenho e praticidade. Combinando amplificadores e caixas de som de alta qualidade, esses kits garantem potência, clareza e fidelidade sonora para diversos ambientes.",
+        "descMobile": "Os Kits M power Sound oferecem soluções completas de áudio com alta performance e praticidade.",
+        "products": [
+          7, 8
+        ]
+      }
     ],
     slidesHome: [
       {
@@ -310,7 +326,7 @@ const useProductStore = defineStore('product', {
         "name": "Caixa Amplificadora MP700 USB/SD",
         "img": "/products/mp700-2.webp",
         "img2": "/products/mp700-2.webp",
-        "size": "h-20",
+        "size": "h-12",
         "alt": "Imagem Produto",
         "manual": "manual-mp700.pdf",
         "description": "Com potência de 70W e múltiplas opções de entrada, a MP700 é ideal para apresentações, igrejas e eventos de médio porte.",
@@ -378,6 +394,7 @@ const useProductStore = defineStore('product', {
         "id": 4,
         "name": "Caixa Acústica MP35 - 50W",
         "img": "/products/mp35-3.webp",
+        "img2": "/products/mp35-3.webp",
         "size": "h-24",
         "alt": "Imagem Produto",
         "description": "Compacta, leve e eficiente, a MP35 é ideal para ambientes que exigem qualidade sonora com discrição estética.",
@@ -439,6 +456,7 @@ const useProductStore = defineStore('product', {
         "id": 5,
         "name": "Receiver Digital MP250 - 50W RMS",
         "img": "/products/mp250-1.webp",
+        "img2": "/products/mp250-1.webp",
         "size": "h-24",
         "alt": "Imagem Produto",
         "manual": "manual-mp250.pdf",
@@ -505,6 +523,7 @@ const useProductStore = defineStore('product', {
         "id": 6,
         "name": "Arandela 50W",
         "img": "/products/arandela-1.webp",
+        "img2": "/products/arandela-1.webp",
         "size": "h-20",
         "alt": "Imagem Produto",
         "description": "Arandela com alto falante de 6'' e potência de 50W, ideal para instalações de som ambiente com fácil montagem e acabamento discreto.",
@@ -569,6 +588,7 @@ const useProductStore = defineStore('product', {
         "id": 7,
         "name": "Kit Teto Gesso Embutir + 04 Arandelas",
         "img": "/products/kit-1.webp",
+        "img2": "/products/kit-1.webp",
         "size": "h-24",
         "alt": "Imagem Produto",
         "description": "O Receiver MP250 oferece conectividade versátil, som de qualidade e funcionalidades ideais para sistemas de som ambiente e Arandela com alto falante de 6'' e potência de 50W, ideal para instalações de som ambiente com fácil montagem e acabamento discreto.",
@@ -634,6 +654,7 @@ const useProductStore = defineStore('product', {
         "id": 8,
         "name": "Kit Mp250 Amplificador + 4 Caixas",
         "img": "/products/kit-2.webp",
+        "img2": "/products/kit-2.webp",
         "size": "h-24",
         "alt": "Imagem Produto",
         "description": "O Receiver MP250 oferece conectividade versátil, som de qualidade e funcionalidades ideais para sistemas de som ambiente.",
@@ -699,7 +720,7 @@ const useProductStore = defineStore('product', {
         "id": 9,
         "name": "Caixa Amplificadora MP800 USB/SD",
         "img": "/products/mp-800.webp",
-        "img2": "/products/mp-800.webp",
+        "img2": "/products/mp800-2.webp",
         "size": "h-20",
         "alt": "Imagem Produto",
         "manual": "manual-mp800.pdf",

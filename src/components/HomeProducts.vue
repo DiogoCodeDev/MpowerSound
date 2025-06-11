@@ -87,12 +87,14 @@ const productsFiltrados = computed(() => {
         </span>
       </div>
     </div>
-
-    <div v-for="(slide, index) in slidesFiltrados" :key="index">
+ 
+    <!-- <div v-for="(slide, index) in slidesFiltrados" :key="index">
       <InfiniteCarousel :slide="slide" /> 
-    </div>
+    </div> -->
 
-    <ProductSection :slide="productsFiltrados[0]" /> 
+    <div v-for="(slide, i) in productsFiltrados" :key="i">
+      <ProductSection :slide="slide" /> 
+    </div>
   </div>
 </template>
 
