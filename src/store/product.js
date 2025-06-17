@@ -792,7 +792,7 @@ const useProductStore = defineStore('product', {
         "name": "Amplificador MP300 USB/SD",
         "img": "/products/mp300-1.webp",
         "img2": "/products/mp300-1.webp",
-        "size": "h-20",
+        "size": "h-24",
         "alt": "Imagem Produto",
         "manual": "manual-mp300.pdf",
         "description": "Amplificador de 300W RMS com múltiplas entradas e saídas, ideal para ambientes que exigem potência e qualidade sonora.",
