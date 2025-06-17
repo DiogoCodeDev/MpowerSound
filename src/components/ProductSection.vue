@@ -1,5 +1,5 @@
 <template>
-  <div data-aos="fade-in" class="relative text-black mx-auto w-full lg:w-11/12 mb-12 lg:mb-14">
+  <div class="relative text-black mx-auto w-full lg:w-11/12 mb-12 lg:mb-14">
     <div class="w-full lg:w-11/12 mx-auto py-4 lg:mx-12">
       <h2 class="mx-3 lg:mx-0 text-2xl lg:text-xl mb-2 font-[500]">{{ slide.title }}</h2>
       <p class="mr-1 ml-3 lg:mx-0 lg:text-[0.85rem] font-[400] hidden lg:block">{{ slide.desc }}</p>
@@ -17,6 +17,7 @@
         v-for="(product, index) in slide.products.slice(0, 4)"
         :key="index"
         @click="goToProduct(product)"
+        data-aos="zoom-in"
         class="bg-white rounded shadow hover:scale-[1.02] duration-200 cursor-pointer p-4 flex flex-col justify-between relative"
       >
         <div v-if="product.oldPricePromotion"
