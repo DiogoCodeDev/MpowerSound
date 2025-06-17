@@ -16,7 +16,7 @@ const items = ref([
         title: 'Receiver Digital MP250',
         description: '•&nbsp; A melhor potência para seu som! <br> •&nbsp; Excelente custo benefício! <br> •&nbsp; 10% de desconto!',
         img: '/banner/product-1.png',
-        class: 'h-64 md:h-36 lg:h-64',
+        class: 'h-64 md:h-36 lg:h-56',
     },
     {
         title: 'Kits M Power Sound',
