@@ -8,20 +8,20 @@ const items = ref([
     {
         title: 'Caixa Amplificadora MP200',
         description: 'Potência, qualidade e som incomparável. <br> Encontre o amplificador perfeito.',
-        img: '/banner/product-2.png',
+        img: '/banner/product-2.webp',
         class: 'h-64 md:h-36 lg:h-64',
         saleDiscount: 'Todos com <bold class="font-black text-yellow-500 lg:text-[1.34rem]">10%</bold> de desconto!'
     },
     {
         title: 'Receiver Digital MP250',
         description: '•&nbsp; A melhor potência para seu som! <br> •&nbsp; Excelente custo benefício! <br> •&nbsp; 10% de desconto!',
-        img: '/banner/product-1.png',
+        img: '/banner/product-1.webp',
         class: 'h-64 md:h-36 lg:h-56',
     },
     {
         title: 'Kits M Power Sound',
         description: 'Som de alta fidelidade para sua experiência! <br> A maior qualidade do mercado atual.',
-        img: '/banner/product-3.png',
+        img: '/banner/product-3.webp',
         class: 'h-64 md:h-36 lg:h-64',
         saleDiscount: 'Todos com <bold class="font-black text-yellow-500 lg:text-[1.34rem]">10%</bold> de desconto!'
     }
