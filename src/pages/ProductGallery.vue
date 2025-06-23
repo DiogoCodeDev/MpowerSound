@@ -20,7 +20,7 @@ const newfiltroCategoria = ref('');
 const filtroPreco = ref('');
 
 const slidesProduct = computed(() => {
-    return productStore.slidesGallery.map(slide => {
+    return productStore.productHome.map(slide => {
         return {
             ...slide,
             products: slide.products.map(productId => {
