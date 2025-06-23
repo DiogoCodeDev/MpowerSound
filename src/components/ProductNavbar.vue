@@ -165,12 +165,12 @@ const isMenuOpen = ref(false);
 									&nbsp;Mercado Livre</div></a>
 							</li>
 							<li class="font-normal tracking-wider w-72 ml-1 py-1">
-								<router-link
-									class="text-white cursor-pointer hover:ml-1 duration-150 ease-in-out"> • &nbsp;Instagram</router-link>
+								<div
+									class="text-white cursor-pointer hover:ml-1 duration-150 ease-in-out"> • &nbsp;Instagram</div>
 							</li>
 							<li class="font-normal tracking-wider w-72 ml-1 py-1">
-								<router-link
-									class="text-white cursor-pointer hover:ml-1 duration-150 ease-in-out"> • &nbsp;WhatsApp</router-link>
+								<div
+									class="text-white cursor-pointer hover:ml-1 duration-150 ease-in-out"> • &nbsp;WhatsApp</div>
 							</li>
 						</ul>
 					</li>
@@ -250,12 +250,12 @@ const isMenuOpen = ref(false);
 										<div @click="notFixeNavBar" to="/product-gallery?all"
 											class="text-white cursor-pointer hover:ml-1 font-normal tracking-wider duration-150 ease-in-out"> • &nbsp;
 											Mercado Livre</div></a></li>
-									<li class="h-10 flex text-[1.05rem] items-center text-sm"><router-link
+									<li class="h-10 flex text-[1.05rem] items-center text-sm"><div
 											class="text-white cursor-pointer hover:ml-1 font-normal tracking-wider duration-150 ease-in-out"> • &nbsp; 
-											Instagram</router-link></li>
-									<li class="h-10 flex text-[1.05rem] items-center text-sm"><router-link
+											Instagram</div></li>
+									<li class="h-10 flex text-[1.05rem] items-center text-sm"><div
 											class="text-white cursor-pointer hover:ml-1 font-normal tracking-wider duration-150 ease-in-out"> • &nbsp;
-											WhatsApp</router-link></li>
+											WhatsApp</div></li>
 								</ul>
 							</transition>
 						</li>

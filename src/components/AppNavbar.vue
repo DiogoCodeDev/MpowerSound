@@ -152,12 +152,12 @@ const isMenuOpen = ref(false);
 									&nbsp;Mercado Livre</div></a>
 							</li>
 							<li class="font-normal tracking-wider w-72 ml-1 py-1">
-								<router-link @click="notFixeNavBar" to="/product-gallery?all"
-									class="text-white cursor-pointer hover:ml-1 duration-150 ease-in-out"> • &nbsp;Instagram</router-link>
+								<div @click="notFixeNavBar" to="/product-gallery?all"
+									class="text-white cursor-pointer hover:ml-1 duration-150 ease-in-out"> • &nbsp;Instagram</div>
 							</li>
 							<li class="font-normal tracking-wider w-72 ml-1 py-1">
-								<router-link @click="notFixeNavBar" to="/product-gallery?all"
-									class="text-white cursor-pointer hover:ml-1 duration-150 ease-in-out"> • &nbsp;WhatsApp</router-link>
+								<div @click="notFixeNavBar" to="/product-gallery?all"
+									class="text-white cursor-pointer hover:ml-1 duration-150 ease-in-out"> • &nbsp;WhatsApp</div>
 							</li>
 						</ul>
 					</li>
@@ -238,12 +238,12 @@ const isMenuOpen = ref(false);
 										<div
 											class="text-white cursor-pointer hover:ml-1 duration-150 ease-in-out"> • &nbsp;
 											Mercado Livre</div></a></li>
-									<li class="font-normal tracking-wider h-10 flex text-[1.05rem] items-center text-sm"><router-link @click="notFixeNavBar" to="/product-gallery?all"
+									<li class="font-normal tracking-wider h-10 flex text-[1.05rem] items-center text-sm"><div
 											class="text-white cursor-pointer hover:ml-1 duration-150 ease-in-out"> • &nbsp; 
-											Instagram</router-link></li>
-									<li class="font-normal tracking-wider h-10 flex text-[1.05rem] items-center text-sm"><router-link @click="notFixeNavBar" to="/product-gallery?all"
+											Instagram</div></li>
+									<li class="font-normal tracking-wider h-10 flex text-[1.05rem] items-center text-sm"><div
 											class="text-white cursor-pointer hover:ml-1 duration-150 ease-in-out"> • &nbsp;
-											WhatsApp</router-link></li>
+											WhatsApp</div></li>
 								</ul>
 							</transition>
 						</li>
