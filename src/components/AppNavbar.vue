@@ -50,7 +50,7 @@ const notFixeNavBar = () =>  {
 }
 
 const goToGallery = (filter) => {
-    router.push({ path: '/product-gallery', query: { filter: filter } });
+    router.push({ path: '/product-gallery', query: { search: filter } });
 };	
 
 const handleMouseEnter = () => {
