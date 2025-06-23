@@ -61,7 +61,7 @@ const productsFiltrados = computed(() => {
             <option class="py-4" value="">Todos</option>
             <option class="py-4" value="Caixas Amplificadoras Multi-uso">Caixas Amplificadoras Multi-uso</option>
             <option class="py-4" value="amplificadores de potência">Amplificadores de Potência</option>
-            <option class="py-4" value="Kits M power Sound">Kits M power Sound</option>
+            <option class="py-4" value="Kits de som ambiente">Kits de som ambiente</option>
           </select>
           <span class="absolute right-2 top-1/2 transform -translate-y-1/2 pointer-events-none text-xs">
             ▼

@@ -19,7 +19,7 @@ const items = ref([
         class: 'h-64 md:h-36 lg:h-56',
     },
     {
-        title: 'Kits M Power Sound',
+        title: 'Kits de som ambiente',
         description: 'Som de alta fidelidade para sua experiência! <br> A maior qualidade do mercado atual.',
         img: '/banner/product-3.webp',
         class: 'h-64 md:h-36 lg:h-64',

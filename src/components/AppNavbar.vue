@@ -1,7 +1,8 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from "vue";
-import { useRoute } from "vue-router";
+import { useRoute, useRouter } from "vue-router";
 
+const router = useRouter();
 const route = useRoute();
 const isNavbarFixed = ref(false);
 const navbarRef = ref(null);
@@ -47,6 +48,10 @@ const toggleRedes = () => {
 const notFixeNavBar = () =>  {
 	isNavbarFixed.value = false;
 }
+
+const goToGallery = (filter) => {
+    router.push({ path: '/product-gallery', query: { filter: filter } });
+};	
 
 const handleMouseEnter = () => {
 	if (submenuTimeout.value) {
@@ -106,20 +111,20 @@ const isMenuOpen = ref(false);
 							style="background-color: #090909;"
 							class="absolute w-64 shadow-md rounded mr-1 p-2 space-y-2">
 							<li class="font-normal tracking-wider w-72 ml-1 pt-2 pb-1">
-								<router-link @click="notFixeNavBar" to="/product-gallery?all"
-									class="text-white hover:ml-1 duration-150 ease-in-out"> •&nbsp;
-									Caixas Amplificadoras Multi-uso</router-link>
+								<div @click="goToGallery('Caixas Amplificadoras Multi-uso')" to="/product-gallery?all"
+									class="text-white cursor-pointer hover:ml-1 duration-150 ease-in-out"> •&nbsp;
+									Caixas Amplificadoras Multi-uso</div>
 							</li>
 							<li class="font-normal tracking-wider w-72 ml-1 py-1">
-								<router-link @click="notFixeNavBar" to="/product-gallery?all"
-									class="text-white hover:ml-1 duration-150 ease-in-out"> • &nbsp;
-									Amplificadores de Potência</router-link>
+								<div @click="goToGallery('Amplificadores de Potência')" to="/product-gallery?all"
+									class="text-white cursor-pointer hover:ml-1 duration-150 ease-in-out"> • &nbsp;
+									Amplificadores de Potência</div>
 							</li>
 							<li class="font-normal tracking-wider w-72 ml-1 py-1">
-								<router-link @click="notFixeNavBar" to="/product-gallery?all"
-									class="text-white hover:ml-1 duration-150 ease-in-out"> • &nbsp;Caixas
-									Kits M power Sound
-								</router-link>
+								<div @click="goToGallery('Kits de som ambiente')" to="/product-gallery?all"
+									class="text-white cursor-pointer hover:ml-1 duration-150 ease-in-out"> • &nbsp;
+									Kits de som ambiente
+								</div>
 							</li>
 						</ul>
 					</li>
@@ -134,24 +139,25 @@ const isMenuOpen = ref(false);
 					<li :class="{ 'text-yellow-400 font-semibold ': route.path === '/redes', 'bg-[#090909] rounded': isSubmenuSocialMediaOpen }"
 						class="w-32 font-normal tracking-wider h-7 ml-4 flex items-center text-[0.75rem] justify-center" @mouseenter="handleMouseSocialEnter"
 						@mouseleave="handleMouseSocialLeave">
-						<router-link @click="notFixeNavBar" to="/redes-sociais">Redes Sociais</router-link>
+						<router-link @click="notFixeNavBar">Redes Sociais</router-link>
 						<span class="ml-3 text-xs cursor-pointer transform transition-transform duration-300"
 							:class="{ 'rotate-180': isSubmenuSocialMediaOpen }">▼</span>
 						<ul v-if="isSubmenuSocialMediaOpen" :class="isNavbarFixed ? 'mt-40' : 'mt-34'"
 							style="background-color: #090909;"
 							class="absolute w-56 shadow-md rounded mr-1 p-2 space-y-2">
 							<li class="font-normal tracking-wider w-72 ml-1 pt-2 pb-1">
-								<router-link @click="notFixeNavBar" to="/product-gallery?all"
-									class="text-white hover:ml-1 duration-150 ease-in-out"> •
-									&nbsp;Mercado Livre</router-link>
+								<a href="https://lista.mercadolivre.com.br/_CustId_2290861308?item_id=MLB5394978766&category_id=MLB11507&seller_id=2290861308&client=recoview-selleritems&recos_listing=true#origin=vip&component=sellerData&typeSeller=classic">
+									<div
+									class="text-white cursor-pointer hover:ml-1 duration-150 ease-in-out"> •
+									&nbsp;Mercado Livre</div></a>
 							</li>
 							<li class="font-normal tracking-wider w-72 ml-1 py-1">
 								<router-link @click="notFixeNavBar" to="/product-gallery?all"
-									class="text-white hover:ml-1 duration-150 ease-in-out"> • &nbsp;Instagram</router-link>
+									class="text-white cursor-pointer hover:ml-1 duration-150 ease-in-out"> • &nbsp;Instagram</router-link>
 							</li>
 							<li class="font-normal tracking-wider w-72 ml-1 py-1">
 								<router-link @click="notFixeNavBar" to="/product-gallery?all"
-									class="text-white hover:ml-1 duration-150 ease-in-out"> • &nbsp;WhatsApp</router-link>
+									class="text-white cursor-pointer hover:ml-1 duration-150 ease-in-out"> • &nbsp;WhatsApp</router-link>
 							</li>
 						</ul>
 					</li>
@@ -198,13 +204,13 @@ const isMenuOpen = ref(false);
 							<transition name="slide">
 								<ul v-show="isProdutosOpen" class="ml-3 mt-2 space-y-1">
 									<li class="font-normal tracking-wider h-10 mt-4 text-[1.05rem] flex items-center text-sm">									
-										<router-link @click="notFixeNavBar" to="/product-gallery?all"
-											class="text-white hover:ml-1 duration-150 ease-in-out"> • &nbsp;
-											Caixas Amplificadoras Multi-uso</router-link></li>
-									<li class="font-normal tracking-wider h-10 flex text-[1.05rem] items-center text-sm"><router-link @click="notFixeNavBar" to="/product-gallery?all"
-											class="text-white hover:ml-1 duration-150 ease-in-out"> • &nbsp; Amplificadores de Potência</router-link></li>
-									<li class="font-normal tracking-wider h-10 flex text-[1.05rem] items-center text-sm"><router-link @click="notFixeNavBar" to="/product-gallery?all"
-											class="text-white hover:ml-1 duration-150 ease-in-out"> • &nbsp; Kits M power Sound</router-link></li>
+										<div @click="goToGallery('Caixas Amplificadoras Multi-uso')"
+											class="text-white cursor-pointer hover:ml-1 duration-150 ease-in-out"> • &nbsp;
+											Caixas Amplificadoras Multi-uso</div></li>
+									<li class="font-normal tracking-wider h-10 flex text-[1.05rem] items-center text-sm"><div @click="goToGallery('Amplificadores de Potência')"
+											class="text-white cursor-pointer hover:ml-1 duration-150 ease-in-out"> • &nbsp; Amplificadores de Potência</div></li>
+									<li class="font-normal tracking-wider h-10 flex text-[1.05rem] items-center text-sm"><div @click="goToGallery('Kits de som ambiente')"
+											class="text-white cursor-pointer hover:ml-1 duration-150 ease-in-out"> • &nbsp; Kits de som ambiente</div></li>
 								</ul>
 							</transition>
 						</li>
@@ -228,14 +234,15 @@ const isMenuOpen = ref(false);
 							<transition name="slide">
 								<ul v-show="isProdutosRedesOpen" class="ml-3 mt-2 space-y-1">
 									<li class="font-normal tracking-wider h-10 mt-4 text-[1.05rem] flex items-center text-sm">									
-										<router-link @click="notFixeNavBar" to="/product-gallery?all"
-											class="text-white hover:ml-1 duration-150 ease-in-out"> • &nbsp;
-											Mercado Livre</router-link></li>
+										<a href="https://lista.mercadolivre.com.br/_CustId_2290861308?item_id=MLB5394978766&category_id=MLB11507&seller_id=2290861308&client=recoview-selleritems&recos_listing=true#origin=vip&component=sellerData&typeSeller=classic">
+										<div
+											class="text-white cursor-pointer hover:ml-1 duration-150 ease-in-out"> • &nbsp;
+											Mercado Livre</div></a></li>
 									<li class="font-normal tracking-wider h-10 flex text-[1.05rem] items-center text-sm"><router-link @click="notFixeNavBar" to="/product-gallery?all"
-											class="text-white hover:ml-1 duration-150 ease-in-out"> • &nbsp; 
+											class="text-white cursor-pointer hover:ml-1 duration-150 ease-in-out"> • &nbsp; 
 											Instagram</router-link></li>
 									<li class="font-normal tracking-wider h-10 flex text-[1.05rem] items-center text-sm"><router-link @click="notFixeNavBar" to="/product-gallery?all"
-											class="text-white hover:ml-1 duration-150 ease-in-out"> • &nbsp;
+											class="text-white cursor-pointer hover:ml-1 duration-150 ease-in-out"> • &nbsp;
 											WhatsApp</router-link></li>
 								</ul>
 							</transition>

@@ -22,9 +22,9 @@ const useProductStore = defineStore('product', {
         ]
       },
       {
-        "title": "Kits M power Sound",
-        "desc": "Os Kits M power Sound foram desenvolvidos para oferecer soluções completas de áudio com excelente desempenho e praticidade. Combinando amplificadores e caixas de som de alta qualidade, esses kits garantem potência, clareza e fidelidade sonora para diversos ambientes.",
-        "descMobile": "Os Kits M power Sound oferecem soluções completas de áudio com alta performance e praticidade.",
+        "title": "Kits de som ambiente",
+        "desc": "Os Kits de som ambiente foram desenvolvidos para oferecer soluções completas de áudio com excelente desempenho e praticidade. Combinando amplificadores e caixas de som de alta qualidade, esses kits garantem potência, clareza e fidelidade sonora para diversos ambientes.",
+        "descMobile": "Os Kits de som ambiente oferecem soluções completas de áudio com alta performance e praticidade.",
         "products": [
           7, 8
         ]
@@ -48,9 +48,9 @@ const useProductStore = defineStore('product', {
         ]
       },
       {
-        "title": "Kits M power Sound",
-        "desc": "Os Kits M power Sound foram desenvolvidos para oferecer soluções completas de áudio com excelente desempenho e praticidade. Combinando amplificadores e caixas de som de alta qualidade, esses kits garantem potência, clareza e fidelidade sonora para diversos ambientes.",
-        "descMobile": "Os Kits M power Sound oferecem soluções completas de áudio com alta performance e praticidade.",
+        "title": "Kits de som ambiente",
+        "desc": "Os Kits de som ambiente foram desenvolvidos para oferecer soluções completas de áudio com excelente desempenho e praticidade. Combinando amplificadores e caixas de som de alta qualidade, esses kits garantem potência, clareza e fidelidade sonora para diversos ambientes.",
+        "descMobile": "Os Kits de som ambiente oferecem soluções completas de áudio com alta performance e praticidade.",
         "products": [
           7, 8, 7, 8, 7, 8, 7, 8, 7, 8, 7, 8, 7, 8
         ]
@@ -74,9 +74,9 @@ const useProductStore = defineStore('product', {
         ]
       },
       {
-        "title": "Kits M power Sound",
-        "desc": "Os Kits M power Sound foram desenvolvidos para oferecer soluções completas de áudio com excelente desempenho e praticidade. Combinando amplificadores e caixas de som de alta qualidade, esses kits garantem potência, clareza e fidelidade sonora para diversos ambientes.",
-        "descMobile": "Os Kits M power Sound oferecem soluções completas de áudio com alta performance e praticidade.",
+        "title": "Kits de som ambiente",
+        "desc": "Os Kits de som ambiente foram desenvolvidos para oferecer soluções completas de áudio com excelente desempenho e praticidade. Combinando amplificadores e caixas de som de alta qualidade, esses kits garantem potência, clareza e fidelidade sonora para diversos ambientes.",
+        "descMobile": "Os Kits de som ambiente oferecem soluções completas de áudio com alta performance e praticidade.",
         "products": [
           7, 8, 7, 8, 7, 8, 7, 8, 7, 8, 7, 8, 7, 8
         ]
@@ -227,7 +227,7 @@ const useProductStore = defineStore('product', {
         ],
         "saleCfg": [
           {
-            "price": "1.330,90",
+            "price": "945,20",
             "installmentPrice": "332,73",
             "installmentMax": "4x"
           }
@@ -296,7 +296,7 @@ const useProductStore = defineStore('product', {
         ],
         "saleCfg": [
           {
-            "price": "669,90",
+            "price": "497,00",
             "installmentPrice": "167,45",
             "installmentMax": "4x"
           }
@@ -365,18 +365,18 @@ const useProductStore = defineStore('product', {
         ],
         "saleCfg": [
           {
-            "price": "909,90",
+            "price": "645,50",
             "installmentPrice": "227,25",
             "installmentMax": "4x"
           }
         ],
         "imgsProduct": [
           {
-            "img": "/products/mp700-1.webp",
+            "img": "/products/mp700-2.webp",
             "alt": "Mp 700 - img 1"
           },
           {
-            "img": "/products/mp700-2.webp",
+            "img": "/products/mp700-1.webp",
             "alt": "Mp 700 - img 2"
           },
           {
@@ -762,14 +762,14 @@ const useProductStore = defineStore('product', {
         ],
         "saleCfg": [
           {
-            "price": "1.159,99",
+            "price": "823,82",
             "installmentPrice": "225,00",
             "installmentMax": "4x"
           }
         ],
         "imgsProduct": [
           {
-            "img": "/products/mp-800.webp",
+            "img": "/products/mp800-2.webp",
             "alt": "Mp 800 - img 1"
           },
           {
@@ -781,7 +781,7 @@ const useProductStore = defineStore('product', {
             "alt": "Mp 800 - img 3"
           },
           {
-            "img": "/products/mp-800.webp",
+            "img": "/products/mp800-2.webp",
             "alt": "Mp 800 - img 4"
           }
         ],

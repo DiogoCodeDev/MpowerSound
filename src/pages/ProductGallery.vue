@@ -2,6 +2,7 @@
 import { ref, computed, onMounted } from 'vue';
 import InfiniteCarousel from "../components/InfiniteCarousel.vue";
 import ListCarousel from "../components/ListCarousel.vue";
+import ProductSection from "../components/ProductSection.vue";
 import useProductStore from '../store/product.js';
 import { useRoute, useRouter } from "vue-router";
 import HeaderProduct from "../components/HeaderProduct.vue";
@@ -159,7 +160,7 @@ watch(
                                 <option class="py-4 px-2" value="">Produto</option>
                                 <option class="py-4" value="Caixas Amplificadoras Multi-uso">Caixas Amplificadoras Multi-uso</option>
                                 <option class="py-4" value="amplificadores de potência">Amplificadores de Potência</option>
-                                <option class="py-4" value="Kits M power Sound">Kits M power Sound</option>
+                                <option class="py-4" value="Kits de som ambiente">Kits de som ambiente</option>
                                 <option v-if="newfiltroCategoria" class="py-4 px-2" :value="newfiltroCategoria">{{newfiltroCategoria}}</option>
                             </select>
                             <span
@@ -193,8 +194,9 @@ watch(
             </div>
 
             <div v-for="(slide, index) in slidesFiltrados" :key="index">
-                <InfiniteCarousel v-if="hasBoxMode" :slide="slide" />
-                <ListCarousel v-if="hasListMode" :slide="slide" />
+                <!-- <InfiniteCarousel v-if="hasBoxMode" :slide="slide" />
+                <ListCarousel v-if="hasListMode" :slide="slide" />  -->
+                <ProductSection :slide="slide" /> 
             </div>
 
             <div v-if="slidesFiltrados.length === 0" class="w-full mt-8 lg:mt-12 text-black">
