@@ -6,7 +6,7 @@ import { useRouter } from 'vue-router';
 const router = useRouter();
 
 const goToGallery = (filter) => {
-    router.push({ path: '/product-gallery', query: { filter: filter } });
+    router.push({ path: '/product-gallery', query: { search: filter } });
 };	
 
 </script>
