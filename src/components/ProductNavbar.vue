@@ -152,7 +152,7 @@ const isMenuOpen = ref(false);
 					<li :class="{ 'text-yellow-400 font-bold ': route.path === '/redes', 'bg-[#090909] rounded': isSubmenuSocialMediaOpen }"
 						class="w-32 h-7 font-normal tracking-widest ml-4 flex items-center text-[0.75rem] justify-center" @mouseenter="handleMouseSocialEnter"
 						@mouseleave="handleMouseSocialLeave">
-						<div @click="notFixeNavBar">Redes Sociais</div>
+						<div>Redes Sociais</div>
 						<span class="ml-3 text-xs cursor-pointer transform transition-transform duration-300"
 							:class="{ 'rotate-180': isSubmenuSocialMediaOpen }">▼</span>
 						<ul v-if="isSubmenuSocialMediaOpen" :class="isNavbarFixed ? 'mt-40' : 'mt-40'"
