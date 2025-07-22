@@ -51,8 +51,8 @@ const route = useRoute();
 			<div>
 				<h3 data-aos="fade-right" class="text-xl mb-8 lg:mb-4 lg:mt-6 font-black uppercase">Contato</h3>
 				<div class="flex w-72 lg:w-8/12 justify-between mb-4 lg:mb-3">
-					<a href="https://lista.mercadolivre.com.br/_CustId_2290861308?item_id=MLB5394978766&category_id=MLB11507&seller_id=2290861308&client=recoview-selleritems&recos_listing=true#origin=vip&component=sellerData&typeSeller=classic" target="_blank" rel="noopener noreferrer">
-						<img data-aos="fade-up" alt="icon mercado livre" class="h-9 cursor-pointer lg:h-5.5" src="../assets/img/icons/mercado-livre-logo.webp" />
+					<a href="https://www.magazineluiza.com.br/lojista/mpowersound/" target="_blank" rel="noopener noreferrer">
+						<img data-aos="fade-up" alt="icon magalu" class="h-9 cursor-pointer lg:h-5.5" src="../assets/img/icons/magalu-logo.png" />
 					</a>
 					<img data-aos="fade-up" alt="icon whatsapp" class="h-9 cursor-pointer lg:h-5.5 mb-12 lg:mb-2" src="../assets/img/icons/wpp-icon.webp"/>
 					<img data-aos="fade-up" alt="icon instagram" class="h-9 cursor-pointer lg:h-5.5" src="../assets/img/icons/instagram-icon.webp"/>

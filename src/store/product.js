@@ -110,7 +110,7 @@ const useProductStore = defineStore('product', {
       //   "size": "h-20",
       //   "alt": "Imagem Produto",
       //   "description": "Este amplificador excepcional oferece uma experiência sonora incomparável, onde cada nota e cada nuance são reproduzidas com clareza cristalina e precisão impressionante.",
-      //   "mercadolivre": "https://lista.mercadolivre.com.br/amplificadores#D[A:amplificadores]",
+      //   "magalu": "https://lista.mercadolivre.com.br/amplificadores#D[A:amplificadores]",
       //   "amazon":"https://www.amazon.com.br/s?k=amplificadores&__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3AR8WW2DKSE17&sprefix=amplificadore%2Caps%2C254&ref=nb_sb_noss_2",
       //   "topicsDesc": [
       //     {
@@ -191,7 +191,7 @@ const useProductStore = defineStore('product', {
         "alt": "Imagem Produto",
         "manual": "manual-mp900.pdf",
         "description": "Caixa amplificadora com múltiplas entradas e controles individuais, ideal para apresentações, igrejas, escolas e eventos em geral.",
-        "mercadolivre": "https://produto.mercadolivre.com.br/MLB-4025771895-caixa-amplificada-mp-900-bluetooth-usb-sd-card-fm-_JM",
+        "magalu": "https://www.magazineluiza.com.br/caixa-amplificadora-multiuso-mp-900-bluetooth-mpower-sound/p/fe1184cjcj/ea/easm/?partner_id=64068&utm_source=pdp&utm_medium=share",
         "amazon": "",
         "topicsDesc": [
           {
@@ -261,7 +261,7 @@ const useProductStore = defineStore('product', {
         "alt": "Imagem Produto",
         "manual": "manual-mp200.pdf",
         "description": "Compacta e eficiente, a MP200 é uma caixa amplificadora ideal para ambientes menores, oferecendo múltiplas conexões e controle completo de áudio.",
-        "mercadolivre": "https://produto.mercadolivre.com.br/MLB-5342846720-caixa-amplificada-mp-200-bluetooth-usb-sd-card-fm-_JM",
+        "magalu": "https://www.magazineluiza.com.br/caixa-amplificadora-multiuso-mp-200-bluetooth-mpower-sound/p/bhak82e45c/ea/cxsm/?partner_id=64068&utm_source=pdp&utm_medium=share",
         "amazon": "",
         "topicsDesc": [
           {
@@ -330,7 +330,7 @@ const useProductStore = defineStore('product', {
         "alt": "Imagem Produto",
         "manual": "manual-mp700.pdf",
         "description": "Com potência de 70W e múltiplas opções de entrada, a MP700 é ideal para apresentações, igrejas e eventos de médio porte.",
-        "mercadolivre": "https://produto.mercadolivre.com.br/MLB-5343705594-caixa-amplificada-mp-700-bluetooth-usb-sd-card-fm-_JM",
+        "magalu": "https://www.magazineluiza.com.br/caixa-amplificadora-multiuso-mp-700-bluetooth-mpower-sound/p/hhkc5c5f89/ea/easm/?partner_id=64068&utm_source=pdp&utm_medium=share",
         "amazon": "",
         "topicsDesc": [
           {
@@ -398,7 +398,7 @@ const useProductStore = defineStore('product', {
         "size": "h-24",
         "alt": "Imagem Produto",
         "description": "Compacta, leve e eficiente, a MP35 é ideal para ambientes que exigem qualidade sonora com discrição estética.",
-        "mercadolivre": "https://produto.mercadolivre.com.br/MLB-4025897385-caixa-acustica-mp-35-_JM",
+        "magalu": "https://www.magazineluiza.com.br/caixa-acustica-mp-35-mpower-sound/p/fk7g31hk57/ea/cxsm/?partner_id=64068&utm_source=pdp&utm_medium=share",
         "amazon": "",
         "topicsDesc": [
           {
@@ -461,7 +461,7 @@ const useProductStore = defineStore('product', {
         "alt": "Imagem Produto",
         "manual": "manual-mp250.pdf",
         "description": "O Receiver MP250 oferece conectividade versátil, som de qualidade e funcionalidades ideais para sistemas de som ambiente.",
-        "mercadolivre": "https://produto.mercadolivre.com.br/MLB-4025883497-receiver-digital-mp-250-bluetooth-usb-sd-card-fm-_JM",
+        "magalu": "https://www.magazineluiza.com.br/receiver-digital-mp-250-bluetooth-sd-card-usb-fm-mpower-sound/p/kc973a87ee/ea/easm/?partner_id=64068&utm_source=pdp&utm_medium=share",
         "amazon": "",
         "topicsDesc": [
           {
@@ -527,7 +527,7 @@ const useProductStore = defineStore('product', {
         "size": "h-20",
         "alt": "Imagem Produto",
         "description": "Arandela com alto falante de 6'' e potência de 50W, ideal para instalações de som ambiente com fácil montagem e acabamento discreto.",
-        "mercadolivre": "https://produto.mercadolivre.com.br/MLB-4040460485-arandela-som-ambiente-_JM",
+        "magalu": "https://www.magazineluiza.com.br/arandela-para-som-ambiente-mpower-sound/p/kk5h55acfh/cj/lzar/?partner_id=64068&utm_source=pdp&utm_medium=share",
         "amazon": "",
         "topicsDesc": [
           {
@@ -592,7 +592,7 @@ const useProductStore = defineStore('product', {
         "size": "h-24",
         "alt": "Imagem Produto",
         "description": "O Receiver MP250 oferece conectividade versátil, som de qualidade e funcionalidades ideais para sistemas de som ambiente e Arandela com alto falante de 6'' e potência de 50W, ideal para instalações de som ambiente com fácil montagem e acabamento discreto.",
-        "mercadolivre": "https://produto.mercadolivre.com.br/MLB-4032239297-kit-som-ambiente-teto-gesso-embutir-04-arandelas-_JM",
+        "magalu": "https://www.magazineluiza.com.br/kit-som-ambiente-teto-gesso-embutir-04-arandelas-mpower-sound/p/ec597e6k9h/ea/cxsm/?partner_id=64068&utm_source=pdp&utm_medium=share",
         "amazon": "",
         "topicsDesc": [
           {
@@ -658,7 +658,7 @@ const useProductStore = defineStore('product', {
         "size": "h-24",
         "alt": "Imagem Produto",
         "description": "O Receiver MP250 oferece conectividade versátil, som de qualidade e funcionalidades ideais para sistemas de som ambiente.",
-        "mercadolivre": "https://produto.mercadolivre.com.br/MLB-4025963203-kit-som-ambiente-mp250-amplificador-bluetooth-usb-4-caixas-_JM",
+        "magalu": "https://www.magazineluiza.com.br/kit-som-ambiente-mp-250-4-caixas-acusticas-mpower-sound/p/cej8a11hch/ea/cxac/?partner_id=64068&utm_source=pdp&utm_medium=share",
         "amazon": "",
         "topicsDesc": [
           {
@@ -725,7 +725,7 @@ const useProductStore = defineStore('product', {
         "alt": "Imagem Produto",
         "manual": "manual-mp800.pdf",
         "description": "Caixa amplificadora de 100W RMS com entradas diversas, controles individuais e conexão Bluetooth. Ideal para eventos, igrejas, escolas e uso profissional.",
-        "mercadolivre": "https://produto.mercadolivre.com.br/MLB-5360810242-caixa-amplificadora-mp-800-bluetooth-usb-sd-card-fm-_JM",
+        "magalu": "https://www.magazineluiza.com.br/caixa-amplificadora-multiuso-mp-800-bluetooth-mpower-sound/p/cg895e99e9/ea/easm/?partner_id=64068&utm_source=pdp&utm_medium=share",
         "amazon": "",
         "topicsDesc": [
           {
@@ -796,7 +796,7 @@ const useProductStore = defineStore('product', {
         "alt": "Imagem Produto",
         "manual": "manual-mp300.pdf",
         "description": "Amplificador de 300W RMS com múltiplas entradas e saídas, ideal para ambientes que exigem potência e qualidade sonora.",
-        "mercadolivre": "https://produto.mercadolivre.com.br/MLB-4067012153-amplificador-mp-300-bluetooth-usb-sd-card-fm-_JM",
+        "magalu": "https://www.magazineluiza.com.br/amplificador-mp-300-bluetooth-sd-card-usb-fm-mpower-sound/p/cbb1ed8k32/ea/easm/?partner_id=64068&utm_source=pdp&utm_medium=share",
         "amazon": "",
         "topicsDesc": [
           {

@@ -146,10 +146,10 @@ const isMenuOpen = ref(false);
 							style="background-color: #090909;"
 							class="absolute w-56 shadow-md rounded mr-1 p-2 space-y-2">
 							<li class="font-normal tracking-wider w-72 ml-1 pt-2 pb-1">
-								<a href="https://lista.mercadolivre.com.br/_CustId_2290861308?item_id=MLB5394978766&category_id=MLB11507&seller_id=2290861308&client=recoview-selleritems&recos_listing=true#origin=vip&component=sellerData&typeSeller=classic">
+								<a href="https://www.magazineluiza.com.br/lojista/mpowersound/">
 									<div
 									class="text-white cursor-pointer hover:ml-1 duration-150 ease-in-out"> •
-									&nbsp;Mercado Livre</div></a>
+									&nbsp;Magalu</div></a>
 							</li>
 							<li class="font-normal tracking-wider w-72 ml-1 py-1">
 								<div @click="notFixeNavBar" to="/product-gallery?all"
@@ -234,10 +234,10 @@ const isMenuOpen = ref(false);
 							<transition name="slide">
 								<ul v-show="isProdutosRedesOpen" class="ml-3 mt-2 space-y-1">
 									<li class="font-normal tracking-wider h-10 mt-4 text-[1.05rem] flex items-center text-sm">									
-										<a href="https://lista.mercadolivre.com.br/_CustId_2290861308?item_id=MLB5394978766&category_id=MLB11507&seller_id=2290861308&client=recoview-selleritems&recos_listing=true#origin=vip&component=sellerData&typeSeller=classic">
+										<a href="https://www.magazineluiza.com.br/lojista/mpowersound/">
 										<div
 											class="text-white cursor-pointer hover:ml-1 duration-150 ease-in-out"> • &nbsp;
-											Mercado Livre</div></a></li>
+											Magalu</div></a></li>
 									<li class="font-normal tracking-wider h-10 flex text-[1.05rem] items-center text-sm"><div
 											class="text-white cursor-pointer hover:ml-1 duration-150 ease-in-out"> • &nbsp; 
 											Instagram</div></li>

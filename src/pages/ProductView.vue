@@ -210,17 +210,17 @@ watch(productId, getProduct, { immediate: true });
                                 class="font-bold">pequena</span> diferença de
                             preço </p>
                         <div class="w-full flex flex-col items-center lg:flex-row">
-                            <a :href="product.mercadolivre" target="_blank">
+                            <a :href="product.magalu" target="_blank">
                                 <button data-aos="zoom-in" data-aos-duration="100"
-                                    class="w-80 lg:w-64 cursor-pointer hover:scale-105 transition-transform duration-300 ease-in-out mb-6 lg:mb-0 shadow-xl h-16 bg-yellow-300 text-[#2D2E7B] font-bold rounded-full flex items-center justify-center space-x-2">
-                                    <img alt="logo mercado livre" class="h-8"
-                                        src="../assets/img/icons/mercado-livre.webp" />
+                                    class="w-80 lg:w-64 cursor-pointer hover:scale-105 transition-transform duration-300 ease-in-out mb-6 lg:mb-0 shadow-xl h-16 bg-[#0E87FE] text-[#2D2E7B] font-bold rounded-full flex items-center justify-center space-x-2">
+                                    <img alt="logo Magalu" class="h-8"
+                                        src="../assets/img/icons/magalu-logo.png" />
                                 </button>
                             </a>
                             <!-- <a :href="product.amazon" target="_blank">
                                 <button data-aos="zoom-in" data-aos-duration="200"
                                     class="w-80 lg:w-64 cursor-pointer hover:scale-105 mb-6 lg:mb-0 transition-transform duration-300 mx-6 ease-in-out h-16 shadow-xl bg-[#131921] text-white font-bold rounded-full flex items-center justify-center space-x-2">
-                                    <img alt="logo mercado livre" class="h-8 pt-1"
+                                    <img alt="logo Magalu" class="h-8 pt-1"
                                         src="../assets/img/icons/amazon-logo.webp" />
                                 </button>
                             </a> -->
