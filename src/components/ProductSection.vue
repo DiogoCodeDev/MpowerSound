@@ -25,8 +25,8 @@
           {{ product.oldPricePromotion[0].discountPercentage }} OFF
         </div>
 
-        <div class="flex items-center justify-center h-28 lg:h-36">
-          <img class="h-24 lg:h-36" :src="getImagePath(product.img2)" :alt="product.alt" />
+        <div class="flex items-center justify-center h-28 lg:h-38">
+          <img class="h-28 lg:h-40" :src="getImagePath(product.img2)" :alt="product.alt" />
         </div>
 
         <h2

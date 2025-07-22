@@ -9,6 +9,7 @@ const items = ref([
         title: 'Caixa Amplificadora MP200',
         description: 'Potência, qualidade e som incomparável. <br> Encontre o amplificador perfeito.',
         img: '/banner/product-2.webp',
+        type: 'product',
         class: 'h-64 md:h-36 lg:h-64',
         saleDiscount: 'Todos com <bold class="font-black text-yellow-500 lg:text-[1.34rem]">10%</bold> de desconto!'
     },
@@ -16,6 +17,7 @@ const items = ref([
         title: 'Receiver Digital MP250',
         description: '•&nbsp; A melhor potência para seu som! <br> •&nbsp; Excelente custo benefício! <br> •&nbsp; 10% de desconto!',
         img: '/banner/product-1.webp',
+        type: 'product',
         class: 'h-64 md:h-36 lg:h-56',
     },
     {
@@ -23,6 +25,7 @@ const items = ref([
         description: 'Som de alta fidelidade para sua experiência! <br> A maior qualidade do mercado atual.',
         img: '/banner/product-3.webp',
         class: 'h-64 md:h-36 lg:h-64',
+        type: 'category',
         saleDiscount: 'Todos com <bold class="font-black text-yellow-500 lg:text-[1.34rem]">10%</bold> de desconto!'
     }
 ]);
@@ -34,9 +37,12 @@ let interval = null;
 let startX = 0;
 let endX = 0;
 
-const goToGallery = (filter) => {
-    router.push({ path: '/product-gallery', query: { search: filter } });
-};
+const goToGallery = (filter, type) => {
+    if(type == "category")
+      router.push({ path: '/product-gallery', query: { search: filter } });
+    else
+      router.push({ path: '/product-gallery', query: { filter: filter } });
+  };
 
 const changeSlide = (direction) => {
     fadeOut.value = true;
@@ -92,7 +98,7 @@ onUnmounted(() => {
       <div class="relative w-full md:w-10/12 overflow-hidden flex items-center justify-center">
         <div class="flex w-full transition-transform duration-300 ease-in-out"
           :style="{ transform: `translateX(-${currentIndex * 100}%)` }">
-          <div v-for="(item, index) in items" @click="goToGallery(item.title)" :key="index"
+          <div v-for="(item, index) in items" @click="goToGallery(item.title, item.type)" :key="index"
             class="w-full flex flex-col md:flex-row flex-shrink-0 justify-center items-center">
             <div class="w-full md:w-9/12 lg:w-7/12 lg:pl-8 flex flex-col mb-16 md:mb-0 items-center justify-center">
               <h1 data-aos="fade-down" :class="item.saleDiscount ? 'mb-2' : 'mb-4'"

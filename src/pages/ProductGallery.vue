@@ -72,7 +72,7 @@ const slidesFiltrados = computed(() => {
 
             return nomeMatch && categoriaMatch && promocaoMatch;
         });
-
+ 
         if (filtroPreco.value === 'menores') {
             produtosFiltrados.sort((a, b) => {
                 const precoA = a.saleCfg && a.saleCfg[0] && a.saleCfg[0].price ? formatPrice(a.saleCfg[0].price) : 0;
@@ -100,6 +100,9 @@ watch(
         else if (newPath.includes('search')) {
             filtroCategoria.value = route.query.search || '';
             newfiltroCategoria.value = route.query.search || '';
+        }
+        else if (newPath.includes('filter')) {
+            filtroTexto.value = route.query.filter || '';
         }
         else {
             filtroPreco.value = '';
