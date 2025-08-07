@@ -45,7 +45,7 @@
                         <span class="font-semibold">{{ product.saleCfg[0].installmentMax }}</span> de <span
                             class="font-semibold">{{ product.saleCfg[0].installmentPrice }}</span> sem juros!
                     </h4> -->
-                    <h4 class="font-[600] px-2 text-left text-black text-[0.67rem] lg:text-[0.55rem] mt-2">15% de desconto na retirada.
+                    <h4 class="font-[600] px-2 text-left text-black text-[0.67rem] lg:text-[0.55rem] mt-2">10% de desconto na retirada.
                     </h4>
                 </div>
             </div>
@@ -71,81 +71,82 @@ import { useRouter } from 'vue-router';
 
 const router = useRouter();
 const carousel = ref(null);
+const cardWidth = ref(0);
 
 defineProps({
-    slide: {
-        type: [Array, Object],
-        required: true
-    }
+  slide: {
+    type: [Array, Object],
+    required: true
+  }
 });
 
-const getScrollAmount = () => {
-    if (window.innerWidth <= 768) {
-        return 160;
-    }
-    return 275;
-};
-
 const goToGallery = (filter) => {
-    if(filter == "Selecionados para você!")
-        filter = "Produtos"
-    router.push({ path: '/product-gallery', query: { search: filter } });
+  if (filter == "Selecionados para você!") filter = "Produtos";
+  router.push({ path: '/product-gallery', query: { search: filter } });
 };
 
 const limitNameProduct = (name) => {
-    return name.length > 23 ? name.substring(0, 23) + '..' : name;
-}
+  return name.length > 23 ? name.substring(0, 23) + '..' : name;
+};
 
 const getImagePath = (imgPath) => {
-    return new URL(imgPath.replace('@/', '/src/'), import.meta.url).href;
+  return new URL(imgPath.replace('@/', '/src/'), import.meta.url).href;
+};
+
+const getScrollAmount = () => {
+  return cardWidth.value || 275;
 };
 
 const scrollLeft = () => {
-    if (carousel.value) {
-        const scrollAmount = getScrollAmount();
-        carousel.value.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+  if (carousel.value) {
+    const scrollAmount = getScrollAmount();
+    carousel.value.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
 
-        if (carousel.value.scrollLeft <= 0) {
-            carousel.value.scrollLeft = carousel.value.scrollWidth - carousel.value.clientWidth;
-        }
+    if (carousel.value.scrollLeft <= 0) {
+      carousel.value.scrollLeft = carousel.value.scrollWidth - carousel.value.clientWidth;
     }
+  }
 };
 
 const scrollRight = () => {
-    if (carousel.value) {
-        const scrollAmount = getScrollAmount();
-        carousel.value.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+  if (carousel.value) {
+    const scrollAmount = getScrollAmount();
+    carousel.value.scrollBy({ left: scrollAmount, behavior: 'smooth' });
 
-        if (carousel.value.scrollLeft + carousel.value.clientWidth >= carousel.value.scrollWidth - 1) {
-            setTimeout(() => { carousel.value.scrollLeft = 0; }, 300);
-        }
+    if (carousel.value.scrollLeft + carousel.value.clientWidth >= carousel.value.scrollWidth - 1) {
+      setTimeout(() => { carousel.value.scrollLeft = 0; }, 300);
     }
+  }
 };
 
 let autoScrollInterval;
 
 const goToProduct = (product) => {
-    router.push(`/product/${product.id}`);
+  router.push(`/product/${product.id}`);
 };
 
 onMounted(() => {
-    autoScrollInterval = setInterval(() => {
-        if (carousel.value) {
-            const currentScroll = carousel.value.scrollLeft + carousel.value.clientWidth;
-            const maxScroll = carousel.value.scrollWidth;
+  const firstCard = carousel.value?.querySelector('div');
+  if (firstCard) {
+    cardWidth.value = firstCard.offsetWidth + parseInt(getComputedStyle(firstCard).marginRight || 0);
+  }
 
-            if (currentScroll >= maxScroll - 1) {
-                setTimeout(() => { carousel.value.scrollLeft = 0; }, 300);
-            } else {
-                scrollRight();
-            }
-        }
-    }, 3500);
+  autoScrollInterval = setInterval(() => {
+    if (carousel.value) {
+      const currentScroll = carousel.value.scrollLeft + carousel.value.clientWidth;
+      const maxScroll = carousel.value.scrollWidth;
 
+      if (currentScroll >= maxScroll - 1) {
+        setTimeout(() => { carousel.value.scrollLeft = 0; }, 300);
+      } else {
+        scrollRight();
+      }
+    }
+  }, 3500);
 });
 
 onUnmounted(() => {
-    clearInterval(autoScrollInterval);
+  clearInterval(autoScrollInterval);
 });
 </script>
 

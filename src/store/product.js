@@ -227,7 +227,7 @@ const useProductStore = defineStore('product', {
         ],
         "saleCfg": [
           {
-            "price": "945,20",
+            "price": "980,00",
             "installmentPrice": "332,73",
             "installmentMax": "4x"
           }
@@ -296,7 +296,7 @@ const useProductStore = defineStore('product', {
         ],
         "saleCfg": [
           {
-            "price": "497,00",
+            "price": "480,00",
             "installmentPrice": "167,45",
             "installmentMax": "4x"
           }
@@ -365,7 +365,7 @@ const useProductStore = defineStore('product', {
         ],
         "saleCfg": [
           {
-            "price": "645,50",
+            "price": "680,00",
             "installmentPrice": "227,25",
             "installmentMax": "4x"
           }
@@ -427,7 +427,7 @@ const useProductStore = defineStore('product', {
         ],
         "saleCfg": [
           {
-            "price": "199,90",
+            "price": "120,00",
             "installmentPrice": "49,90",
             "installmentMax": "4x"
           }
@@ -494,7 +494,7 @@ const useProductStore = defineStore('product', {
         ],
         "saleCfg": [
           {
-            "price": "750,00",
+            "price": "600,00",
             "installmentPrice": "187,50",
             "installmentMax": "4x"
           }
@@ -559,7 +559,7 @@ const useProductStore = defineStore('product', {
         ],
         "saleCfg": [
           {
-            "price": "149,90",
+            "price": "85,00",
             "installmentPrice": "37,45",
             "installmentMax": "4x"
           }
@@ -625,7 +625,7 @@ const useProductStore = defineStore('product', {
         ],
         "saleCfg": [
           {
-            "price": "1.210,00",
+            "price": "960,00",
             "installmentPrice": "302,50",
             "installmentMax": "4x"
           }
@@ -691,7 +691,7 @@ const useProductStore = defineStore('product', {
         ],
         "saleCfg": [
           {
-            "price": "1.399,90",
+            "price": "1.200,00",
             "installmentPrice": "349,98",
             "installmentMax": "4x"
           }
@@ -762,7 +762,7 @@ const useProductStore = defineStore('product', {
         ],
         "saleCfg": [
           {
-            "price": "823,82",
+            "price": "850,00",
             "installmentPrice": "225,00",
             "installmentMax": "4x"
           }
@@ -830,7 +830,7 @@ const useProductStore = defineStore('product', {
         ],
         "saleCfg": [
           {
-            "price": "2.819,99",
+            "price": "2.250,00",
             "installmentPrice": "596,25",
             "installmentMax": "4x"
           }

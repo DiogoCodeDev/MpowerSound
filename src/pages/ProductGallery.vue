@@ -154,7 +154,7 @@ watch(
                         <h3>{{ getTotalProducts(slidesFiltrados) + '&nbsp;' + 'produtos.' }}</h3>
                     </div>
                 </div>
-                <div class="flex w-full lg:w-[24rem] lg:mr-8">
+                <div class="flex w-full lg:w-[32rem] lg:mr-8">
                     <div data-aos="fade-left" class="lg:w-[13rem] flex justify-end lg:justify-start px-4 lg:px-2">
                         <div class="relative w-48 lg:w-48 bg-[#fff] rounded">
                             <select id="categoryFilter"
@@ -186,14 +186,14 @@ watch(
                         </div>
                     </div>
                 </div>
-                <div class="w-24 h-full flex lg:mr-24 mt-7 -ml-12 lg:mt-0 lg:pt-7">
+                <!-- <div class="w-24 h-full flex lg:mr-24 mt-7 -ml-12 lg:mt-0 lg:pt-7">
                     <div class="flex items-center">
                         <img data-aos="zoom-in" data-aos-duration="300" v-if="!hasListMode" @click="ChangeMode" class="h-7 lg:h-6 m-1 ml-12 cursor-pointer"
                             src="../assets/img/icons/icon-box.webp" alt="Ícone produtos modo boxe" />
                         <img data-aos="zoom-in" data-aos-duration="300" v-else-if="hasListMode" @click="ChangeMode" class="h-7 lg:h-6 m-1 ml-12 cursor-pointer"
                             src="../assets/img/icons/icon-list.webp" alt="Ícone produtos modo lista" />
                     </div>
-                </div>
+                </div> -->
             </div>
 
             <div v-for="(slide, index) in slidesFiltrados" :key="index">

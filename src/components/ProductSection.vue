@@ -47,7 +47,7 @@
           </h3>
         </div>
 
-        <h4 class="text-[0.67rem] font-[600] mt-2 text-left text-black">15% de desconto na retirada.</h4>
+        <h4 class="text-[0.67rem] font-[600] mt-2 text-left text-black">10% de desconto na retirada.</h4>
       </div>
     </div>
   </div>

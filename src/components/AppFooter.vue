@@ -50,7 +50,7 @@ const route = useRoute();
 		<div class="w-80 md:w-96 flex flex-col justify-center md:items-center lg:justify-start lg:w-1/3">
 			<div>
 				<h3 data-aos="fade-right" class="text-xl mb-8 lg:mb-4 lg:mt-6 font-black uppercase">Contato</h3>
-				<div class="flex w-72 lg:w-8/12 justify-between mb-4 lg:mb-3">
+				<div class="flex w-72 lg:w-9/12 justify-between mb-4 lg:mb-3">
 					<a href="https://www.magazineluiza.com.br/lojista/mpowersound/" target="_blank" rel="noopener noreferrer">
 						<img data-aos="fade-up" alt="icon magalu" class="h-9 cursor-pointer lg:h-5.5" src="../assets/img/icons/magalu-logo.png" />
 					</a>

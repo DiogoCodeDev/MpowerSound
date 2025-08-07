@@ -82,7 +82,7 @@ function applyDiscount(price) {
 
   if (isNaN(numeric)) return '';
 
-  const discounted = numeric * 0.85;
+  const discounted = numeric * 0.90;
 
   return discounted.toLocaleString('pt-BR', {
     style: 'currency',
@@ -196,7 +196,7 @@ watch(productId, getProduct, { immediate: true });
                         <DescProduct data-aos="zoom-in" :descProd="product.infos" />
                     </div>
                     <div data-aos="fade-left" class="mb-10 mt-6 lg:mt-0">
-                        <h3 class="font-bold uppercase mt-8 text-black text-[1.25rem] lg:text-[1rem]"><span class="text-red-800">15%</span> de desconto na retirada!</h3>
+                        <h3 class="font-bold uppercase mt-8 text-black text-[1.25rem] lg:text-[1rem]"><span class="text-red-800">10%</span> de desconto na retirada!</h3>
                         <h1 data-aos="zoom-in" class="text-black text-[1.5rem] pt-2 pl-2 mr-3">{{ applyDiscount(product.saleCfg[0].price) }}</h1>
                     </div>
                     <div data-aos="fade-left" class="mb-10 mt-14 lg:mt-0">
