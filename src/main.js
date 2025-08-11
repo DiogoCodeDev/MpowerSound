@@ -13,7 +13,7 @@ app.use(router);
 app.mount('#app');
 
 AOS.init({
-  duration: 800,
+  duration: 600,
   once: false,
   offset: 100,
 });

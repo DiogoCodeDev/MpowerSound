@@ -22,7 +22,7 @@ const goToProduct = (product) => {
 		<section class="flex w-full flex-col items-center md:items-start justify-center mb-28">
 			<div class="flex w-full flex-col-reverse md:flex-row-reverse items-center justify-between">
 				<div class="group">
-					<img @click="goToProduct(2)" src="/banner/product-2.png" alt="Item em promoção destaque" class="object-contain cursor-pointer transform transition-transform duration-300 ease-in-out group-hover:scale-110
+					<img @click="goToProduct(2)" src="/banner/product-22.png" alt="Item em promoção destaque" class="object-contain cursor-pointer transform transition-transform duration-300 ease-in-out group-hover:scale-110
 		       		-mt-8 h-[320px] md:h-[300px] lg:h-[360px] xl:h-[450px] 2xl:h-[490px]" loading="lazy" data-aos="fade-right"
 						data-aos-delay="300" />
 				</div>
